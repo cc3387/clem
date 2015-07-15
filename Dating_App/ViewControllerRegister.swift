@@ -25,16 +25,19 @@ class ViewControllerRegister: UIViewController, UITextFieldDelegate,UIPickerView
     
     //PickerView
     @IBOutlet weak var myPicker: UIPickerView!
+    @IBOutlet weak var LocPicker: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         myPicker.delegate = self;
         myPicker.dataSource = self;
-        updateAge()
+        //LocPicker.delegate = self;
+        //LocPicker.dataSource = self;
+        updateAge();
+        //updateLoc();
         // Do any additional setup after loading the view, typically from a nib.
     }
-    
-    
+
     //Register Button Click
     @IBAction func Register(sender: AnyObject) {
         if(self.Username.text == ""){
@@ -143,34 +146,59 @@ class ViewControllerRegister: UIViewController, UITextFieldDelegate,UIPickerView
         case age = 0
     }
     
+    enum LocComponent:Int{
+        case city = 0
+    }
+    
     func updateAge(){
         var sizeComponent = PickerComponent.age.rawValue
         let size = pickerData[sizeComponent][myPicker.selectedRowInComponent(sizeComponent)]
         self.Age.text = size;
     }
     
-    //Picker View Functions
+    func updateLoc(){
+        var sizeComponent = LocComponent.city.rawValue
+        let size = pickerLocData[sizeComponent][LocPicker.selectedRowInComponent(sizeComponent)]
+        self.Location.text = size;
+    }
+    
+    //Picker View, Age Range Functions
     let pickerData = [
         ["18-25","25-30","30-35","35-40", "40-45"]
     ]
     
+    //Picker View, Location Functions
+    let pickerLocData = [
+        ["AL", "NY", "NJ"]
+    ]
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return pickerData.count
+        return pickerData.count ;
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        updateAge()
+        updateAge();
+    }
+    
+    func pickerLocView(pickerLocView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        updateLoc();
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData[component].count
+        return pickerData[component].count;
+    }
+    
+    func pickerLocView(pickerLocView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerLocData[component].count;
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return pickerData[component][row]
+        return pickerData[component][row];
     }
     
-    
+    func pickerLocView(pickerLocView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return pickerLocData[component][row];
+    }
     
 }
 

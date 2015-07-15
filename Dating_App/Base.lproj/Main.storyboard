@@ -73,7 +73,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HlJ-2D-hea">
-                                <rect key="frame" x="178" y="66" width="124" height="33"/>
+                                <rect key="frame" x="172" y="66" width="124" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.28627452250000002" green="0.070588238540000001" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
@@ -89,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1062" y="-249"/>
+            <point key="canvasLocation" x="1100" y="11"/>
         </scene>
         <!--Starting_StoryBoard-->
         <scene sceneID="bM4-w5-iyx">
@@ -104,7 +104,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Find_Love_Intro.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="COL-fV-3Rb">
-                                <rect key="frame" x="2" y="164" width="330" height="205"/>
+                                <rect key="frame" x="0.0" y="156" width="330" height="205"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Simple" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEf-rr-C6W">
                                 <rect key="frame" x="138" y="60" width="135" height="59"/>
@@ -113,7 +113,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44r-iD-Vgt">
-                                <rect key="frame" x="72" y="432" width="220" height="30"/>
+                                <rect key="frame" x="80" y="423" width="220" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.18431372940540314" green="0.062745101749897003" blue="0.22745099663734436" alpha="1" colorSpace="deviceRGB"/>
@@ -124,7 +124,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K00-lW-xUq">
-                                <rect key="frame" x="72" y="476" width="220" height="30"/>
+                                <rect key="frame" x="80" y="471" width="220" height="30"/>
                                 <state key="normal" title="Register">
                                     <color key="titleColor" red="0.18431372939999999" green="0.062745101750000004" blue="0.22745099660000001" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -133,16 +133,16 @@
                                     <segue destination="wuD-Qe-oSm" kind="show" id="VH7-zq-6hm"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  Copyright (c) 2015 Clement Chan, Regan Hsu. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="fIu-VJ-7f5">
-                                <rect key="frame" x="33" y="541" width="314" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stay Simple and Meet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86W-yx-oae">
-                                <rect key="frame" x="93" y="360" width="195" height="59"/>
+                                <rect key="frame" x="93" y="356" width="195" height="59"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                                 <color key="textColor" red="0.2204253582" green="0.360501501" blue="0.68112768310000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  Copyright (c) 2015 Clement Chan, Regan Hsu. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="fIu-VJ-7f5">
+                                <rect key="frame" x="33" y="542" width="314" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -248,30 +248,30 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tr-oA-iz4">
-                                <rect key="frame" x="16" y="348" width="35" height="21"/>
+                                <rect key="frame" x="16" y="353" width="35" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.28627452250000002" green="0.070588238540000001" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTQ-nE-l2z">
-                                <rect key="frame" x="17" y="425" width="72" height="21"/>
+                                <rect key="frame" x="16" y="439" width="72" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.28627452250000002" green="0.070588238540000001" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tzj-qE-Hgg">
-                                <rect key="frame" x="115" y="420" width="134" height="30"/>
+                                <rect key="frame" x="115" y="434" width="134" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter where you live!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdc-vw-cTI">
-                                <rect key="frame" x="115" y="458" width="98" height="21"/>
+                                <rect key="frame" x="115" y="472" width="98" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCR-5z-a5P">
-                                <rect key="frame" x="152" y="500" width="61" height="30"/>
+                                <rect key="frame" x="152" y="519" width="61" height="30"/>
                                 <state key="normal" title="Register!">
                                     <color key="titleColor" red="0.28627452250000002" green="0.070588238540000001" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -287,7 +287,7 @@
                                 <rect key="frame" x="23" y="445" width="108" height="142"/>
                             </pickerView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kTb-5l-g25">
-                                <rect key="frame" x="115" y="344" width="134" height="30"/>
+                                <rect key="frame" x="115" y="349" width="134" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -299,15 +299,25 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tAN-um-cHo">
-                                <rect key="frame" x="261" y="324" width="100" height="80"/>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Your Age~" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oh7-yy-HKl">
-                                <rect key="frame" x="115" y="382" width="92" height="21"/>
+                                <rect key="frame" x="115" y="383" width="92" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rBg-eg-pQO">
+                                <rect key="frame" x="257" y="409" width="100" height="80"/>
+                            </pickerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Strips.png" translatesAutoresizingMaskIntoConstraints="NO" id="bev-b2-S8s">
+                                <rect key="frame" x="107" y="525" width="37" height="32"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Strips.png" translatesAutoresizingMaskIntoConstraints="NO" id="sB7-dX-dwF">
+                                <rect key="frame" x="285" y="65" width="37" height="32"/>
+                            </imageView>
+                            <pickerView alpha="0.49999999999999961" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tAN-um-cHo">
+                                <rect key="frame" x="257" y="324" width="85" height="80"/>
+                                <color key="tintColor" red="0.28627452250000002" green="0.070588238540000001" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -324,6 +334,7 @@
                         <outlet property="Age_Not" destination="oh7-yy-HKl" id="zBs-NW-F3d"/>
                         <outlet property="Email" destination="w0G-Uw-RyA" id="lho-A5-OfQ"/>
                         <outlet property="Email_Not" destination="H2E-KJ-HZz" id="vST-Df-msp"/>
+                        <outlet property="LocPicker" destination="rBg-eg-pQO" id="QPh-3V-fnD"/>
                         <outlet property="Location" destination="tzj-qE-Hgg" id="BbL-kd-Ybs"/>
                         <outlet property="Location_Not" destination="xdc-vw-cTI" id="EZm-6g-ca5"/>
                         <outlet property="Password" destination="yrk-ee-D28" id="XKU-W2-XGQ"/>
@@ -341,7 +352,6 @@
         <!--Picker View-->
         <scene sceneID="Ta5-dd-I4Y">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Vz-l2-tXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="OY7-WW-SMx" customClass="PickerView" customModule="Dating_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZMf-iy-FGL"/>
@@ -391,15 +401,17 @@
                         <outlet property="myPicker" destination="wLJ-OL-8y7" id="xwa-0Z-HPu"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Vz-l2-tXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1766" y="875"/>
         </scene>
     </scenes>
     <resources>
         <image name="Find_Love_Intro.jpg" width="1280" height="692"/>
+        <image name="Strips.png" width="240" height="148"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yRc-T6-p37"/>
-        <segue reference="bYV-3V-alE"/>
+        <segue reference="N9M-jQ-SPw"/>
+        <segue reference="VH7-zq-6hm"/>
     </inferredMetricsTieBreakers>
 </document>
