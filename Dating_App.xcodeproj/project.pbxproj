@@ -10,11 +10,13 @@
 		AA10153A1B5170A7007F77B8 /* ViewControllerLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1015391B5170A7007F77B8 /* ViewControllerLogin.swift */; };
 		AA10153C1B51B1BD007F77B8 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA10153B1B51B1BD007F77B8 /* PickerView.swift */; };
 		AA1015401B536A76007F77B8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA10153F1B536A76007F77B8 /* Images.xcassets */; };
+		AA1015421B54B885007F77B8 /* Strips.png in Resources */ = {isa = PBXBuildFile; fileRef = AA1015411B54B885007F77B8 /* Strips.png */; };
+		AA11D2621B5CA75F005CFBC2 /* Main_Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA11D2611B5CA75F005CFBC2 /* Main_Profile.swift */; };
 		AA271D7B1B4DF4CC00EA5BA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA271D7A1B4DF4CC00EA5BA6 /* AppDelegate.swift */; };
 		AA271D7D1B4DF4CC00EA5BA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA271D7C1B4DF4CC00EA5BA6 /* ViewController.swift */; };
-		AA271D801B4DF4CC00EA5BA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA271D7E1B4DF4CC00EA5BA6 /* Main.storyboard */; };
 		AA271D851B4DF4CC00EA5BA6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA271D831B4DF4CC00EA5BA6 /* LaunchScreen.xib */; };
 		AA271D911B4DF4CC00EA5BA6 /* Dating_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA271D901B4DF4CC00EA5BA6 /* Dating_AppTests.swift */; };
+		AA271D9B1B4DF55200EA5BA6 /* Find_Love_Intro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA271D9A1B4DF55200EA5BA6 /* Find_Love_Intro.jpg */; };
 		AA271D9F1B4E196400EA5BA6 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271D9E1B4E196400EA5BA6 /* libsqlite3.0.dylib */; };
 		AA271DA11B4E198200EA5BA6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DA01B4E198200EA5BA6 /* libz.dylib */; };
 		AA271DA31B4E19C900EA5BA6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DA21B4E19C900EA5BA6 /* SystemConfiguration.framework */; };
@@ -26,15 +28,14 @@
 		AA271DAF1B4E1A8800EA5BA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DAE1B4E1A8800EA5BA6 /* CoreGraphics.framework */; };
 		AA271DB11B4E1A9B00EA5BA6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DB01B4E1A9B00EA5BA6 /* CFNetwork.framework */; };
 		AA271DB31B4E1AAD00EA5BA6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DB21B4E1AAD00EA5BA6 /* AudioToolbox.framework */; };
+		AA271DBA1B4E1AE000EA5BA6 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DB41B4E1AE000EA5BA6 /* Bolts.framework */; };
+		AA271DBB1B4E1AE000EA5BA6 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DB51B4E1AE000EA5BA6 /* Parse.framework */; };
+		AA271DBC1B4E1AE000EA5BA6 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DB61B4E1AE000EA5BA6 /* ParseCrashReporting.framework */; };
+		AA271DBD1B4E1AE000EA5BA6 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DB71B4E1AE000EA5BA6 /* ParseFacebookUtils.framework */; };
+		AA271DBE1B4E1AE000EA5BA6 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DB81B4E1AE000EA5BA6 /* ParseFacebookUtilsV4.framework */; };
+		AA271DBF1B4E1AE000EA5BA6 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DB91B4E1AE000EA5BA6 /* ParseUI.framework */; };
 		AA271DCC1B4E23EA00EA5BA6 /* ViewControllerRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA271DCB1B4E23EA00EA5BA6 /* ViewControllerRegister.swift */; };
-		AA7C12411B55E2DC004C10F2 /* Find_Love_Intro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA7C12401B55E2DC004C10F2 /* Find_Love_Intro.jpg */; };
-		AA7C12481B55E369004C10F2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA7C12421B55E369004C10F2 /* Bolts.framework */; };
-		AA7C12491B55E369004C10F2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA7C12431B55E369004C10F2 /* Parse.framework */; };
-		AA7C124A1B55E369004C10F2 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA7C12441B55E369004C10F2 /* ParseCrashReporting.framework */; };
-		AA7C124B1B55E369004C10F2 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA7C12451B55E369004C10F2 /* ParseFacebookUtils.framework */; };
-		AA7C124C1B55E369004C10F2 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA7C12461B55E369004C10F2 /* ParseFacebookUtilsV4.framework */; };
-		AA7C124D1B55E369004C10F2 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA7C12471B55E369004C10F2 /* ParseUI.framework */; };
-		AA7C124F1B55E3B2004C10F2 /* Strips.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7C124E1B55E3B2004C10F2 /* Strips.png */; };
+		AA5F461F1B5DF1590045D9C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5F461E1B5DF1590045D9C6 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,15 +52,17 @@
 		AA1015391B5170A7007F77B8 /* ViewControllerLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerLogin.swift; sourceTree = "<group>"; };
 		AA10153B1B51B1BD007F77B8 /* PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		AA10153F1B536A76007F77B8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AA1015411B54B885007F77B8 /* Strips.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Strips.png; sourceTree = "<group>"; };
+		AA11D2611B5CA75F005CFBC2 /* Main_Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Main_Profile.swift; path = ../Main_Profile.swift; sourceTree = "<group>"; };
 		AA271D751B4DF4CC00EA5BA6 /* Dating_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dating_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA271D791B4DF4CC00EA5BA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA271D7A1B4DF4CC00EA5BA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA271D7C1B4DF4CC00EA5BA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AA271D7F1B4DF4CC00EA5BA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA271D841B4DF4CC00EA5BA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AA271D8A1B4DF4CC00EA5BA6 /* Dating_AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dating_AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA271D8F1B4DF4CC00EA5BA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA271D901B4DF4CC00EA5BA6 /* Dating_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dating_AppTests.swift; sourceTree = "<group>"; };
+		AA271D9A1B4DF55200EA5BA6 /* Find_Love_Intro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Find_Love_Intro.jpg; path = ../../../../Pictures/Find_Love_Intro.jpg; sourceTree = "<group>"; };
 		AA271D9E1B4E196400EA5BA6 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		AA271DA01B4E198200EA5BA6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		AA271DA21B4E19C900EA5BA6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -71,16 +74,15 @@
 		AA271DAE1B4E1A8800EA5BA6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		AA271DB01B4E1A9B00EA5BA6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		AA271DB21B4E1AAD00EA5BA6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AA271DB41B4E1AE000EA5BA6 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../iOS_App/parse-library-1/Bolts.framework"; sourceTree = "<group>"; };
+		AA271DB51B4E1AE000EA5BA6 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../iOS_App/parse-library-1/Parse.framework"; sourceTree = "<group>"; };
+		AA271DB61B4E1AE000EA5BA6 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "../../../iOS_App/parse-library-1/ParseCrashReporting.framework"; sourceTree = "<group>"; };
+		AA271DB71B4E1AE000EA5BA6 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "../../../iOS_App/parse-library-1/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
+		AA271DB81B4E1AE000EA5BA6 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "../../../iOS_App/parse-library-1/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
+		AA271DB91B4E1AE000EA5BA6 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "../../../iOS_App/parse-library-1/ParseUI.framework"; sourceTree = "<group>"; };
 		AA271DC61B4E1C6F00EA5BA6 /* Dating_App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dating_App-Bridging-Header.h"; sourceTree = "<group>"; };
 		AA271DCB1B4E23EA00EA5BA6 /* ViewControllerRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerRegister.swift; sourceTree = "<group>"; };
-		AA7C12401B55E2DC004C10F2 /* Find_Love_Intro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Find_Love_Intro.jpg; path = Images.xcassets/Find_Love_Intro.jpg; sourceTree = "<group>"; };
-		AA7C12421B55E369004C10F2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		AA7C12431B55E369004C10F2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		AA7C12441B55E369004C10F2 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
-		AA7C12451B55E369004C10F2 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
-		AA7C12461B55E369004C10F2 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
-		AA7C12471B55E369004C10F2 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
-		AA7C124E1B55E3B2004C10F2 /* Strips.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Strips.png; sourceTree = "<group>"; };
+		AA5F461E1B5DF1590045D9C6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,19 +93,19 @@
 				AA271DB31B4E1AAD00EA5BA6 /* AudioToolbox.framework in Frameworks */,
 				AA271DB11B4E1A9B00EA5BA6 /* CFNetwork.framework in Frameworks */,
 				AA271DAF1B4E1A8800EA5BA6 /* CoreGraphics.framework in Frameworks */,
+				AA271DBA1B4E1AE000EA5BA6 /* Bolts.framework in Frameworks */,
 				AA271DAD1B4E1A6000EA5BA6 /* CoreLocation.framework in Frameworks */,
+				AA271DBC1B4E1AE000EA5BA6 /* ParseCrashReporting.framework in Frameworks */,
 				AA271DAB1B4E1A4600EA5BA6 /* MobileCoreServices.framework in Frameworks */,
-				AA7C124C1B55E369004C10F2 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				AA271DBB1B4E1AE000EA5BA6 /* Parse.framework in Frameworks */,
+				AA271DBD1B4E1AE000EA5BA6 /* ParseFacebookUtils.framework in Frameworks */,
+				AA271DBF1B4E1AE000EA5BA6 /* ParseUI.framework in Frameworks */,
 				AA271DA91B4E1A2A00EA5BA6 /* QuartzCore.framework in Frameworks */,
-				AA7C124A1B55E369004C10F2 /* ParseCrashReporting.framework in Frameworks */,
+				AA271DBE1B4E1AE000EA5BA6 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				AA271DA71B4E1A1300EA5BA6 /* Security.framework in Frameworks */,
-				AA7C124B1B55E369004C10F2 /* ParseFacebookUtils.framework in Frameworks */,
-				AA7C12491B55E369004C10F2 /* Parse.framework in Frameworks */,
 				AA271DA51B4E19FE00EA5BA6 /* StoreKit.framework in Frameworks */,
 				AA271DA31B4E19C900EA5BA6 /* SystemConfiguration.framework in Frameworks */,
-				AA7C12481B55E369004C10F2 /* Bolts.framework in Frameworks */,
 				AA271DA11B4E198200EA5BA6 /* libz.dylib in Frameworks */,
-				AA7C124D1B55E369004C10F2 /* ParseUI.framework in Frameworks */,
 				AA271D9F1B4E196400EA5BA6 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,13 +144,14 @@
 			children = (
 				AA271D7A1B4DF4CC00EA5BA6 /* AppDelegate.swift */,
 				AA271D7C1B4DF4CC00EA5BA6 /* ViewController.swift */,
+				AA11D2611B5CA75F005CFBC2 /* Main_Profile.swift */,
 				AA1015391B5170A7007F77B8 /* ViewControllerLogin.swift */,
 				AA10153B1B51B1BD007F77B8 /* PickerView.swift */,
 				AA271DCB1B4E23EA00EA5BA6 /* ViewControllerRegister.swift */,
-				AA271D7E1B4DF4CC00EA5BA6 /* Main.storyboard */,
+				AA5F461E1B5DF1590045D9C6 /* Main.storyboard */,
 				AA10153F1B536A76007F77B8 /* Images.xcassets */,
-				AA7C124E1B55E3B2004C10F2 /* Strips.png */,
-				AA7C12401B55E2DC004C10F2 /* Find_Love_Intro.jpg */,
+				AA1015411B54B885007F77B8 /* Strips.png */,
+				AA271D9A1B4DF55200EA5BA6 /* Find_Love_Intro.jpg */,
 				AA271D831B4DF4CC00EA5BA6 /* LaunchScreen.xib */,
 				AA271D781B4DF4CC00EA5BA6 /* Supporting Files */,
 			);
@@ -184,12 +187,12 @@
 		AA271DC01B4E1B2B00EA5BA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AA7C12421B55E369004C10F2 /* Bolts.framework */,
-				AA7C12431B55E369004C10F2 /* Parse.framework */,
-				AA7C12441B55E369004C10F2 /* ParseCrashReporting.framework */,
-				AA7C12451B55E369004C10F2 /* ParseFacebookUtils.framework */,
-				AA7C12461B55E369004C10F2 /* ParseFacebookUtilsV4.framework */,
-				AA7C12471B55E369004C10F2 /* ParseUI.framework */,
+				AA271DB41B4E1AE000EA5BA6 /* Bolts.framework */,
+				AA271DB51B4E1AE000EA5BA6 /* Parse.framework */,
+				AA271DB61B4E1AE000EA5BA6 /* ParseCrashReporting.framework */,
+				AA271DB71B4E1AE000EA5BA6 /* ParseFacebookUtils.framework */,
+				AA271DB81B4E1AE000EA5BA6 /* ParseFacebookUtilsV4.framework */,
+				AA271DB91B4E1AE000EA5BA6 /* ParseUI.framework */,
 				AA271DB21B4E1AAD00EA5BA6 /* AudioToolbox.framework */,
 				AA271DB01B4E1A9B00EA5BA6 /* CFNetwork.framework */,
 				AA271DAE1B4E1A8800EA5BA6 /* CoreGraphics.framework */,
@@ -286,11 +289,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA7C12411B55E2DC004C10F2 /* Find_Love_Intro.jpg in Resources */,
 				AA1015401B536A76007F77B8 /* Images.xcassets in Resources */,
-				AA7C124F1B55E3B2004C10F2 /* Strips.png in Resources */,
-				AA271D801B4DF4CC00EA5BA6 /* Main.storyboard in Resources */,
+				AA5F461F1B5DF1590045D9C6 /* Main.storyboard in Resources */,
+				AA1015421B54B885007F77B8 /* Strips.png in Resources */,
 				AA271D851B4DF4CC00EA5BA6 /* LaunchScreen.xib in Resources */,
+				AA271D9B1B4DF55200EA5BA6 /* Find_Love_Intro.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +313,7 @@
 			files = (
 				AA10153A1B5170A7007F77B8 /* ViewControllerLogin.swift in Sources */,
 				AA271D7D1B4DF4CC00EA5BA6 /* ViewController.swift in Sources */,
+				AA11D2621B5CA75F005CFBC2 /* Main_Profile.swift in Sources */,
 				AA271D7B1B4DF4CC00EA5BA6 /* AppDelegate.swift in Sources */,
 				AA10153C1B51B1BD007F77B8 /* PickerView.swift in Sources */,
 				AA271DCC1B4E23EA00EA5BA6 /* ViewControllerRegister.swift in Sources */,
@@ -335,14 +339,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AA271D7E1B4DF4CC00EA5BA6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AA271D7F1B4DF4CC00EA5BA6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AA271D831B4DF4CC00EA5BA6 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -443,7 +439,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/clement_chan_pig/Documents/iOS_App/parse-library-1",
-					"$(PROJECT_DIR)/Dating_App",
 				);
 				INFOPLIST_FILE = Dating_App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -461,7 +456,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/clement_chan_pig/Documents/iOS_App/parse-library-1",
-					"$(PROJECT_DIR)/Dating_App",
 				);
 				INFOPLIST_FILE = Dating_App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
