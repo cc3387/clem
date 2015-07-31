@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Clement Chan. All rights reserved.
 //
 
+//Test import information//
+
 import Foundation
 
 import UIKit
