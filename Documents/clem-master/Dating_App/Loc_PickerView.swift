@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Clement Chan. All rights reserved.
 //
 
+//Determine new picker location//
+
 import UIKit
 
 class Loc_PickerView: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate {
