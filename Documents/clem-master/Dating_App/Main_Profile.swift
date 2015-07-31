@@ -23,6 +23,7 @@ class Main_Profile: UIViewController{
         let hour_i = hour_int();
         let minute_i = minute_Int();
         
+        //Display Time and Hours when logged in
         if(hour_i > 6 && hour_i < 12){
         self.Greetings.text = "Good Morning, "
         }
