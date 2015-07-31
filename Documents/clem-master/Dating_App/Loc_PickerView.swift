@@ -56,7 +56,7 @@ class Loc_PickerView: UIViewController,UIPickerViewDataSource, UIPickerViewDeleg
     }
     
     let pickerData = [
-        ["New York NY","Los Angeles CA","Chicago IL","Houston TX", "Phoenix AZ"]
+        ["New York NY","Los Angeles CA","Chicago IL","Houston TX", "Phoenix AZ","New Jersey NJ", "Virginia VA", "California CA"]
     ]
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
