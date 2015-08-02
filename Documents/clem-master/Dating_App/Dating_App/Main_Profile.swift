@@ -72,6 +72,7 @@ class Main_Profile: UIViewController{
                                 self.login.text = uname;
                             }
                             
+                            //Problem, Does not get update every single time...
                             if let location = user["location"] as? NSDictionary{
                                 if let street = location["street"] as? String {
                                     if let city = location["city"] as? String {
