@@ -14,8 +14,160 @@ class Main_Profile: UIViewController{
     @IBOutlet weak var Minutes: UILabel!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var Greetings: UILabel!
+    @IBOutlet weak var myNameLabel: UILabel!
+    @IBOutlet weak var Address: UILabel!
+    @IBOutlet weak var Gender: UILabel!
+    @IBOutlet weak var login: UILabel!
+    
+
     
     var loginuser: String = login_info.user_id
+    
+    
+    @IBAction func Retrieve(sender: AnyObject) {
+    
+        // Do any additional setup after loading the view, typically from a nib.
+        let manager = AFHTTPRequestOperationManager()
+        let manageraddress = AFHTTPRequestOperationManager()
+        self.myNameLabel.text = ""
+        
+        //create gray activity indicator view
+        var activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        
+        //add the activity to the viewcontroller's view
+        view.addSubview(activityIndicatorView)
+        
+        //position the activity indicator view in the center
+        activityIndicatorView.center = view.center
+        
+        activityIndicatorView.startAnimating()
+        
+        manager.GET( "http://api.randomuser.me/",
+            parameters: nil,
+            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+                
+                println("Response: " + responseObject.description)
+            
+                
+                if let results = responseObject["results"] as? NSArray {
+                    if let user = results[0] as? NSDictionary {
+                        if let user = user["user"] as? NSDictionary {
+                            if let name = user["name"] as? NSDictionary {
+                                if let first = name["first"] as? String {
+                                    var fullName:String = first as String
+                                    if let second = name["last"] as? String {
+                                        fullName += " "
+                                        fullName += second
+                                        self.myNameLabel.text = fullName
+                                        //self.myNameLabel.adjustsFontSizeToFitWidth = true
+                                    }
+                                }
+                            }
+                            
+                            if let gender = user["gender"] as? String{
+                                self.Gender.text = gender;
+                            }
+                            
+                            if let uname = user["username"] as? String{
+                                self.login.text = uname;
+                            }
+                            
+                            if let location = user["location"] as? NSDictionary{
+                                if let street = location["street"] as? String {
+                                    if let city = location["city"] as? String {
+                                        if let state = location["state"] as? String {
+                                            if let zip = location["zip"] as? String {
+                                                var fulladdress:String = street as String
+                                                fulladdress += " "
+                                                fulladdress += city
+                                                self.Address.text = fulladdress;
+                                                //self.Address.adjustsFontSizeToFitWidth = true
+                                                //println(fulladdress);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                    }
+                    else {
+                            println(user)
+                            self.myNameLabel.text = "failed at cell"
+                            self.myNameLabel.adjustsFontSizeToFitWidth = true
+                        }
+                    }
+                    else {
+                        self.myNameLabel.text = "failed at user"
+                    }
+                }
+                else {
+                    self.myNameLabel.text = "failed at results"
+                    self.Address.text = "failed at results"
+                }
+                activityIndicatorView.stopAnimating()
+            },
+            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+                println("uuuError: " + error.localizedDescription)
+                //google timeout
+                activityIndicatorView.stopAnimating()
+                //self.myNameLabel.text = ":("
+                
+                var alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+        })
+        
+        //Get the Address
+        /*manageraddress.GET( "http://api.randomuser.me/",
+            parameters: nil,
+            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+                
+                println("Response: " + responseObject.description)
+                if let results = responseObject["results"] as? NSArray {
+                    if let user = results[0] as? NSDictionary {
+                        if let user = user["user"] as? NSDictionary {
+                            if let name = user["name"] as? NSDictionary {
+                                if let first = name["first"] as? String {
+                                    var fullName:String = first as String
+                                    if let second = name["last"] as? String {
+                                        fullName += " "
+                                        fullName += second
+                                        self.Address.text = fullName
+                                        self.Address.adjustsFontSizeToFitWidth = true
+                                    }
+                                }
+                            }
+                        }
+                        else {
+                            println(user)
+                            self.myNameLabel.text = "failed at cell"
+                            self.myNameLabel.adjustsFontSizeToFitWidth = true
+                            self.Address.text = "failed at cell"
+                            self.Address.adjustsFontSizeToFitWidth = true
+                        }
+                    }
+                    else {
+                        self.myNameLabel.text = "failed at user"
+                        self.Address.text = "failed at user"
+                    }
+                    //self.myNameLabel.text = nationality
+                }
+                else {
+                    self.myNameLabel.text = "failed at results"
+                    self.Address.text = "failed at results"
+                }
+                activityIndicatorView.stopAnimating()
+            },
+            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+                println("uuuError: " + error.localizedDescription)
+                //google timeout
+                activityIndicatorView.stopAnimating()
+                //self.myNameLabel.text = ":("
+                
+                var alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+        })*/
+    }
 
     override func viewDidLoad() {
         let hours = hour();
