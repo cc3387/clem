@@ -23,12 +23,42 @@ class Main_Profile: UIViewController{
     
     var loginuser: String = login_info.user_id
     
+    @IBAction func Posting(sender: AnyObject) {
+        
+        let manager = AFHTTPRequestOperationManager()
+        manager.POST("http://samwize.com/api/poo/", parameters: nil,
+            
+            success: {(operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+                println(responseObject)
+            },
+            
+            failure: {(operation: AFHTTPRequestOperation!,error: NSError!) in
+                println("uuuError: " + error.localizedDescription)
+        })
+
+        
+    }
+    
+    /*@IBAction func Posting(sender: AnyObject) {
+        
+        let manager = AFHTTPRequestOperationManager()
+        manager.POST("http://samwize.com/api/poo/", parameters: nil,
+            
+            success: {(operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+                println(responseObject)
+            },
+            
+            failure: {(operation: AFHTTPRequestOperation!,error: NSError!) in
+                println("uuuError: " + error.localizedDescription)
+        })
+    }*/
+    
     
     @IBAction func Retrieve(sender: AnyObject) {
     
         // Do any additional setup after loading the view, typically from a nib.
         let manager = AFHTTPRequestOperationManager()
-        let manageraddress = AFHTTPRequestOperationManager()
+        //let manageraddress = AFHTTPRequestOperationManager()
         self.myNameLabel.text = ""
         
         //create gray activity indicator view
