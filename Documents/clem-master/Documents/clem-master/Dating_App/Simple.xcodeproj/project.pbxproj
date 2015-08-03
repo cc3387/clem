@@ -15,7 +15,6 @@
 		AA271D7D1B4DF4CC00EA5BA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA271D7C1B4DF4CC00EA5BA6 /* ViewController.swift */; };
 		AA271D851B4DF4CC00EA5BA6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA271D831B4DF4CC00EA5BA6 /* LaunchScreen.xib */; };
 		AA271D911B4DF4CC00EA5BA6 /* Dating_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA271D901B4DF4CC00EA5BA6 /* Dating_AppTests.swift */; };
-		AA271D9B1B4DF55200EA5BA6 /* Find_Love_Intro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA271D9A1B4DF55200EA5BA6 /* Find_Love_Intro.jpg */; };
 		AA271D9F1B4E196400EA5BA6 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271D9E1B4E196400EA5BA6 /* libsqlite3.0.dylib */; };
 		AA271DA11B4E198200EA5BA6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DA01B4E198200EA5BA6 /* libz.dylib */; };
 		AA271DA31B4E19C900EA5BA6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DA21B4E19C900EA5BA6 /* SystemConfiguration.framework */; };
@@ -94,7 +93,6 @@
 		AA271D8A1B4DF4CC00EA5BA6 /* SimpleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA271D8F1B4DF4CC00EA5BA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA271D901B4DF4CC00EA5BA6 /* Dating_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dating_AppTests.swift; sourceTree = "<group>"; };
-		AA271D9A1B4DF55200EA5BA6 /* Find_Love_Intro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Find_Love_Intro.jpg; path = ../../../../Pictures/Find_Love_Intro.jpg; sourceTree = "<group>"; };
 		AA271D9E1B4E196400EA5BA6 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		AA271DA01B4E198200EA5BA6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		AA271DA21B4E19C900EA5BA6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -222,7 +220,6 @@
 				AADFA1831B67A20F00491DBF /* Location_Pictures */,
 				AADFA1841B67A23000491DBF /* Male_Female */,
 				AAAE73E31B5F4D45007841DC /* Cover_Page.jpg */,
-				AA271D9A1B4DF55200EA5BA6 /* Find_Love_Intro.jpg */,
 				AA271D831B4DF4CC00EA5BA6 /* LaunchScreen.xib */,
 				AA271D781B4DF4CC00EA5BA6 /* Supporting Files */,
 			);
@@ -438,7 +435,6 @@
 				AA271D851B4DF4CC00EA5BA6 /* LaunchScreen.xib in Resources */,
 				AA5AC1F71B6491B300158156 /* Hong_Kong.jpg in Resources */,
 				AA5AC1FB1B6499CA00158156 /* London.jpg in Resources */,
-				AA271D9B1B4DF55200EA5BA6 /* Find_Love_Intro.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
