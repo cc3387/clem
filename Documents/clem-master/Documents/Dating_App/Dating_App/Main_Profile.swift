@@ -18,6 +18,8 @@ class Main_Profile: UIViewController{
     @IBOutlet weak var Address: UILabel!
     @IBOutlet weak var Gender: UILabel!
     @IBOutlet weak var login: UILabel!
+    @IBOutlet weak var Name: UILabel!
+    
     
 
     
@@ -25,8 +27,17 @@ class Main_Profile: UIViewController{
     
     @IBAction func Posting(sender: AnyObject) {
         
+        var params = [
+            "title":"Clement"
+        ]
+        
+        var ugh = [
+            "_id": "55c019d23cda349c02b6f974"
+            
+        ]
+        
         let manager = AFHTTPRequestOperationManager()
-        manager.POST("http://samwize.com/api/poo/", parameters: self.loginuser,
+        /*manager.POST("http://samwize.com/api/poo/", parameters: params,
             
             success: {(operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 println(responseObject)
@@ -35,8 +46,31 @@ class Main_Profile: UIViewController{
             failure: {(operation: AFHTTPRequestOperation!,error: NSError!) in
                 println("uuuError: " + error.localizedDescription)
         })
-
         
+        //post to your node server
+        manager.POST("http://localhost:3000/items",
+            parameters: params,
+            success: { (AFHTTPRequestOperation, AnyObject) -> Void in
+                println("success!")
+            }) { (AFHTTPRequestOperation, NSError) -> Void in
+                println("fail")
+        }*/
+        
+        //Get information in your server
+        manager.GET( "http://localhost:3000/items/person",
+            parameters: nil,
+            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+                println("JSON: " + responseObject.description)
+                if let results = responseObject["person"] as? NSArray {
+                    if let title = results[0] as? String {
+                        self.Name.text = title as String
+                        self.Name.adjustsFontSizeToFitWidth = true
+                }
+              }
+            },
+            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+                println("Error: " + error.localizedDescription)
+        })
     }
     
     /*@IBAction func Posting(sender: AnyObject) {
