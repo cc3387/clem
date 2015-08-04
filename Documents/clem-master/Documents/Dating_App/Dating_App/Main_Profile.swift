@@ -45,7 +45,38 @@ class Main_Profile: UIViewController{
             
             failure: {(operation: AFHTTPRequestOperation!,error: NSError!) in
                 println("uuuError: " + error.localizedDescription)
+        })*/
+        
+        //post to your node server
+        manager.POST("http://localhost:3000/items",
+            parameters: params,
+            success: { (AFHTTPRequestOperation, AnyObject) -> Void in
+                println("success!")
+            }) { (AFHTTPRequestOperation, NSError) -> Void in
+                println("fail")
+        }
+        
+        //Get information in your server
+        manager.GET( "http://localhost:3000/items/person",
+            parameters: nil,
+            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+                println("JSON: " + responseObject.description)
+                if let results = responseObject[0] as? NSArray {
+                    if let title = results[0] as? String {
+                        self.Name.text = title as String
+                        self.Name.adjustsFontSizeToFitWidth = true
+                }
+              }
+            },
+            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+                println("Error: " + error.localizedDescription)
         })
+<<<<<<< HEAD:Documents/clem-master/Documents/Dating_App/Dating_App/Main_Profile.swift
+=======
+        
+        
+
+>>>>>>> fb15c5899df34fca264d642a4e31fac078dcf687:Documents/clem-master/Dating_App/Dating_App/Main_Profile.swift
         
         //post to your node server
         manager.POST("http://localhost:3000/items",
@@ -332,5 +363,8 @@ class Main_Profile: UIViewController{
     //}
     
 }
+
+
+
 
 
