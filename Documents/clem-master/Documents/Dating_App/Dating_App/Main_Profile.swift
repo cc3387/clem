@@ -21,7 +21,7 @@ class Main_Profile: UIViewController{
     @IBOutlet weak var Name: UILabel!
     
     
-
+    
     
     var loginuser: String = login_info.user_id
     
@@ -38,53 +38,22 @@ class Main_Profile: UIViewController{
         
         let manager = AFHTTPRequestOperationManager()
         /*manager.POST("http://samwize.com/api/poo/", parameters: params,
-            
-            success: {(operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
-                println(responseObject)
-            },
-            
-            failure: {(operation: AFHTTPRequestOperation!,error: NSError!) in
-                println("uuuError: " + error.localizedDescription)
-        })*/
         
-        //post to your node server
-        manager.POST("http://localhost:3000/items",
-            parameters: params,
-            success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-                println("success!")
-            }) { (AFHTTPRequestOperation, NSError) -> Void in
-                println("fail")
-        }
+        success: {(operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+        println(responseObject)
+        },
         
-        //Get information in your server
-        manager.GET( "http://localhost:3000/items/person",
-            parameters: nil,
-            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
-                println("JSON: " + responseObject.description)
-                if let results = responseObject[0] as? NSArray {
-                    if let title = results[0] as? String {
-                        self.Name.text = title as String
-                        self.Name.adjustsFontSizeToFitWidth = true
-                }
-              }
-            },
-            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
-                println("Error: " + error.localizedDescription)
+        failure: {(operation: AFHTTPRequestOperation!,error: NSError!) in
+        println("uuuError: " + error.localizedDescription)
         })
-<<<<<<< HEAD:Documents/clem-master/Documents/Dating_App/Dating_App/Main_Profile.swift
-=======
-        
-        
-
->>>>>>> fb15c5899df34fca264d642a4e31fac078dcf687:Documents/clem-master/Dating_App/Dating_App/Main_Profile.swift
         
         //post to your node server
         manager.POST("http://localhost:3000/items",
-            parameters: params,
-            success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-                println("success!")
-            }) { (AFHTTPRequestOperation, NSError) -> Void in
-                println("fail")
+        parameters: params,
+        success: { (AFHTTPRequestOperation, AnyObject) -> Void in
+        println("success!")
+        }) { (AFHTTPRequestOperation, NSError) -> Void in
+        println("fail")
         }*/
         
         //Get information in your server
@@ -96,8 +65,8 @@ class Main_Profile: UIViewController{
                     if let title = results[0] as? String {
                         self.Name.text = title as String
                         self.Name.adjustsFontSizeToFitWidth = true
+                    }
                 }
-              }
             },
             failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
                 println("Error: " + error.localizedDescription)
@@ -105,22 +74,22 @@ class Main_Profile: UIViewController{
     }
     
     /*@IBAction func Posting(sender: AnyObject) {
-        
-        let manager = AFHTTPRequestOperationManager()
-        manager.POST("http://samwize.com/api/poo/", parameters: nil,
-            
-            success: {(operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
-                println(responseObject)
-            },
-            
-            failure: {(operation: AFHTTPRequestOperation!,error: NSError!) in
-                println("uuuError: " + error.localizedDescription)
-        })
+    
+    let manager = AFHTTPRequestOperationManager()
+    manager.POST("http://samwize.com/api/poo/", parameters: nil,
+    
+    success: {(operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+    println(responseObject)
+    },
+    
+    failure: {(operation: AFHTTPRequestOperation!,error: NSError!) in
+    println("uuuError: " + error.localizedDescription)
+    })
     }*/
     
     
     @IBAction func Retrieve(sender: AnyObject) {
-    
+        
         // Do any additional setup after loading the view, typically from a nib.
         let manager = AFHTTPRequestOperationManager()
         //let manageraddress = AFHTTPRequestOperationManager()
@@ -142,7 +111,7 @@ class Main_Profile: UIViewController{
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 
                 println("Response: " + responseObject.description)
-            
+                
                 
                 if let results = responseObject["results"] as? NSArray {
                     if let user = results[0] as? NSDictionary {
@@ -183,8 +152,8 @@ class Main_Profile: UIViewController{
                                     }
                                 }
                             }
-                    }
-                    else {
+                        }
+                        else {
                             println(user)
                             self.myNameLabel.text = "failed at cell"
                             self.myNameLabel.adjustsFontSizeToFitWidth = true
@@ -213,57 +182,57 @@ class Main_Profile: UIViewController{
         
         //Get the Address
         /*manageraddress.GET( "http://api.randomuser.me/",
-            parameters: nil,
-            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
-                
-                println("Response: " + responseObject.description)
-                if let results = responseObject["results"] as? NSArray {
-                    if let user = results[0] as? NSDictionary {
-                        if let user = user["user"] as? NSDictionary {
-                            if let name = user["name"] as? NSDictionary {
-                                if let first = name["first"] as? String {
-                                    var fullName:String = first as String
-                                    if let second = name["last"] as? String {
-                                        fullName += " "
-                                        fullName += second
-                                        self.Address.text = fullName
-                                        self.Address.adjustsFontSizeToFitWidth = true
-                                    }
-                                }
-                            }
-                        }
-                        else {
-                            println(user)
-                            self.myNameLabel.text = "failed at cell"
-                            self.myNameLabel.adjustsFontSizeToFitWidth = true
-                            self.Address.text = "failed at cell"
-                            self.Address.adjustsFontSizeToFitWidth = true
-                        }
-                    }
-                    else {
-                        self.myNameLabel.text = "failed at user"
-                        self.Address.text = "failed at user"
-                    }
-                    //self.myNameLabel.text = nationality
-                }
-                else {
-                    self.myNameLabel.text = "failed at results"
-                    self.Address.text = "failed at results"
-                }
-                activityIndicatorView.stopAnimating()
-            },
-            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
-                println("uuuError: " + error.localizedDescription)
-                //google timeout
-                activityIndicatorView.stopAnimating()
-                //self.myNameLabel.text = ":("
-                
-                var alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
+        parameters: nil,
+        success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+        
+        println("Response: " + responseObject.description)
+        if let results = responseObject["results"] as? NSArray {
+        if let user = results[0] as? NSDictionary {
+        if let user = user["user"] as? NSDictionary {
+        if let name = user["name"] as? NSDictionary {
+        if let first = name["first"] as? String {
+        var fullName:String = first as String
+        if let second = name["last"] as? String {
+        fullName += " "
+        fullName += second
+        self.Address.text = fullName
+        self.Address.adjustsFontSizeToFitWidth = true
+        }
+        }
+        }
+        }
+        else {
+        println(user)
+        self.myNameLabel.text = "failed at cell"
+        self.myNameLabel.adjustsFontSizeToFitWidth = true
+        self.Address.text = "failed at cell"
+        self.Address.adjustsFontSizeToFitWidth = true
+        }
+        }
+        else {
+        self.myNameLabel.text = "failed at user"
+        self.Address.text = "failed at user"
+        }
+        //self.myNameLabel.text = nationality
+        }
+        else {
+        self.myNameLabel.text = "failed at results"
+        self.Address.text = "failed at results"
+        }
+        activityIndicatorView.stopAnimating()
+        },
+        failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+        println("uuuError: " + error.localizedDescription)
+        //google timeout
+        activityIndicatorView.stopAnimating()
+        //self.myNameLabel.text = ":("
+        
+        var alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
         })*/
     }
-
+    
     override func viewDidLoad() {
         let hours = hour();
         let minutes = minute();
@@ -271,13 +240,13 @@ class Main_Profile: UIViewController{
         let minute_i = minute_Int();
         
         if(hour_i > 6 && hour_i < 12){
-        self.Greetings.text = "Good Morning, "
+            self.Greetings.text = "Good Morning, "
         }
         else if(hour_i >= 12 && hour_i <= 18){
-        self.Greetings.text = "Good Afternoon, "
+            self.Greetings.text = "Good Afternoon, "
         }
         else{
-        self.Greetings.text = "Good Evening, "
+            self.Greetings.text = "Good Evening, "
         }
         
         self.Hour.text = hours;
@@ -363,8 +332,3 @@ class Main_Profile: UIViewController{
     //}
     
 }
-
-
-
-
-
