@@ -18,17 +18,15 @@ class Main_Profile: UIViewController{
     @IBOutlet weak var Address: UILabel!
     @IBOutlet weak var Gender: UILabel!
     @IBOutlet weak var login: UILabel!
+    @IBOutlet weak var PostName: UITextField!
     @IBOutlet weak var Name: UILabel!
-    
-    
-    
     
     var loginuser: String = login_info.user_id
     
     @IBAction func Posting(sender: AnyObject) {
         
         var params = [
-            "title":"Clement"
+            "title": self.PostName.text
         ]
         
         var ugh = [
@@ -45,24 +43,33 @@ class Main_Profile: UIViewController{
         
         failure: {(operation: AFHTTPRequestOperation!,error: NSError!) in
         println("uuuError: " + error.localizedDescription)
-        })
+        })*/
         
         //post to your node server
-        manager.POST("http://localhost:3000/items",
+        if (self.PostName.text == ""){
+        println("Please Enter Value...");
+        }
+        else{
+        manager.POST("http://localhost:3000/clem",
         parameters: params,
         success: { (AFHTTPRequestOperation, AnyObject) -> Void in
         println("success!")
         }) { (AFHTTPRequestOperation, NSError) -> Void in
         println("fail")
-        }*/
-        
+        }
+        }
         //Get information in your server
-        manager.GET( "http://localhost:3000/items/person",
+        var set = NSSet();
+        manager.responseSerializer = AFHTTPResponseSerializer();
+        manager.responseSerializer.acceptableContentTypes = set.setByAddingObject("text/html");
+        
+        manager.GET( "http://localhost:3000/clem",
             parameters: nil,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
-                println("JSON: " + responseObject.description)
-                if let results = responseObject["person"] as? NSArray {
-                    if let title = results[0] as? String {
+                //println("JSON: " + responseObject.description)
+                println("Object obtained successfully");
+                if let results = responseObject[0] as? NSDictionary {
+                    if let title = results["title"] as? String {
                         self.Name.text = title as String
                         self.Name.adjustsFontSizeToFitWidth = true
                     }
