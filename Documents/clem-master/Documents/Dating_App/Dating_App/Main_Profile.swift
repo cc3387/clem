@@ -46,7 +46,7 @@ class Main_Profile: UIViewController{
         })*/
         
         //post to your node server
-        if (self.PostName.text == ""){
+        /*if (self.PostName.text == ""){
         println("Please Enter Value...");
         }
         else{
@@ -57,16 +57,16 @@ class Main_Profile: UIViewController{
         }) { (AFHTTPRequestOperation, NSError) -> Void in
         println("fail")
         }
-        }
+        }*/
         //Get information in your server
-        var set = NSSet();
-        manager.responseSerializer = AFHTTPResponseSerializer();
-        manager.responseSerializer.acceptableContentTypes = set.setByAddingObject("text/html");
+        //var set = NSSet();
+        //manager.responseSerializer = AFHTTPResponseSerializer();
+        //manager.responseSerializer.acceptableContentTypes = set.setByAddingObject("text/html");
         
-        manager.GET( "http://localhost:3000/clem",
+        manager.GET( "http://localhost:3000/clem/person/Clement",
             parameters: nil,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
-                //println("JSON: " + responseObject.description)
+                println("JSON: " + responseObject.description)
                 println("Object obtained successfully");
                 if let results = responseObject[0] as? NSDictionary {
                     if let title = results["title"] as? String {
