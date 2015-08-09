@@ -33,6 +33,18 @@
 		AA271DBE1B4E1AE000EA5BA6 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DB81B4E1AE000EA5BA6 /* ParseFacebookUtilsV4.framework */; };
 		AA271DBF1B4E1AE000EA5BA6 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DB91B4E1AE000EA5BA6 /* ParseUI.framework */; };
 		AA271DCC1B4E23EA00EA5BA6 /* ViewControllerRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA271DCB1B4E23EA00EA5BA6 /* ViewControllerRegister.swift */; };
+		AA3C847B1B770CF500C76304 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA3C84791B770CF500C76304 /* GoogleMaps.bundle */; };
+		AA3C847C1B770CF500C76304 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3C847A1B770CF500C76304 /* GoogleMaps.framework */; };
+		AA3C847E1B770E0100C76304 /* Location_class.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C847D1B770E0100C76304 /* Location_class.swift */; };
+		AA3C84801B770E5A00C76304 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3C847F1B770E5A00C76304 /* OpenGLES.framework */; };
+		AA3C84821B770E8400C76304 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3C84811B770E8400C76304 /* libicucore.dylib */; };
+		AA3C84841B770E8F00C76304 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3C84831B770E8F00C76304 /* libc++.dylib */; };
+		AA3C84861B770EA400C76304 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3C84851B770EA400C76304 /* ImageIO.framework */; };
+		AA3C84881B770EB300C76304 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3C84871B770EB300C76304 /* GLKit.framework */; };
+		AA3C848A1B770EC400C76304 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3C84891B770EC400C76304 /* CoreText.framework */; };
+		AA3C848C1B770ECA00C76304 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3C848B1B770ECA00C76304 /* CoreData.framework */; };
+		AA3C848E1B770ED800C76304 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3C848D1B770ED800C76304 /* AVFoundation.framework */; };
+		AA3C84931B7716BC00C76304 /* Google_Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C84921B7716BC00C76304 /* Google_Location.swift */; };
 		AA5AC1F31B648F0900158156 /* space-lp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA5AC1F21B648F0900158156 /* space-lp.jpg */; };
 		AA5AC1F51B6490DD00158156 /* New_York.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA5AC1F41B6490DD00158156 /* New_York.jpg */; };
 		AA5AC1F71B6491B300158156 /* Hong_Kong.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA5AC1F61B6491B300158156 /* Hong_Kong.jpg */; };
@@ -112,6 +124,18 @@
 		AA271DB91B4E1AE000EA5BA6 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "../../../iOS_App/parse-library-1/ParseUI.framework"; sourceTree = "<group>"; };
 		AA271DC61B4E1C6F00EA5BA6 /* Dating_App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dating_App-Bridging-Header.h"; sourceTree = "<group>"; };
 		AA271DCB1B4E23EA00EA5BA6 /* ViewControllerRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerRegister.swift; sourceTree = "<group>"; };
+		AA3C84791B770CF500C76304 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
+		AA3C847A1B770CF500C76304 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		AA3C847D1B770E0100C76304 /* Location_class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location_class.swift; sourceTree = "<group>"; };
+		AA3C847F1B770E5A00C76304 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		AA3C84811B770E8400C76304 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		AA3C84831B770E8F00C76304 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		AA3C84851B770EA400C76304 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		AA3C84871B770EB300C76304 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		AA3C84891B770EC400C76304 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		AA3C848B1B770ECA00C76304 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AA3C848D1B770ED800C76304 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AA3C84921B7716BC00C76304 /* Google_Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Google_Location.swift; sourceTree = "<group>"; };
 		AA5AC1F21B648F0900158156 /* space-lp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "space-lp.jpg"; sourceTree = "<group>"; };
 		AA5AC1F41B6490DD00158156 /* New_York.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = New_York.jpg; sourceTree = "<group>"; };
 		AA5AC1F61B6491B300158156 /* Hong_Kong.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hong_Kong.jpg; sourceTree = "<group>"; };
@@ -155,12 +179,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA3C848E1B770ED800C76304 /* AVFoundation.framework in Frameworks */,
+				AA3C848C1B770ECA00C76304 /* CoreData.framework in Frameworks */,
+				AA3C848A1B770EC400C76304 /* CoreText.framework in Frameworks */,
+				AA3C84881B770EB300C76304 /* GLKit.framework in Frameworks */,
+				AA3C84861B770EA400C76304 /* ImageIO.framework in Frameworks */,
+				AA3C84841B770E8F00C76304 /* libc++.dylib in Frameworks */,
+				AA3C84821B770E8400C76304 /* libicucore.dylib in Frameworks */,
+				AA271DA11B4E198200EA5BA6 /* libz.dylib in Frameworks */,
+				AA3C84801B770E5A00C76304 /* OpenGLES.framework in Frameworks */,
 				AA271DB31B4E1AAD00EA5BA6 /* AudioToolbox.framework in Frameworks */,
 				AA271DB11B4E1A9B00EA5BA6 /* CFNetwork.framework in Frameworks */,
 				AA271DAF1B4E1A8800EA5BA6 /* CoreGraphics.framework in Frameworks */,
 				AA271DBA1B4E1AE000EA5BA6 /* Bolts.framework in Frameworks */,
 				AA271DAD1B4E1A6000EA5BA6 /* CoreLocation.framework in Frameworks */,
 				AA271DBC1B4E1AE000EA5BA6 /* ParseCrashReporting.framework in Frameworks */,
+				AA3C847C1B770CF500C76304 /* GoogleMaps.framework in Frameworks */,
 				AA271DAB1B4E1A4600EA5BA6 /* MobileCoreServices.framework in Frameworks */,
 				AA271DBB1B4E1AE000EA5BA6 /* Parse.framework in Frameworks */,
 				AA271DBD1B4E1AE000EA5BA6 /* ParseFacebookUtils.framework in Frameworks */,
@@ -170,7 +204,6 @@
 				AA271DA71B4E1A1300EA5BA6 /* Security.framework in Frameworks */,
 				AA271DA51B4E19FE00EA5BA6 /* StoreKit.framework in Frameworks */,
 				AA271DA31B4E19C900EA5BA6 /* SystemConfiguration.framework in Frameworks */,
-				AA271DA11B4E198200EA5BA6 /* libz.dylib in Frameworks */,
 				AA271D9F1B4E196400EA5BA6 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +221,8 @@
 		AA271D6C1B4DF4CC00EA5BA6 = {
 			isa = PBXGroup;
 			children = (
+				AA3C84791B770CF500C76304 /* GoogleMaps.bundle */,
+				AA3C847A1B770CF500C76304 /* GoogleMaps.framework */,
 				AADFA2171B6D74E600491DBF /* AFNetworking */,
 				AA271DC01B4E1B2B00EA5BA6 /* Frameworks */,
 				AA271D771B4DF4CC00EA5BA6 /* Dating_App */,
@@ -208,6 +243,7 @@
 		AA271D771B4DF4CC00EA5BA6 /* Dating_App */ = {
 			isa = PBXGroup;
 			children = (
+				AA3C848F1B77157200C76304 /* Google_Location */,
 				AA5AC1F11B64559E00158156 /* Preferences */,
 				AA271D7A1B4DF4CC00EA5BA6 /* AppDelegate.swift */,
 				AA271D7C1B4DF4CC00EA5BA6 /* ViewController.swift */,
@@ -255,6 +291,16 @@
 		AA271DC01B4E1B2B00EA5BA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AA3C848D1B770ED800C76304 /* AVFoundation.framework */,
+				AA3C848B1B770ECA00C76304 /* CoreData.framework */,
+				AA3C84891B770EC400C76304 /* CoreText.framework */,
+				AA3C84871B770EB300C76304 /* GLKit.framework */,
+				AA3C84851B770EA400C76304 /* ImageIO.framework */,
+				AA3C84831B770E8F00C76304 /* libc++.dylib */,
+				AA271DA01B4E198200EA5BA6 /* libz.dylib */,
+				AA3C84811B770E8400C76304 /* libicucore.dylib */,
+				AA271D9E1B4E196400EA5BA6 /* libsqlite3.0.dylib */,
+				AA3C847F1B770E5A00C76304 /* OpenGLES.framework */,
 				AA271DB41B4E1AE000EA5BA6 /* Bolts.framework */,
 				AA271DB51B4E1AE000EA5BA6 /* Parse.framework */,
 				AA271DB61B4E1AE000EA5BA6 /* ParseCrashReporting.framework */,
@@ -270,11 +316,18 @@
 				AA271DA61B4E1A1300EA5BA6 /* Security.framework */,
 				AA271DA41B4E19FE00EA5BA6 /* StoreKit.framework */,
 				AA271DA21B4E19C900EA5BA6 /* SystemConfiguration.framework */,
-				AA271DA01B4E198200EA5BA6 /* libz.dylib */,
-				AA271D9E1B4E196400EA5BA6 /* libsqlite3.0.dylib */,
 			);
 			name = Frameworks;
 			path = Dating_App;
+			sourceTree = "<group>";
+		};
+		AA3C848F1B77157200C76304 /* Google_Location */ = {
+			isa = PBXGroup;
+			children = (
+				AA3C847D1B770E0100C76304 /* Location_class.swift */,
+				AA3C84921B7716BC00C76304 /* Google_Location.swift */,
+			);
+			name = Google_Location;
 			sourceTree = "<group>";
 		};
 		AA5AC1F11B64559E00158156 /* Preferences */ = {
@@ -420,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AACE8E671B6715DA0033FE2E /* Triple_Stripes.png in Resources */,
+				AA3C847B1B770CF500C76304 /* GoogleMaps.bundle in Resources */,
 				AA5AC1FD1B649D0B00158156 /* San_Francisco.jpg in Resources */,
 				AA1015401B536A76007F77B8 /* Images.xcassets in Resources */,
 				AA5AC1F51B6490DD00158156 /* New_York.jpg in Resources */,
@@ -461,11 +515,13 @@
 				AADFA22F1B6D74E600491DBF /* AFHTTPSessionManager.m in Sources */,
 				AADFA2371B6D74E600491DBF /* AFURLRequestSerialization.m in Sources */,
 				AA7E555E1B60ABE7002EB1EB /* Main_Profile.swift in Sources */,
+				AA3C84931B7716BC00C76304 /* Google_Location.swift in Sources */,
 				AADFA23B1B6D74E600491DBF /* AFURLSessionManager.m in Sources */,
 				AA271D7B1B4DF4CC00EA5BA6 /* AppDelegate.swift in Sources */,
 				AADFA22D1B6D74E600491DBF /* AFHTTPRequestOperationManager.m in Sources */,
 				AACE8E6E1B671D730033FE2E /* Major.swift in Sources */,
 				AADFA2391B6D74E600491DBF /* AFURLResponseSerialization.m in Sources */,
+				AA3C847E1B770E0100C76304 /* Location_class.swift in Sources */,
 				AA5AC2011B651A8100158156 /* Male_Female.swift in Sources */,
 				AA5AC1FF1B65153C00158156 /* Edu_PickerView.swift in Sources */,
 				AA10153C1B51B1BD007F77B8 /* Loc_PickerView.swift in Sources */,
@@ -601,6 +657,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/clement_chan_pig/Documents/iOS_App/parse-library-1",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Dating_App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -618,6 +675,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/clement_chan_pig/Documents/iOS_App/parse-library-1",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Dating_App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

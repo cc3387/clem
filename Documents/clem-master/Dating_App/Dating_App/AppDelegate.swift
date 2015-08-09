@@ -17,8 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        //Parse API
+        Parse.setApplicationId("qFuwA5YRyuaf7BQ2tXM5ANg5onwgbCixQnkAR70W", clientKey: "DKQfkIgQADh8etSliPm0BdpETKPsUj0l6kQgA3ZE");
         
-        Parse.setApplicationId("qFuwA5YRyuaf7BQ2tXM5ANg5onwgbCixQnkAR70W", clientKey: "DKQfkIgQADh8etSliPm0BdpETKPsUj0l6kQgA3ZE")
+        //Google Map API
+        GMSServices.provideAPIKey("AIzaSyADGE86SbwoClUTPrhGvb4TxHX1FoU4cfY")
+        
         
         // Override point for customization after application launch.
         return true

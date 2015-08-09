@@ -186,6 +186,8 @@ class ViewControllerRegister: UIViewController, UITextFieldDelegate,UIPickerView
 struct register_info{
     static var user_id: String = "";
     static var location: String = "";
+    static var location_lat: Double = 0;
+    static var location_lng: Double = 0;
     static var Gender: String = "";
     static var education: String = "";
     static var Major: String = "";

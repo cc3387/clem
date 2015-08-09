@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bpH-nP-zcn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XrC-Zk-39t">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -267,7 +267,79 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9NQ-Sf-0xg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1921" y="60"/>
+            <point key="canvasLocation" x="1931" y="60"/>
+        </scene>
+        <!--Google View Controller-->
+        <scene sceneID="6Bn-UN-P6r">
+            <objects>
+                <viewController id="XrC-Zk-39t" customClass="Google_ViewController" customModule="Simple" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KKw-gr-vdb"/>
+                        <viewControllerLayoutGuide type="bottom" id="cSV-Mc-Ms0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j06-FI-GUs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66Y-37-g74">
+                                <rect key="frame" x="72" y="285" width="118" height="30"/>
+                                <state key="normal" title="Request Address">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Request_Address:" destination="XrC-Zk-39t" eventType="touchUpInside" id="X5v-fu-6Yv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Simple" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdK-jo-I5x">
+                                <rect key="frame" x="36" y="20" width="58" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <color key="textColor" red="0.2204253582" green="0.360501501" blue="0.68112768310000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cover_Page.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="EEO-ru-fqc">
+                                <rect key="frame" x="16" y="52" width="69" height="45"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Joo-qc-95r">
+                                <rect key="frame" x="33" y="91" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.2204253582" green="0.360501501" blue="0.68112768310000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bpH-nP-zcn" kind="show" id="vJn-ZF-aH9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address Search" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crl-qA-DoQ">
+                                <rect key="frame" x="114" y="62" width="293" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.28627452250000002" green="0.070588238540000001" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eqT-z8-gzg">
+                                <rect key="frame" x="72" y="178" width="212" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccr-MA-IW7">
+                                <rect key="frame" x="72" y="236" width="167" height="30"/>
+                                <state key="normal" title="Request From Text Field">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Request_From_Text:" destination="XrC-Zk-39t" eventType="touchUpInside" id="RNp-PZ-uov"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="Address" destination="eqT-z8-gzg" id="hgi-eb-Da6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dy7-Z5-gdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2608" y="60"/>
         </scene>
         <!--Starting_StoryBoard-->
         <scene sceneID="bM4-w5-iyx">
@@ -569,12 +641,6 @@
                                 <color key="textColor" red="0.28627452250000002" green="0.070588238540000001" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wb-k3-b7c">
-                                <rect key="frame" x="50" y="228" width="224" height="154"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="224" id="tB7-TL-kyW"/>
-                                </constraints>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qna-hG-tgu">
                                 <rect key="frame" x="146" y="380" width="32" height="30"/>
                                 <state key="normal" title="Next">
@@ -654,6 +720,12 @@
                                 <color key="textColor" red="0.28627452250000002" green="0.070588238540000001" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wb-k3-b7c">
+                                <rect key="frame" x="50" y="228" width="224" height="154"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="224" id="tB7-TL-kyW"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.91764705879999997" green="0.57647058819999997" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -782,7 +854,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PtC-gJ-Hz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3526" y="841"/>
+            <point key="canvasLocation" x="3468" y="841"/>
         </scene>
         <!--Major-->
         <scene sceneID="wXF-Ft-CSs">
@@ -840,7 +912,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGv-85-5EW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4260" y="841"/>
+            <point key="canvasLocation" x="4213" y="841"/>
         </scene>
         <!--Male Female-->
         <scene sceneID="3cd-0T-36F">
@@ -948,9 +1020,9 @@
         <image name="space-lp.jpg" width="725" height="470"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FQD-TY-JKz"/>
-        <segue reference="udb-jy-dJt"/>
-        <segue reference="5RS-89-93Y"/>
+        <segue reference="vJn-ZF-aH9"/>
         <segue reference="KBk-Ef-9Hr"/>
+        <segue reference="BEl-R9-648"/>
+        <segue reference="udb-jy-dJt"/>
     </inferredMetricsTieBreakers>
 </document>
