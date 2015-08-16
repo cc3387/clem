@@ -70,7 +70,7 @@ class Major: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
     }
 
     let pickerData = [
-        ["Anthropology", "Computer Sci.","Psychology", "Mathematics", "Physics", "Economics", "Engineering"]
+        ["Anthropology", "Computer Sci.","Psychology", "Mathematics", "Physics", "Economics", "Electrial Engineering", "English", "History"]
     ]
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -81,10 +81,12 @@ class Major: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
         return pickerData[component][row]
     }
     
+    /*Function to change the color of the fonts in the pickerview*/
+    
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView
     {
         var pickerLabel = UILabel()
-        pickerLabel.textColor = UIColor.blackColor()
+        pickerLabel.textColor = UIColor.blueColor()
         pickerLabel.text = pickerData[component][row]
         // pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 15)
         pickerLabel.font = UIFont(name: "Arial-BoldMT", size: 15) // In this use your custom font
