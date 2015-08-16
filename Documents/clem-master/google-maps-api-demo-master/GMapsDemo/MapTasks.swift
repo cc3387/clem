@@ -193,7 +193,6 @@ class MapTasks: NSObject {
         let distanceInKilometers: Double = Double(totalDistanceInMeters / 1000)
         totalDistance = "Total Distance: \(distanceInKilometers) Km"
         
-        
         let mins = totalDurationInSeconds / 60
         let hours = mins / 60
         let days = hours / 24

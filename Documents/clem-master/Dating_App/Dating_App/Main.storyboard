@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XrC-Zk-39t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GXS-uk-QB6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -225,11 +225,6 @@
                                     <action selector="Posting:" destination="GXS-uk-QB6" eventType="touchUpInside" id="nWt-lT-lOk"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6C0-Uc-WQr">
-                                <rect key="frame" x="182" y="335" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jC5-Pj-vUE">
                                 <rect key="frame" x="182" y="263" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -240,6 +235,27 @@
                                 <rect key="frame" x="213" y="101" width="62" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.92941182850000004" green="0.5411764979" blue="0.50196081400000003" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJ6-C0-Ssu">
+                                <rect key="frame" x="182" y="439" width="32" height="30"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.28627452250000002" green="0.070588238540000001" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Next:" destination="GXS-uk-QB6" eventType="touchUpInside" id="onC-XY-cTf"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6C0-Uc-WQr">
+                                <rect key="frame" x="182" y="389" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wn5-dG-los">
+                                <rect key="frame" x="182" y="337" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.28627452250000002" green="0.070588238540000001" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -260,9 +276,11 @@
                         <outlet property="Name" destination="jC5-Pj-vUE" id="2AX-JN-dSY"/>
                         <outlet property="PostName" destination="6C0-Uc-WQr" id="nrO-jn-cYS"/>
                         <outlet property="Username" destination="dEd-a1-BPB" id="oe1-hr-tiG"/>
+                        <outlet property="location" destination="wn5-dG-los" id="LxS-bw-AZl"/>
                         <outlet property="login" destination="dEd-a1-BPB" id="4rG-MJ-t75"/>
                         <outlet property="myNameLabel" destination="f1Y-y0-kC8" id="raN-A2-5Hy"/>
                         <outlet property="username" destination="q92-Iw-E5t" id="LxT-Jt-hrn"/>
+                        <segue destination="XrC-Zk-39t" kind="show" identifier="Add_Search" id="jjU-QV-TQm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9NQ-Sf-0xg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -335,11 +353,12 @@
                     </view>
                     <connections>
                         <outlet property="Address" destination="eqT-z8-gzg" id="hgi-eb-Da6"/>
+                        <segue destination="qZt-dA-1tE" kind="show" identifier="Gender" id="bt9-n8-i2R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dy7-Z5-gdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2608" y="60"/>
+            <point key="canvasLocation" x="2643" y="60"/>
         </scene>
         <!--Starting_StoryBoard-->
         <scene sceneID="bM4-w5-iyx">
@@ -770,7 +789,7 @@
                     </view>
                     <connections>
                         <outlet property="myPicker" destination="0wb-k3-b7c" id="u4h-no-glN"/>
-                        <segue destination="qZt-dA-1tE" kind="show" identifier="Gender" id="5RS-89-93Y"/>
+                        <segue destination="XrC-Zk-39t" kind="show" identifier="Google_Loc" id="ekB-3V-pnZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Vz-l2-tXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -898,17 +917,34 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What was your major?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3Z-wC-nH5">
-                                <rect key="frame" x="110" y="124" width="221" height="39"/>
+                                <rect key="frame" x="107" y="140" width="221" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.28627452250000002" green="0.070588238540000001" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Strips.png" translatesAutoresizingMaskIntoConstraints="NO" id="KRw-M4-Jch">
-                                <rect key="frame" x="287" y="133" width="23" height="21"/>
+                                <rect key="frame" x="284" y="149" width="23" height="21"/>
                             </imageView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JFQ-Gg-WoH">
+                                <rect key="frame" x="91" y="187" width="192" height="152"/>
+                                <color key="tintColor" red="0.28627452250000002" green="0.070588238540000001" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WqG-Qf-SNs">
+                                <rect key="frame" x="157" y="376" width="60" height="36"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="0.28627452250000002" green="0.070588238540000001" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Info:" destination="3hM-dC-8wX" eventType="touchUpInside" id="dFq-ta-EKG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="myPicker" destination="JFQ-Gg-WoH" id="hL0-e7-raI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGv-85-5EW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1001,7 +1037,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2639" y="841"/>
+            <point key="canvasLocation" x="2759" y="870"/>
         </scene>
     </scenes>
     <resources>
@@ -1020,9 +1056,10 @@
         <image name="space-lp.jpg" width="725" height="470"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vJn-ZF-aH9"/>
+        <segue reference="FQD-TY-JKz"/>
+        <segue reference="jjU-QV-TQm"/>
+        <segue reference="bt9-n8-i2R"/>
         <segue reference="KBk-Ef-9Hr"/>
-        <segue reference="BEl-R9-648"/>
         <segue reference="udb-jy-dJt"/>
     </inferredMetricsTieBreakers>
 </document>

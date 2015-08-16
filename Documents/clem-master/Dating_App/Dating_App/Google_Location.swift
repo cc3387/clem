@@ -31,11 +31,37 @@ class Google_ViewController: UIViewController, CLLocationManagerDelegate, GMSMap
             let coordinate = CLLocationCoordinate2D(latitude: self.mapTasks.fetchedAddressLatitude, longitude: self.mapTasks.fetchedAddressLongitude)
             register_info.location_lat = self.mapTasks.fetchedAddressLatitude;
             register_info.location_lng = self.mapTasks.fetchedAddressLongitude;
+            println("The Latitude is:");
             println(register_info.location_lat);
+            println("The Longitude is:");
             println(register_info.location_lng);
+            
+            /*Sending Location latitude and longitude to the localhost server*/
+                
+            var loc_lng:String = String(format:"%f",register_info.location_lng);
+            var loc_lat:String = String(format:"%f",register_info.location_lat);
+                
+                
+            var params = [
+            "longitude": loc_lng,
+            "latitude" : loc_lat
+            ];
+                
+            let manager = AFHTTPRequestOperationManager();
+                
+            manager.POST("http://localhost:3000/location",
+            parameters: params,
+            success: { (AFHTTPRequestOperation, AnyObject) -> Void in
+            println("success!")
+            }) { (AFHTTPRequestOperation, NSError) -> Void in
+            println("fail")
             }
-        
+                
+            }
+         
         })
+        
+        self.loadDestinationVC();
     }
     
     
@@ -70,6 +96,22 @@ class Google_ViewController: UIViewController, CLLocationManagerDelegate, GMSMap
             })
             
         }
+        /*Sending the latitude and longitude information to the server*/
+
+        var params = [
+            "longitude": register_info.location_lng,
+            "latitude" : register_info.location_lat
+        ];
+        
+        let manager = AFHTTPRequestOperationManager();
+        
+        manager.POST("http://localhost:3000/clem",
+            parameters: params,
+            success: { (AFHTTPRequestOperation, AnyObject) -> Void in
+                println("success!")
+            }) { (AFHTTPRequestOperation, NSError) -> Void in
+                println("fail")
+        }
         
         let closeAction = UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel) { (alertAction) -> Void in
             
@@ -87,6 +129,11 @@ class Google_ViewController: UIViewController, CLLocationManagerDelegate, GMSMap
     
     override func didReceiveMemoryWarning() {
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    func loadDestinationVC(){
+        self.performSegueWithIdentifier("Gender", sender: nil)
     }
 
 }

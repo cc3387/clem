@@ -18,37 +18,21 @@ import UIKit
 class MapTasks: NSObject {
     
     let baseURLGeocode = "https://maps.googleapis.com/maps/api/geocode/json?"
-    
     var lookupAddressResults: Dictionary<NSObject, AnyObject>!
-    
     var fetchedFormattedAddress: String!
-    
     var fetchedAddressLongitude: Double!
-    
     var fetchedAddressLatitude: Double!
-    
     let baseURLDirections = "https://maps.googleapis.com/maps/api/directions/json?"
-    
     var selectedRoute: Dictionary<NSObject, AnyObject>!
-    
     var overviewPolyline: Dictionary<NSObject, AnyObject>!
-    
     var originCoordinate: CLLocationCoordinate2D!
-    
     var destinationCoordinate: CLLocationCoordinate2D!
-    
     var originAddress: String!
-    
     var destinationAddress: String!
-    
     var totalDistanceInMeters: UInt = 0
-    
     var totalDistance: String!
-    
     var totalDurationInSeconds: UInt = 0
-    
     var totalDuration: String!
-    
     
     override init() {
         super.init()

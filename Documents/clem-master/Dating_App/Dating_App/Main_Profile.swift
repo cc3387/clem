@@ -20,6 +20,7 @@ class Main_Profile: UIViewController{
     @IBOutlet weak var login: UILabel!
     @IBOutlet weak var PostName: UITextField!
     @IBOutlet weak var Name: UILabel!
+    @IBOutlet weak var location: UILabel!
     
     var loginuser: String = login_info.user_id
     
@@ -46,7 +47,7 @@ class Main_Profile: UIViewController{
         })*/
         
         //post to your node server
-        /*if (self.PostName.text == ""){
+        if (self.PostName.text == ""){
         println("Please Enter Value...");
         }
         else{
@@ -57,13 +58,13 @@ class Main_Profile: UIViewController{
         }) { (AFHTTPRequestOperation, NSError) -> Void in
         println("fail")
         }
-        }*/
+        }
         //Get information in your server
         //var set = NSSet();
         //manager.responseSerializer = AFHTTPResponseSerializer();
         //manager.responseSerializer.acceptableContentTypes = set.setByAddingObject("text/html");
         
-        manager.GET( "http://localhost:3000/clem/person/Clement",
+        manager.GET( "http://localhost:3000/reg_test1/person/clementc",
             parameters: nil,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 println("JSON: " + responseObject.description)
@@ -72,6 +73,10 @@ class Main_Profile: UIViewController{
                     if let title = results["title"] as? String {
                         self.Name.text = title as String
                         self.Name.adjustsFontSizeToFitWidth = true
+                        if let loc = results["location"] as? String {
+                           self.location.text = loc as String
+                           self.location.adjustsFontSizeToFitWidth = true
+                        }
                     }
                 }
             },
@@ -266,6 +271,14 @@ class Main_Profile: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func Next(sender: AnyObject) {
+        self.loadDestinationVC();
+    }
+    
+    
+    func loadDestinationVC(){
+        self.performSegueWithIdentifier("Add_Search", sender: nil)
+    }
     
     func hour() -> String
     {

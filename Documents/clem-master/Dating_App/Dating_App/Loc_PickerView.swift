@@ -32,7 +32,7 @@ class Loc_PickerView: UIViewController,UIPickerViewDataSource, UIPickerViewDeleg
     
     
     func loadDestinationVC(){
-        self.performSegueWithIdentifier("Gender", sender: nil)
+        self.performSegueWithIdentifier("Google_Loc", sender: nil)
     }
     
     
