@@ -81,4 +81,15 @@ class Major: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
         return pickerData[component][row]
     }
     
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView
+    {
+        var pickerLabel = UILabel()
+        pickerLabel.textColor = UIColor.blackColor()
+        pickerLabel.text = pickerData[component][row]
+        // pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 15)
+        pickerLabel.font = UIFont(name: "Arial-BoldMT", size: 15) // In this use your custom font
+        pickerLabel.textAlignment = NSTextAlignment.Center
+        return pickerLabel
+    }
+    
 }
