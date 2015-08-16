@@ -76,6 +76,7 @@ class Main_Profile: UIViewController{
                         if let loc = results["location"] as? String {
                            self.location.text = loc as String
                            self.location.adjustsFontSizeToFitWidth = true
+                           println(self.location.text);
                         }
                     }
                 }
