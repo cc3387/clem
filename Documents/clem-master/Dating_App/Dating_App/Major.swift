@@ -70,7 +70,7 @@ class Major: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
     }
 
     let pickerData = [
-        ["Anthropology", "Psychology", "Mathematics", "Physics", "Economics", "Electrical Engineering"]
+        ["Anthropology", "Computer Sci.","Psychology", "Mathematics", "Physics", "Economics", "Engineering"]
     ]
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
