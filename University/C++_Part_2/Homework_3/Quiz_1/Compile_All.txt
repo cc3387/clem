@@ -1,0 +1,1 @@
+g++ -c DayOfYear_M.cpp && g++ -c Main.cpp && g++ -o DayOfYear_Main Main.o DayOfYear_M.o 

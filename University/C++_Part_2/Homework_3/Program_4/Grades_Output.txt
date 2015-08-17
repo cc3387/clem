@@ -1,0 +1,5 @@
+Chan Clement 85, 80, 90, 100, 95, 91, 75, 83, 90, 92,Average of the student is: 88.1.
+Cheung Amanda 55, 82, 40, 10, 90, 20, 10, 60, 50, 12,Average of the student is: 42.9.
+Lucas Peter 45, 55, 70, 80, 40, 50, 30, 25, 40, 9,Average of the student is: 44.4.
+Lucy Diana 40, 35, 80, 85, 100, 40, 5, 45, 95, 6,Average of the student is: 53.1.
+Wong Rachel 80, 95, 90, 99, 100, 93, 95, 96, 95, 91,Average of the student is: 93.4.

@@ -1,0 +1,1 @@
+g++ -c Employee.cpp && g++ -c Main.cpp && g++ -c SalariedEmployee.cpp && g++ -c Administrator.cpp && g++ -o Admin_main Employee.o Main.o SalariedEmployee.o Administrator.o

@@ -1,0 +1,1 @@
+g++ -c Point.cpp && g++ -c Person.cpp && g++ -c Main.cpp && g++ -o Point_Final Point.o Person.o Main.o

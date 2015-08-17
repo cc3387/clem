@@ -1,0 +1,5 @@
+
+
+
+
+g++ -c Payment.cpp && g++ -c Main.cpp && g++ -c CreditPayment.cpp && g++ -c CashPayment.cpp && g++ -o Main_Payment Payment.o Main.o CashPayment.o CreditPayment.o 

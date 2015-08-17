@@ -1,0 +1,1 @@
+g++ -c Shape.cpp && g++ -c Circle.cpp && g++ -c Right_Triangle.cpp && g++ -c Doughnut.cpp && g++ -c Main.cpp && g++ -o Shape_Final Shape.o Circle.o Right_Triangle.o Doughnut.o Main.o

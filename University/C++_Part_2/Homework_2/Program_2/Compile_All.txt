@@ -1,0 +1,1 @@
+g++ -c Main.cpp && g++ -c Predator.cpp && g++ -c Ants.cpp && g++ -c DoodleBug.cpp && g++ -o Predator Predator.o Main.o Ants.o DoodleBug.o

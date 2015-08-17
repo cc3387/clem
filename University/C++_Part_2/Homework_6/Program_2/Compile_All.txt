@@ -1,0 +1,1 @@
+g++ -c item_class.cpp && g++ -c Main.cpp && g++ -o item_class_final item_class.o Main.o 
