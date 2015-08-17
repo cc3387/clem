@@ -1,0 +1,183 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+//Global Variables;
+
+static const int daysMonth[]={31,28,31,30,31,30,31,31,30,31,30,31};
+static const int monthsYear = 12;
+
+class Date{
+
+private:
+
+    int day;
+    int month;
+    int year;
+    int *date;
+
+
+public:
+    
+    //Constructors and Destructors
+
+    Date(); //Default Constructors
+    Date(int, int, int); //Parametric Constructors
+    Date(const Date &D); //Copy Constructor
+    ~Date(); //Destructors  
+
+    //mutators & accessors
+    int getDays() const;
+    int getMonth() const;
+    int getYear() const;
+    void DisplayDate() const; //Show Days, Months and Years
+    int calcDiff(const Date &Today);
+    
+    //Operator overload
+    Date& operator = (const Date &D);
+};
+
+class Bond{
+
+private:
+
+     char *name;
+     float value;
+     Date purchaseDate;
+     Date maturityDate;
+     Date Today;
+
+public:
+
+     Bond();
+     Bond(char*, float, const Date &D1, const Date &D2);
+     int getDays(const Date &D)const;
+     int getMonth(const Date &D)const;
+     int getYear(const Date &D)const;
+     void Display(const Date&D)const;
+     void setToday(Date &hoy);
+     int daysToMaturity(Bond &B);
+};
+
+
+//Constructors and Destructors
+
+//Default Constructors
+Date::Date(){
+day = 0;
+month = 0;
+year = 0;
+
+date = new int[3];
+for(int i=0; i<3; i++){
+date[i] = 0;
+}
+
+
+}
+
+//Parameterized Constructors
+Date::Date(int a, int b, int c){
+
+date = new int[3];
+
+for(int i=0; i<3; i++){
+date[i] = 0;
+}
+
+if(b > daysMonth[a-1] || a > monthsYear || a < 0){
+cout<<"The values entered were not in the calendar.."<<endl;
+}
+
+month = a;
+day = b;
+year = c;
+}
+
+//Destructors
+Date::~Date(){
+cout<<"This is Destructor.."<<endl;
+delete[] date;
+}
+
+//Copy Constructors
+Date::Date(const Date &D){
+day = D.day;
+month = D.month;
+year = D.year;
+
+for(int i=0; i<3; i++){
+date[i] = D.date[i];
+}
+}
+
+//Mutators and Accessors
+int Date::getDays()const{
+return day;
+}
+
+int Date::getMonth()const{
+return month;
+}
+
+int Date::getYear()const{
+return year;
+}
+
+void Date::DisplayDate()const{
+cout << getMonth() << "/" << getDays() << "/" << getYear() << endl;
+}
+
+//Operator overload
+Date& Date::operator=(const Date &D){
+day = D.getDays();
+month = D.getMonth();
+year = D.getYear();
+return *this;
+}
+
+
+Bond::Bond(){
+cout<<"A bond must contain information.."<<endl;
+}
+
+Bond::Bond(char* a, float b, const Date &D1, const Date &D2){
+name = a;
+value = b;
+purchaseDate = D1;
+maturityDate = D2;
+}
+
+int Bond::getDays(const Date &D)const{
+return D.getDays();
+}
+
+int Bond::getMonth(const Date &D)const{
+return D.getMonth();
+}
+
+int Bond::getYear(const Date &D)const{
+return D.getYear();
+}
+
+void Bond::Display(const Date&D)const{
+D.DisplayDate();
+}
+
+void Bond::setToday(Date &hoy){
+Today = hoy;
+}
+
+int Bond::daysToMaturity(Bond &B){
+
+}
+
+int main(){
+Date D1(11,10,2014), D2(10,5,2011), T_1(11,21,2014);
+Bond B("Clement",105,D1,D2);
+B.Display(D1);
+B.Display(D2);
+B.setToday(T_1);
+
+
+}
