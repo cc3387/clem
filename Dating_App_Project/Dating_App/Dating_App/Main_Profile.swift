@@ -75,6 +75,7 @@ class Main_Profile: UIViewController{
                     if let title = results["title"] as? String {
                         self.Name.text = title as String
                         self.Name.adjustsFontSizeToFitWidth = true
+                        /*Added Location*/
                         if let loc = results["location"] as? String {
                            self.location.text = loc as String
                            self.location.adjustsFontSizeToFitWidth = true
