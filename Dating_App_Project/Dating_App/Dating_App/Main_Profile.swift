@@ -78,7 +78,7 @@ class Main_Profile: UIViewController{
                         if let loc = results["location"] as? String {
                            self.location.text = loc as String
                            self.location.adjustsFontSizeToFitWidth = true
-                            
+                            /*Added Latitude and Longitude information for server*/
                             if let lat = results["latitude"] as? String {
                                 self.Latitude.text = lat as String
                                 self.Latitude.adjustsFontSizeToFitWidth = true
