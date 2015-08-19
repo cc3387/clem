@@ -1,1 +1,0 @@
-g++ -c Main.cpp && g++ -c Figure.cpp && g++ -c Triangle.cpp && g++ -c Rectangle.cpp && g++ -o Shape_Main Main.o Figure.o Triangle.o Rectangle.o

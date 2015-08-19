@@ -1,1 +1,0 @@
-g++ -c Person.cpp && g++ -c Vehicle.cpp && g++ -c Main.cpp && g++ -c Truck.cpp && g++ -o Main Person.o Main.o Vehicle.o Truck.o
