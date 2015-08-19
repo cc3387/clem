@@ -1,1 +1,0 @@
-g++ -c Grid.cpp && g++ -c Player.cpp && g++ -c main.cpp && g++ main.o Player.o Grid.o -o main
