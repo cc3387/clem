@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bpH-nP-zcn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bpH-nP-zcn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -219,22 +219,6 @@
                                 <color key="textColor" red="0.28627452250000002" green="0.070588238540000001" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q92-Iw-E5t">
-                                <rect key="frame" x="214" y="97" width="62" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="0.92941182850000004" green="0.5411764979" blue="0.50196081400000003" alpha="1" colorSpace="deviceRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJ6-C0-Ssu">
-                                <rect key="frame" x="182" y="391" width="32" height="30"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" red="0.28627452250000002" green="0.070588238540000001" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Next:" destination="GXS-uk-QB6" eventType="touchUpInside" id="onC-XY-cTf"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6C0-Uc-WQr">
                                 <rect key="frame" x="182" y="341" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -265,7 +249,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Greetings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKI-45-lpf">
-                                <rect key="frame" x="101" y="97" width="95" height="21"/>
+                                <rect key="frame" x="101" y="97" width="123" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.92941182850000004" green="0.5411764979" blue="0.50196081400000003" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
@@ -275,6 +259,22 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q92-Iw-E5t">
+                                <rect key="frame" x="232" y="97" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.92941182850000004" green="0.5411764979" blue="0.50196081400000003" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fW-ci-vDC">
+                                <rect key="frame" x="182" y="392" width="32" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rWw-J6-Kjp" kind="show" identifier="Calculate_Distance" id="doA-Lw-HFS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -300,12 +300,72 @@
                         <outlet property="login" destination="dEd-a1-BPB" id="4rG-MJ-t75"/>
                         <outlet property="myNameLabel" destination="f1Y-y0-kC8" id="raN-A2-5Hy"/>
                         <outlet property="username" destination="q92-Iw-E5t" id="LxT-Jt-hrn"/>
-                        <segue destination="XrC-Zk-39t" kind="show" identifier="Add_Search" id="jjU-QV-TQm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9NQ-Sf-0xg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1878" y="8"/>
+            <point key="canvasLocation" x="1870" y="60"/>
+        </scene>
+        <!--Distance Calculation-->
+        <scene sceneID="VqH-ef-W89">
+            <objects>
+                <viewController id="rWw-J6-Kjp" customClass="Distance_Calculation" customModule="Simple" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bs5-C4-Z2k"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pco-gP-wv3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Iur-nm-Ehe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rH1-3x-5HZ">
+                                <rect key="frame" x="38" y="65" width="94" height="30"/>
+                                <state key="normal" title="Find Distance">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Distance_Calc:" destination="rWw-J6-Kjp" eventType="touchUpInside" id="q3v-rR-FbM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Origin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JP2-2Y-5c5">
+                                <rect key="frame" x="38" y="125" width="224" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Destination" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfx-gI-jKs">
+                                <rect key="frame" x="38" y="187" width="224" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Duration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poF-rj-kXg">
+                                <rect key="frame" x="38" y="351" width="224" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAw-V6-21S">
+                                <rect key="frame" x="38" y="285" width="166" height="30"/>
+                                <state key="normal" title="Calculate Time Distance">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Time_Distance:" destination="rWw-J6-Kjp" eventType="touchUpInside" id="ZwW-5y-wja"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="Destination" destination="dfx-gI-jKs" id="Tl6-wH-I59"/>
+                        <outlet property="Duration" destination="poF-rj-kXg" id="qGM-wi-gdA"/>
+                        <outlet property="Origin" destination="JP2-2Y-5c5" id="DCF-UT-YNx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HgC-Y2-6zq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2626" y="63"/>
         </scene>
         <!--Google View Controller-->
         <scene sceneID="6Bn-UN-P6r">
@@ -378,7 +438,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dy7-Z5-gdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2643" y="60"/>
+            <point key="canvasLocation" x="2628" y="831"/>
         </scene>
         <!--Starting_StoryBoard-->
         <scene sceneID="bM4-w5-iyx">
@@ -931,7 +991,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PtC-gJ-Hz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3365" y="831"/>
+            <point key="canvasLocation" x="4285" y="839"/>
         </scene>
         <!--Major-->
         <scene sceneID="wXF-Ft-CSs">
@@ -1002,11 +1062,12 @@
                     </view>
                     <connections>
                         <outlet property="myPicker" destination="JFQ-Gg-WoH" id="hL0-e7-raI"/>
+                        <segue destination="bpH-nP-zcn" kind="show" identifier="Start" id="ms7-iO-sgR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGv-85-5EW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4152" y="831"/>
+            <point key="canvasLocation" x="4993" y="839"/>
         </scene>
         <!--Male Female-->
         <scene sceneID="3cd-0T-36F">
@@ -1095,7 +1156,24 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2643" y="831"/>
+            <point key="canvasLocation" x="3491" y="839"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cNh-Zh-Oz2">
+            <objects>
+                <viewController id="P41-Ap-7lp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zfu-d1-tSb"/>
+                        <viewControllerLayoutGuide type="bottom" id="pR7-hy-14B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kTj-wp-0C1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pKk-DJ-4J0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
@@ -1114,9 +1192,8 @@
         <image name="space-lp.jpg" width="725" height="470"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jjU-QV-TQm"/>
-        <segue reference="FQD-TY-JKz"/>
-        <segue reference="udb-jy-dJt"/>
+        <segue reference="ms7-iO-sgR"/>
+        <segue reference="Gj8-v2-86R"/>
         <segue reference="BEl-R9-648"/>
         <segue reference="KBk-Ef-9Hr"/>
     </inferredMetricsTieBreakers>

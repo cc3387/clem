@@ -19,8 +19,14 @@ class Major: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
         self.updateMajor();
         let manager = AFHTTPRequestOperationManager();
         
+        var loc_lng_int = round(register_info.location_lng);
+        var loc_lat_int = round(register_info.location_lat);
+        
         var loc_lng: String = String(format:"%f",register_info.location_lng);
         var loc_lat:String = String(format:"%f",register_info.location_lat);
+        
+        //var loc_lng: String = String(format:"%f",loc_lng_int);
+        //var loc_lat:String = String(format:"%f",loc_lat_int);
         
     var params = [
         "title": register_info.user_id,
@@ -31,18 +37,39 @@ class Major: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
         "longitude": loc_lng,
         "latitude": loc_lat,
         "Education":register_info.education,
-        "Major":register_info.Major
+        "Major":register_info.Major,
+        "Address": register_info.address
         ];
         
-        manager.POST("http://localhost:3000/reg_test1",
+        manager.POST("http://localhost:3000/reg_test3",
             parameters: params,
             success: { (AFHTTPRequestOperation, AnyObject) -> Void in
                 println("success!")
             }) { (AFHTTPRequestOperation, NSError) -> Void in
                 println("fail")
         }
+     
+    var param_loc = [
+            "title": register_info.location,
+            "longitude": loc_lng,
+            "latitude": loc_lat,
+            "Address": register_info.address,
+            "user_id": register_info.user_id
+        ];
+
         
+        manager.POST("http://localhost:3000/loc_reg2",
+            parameters: param_loc,
+            success: { (AFHTTPRequestOperation, AnyObject) -> Void in
+                println("success!")
+            }) { (AFHTTPRequestOperation, NSError) -> Void in
+                println("fail")
+        }
+        
+        loadDestinationVC();
+
     }
+    
     override func viewDidLoad() {
         // Do any additional setup after loading the view, typically from a nib.
         myPicker.delegate = self;
@@ -93,5 +120,11 @@ class Major: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
         pickerLabel.textAlignment = NSTextAlignment.Center
         return pickerLabel
     }
+    
+    
+    func loadDestinationVC(){
+        self.performSegueWithIdentifier("Start", sender: nil)
+    }
+    
     
 }

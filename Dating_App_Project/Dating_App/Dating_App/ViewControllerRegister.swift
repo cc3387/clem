@@ -187,6 +187,7 @@ struct register_info{
     static var user_id: String = "";
     static var age_range: String = "";
     static var location: String = "";
+    static var address: String = "";
     static var location_lat: Double = 0;
     static var location_lng: Double = 0;
     static var Gender: String = "";

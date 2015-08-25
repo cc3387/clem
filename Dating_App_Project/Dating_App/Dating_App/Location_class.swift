@@ -6,14 +6,14 @@
 //  Copyright (c) 2015 Clement Chan. All rights reserved.
 //
 
+import UIKit
+
 enum TravelModes: Int {
     case driving
     case walking
     case bicycling
 }
 
-
-import UIKit
 
 class MapTasks: NSObject {
     

@@ -18,6 +18,8 @@ class Google_ViewController: UIViewController, CLLocationManagerDelegate, GMSMap
         
         let address = self.Address.text;
         
+        register_info.address = address;
+        
         self.mapTasks.geocodeAddress(address, withCompletionHandler: { (status, success) -> Void in
             
             if !success {

@@ -44,7 +44,7 @@ class Loc_PickerView: UIViewController,UIPickerViewDataSource, UIPickerViewDeleg
         var sizeComponent = PickerComponent.loc.rawValue
         let size = pickerData[sizeComponent][myPicker.selectedRowInComponent(sizeComponent)]
         self.Loc = size;
-        register_info.location = self.Loc;
+        register_info.location = self.map(self.Loc);
         println(register_info.location);
     }
     
@@ -54,7 +54,7 @@ class Loc_PickerView: UIViewController,UIPickerViewDataSource, UIPickerViewDeleg
     }
     
     let pickerData = [
-        ["New York NY","Los Angeles CA","Chicago IL","Houston TX", "Phoenix AZ"]
+        ["New York NY","New Jersey NJ", "Pennsylvania PA", "Florida FL", "California CA","Chicago IL","Houston TX", "Phoenix AZ"]
     ]
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -73,11 +73,49 @@ class Loc_PickerView: UIViewController,UIPickerViewDataSource, UIPickerViewDeleg
         pickerLabel.textColor = UIColor.blackColor()
         pickerLabel.text = pickerData[component][row]
         // pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 15)
-        pickerLabel.font = UIFont(name: "Arial-BoldMT", size: 15) // In this use your custom font
+        pickerLabel.font = UIFont(name: "Arial-BoldMT", size: 16) // In this use your custom font
         pickerLabel.textAlignment = NSTextAlignment.Center
         return pickerLabel
     }
     
+    func map(loc:String) -> String {
+        
+        var location: String?;
+        
+        if (loc == "New York NY"){
+        location = "NY";
+        }
+        
+        else if (loc == "New Jersey NJ"){
+        location = "NJ";
+        }
+        
+        else if (loc == "Pennsylvania PA"){
+        location = "PA";
+        }
+        
+        else if (loc == "Florida FL"){
+        location  = "FL";
+        }
+        
+        else if (loc == "California CA"){
+        location  = "CA";
+        }
+        
+        else if (loc == "Illinois IL"){
+        location  = "IL";
+        }
+        
+        else if (loc == "Texas TX"){
+        location  = "TX";
+        }
+        
+        else if (loc == "Arizona AZ"){
+        location = "AZ";
+        }
+        
+        return location!;
+    }
     
 }
 

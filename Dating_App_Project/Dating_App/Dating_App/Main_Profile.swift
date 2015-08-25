@@ -66,12 +66,14 @@ class Main_Profile: UIViewController{
         //manager.responseSerializer = AFHTTPResponseSerializer();
         //manager.responseSerializer.acceptableContentTypes = set.setByAddingObject("text/html");
         
-        manager.GET( "http://localhost:3000/reg_test1/person/clementc",
+        manager.GET( "http://localhost:3000/reg_test3/person/clementc",
             parameters: nil,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 println("JSON: " + responseObject.description)
                 println("Object obtained successfully");
-                if let results = responseObject[0] as? NSDictionary {
+                println(responseObject.count);
+                
+                if let results = responseObject[2] as? NSDictionary {
                     if let title = results["title"] as? String {
                         self.Name.text = title as String
                         self.Name.adjustsFontSizeToFitWidth = true
@@ -92,10 +94,11 @@ class Main_Profile: UIViewController{
                         }
                     }
                 }
-            },
+             },
             failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
                 println("Error: " + error.localizedDescription)
-        })
+            }
+        )
     }
     
     /*@IBAction func Posting(sender: AnyObject) {
@@ -284,14 +287,14 @@ class Main_Profile: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func Next(sender: AnyObject) {
+    /*@IBAction func Next(sender: AnyObject) {
         self.loadDestinationVC();
     }
     
     
     func loadDestinationVC(){
         self.performSegueWithIdentifier("Add_Search", sender: nil)
-    }
+    }*/
     
     func hour() -> String
     {

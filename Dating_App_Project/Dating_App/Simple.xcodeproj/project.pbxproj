@@ -54,6 +54,7 @@
 		AA5AC2011B651A8100158156 /* Male_Female.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AC2001B651A8100158156 /* Male_Female.swift */; };
 		AA5F461F1B5DF1590045D9C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5F461E1B5DF1590045D9C6 /* Main.storyboard */; };
 		AA7E555E1B60ABE7002EB1EB /* Main_Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7E555D1B60ABE7002EB1EB /* Main_Profile.swift */; };
+		AA8832D41B8A543300A574D8 /* Distance_Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8832D31B8A543300A574D8 /* Distance_Calculation.swift */; };
 		AAAE73E41B5F4D45007841DC /* Cover_Page.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAAE73E31B5F4D45007841DC /* Cover_Page.jpg */; };
 		AACE8E651B67155F0033FE2E /* Male.png in Resources */ = {isa = PBXBuildFile; fileRef = AACE8E641B67155F0033FE2E /* Male.png */; };
 		AACE8E671B6715DA0033FE2E /* Triple_Stripes.png in Resources */ = {isa = PBXBuildFile; fileRef = AACE8E661B6715DA0033FE2E /* Triple_Stripes.png */; };
@@ -145,6 +146,7 @@
 		AA5AC2001B651A8100158156 /* Male_Female.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Male_Female.swift; sourceTree = "<group>"; };
 		AA5F461E1B5DF1590045D9C6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AA7E555D1B60ABE7002EB1EB /* Main_Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main_Profile.swift; sourceTree = "<group>"; };
+		AA8832D31B8A543300A574D8 /* Distance_Calculation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Distance_Calculation.swift; sourceTree = "<group>"; };
 		AAAE73E31B5F4D45007841DC /* Cover_Page.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cover_Page.jpg; sourceTree = "<group>"; };
 		AACE8E641B67155F0033FE2E /* Male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Male.png; sourceTree = "<group>"; };
 		AACE8E661B6715DA0033FE2E /* Triple_Stripes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Triple_Stripes.png; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 			children = (
 				AA3C847D1B770E0100C76304 /* Location_class.swift */,
 				AA3C84921B7716BC00C76304 /* Google_Location.swift */,
+				AA8832D31B8A543300A574D8 /* Distance_Calculation.swift */,
 			);
 			name = Google_Location;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				AA271D7D1B4DF4CC00EA5BA6 /* ViewController.swift in Sources */,
 				AADFA2351B6D74E600491DBF /* AFURLConnectionOperation.m in Sources */,
 				AADFA22B1B6D74E600491DBF /* AFHTTPRequestOperation.m in Sources */,
+				AA8832D41B8A543300A574D8 /* Distance_Calculation.swift in Sources */,
 				AADFA22F1B6D74E600491DBF /* AFHTTPSessionManager.m in Sources */,
 				AADFA2371B6D74E600491DBF /* AFURLRequestSerialization.m in Sources */,
 				AA7E555E1B60ABE7002EB1EB /* Main_Profile.swift in Sources */,
