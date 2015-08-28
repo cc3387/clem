@@ -45,35 +45,35 @@ class ViewControllerRegister: UIViewController, UITextFieldDelegate,UIPickerView
         self.User_Note.textColor = UIColor.redColor();
         }
         else if (self.Username.text != "" && self.Password.text == ""){
-        self.User_Note.textColor = UIColor.whiteColor();
+        self.User_Note.textColor = UIColor.clearColor();
         self.Password_Not.textColor = UIColor.redColor();
         }
         else if(self.Username.text != "" && self.Password.text != "" && self.Email.text == ""){
-        self.User_Note.textColor = UIColor.whiteColor();
-        self.Password_Not.textColor = UIColor.whiteColor();
+        self.User_Note.textColor = UIColor.clearColor();
+        self.Password_Not.textColor = UIColor.clearColor();
         self.Email_Not.textColor = UIColor.redColor();
         }
         else if(self.Username.text != "" && self.Password.text != "" && self.Email.text != "" && self.Age.text == "" && self.Location.text == ""){
-        self.User_Note.textColor = UIColor.whiteColor();
-        self.Password_Not.textColor = UIColor.whiteColor();
-        self.Email_Not.textColor = UIColor.whiteColor();
+        self.User_Note.textColor = UIColor.clearColor();
+        self.Password_Not.textColor = UIColor.clearColor();
+        self.Email_Not.textColor = UIColor.clearColor();
         self.Age_Not.textColor = UIColor.redColor();
-        self.Location_Not.textColor = UIColor.whiteColor();
+        self.Location_Not.textColor = UIColor.clearColor();
         }
         else if(self.Username.text != "" && self.Password.text != "" && self.Email.text != "" && self.Age.text != "" && self.Location.text == ""){
-        self.User_Note.textColor = UIColor.whiteColor();
-        self.Password_Not.textColor = UIColor.whiteColor();
-        self.Email_Not.textColor = UIColor.whiteColor();
-        self.Age_Not.textColor = UIColor.whiteColor();
+        self.User_Note.textColor = UIColor.clearColor();
+        self.Password_Not.textColor = UIColor.clearColor();
+        self.Email_Not.textColor = UIColor.clearColor();
+        self.Age_Not.textColor = UIColor.clearColor();
         self.Location_Not.textColor = UIColor.redColor();
         }
         
         if(self.Username.text != "" && self.Password.text != "" && self.Email.text != "" && self.Age.text != "" && self.Location.text != "" ){
-        self.User_Note.textColor = UIColor.whiteColor();
-        self.Password_Not.textColor = UIColor.whiteColor();
-        self.Email_Not.textColor = UIColor.whiteColor();
-        self.Age_Not.textColor = UIColor.whiteColor();
-        self.Location_Not.textColor = UIColor.whiteColor();
+        self.User_Note.textColor = UIColor.clearColor();
+        self.Password_Not.textColor = UIColor.clearColor();
+        self.Email_Not.textColor = UIColor.clearColor();
+        self.Age_Not.textColor = UIColor.clearColor();
+        self.Location_Not.textColor = UIColor.clearColor();
             
             
         //When send button is tappe

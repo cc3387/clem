@@ -54,7 +54,7 @@ class Loc_PickerView: UIViewController,UIPickerViewDataSource, UIPickerViewDeleg
     }
     
     let pickerData = [
-        ["New York NY","New Jersey NJ", "Pennsylvania PA", "Florida FL", "California CA","Chicago IL","Houston TX", "Arizona AZ"]
+        ["New York NY","New Jersey NJ", "Pennsylvania PA", "Florida FL", "California CA","Illinois IL","Texas TX", "Arizona AZ"]
     ]
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -73,7 +73,7 @@ class Loc_PickerView: UIViewController,UIPickerViewDataSource, UIPickerViewDeleg
         pickerLabel.textColor = UIColor.whiteColor()
         pickerLabel.text = pickerData[component][row]
         // pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 15)
-        pickerLabel.font = UIFont(name: "Arial-BoldMT", size: 16) // In this use your custom font
+        pickerLabel.font = UIFont(name: "System Thin", size: 20) // In this use your custom font
         pickerLabel.textAlignment = NSTextAlignment.Center
         return pickerLabel
     }
