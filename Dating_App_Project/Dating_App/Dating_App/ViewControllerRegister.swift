@@ -180,6 +180,19 @@ class ViewControllerRegister: UIViewController, UITextFieldDelegate,UIPickerView
     func loadDestinationVC(){
         self.performSegueWithIdentifier("Location_Picker", sender: nil)
     }
+    
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView
+    {
+        var pickerLabel = UILabel()
+        pickerLabel.textColor = UIColor.whiteColor()
+        pickerLabel.text = pickerData[component][row]
+        // pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 15)
+        pickerLabel.font = UIFont(name: "System Thin", size: 20) // In this use your custom font
+        pickerLabel.textAlignment = NSTextAlignment.Center
+        return pickerLabel
+    }
+    
+    
 }
 
 //Storing the userid as global variable in the ios app machine
