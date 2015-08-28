@@ -51,7 +51,7 @@ class Google_ViewController: UIViewController, CLLocationManagerDelegate, GMSMap
                 
             let manager = AFHTTPRequestOperationManager();
                 
-            manager.POST("http://localhost:3000/location",
+            manager.POST("http://localhost:3000/collections/location",
             parameters: params,
             success: { (AFHTTPRequestOperation, AnyObject) -> Void in
             println("success!")

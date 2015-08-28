@@ -41,7 +41,7 @@ class Major: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
         "Address": register_info.address
         ];
         
-        manager.POST("http://localhost:3000/reg_test3",
+        manager.POST("http://localhost:3000/collections/reg_test",
             parameters: params,
             success: { (AFHTTPRequestOperation, AnyObject) -> Void in
                 println("success!")
@@ -58,7 +58,7 @@ class Major: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
         ];
 
         
-        manager.POST("http://localhost:3000/loc_reg2",
+        manager.POST("http://localhost:3000/collections/loc_reg",
             parameters: param_loc,
             success: { (AFHTTPRequestOperation, AnyObject) -> Void in
                 println("success!")
