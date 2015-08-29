@@ -59,6 +59,7 @@
 		AA8832D41B8A543300A574D8 /* Distance_Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8832D31B8A543300A574D8 /* Distance_Calculation.swift */; };
 		AA8B166F1B8EAD8C00096E73 /* cloud-horizon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA8B166E1B8EAD8C00096E73 /* cloud-horizon.jpg */; };
 		AAAE73E41B5F4D45007841DC /* Cover_Page.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAAE73E31B5F4D45007841DC /* Cover_Page.jpg */; };
+		AACE1B8B1B91F73E009181C5 /* boat_sea_beach-normal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AACE1B8A1B91F73E009181C5 /* boat_sea_beach-normal.jpg */; };
 		AACE8E6E1B671D730033FE2E /* Major.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE8E6D1B671D730033FE2E /* Major.swift */; };
 		AADFA22B1B6D74E600491DBF /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AADFA2191B6D74E600491DBF /* AFHTTPRequestOperation.m */; };
 		AADFA22C1B6D74E600491DBF /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AADFA2191B6D74E600491DBF /* AFHTTPRequestOperation.m */; };
@@ -148,6 +149,7 @@
 		AA8832D31B8A543300A574D8 /* Distance_Calculation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Distance_Calculation.swift; sourceTree = "<group>"; };
 		AA8B166E1B8EAD8C00096E73 /* cloud-horizon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cloud-horizon.jpg"; sourceTree = "<group>"; };
 		AAAE73E31B5F4D45007841DC /* Cover_Page.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cover_Page.jpg; sourceTree = "<group>"; };
+		AACE1B8A1B91F73E009181C5 /* boat_sea_beach-normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "boat_sea_beach-normal.jpg"; sourceTree = "<group>"; };
 		AACE8E6D1B671D730033FE2E /* Major.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Major.swift; sourceTree = "<group>"; };
 		AADFA2181B6D74E600491DBF /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		AADFA2191B6D74E600491DBF /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				AADFA1831B67A20F00491DBF /* Location_Pictures */,
 				AADFA1841B67A23000491DBF /* Male_Female */,
 				AAAE73E31B5F4D45007841DC /* Cover_Page.jpg */,
+				AACE1B8A1B91F73E009181C5 /* boat_sea_beach-normal.jpg */,
 				AA271D831B4DF4CC00EA5BA6 /* LaunchScreen.xib */,
 				AA271D781B4DF4CC00EA5BA6 /* Supporting Files */,
 			);
@@ -473,6 +476,7 @@
 				AA5F461F1B5DF1590045D9C6 /* Main.storyboard in Resources */,
 				AA0E68BE1B8ECFC9000941C4 /* Female_Cloud.tif in Resources */,
 				AA5AC1F31B648F0900158156 /* space-lp.jpg in Resources */,
+				AACE1B8B1B91F73E009181C5 /* boat_sea_beach-normal.jpg in Resources */,
 				AA8B166F1B8EAD8C00096E73 /* cloud-horizon.jpg in Resources */,
 				AAAE73E41B5F4D45007841DC /* Cover_Page.jpg in Resources */,
 				AA1015421B54B885007F77B8 /* Strips.png in Resources */,

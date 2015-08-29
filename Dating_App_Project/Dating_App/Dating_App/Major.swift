@@ -66,6 +66,19 @@ class Major: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
                 println("fail")
         }
         
+        let cityurl = "http://localhost:3000/collections/city" + "_" + register_info.location;
+        
+        println(cityurl);
+        
+        manager.POST(cityurl,
+            parameters: param_loc,
+            success: { (AFHTTPRequestOperation, AnyObject) -> Void in
+                println("success!")
+            }) { (AFHTTPRequestOperation, NSError) -> Void in
+                println("fail")
+        }
+        
+        
         loadDestinationVC();
 
     }
