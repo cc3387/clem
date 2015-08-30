@@ -21,7 +21,7 @@ class Distance_Calculation: UIViewController{
         let manager = AFHTTPRequestOperationManager();
         
         
-        manager.GET( "http://localhost:3000/collections/city_NY",
+        manager.GET( "http://localhost:3000/collections/city_PA",
             parameters: nil,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 println("JSON: " + responseObject.description)
@@ -40,7 +40,7 @@ class Distance_Calculation: UIViewController{
             }
         )
         
-        manager.GET( "http://localhost:3000/collections/city_NY",
+        manager.GET( "http://localhost:3000/collections/city_PA",
             parameters: nil,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 println("JSON: " + responseObject.description)

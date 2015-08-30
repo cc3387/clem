@@ -53,7 +53,7 @@ class Main_Profile: UIViewController{
         println("Please Enter Value...");
         }
         else{
-        manager.POST("http://localhost:3000/clem",
+        manager.POST("http://localhost:3000/collections",
         parameters: params,
         success: { (AFHTTPRequestOperation, AnyObject) -> Void in
         println("success!")
@@ -66,7 +66,7 @@ class Main_Profile: UIViewController{
         //manager.responseSerializer = AFHTTPResponseSerializer();
         //manager.responseSerializer.acceptableContentTypes = set.setByAddingObject("text/html");
         
-        manager.GET( "http://localhost:3000/reg_test3/person/clementc",
+        manager.GET( "http://localhost:3000/collections/reg_test",
             parameters: nil,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 println("JSON: " + responseObject.description)
