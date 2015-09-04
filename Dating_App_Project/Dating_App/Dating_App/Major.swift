@@ -12,76 +12,15 @@ import UIKit
 class Major: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
     
     @IBOutlet weak var myPicker: UIPickerView!
+    
     var Major = "";
     
-    @IBAction func Info(sender: AnyObject) {
-        
+    
+    @IBAction func UpdateMajor(sender: AnyObject) {
         self.updateMajor();
-        let manager = AFHTTPRequestOperationManager();
-        
-        var loc_lng_int = round(register_info.location_lng);
-        var loc_lat_int = round(register_info.location_lat);
-        
-        var loc_lng: String = String(format:"%f",register_info.location_lng);
-        var loc_lat:String = String(format:"%f",register_info.location_lat);
-        
-        //var loc_lng: String = String(format:"%f",loc_lng_int);
-        //var loc_lat:String = String(format:"%f",loc_lat_int);
-        
-    var params = [
-        "title": register_info.user_id,
-        "user_id": register_info.user_id,
-        "Age_Range": register_info.age_range,
-        "location": register_info.location,
-        "Gender": register_info.Gender,
-        "longitude": loc_lng,
-        "latitude": loc_lat,
-        "Education":register_info.education,
-        "Major":register_info.Major,
-        "Address": register_info.address
-        ];
-        
-        manager.POST("http://localhost:3000/collections/reg_test",
-            parameters: params,
-            success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-                println("success!")
-            }) { (AFHTTPRequestOperation, NSError) -> Void in
-                println("fail")
-        }
-     
-    var param_loc = [
-            "title": register_info.location,
-            "longitude": loc_lng,
-            "latitude": loc_lat,
-            "Address": register_info.address,
-            "user_id": register_info.user_id
-        ];
-
-        
-        manager.POST("http://localhost:3000/collections/loc_reg",
-            parameters: param_loc,
-            success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-                println("success!")
-            }) { (AFHTTPRequestOperation, NSError) -> Void in
-                println("fail")
-        }
-        
-        let cityurl = "http://localhost:3000/collections/city" + "_" + register_info.location;
-        
-        println(cityurl);
-        
-        manager.POST(cityurl,
-            parameters: param_loc,
-            success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-                println("success!")
-            }) { (AFHTTPRequestOperation, NSError) -> Void in
-                println("fail")
-        }
-        
-        
         loadDestinationVC();
-
     }
+    
     
     override func viewDidLoad() {
         // Do any additional setup after loading the view, typically from a nib.
@@ -110,7 +49,134 @@ class Major: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
     }
 
     let pickerData = [
-        ["Anthropology", "Computer Sci.","Psychology", "Mathematics", "Physics", "Economics", "Electrial Engineering", "English", "History"]
+        [   "Accounting",
+            "Acting",
+            "Actuarial Science",
+            "Advertising",
+            "Aeronautical and Astronautical Engineering",
+            "Aeronautical Engineering Technology",
+            "Aerospace Financial Analysis",
+            "African American Studies",
+            "Agricultural Education",
+            "Airline Management and Operations",
+            "Airport Management and Operations",
+            "American Studies",
+            "Animal Sciences",
+            "Animation",
+            "Anthropology",
+            "Applied Meteorology and Climatology",
+            "Art History",
+            "Asian Studies",
+            "Atmospheric Science/Meteorology",
+            "Audio Engineering Technology",
+            "Aviation Management",
+            "Biochemistry",
+            "Biochemistry (Biology)",
+            "Biochemistry (Chemistry)",
+            "Biological Engineering - multiple concentrations",
+            "Biology",
+            "Biology Education",
+            "Biomedical Engineering",
+            "Brain and Behavioral Sciences",
+            "Building Construction Management Technology",
+            "Building Information Modeling",
+            "Business Management",
+            "Cell, Molecular, and Developmental Biology",
+            "Chemical Engineering",
+            "Chemistry",
+            "Civil Engineering",
+            "Classical Studies",
+            "Communication, General",
+            "Comparative Literature",
+            "Computer and Information Technology",
+            "Computer Engineering",
+            "Computer Science",
+            "Construction Engineering",
+            "Corporate Communication",
+            "Creative Writing",
+            "Criminal Justice",
+            "Developmental and Family Science",
+            "Earth/Space Science Education",
+            "Ecology, Evolution, and Environmental Sciences",
+            "Economics",
+            "Effects Technical Direction",
+            "Electrical Engineering",
+            "Elementary Education",
+            "English",
+            "English Education",
+            "Entomology",
+            "Environmental and Ecological Engineering",
+            "Environmental and Natural Resources Engineering",
+            "Environmental Geosciences",
+            "Environmental Health Sciences",
+            "Environmental Studies",
+            "Family and Consumer Sciences Education",
+            "Farm Management",
+            "Film and Theatre Production",
+            "Film and Video Studies",
+            "Finance",
+            "Financial Counseling and Planning",
+            "Fine Arts",
+            "Fisheries and Aquatic Sciences",
+            "Food Science",
+            "Foods and Nutrition in Business",
+            "French",
+            "Genetic Biology",
+            "Geology and Geophysics",
+            "German",
+            "Graphic Design",
+            "Health Sciences - Preprofessional",
+            "Healthcare Construction Management",
+            "History",
+            "Hospitality and Tourism Management",
+            "Human Relations",
+            "Industrial Engineering",
+            "Interior Design",
+            "International Business",
+            "Italian Studies",
+            "Japanese",
+            "Juris Doctor",
+            "Journalism",
+            "Landscape Architecture",
+            "Linguistics",
+            "Management",
+            "Materials Engineering",
+            "Mathematics",
+            "MBA",
+            "Mechanical Engineering",
+            "Medieval and Renaissance Studies",
+            "Meteorology",
+            "Movement and Sport Sciences",
+            "Natural Resources and Environmental Science",
+            "Neurobiology and Physiology",
+            "Nuclear Engineering",
+            "Nursing",
+            "Nutrition Science",
+            "Pharmaceutical Sciences",
+            "Philosophy",
+            "Photography",
+            "Physics",
+            "Planetary Sciences",
+            "Political Science",
+            "Pre Med",
+            "Professional Writing",
+            "Public Health",
+            "Public Relations and Strategic Communication",
+            "Religious Studies",
+            "Retail Management",
+            "Russian",
+            "Sales and Marketing",
+            "Social Studies Education",
+            "Sociology",
+            "Spanish",
+            "Statistics",
+            "Studio Arts and Technology",
+            "Supply Chain Management",
+            "Systems Analysis and Design",
+            "Theatre Art",
+            "Visual Art",
+            "Zoology"
+    ]
     ]
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -129,16 +195,15 @@ class Major: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
         pickerLabel.textColor = UIColor.whiteColor()
         pickerLabel.text = pickerData[component][row]
         // pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 15)
-        pickerLabel.font = UIFont(name: "System Thin", size: 20) // In this use your custom font
+        pickerLabel.font = UIFont(name: "System Thin", size: 12) // In this use your custom font
         pickerLabel.textAlignment = NSTextAlignment.Center
         return pickerLabel
     }
     
     
     func loadDestinationVC(){
-        self.performSegueWithIdentifier("Start", sender: nil)
+        self.performSegueWithIdentifier("Beer_Wine", sender: nil)
     }
-    
     
 }
 

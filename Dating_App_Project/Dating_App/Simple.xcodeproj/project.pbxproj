@@ -60,6 +60,14 @@
 		AA8B166F1B8EAD8C00096E73 /* cloud-horizon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA8B166E1B8EAD8C00096E73 /* cloud-horizon.jpg */; };
 		AAAE73E41B5F4D45007841DC /* Cover_Page.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAAE73E31B5F4D45007841DC /* Cover_Page.jpg */; };
 		AACE1B8B1B91F73E009181C5 /* boat_sea_beach-normal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AACE1B8A1B91F73E009181C5 /* boat_sea_beach-normal.jpg */; };
+		AACE1B8E1B99CAF1009181C5 /* Beer_Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE1B8D1B99CAF0009181C5 /* Beer_Wine.swift */; };
+		AACE1B901B99CB00009181C5 /* Final_Send.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE1B8F1B99CB00009181C5 /* Final_Send.swift */; };
+		AACE1B921B99D6FA009181C5 /* Beer_Mug_Edit.png in Resources */ = {isa = PBXBuildFile; fileRef = AACE1B911B99D6F9009181C5 /* Beer_Mug_Edit.png */; };
+		AACE1B941B99DBC1009181C5 /* SportsArtGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE1B931B99DBC1009181C5 /* SportsArtGallery.swift */; };
+		AACE1B9A1B99F194009181C5 /* wine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AACE1B991B99F194009181C5 /* wine.jpg */; };
+		AACE1B9E1B9A084B009181C5 /* Sunset.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AACE1B9D1B9A084B009181C5 /* Sunset.jpg */; };
+		AACE1BA01B9A0E8A009181C5 /* Sports_Event.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AACE1B9F1B9A0E8A009181C5 /* Sports_Event.jpg */; };
+		AACE1BA21B9A1001009181C5 /* Art_Gallery.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AACE1BA11B9A1001009181C5 /* Art_Gallery.jpg */; };
 		AACE8E6E1B671D730033FE2E /* Major.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE8E6D1B671D730033FE2E /* Major.swift */; };
 		AADFA22B1B6D74E600491DBF /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AADFA2191B6D74E600491DBF /* AFHTTPRequestOperation.m */; };
 		AADFA22C1B6D74E600491DBF /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AADFA2191B6D74E600491DBF /* AFHTTPRequestOperation.m */; };
@@ -150,6 +158,14 @@
 		AA8B166E1B8EAD8C00096E73 /* cloud-horizon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cloud-horizon.jpg"; sourceTree = "<group>"; };
 		AAAE73E31B5F4D45007841DC /* Cover_Page.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cover_Page.jpg; sourceTree = "<group>"; };
 		AACE1B8A1B91F73E009181C5 /* boat_sea_beach-normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "boat_sea_beach-normal.jpg"; sourceTree = "<group>"; };
+		AACE1B8D1B99CAF0009181C5 /* Beer_Wine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer_Wine.swift; sourceTree = "<group>"; };
+		AACE1B8F1B99CB00009181C5 /* Final_Send.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Final_Send.swift; sourceTree = "<group>"; };
+		AACE1B911B99D6F9009181C5 /* Beer_Mug_Edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Beer_Mug_Edit.png; sourceTree = "<group>"; };
+		AACE1B931B99DBC1009181C5 /* SportsArtGallery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsArtGallery.swift; sourceTree = "<group>"; };
+		AACE1B991B99F194009181C5 /* wine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wine.jpg; sourceTree = "<group>"; };
+		AACE1B9D1B9A084B009181C5 /* Sunset.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sunset.jpg; sourceTree = "<group>"; };
+		AACE1B9F1B9A0E8A009181C5 /* Sports_Event.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sports_Event.jpg; sourceTree = "<group>"; };
+		AACE1BA11B9A1001009181C5 /* Art_Gallery.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Art_Gallery.jpg; sourceTree = "<group>"; };
 		AACE8E6D1B671D730033FE2E /* Major.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Major.swift; sourceTree = "<group>"; };
 		AADFA2181B6D74E600491DBF /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		AADFA2191B6D74E600491DBF /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
@@ -241,6 +257,7 @@
 		AA271D771B4DF4CC00EA5BA6 /* Dating_App */ = {
 			isa = PBXGroup;
 			children = (
+				AACE1B8C1B99CA84009181C5 /* Personal_Preferences */,
 				AA3C848F1B77157200C76304 /* Google_Location */,
 				AA5AC1F11B64559E00158156 /* Preferences */,
 				AA271D7A1B4DF4CC00EA5BA6 /* AppDelegate.swift */,
@@ -254,7 +271,12 @@
 				AADFA1831B67A20F00491DBF /* Location_Pictures */,
 				AADFA1841B67A23000491DBF /* Male_Female */,
 				AAAE73E31B5F4D45007841DC /* Cover_Page.jpg */,
+				AACE1B9F1B9A0E8A009181C5 /* Sports_Event.jpg */,
+				AACE1B9D1B9A084B009181C5 /* Sunset.jpg */,
+				AACE1BA11B9A1001009181C5 /* Art_Gallery.jpg */,
+				AACE1B991B99F194009181C5 /* wine.jpg */,
 				AACE1B8A1B91F73E009181C5 /* boat_sea_beach-normal.jpg */,
+				AACE1B911B99D6F9009181C5 /* Beer_Mug_Edit.png */,
 				AA271D831B4DF4CC00EA5BA6 /* LaunchScreen.xib */,
 				AA271D781B4DF4CC00EA5BA6 /* Supporting Files */,
 			);
@@ -339,6 +361,16 @@
 				AACE8E6D1B671D730033FE2E /* Major.swift */,
 			);
 			name = Preferences;
+			sourceTree = "<group>";
+		};
+		AACE1B8C1B99CA84009181C5 /* Personal_Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				AACE1B8D1B99CAF0009181C5 /* Beer_Wine.swift */,
+				AACE1B931B99DBC1009181C5 /* SportsArtGallery.swift */,
+				AACE1B8F1B99CB00009181C5 /* Final_Send.swift */,
+			);
+			name = Personal_Preferences;
 			sourceTree = "<group>";
 		};
 		AADFA1831B67A20F00491DBF /* Location_Pictures */ = {
@@ -472,6 +504,7 @@
 				AA3C847B1B770CF500C76304 /* GoogleMaps.bundle in Resources */,
 				AA5AC1FD1B649D0B00158156 /* San_Francisco.jpg in Resources */,
 				AA1015401B536A76007F77B8 /* Images.xcassets in Resources */,
+				AACE1B9E1B9A084B009181C5 /* Sunset.jpg in Resources */,
 				AA5AC1F51B6490DD00158156 /* New_York.jpg in Resources */,
 				AA5F461F1B5DF1590045D9C6 /* Main.storyboard in Resources */,
 				AA0E68BE1B8ECFC9000941C4 /* Female_Cloud.tif in Resources */,
@@ -482,8 +515,12 @@
 				AA1015421B54B885007F77B8 /* Strips.png in Resources */,
 				AA271D851B4DF4CC00EA5BA6 /* LaunchScreen.xib in Resources */,
 				AA5AC1F71B6491B300158156 /* Hong_Kong.jpg in Resources */,
+				AACE1BA01B9A0E8A009181C5 /* Sports_Event.jpg in Resources */,
 				AA0E68B81B8EC9F9000941C4 /* Male_Cloud.tif in Resources */,
+				AACE1BA21B9A1001009181C5 /* Art_Gallery.jpg in Resources */,
 				AA5AC1FB1B6499CA00158156 /* London.jpg in Resources */,
+				AACE1B921B99D6FA009181C5 /* Beer_Mug_Edit.png in Resources */,
+				AACE1B9A1B99F194009181C5 /* wine.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,14 +544,17 @@
 				AA271D7D1B4DF4CC00EA5BA6 /* ViewController.swift in Sources */,
 				AADFA2351B6D74E600491DBF /* AFURLConnectionOperation.m in Sources */,
 				AADFA22B1B6D74E600491DBF /* AFHTTPRequestOperation.m in Sources */,
+				AACE1B901B99CB00009181C5 /* Final_Send.swift in Sources */,
 				AA8832D41B8A543300A574D8 /* Distance_Calculation.swift in Sources */,
 				AADFA22F1B6D74E600491DBF /* AFHTTPSessionManager.m in Sources */,
 				AADFA2371B6D74E600491DBF /* AFURLRequestSerialization.m in Sources */,
 				AA7E555E1B60ABE7002EB1EB /* Main_Profile.swift in Sources */,
 				AA3C84931B7716BC00C76304 /* Google_Location.swift in Sources */,
 				AADFA23B1B6D74E600491DBF /* AFURLSessionManager.m in Sources */,
+				AACE1B8E1B99CAF1009181C5 /* Beer_Wine.swift in Sources */,
 				AA271D7B1B4DF4CC00EA5BA6 /* AppDelegate.swift in Sources */,
 				AADFA22D1B6D74E600491DBF /* AFHTTPRequestOperationManager.m in Sources */,
+				AACE1B941B99DBC1009181C5 /* SportsArtGallery.swift in Sources */,
 				AACE8E6E1B671D730033FE2E /* Major.swift in Sources */,
 				AADFA2391B6D74E600491DBF /* AFURLResponseSerialization.m in Sources */,
 				AA3C847E1B770E0100C76304 /* Location_class.swift in Sources */,

@@ -207,5 +207,6 @@ struct register_info{
     static var education: String = "";
     static var Major: String = "";
     static var beer_or_wine = "";
+    static var sports_or_art = "";
     static var EDC_or_ballet = "";
 }
