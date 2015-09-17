@@ -45,7 +45,7 @@ class SportsArtGallery: UIViewController{
     }
     
     func loadDestinationVC(){
-        self.performSegueWithIdentifier("Summary_Send", sender: nil)
+        self.performSegueWithIdentifier("EDC_Classical", sender: nil)
     }
     
 }

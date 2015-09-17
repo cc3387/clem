@@ -35,6 +35,9 @@
 		AA271DBE1B4E1AE000EA5BA6 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DB81B4E1AE000EA5BA6 /* ParseFacebookUtilsV4.framework */; };
 		AA271DBF1B4E1AE000EA5BA6 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DB91B4E1AE000EA5BA6 /* ParseUI.framework */; };
 		AA271DCC1B4E23EA00EA5BA6 /* ViewControllerRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA271DCB1B4E23EA00EA5BA6 /* ViewControllerRegister.swift */; };
+		AA353D461BAA8103004F749E /* EDC_Classical.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA353D451BAA8103004F749E /* EDC_Classical.swift */; };
+		AA353D481BAA826C004F749E /* EDC_View.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA353D471BAA826C004F749E /* EDC_View.jpg */; };
+		AA353D4A1BAA840C004F749E /* Classical_Music.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA353D491BAA840C004F749E /* Classical_Music.jpg */; };
 		AA3C847B1B770CF500C76304 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA3C84791B770CF500C76304 /* GoogleMaps.bundle */; };
 		AA3C847C1B770CF500C76304 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3C847A1B770CF500C76304 /* GoogleMaps.framework */; };
 		AA3C847E1B770E0100C76304 /* Location_class.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C847D1B770E0100C76304 /* Location_class.swift */; };
@@ -133,6 +136,9 @@
 		AA271DB91B4E1AE000EA5BA6 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "../../../iOS_App/parse-library-1/ParseUI.framework"; sourceTree = "<group>"; };
 		AA271DC61B4E1C6F00EA5BA6 /* Dating_App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dating_App-Bridging-Header.h"; sourceTree = "<group>"; };
 		AA271DCB1B4E23EA00EA5BA6 /* ViewControllerRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerRegister.swift; sourceTree = "<group>"; };
+		AA353D451BAA8103004F749E /* EDC_Classical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EDC_Classical.swift; sourceTree = "<group>"; };
+		AA353D471BAA826C004F749E /* EDC_View.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EDC_View.jpg; sourceTree = "<group>"; };
+		AA353D491BAA840C004F749E /* Classical_Music.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Classical_Music.jpg; sourceTree = "<group>"; };
 		AA3C84791B770CF500C76304 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 		AA3C847A1B770CF500C76304 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		AA3C847D1B770E0100C76304 /* Location_class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location_class.swift; sourceTree = "<group>"; };
@@ -271,6 +277,8 @@
 				AADFA1831B67A20F00491DBF /* Location_Pictures */,
 				AADFA1841B67A23000491DBF /* Male_Female */,
 				AAAE73E31B5F4D45007841DC /* Cover_Page.jpg */,
+				AA353D471BAA826C004F749E /* EDC_View.jpg */,
+				AA353D491BAA840C004F749E /* Classical_Music.jpg */,
 				AACE1B9F1B9A0E8A009181C5 /* Sports_Event.jpg */,
 				AACE1B9D1B9A084B009181C5 /* Sunset.jpg */,
 				AACE1BA11B9A1001009181C5 /* Art_Gallery.jpg */,
@@ -369,6 +377,7 @@
 				AACE1B8D1B99CAF0009181C5 /* Beer_Wine.swift */,
 				AACE1B931B99DBC1009181C5 /* SportsArtGallery.swift */,
 				AACE1B8F1B99CB00009181C5 /* Final_Send.swift */,
+				AA353D451BAA8103004F749E /* EDC_Classical.swift */,
 			);
 			name = Personal_Preferences;
 			sourceTree = "<group>";
@@ -508,6 +517,7 @@
 				AA5AC1F51B6490DD00158156 /* New_York.jpg in Resources */,
 				AA5F461F1B5DF1590045D9C6 /* Main.storyboard in Resources */,
 				AA0E68BE1B8ECFC9000941C4 /* Female_Cloud.tif in Resources */,
+				AA353D4A1BAA840C004F749E /* Classical_Music.jpg in Resources */,
 				AA5AC1F31B648F0900158156 /* space-lp.jpg in Resources */,
 				AACE1B8B1B91F73E009181C5 /* boat_sea_beach-normal.jpg in Resources */,
 				AA8B166F1B8EAD8C00096E73 /* cloud-horizon.jpg in Resources */,
@@ -518,6 +528,7 @@
 				AACE1BA01B9A0E8A009181C5 /* Sports_Event.jpg in Resources */,
 				AA0E68B81B8EC9F9000941C4 /* Male_Cloud.tif in Resources */,
 				AACE1BA21B9A1001009181C5 /* Art_Gallery.jpg in Resources */,
+				AA353D481BAA826C004F749E /* EDC_View.jpg in Resources */,
 				AA5AC1FB1B6499CA00158156 /* London.jpg in Resources */,
 				AACE1B921B99D6FA009181C5 /* Beer_Mug_Edit.png in Resources */,
 				AACE1B9A1B99F194009181C5 /* wine.jpg in Resources */,
@@ -550,6 +561,7 @@
 				AADFA2371B6D74E600491DBF /* AFURLRequestSerialization.m in Sources */,
 				AA7E555E1B60ABE7002EB1EB /* Main_Profile.swift in Sources */,
 				AA3C84931B7716BC00C76304 /* Google_Location.swift in Sources */,
+				AA353D461BAA8103004F749E /* EDC_Classical.swift in Sources */,
 				AADFA23B1B6D74E600491DBF /* AFURLSessionManager.m in Sources */,
 				AACE1B8E1B99CAF1009181C5 /* Beer_Wine.swift in Sources */,
 				AA271D7B1B4DF4CC00EA5BA6 /* AppDelegate.swift in Sources */,
