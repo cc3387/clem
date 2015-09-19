@@ -1,8 +1,8 @@
 //
-//  EDC_Classical.swift
+//  EDCClassical.swift
 //  Simple
 //
-//  Created by Clement Chan on 9/17/15.
+//  Created by Clement Chan on 9/19/15.
 //  Copyright (c) 2015 Clement Chan. All rights reserved.
 //
 
@@ -10,12 +10,12 @@ import Foundation
 
 import UIKit
 
-class EDC_Classical: UIViewController{
+class EDCClassical: UIViewController{
     
     override func viewDidLoad() {
         
-        var leftSwipe = UISwipeGestureRecognizer(target: self, action: ("EDCClassicalSwipes:"))
-        var rightSwipe = UISwipeGestureRecognizer(target: self, action: ("EDCClassicalSwipes:"))
+        var leftSwipe = UISwipeGestureRecognizer(target: self, action: ("EDCClassicalSwipe:"))
+        var rightSwipe = UISwipeGestureRecognizer(target: self, action: ("EDCClassicalSwipe:"))
         
         leftSwipe.direction = .Left
         rightSwipe.direction = .Right
@@ -30,18 +30,17 @@ class EDC_Classical: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    func EDCClassicalSwipes(sender:UISwipeGestureRecognizer){
+    func EDCClassicalSwipe(sender:UISwipeGestureRecognizer){
         
         if(sender.direction == .Right){
-            register_info.EDC_or_Classic = "Classic"
-            println(register_info.EDC_or_Classic)
+            register_info.EDC_or_Classic = "Classical"
             loadDestinationVC()
-            
+            println(register_info.EDC_or_Classic)
         }
         else if(sender.direction == .Left){
             register_info.EDC_or_Classic = "EDC"
-            println(register_info.EDC_or_Classic)
             loadDestinationVC()
+            println(register_info.EDC_or_Classic)
         }
     }
     
