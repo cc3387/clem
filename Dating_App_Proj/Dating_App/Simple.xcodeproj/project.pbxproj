@@ -70,6 +70,10 @@
 		AA5AC1FB1B6499CA00158156 /* London.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA5AC1FA1B6499CA00158156 /* London.jpg */; };
 		AA5AC1FD1B649D0B00158156 /* San_Francisco.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA5AC1FC1B649D0B00158156 /* San_Francisco.jpg */; };
 		AA5AC2011B651A8100158156 /* Male_Female.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AC2001B651A8100158156 /* Male_Female.swift */; };
+		AA7EF40B1BAE2DCE00C8A305 /* Profile_Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7EF40A1BAE2DCE00C8A305 /* Profile_Main.swift */; };
+		AA7EF40D1BAE2FAC00C8A305 /* night_sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA7EF40C1BAE2FAC00C8A305 /* night_sky.jpg */; };
+		AA7EF40F1BAE46C500C8A305 /* malaysia_morning.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA7EF40E1BAE46C500C8A305 /* malaysia_morning.jpg */; };
+		AA7EF4111BAE479A00C8A305 /* chicago_afternoon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA7EF4101BAE479A00C8A305 /* chicago_afternoon.jpg */; };
 		AA8B166F1B8EAD8C00096E73 /* cloud-horizon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA8B166E1B8EAD8C00096E73 /* cloud-horizon.jpg */; };
 		AAAE73E41B5F4D45007841DC /* Cover_Page.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAAE73E31B5F4D45007841DC /* Cover_Page.jpg */; };
 		AADFA22B1B6D74E600491DBF /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AADFA2191B6D74E600491DBF /* AFHTTPRequestOperation.m */; };
@@ -171,6 +175,10 @@
 		AA5AC1FA1B6499CA00158156 /* London.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = London.jpg; sourceTree = "<group>"; };
 		AA5AC1FC1B649D0B00158156 /* San_Francisco.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = San_Francisco.jpg; sourceTree = "<group>"; };
 		AA5AC2001B651A8100158156 /* Male_Female.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Male_Female.swift; sourceTree = "<group>"; };
+		AA7EF40A1BAE2DCE00C8A305 /* Profile_Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile_Main.swift; sourceTree = "<group>"; };
+		AA7EF40C1BAE2FAC00C8A305 /* night_sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = night_sky.jpg; sourceTree = "<group>"; };
+		AA7EF40E1BAE46C500C8A305 /* malaysia_morning.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = malaysia_morning.jpg; sourceTree = "<group>"; };
+		AA7EF4101BAE479A00C8A305 /* chicago_afternoon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chicago_afternoon.jpg; sourceTree = "<group>"; };
 		AA8B166E1B8EAD8C00096E73 /* cloud-horizon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cloud-horizon.jpg"; sourceTree = "<group>"; };
 		AAAE73E31B5F4D45007841DC /* Cover_Page.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cover_Page.jpg; sourceTree = "<group>"; };
 		AADFA2181B6D74E600491DBF /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -270,8 +278,12 @@
 				AA239AF01BADA14200192AE0 /* Main_Profile.swift */,
 				AA1015391B5170A7007F77B8 /* ViewControllerLogin.swift */,
 				AA239AEE1BAD9FCF00192AE0 /* ViewControllerRegister.swift */,
+				AA7EF40A1BAE2DCE00C8A305 /* Profile_Main.swift */,
 				AA239AD41BAD9C9D00192AE0 /* Main.storyboard */,
 				AA239AD61BAD9CCD00192AE0 /* Images.xcassets */,
+				AA7EF4101BAE479A00C8A305 /* chicago_afternoon.jpg */,
+				AA7EF40E1BAE46C500C8A305 /* malaysia_morning.jpg */,
+				AA7EF40C1BAE2FAC00C8A305 /* night_sky.jpg */,
 				AA1015411B54B885007F77B8 /* Strips.png */,
 				AA239AD81BAD9D0E00192AE0 /* Beer_Mug_Edit.png */,
 				AA239AE81BAD9F1F00192AE0 /* Art_Gallery.jpg */,
@@ -504,6 +516,7 @@
 			files = (
 				AA3C847B1B770CF500C76304 /* GoogleMaps.bundle in Resources */,
 				AA5AC1FD1B649D0B00158156 /* San_Francisco.jpg in Resources */,
+				AA7EF4111BAE479A00C8A305 /* chicago_afternoon.jpg in Resources */,
 				AA5AC1F51B6490DD00158156 /* New_York.jpg in Resources */,
 				AA239AE31BAD9EB300192AE0 /* Sunset.jpg in Resources */,
 				AA0E68BC1B8ECC53000941C4 /* Female_Cloud.tif in Resources */,
@@ -515,6 +528,7 @@
 				AAAE73E41B5F4D45007841DC /* Cover_Page.jpg in Resources */,
 				AA1015421B54B885007F77B8 /* Strips.png in Resources */,
 				AA239AD71BAD9CCD00192AE0 /* Images.xcassets in Resources */,
+				AA7EF40F1BAE46C500C8A305 /* malaysia_morning.jpg in Resources */,
 				AA5AC1F71B6491B300158156 /* Hong_Kong.jpg in Resources */,
 				AA239AEB1BAD9F3A00192AE0 /* wine.jpg in Resources */,
 				AA0E68B81B8EC9F9000941C4 /* Male_Cloud.tif in Resources */,
@@ -524,6 +538,7 @@
 				AA5AC1FB1B6499CA00158156 /* London.jpg in Resources */,
 				AA239ADB1BAD9D1600192AE0 /* boat_sea_beach-normal.jpg in Resources */,
 				AA239AD91BAD9D0E00192AE0 /* Beer_Mug_Edit.png in Resources */,
+				AA7EF40D1BAE2FAC00C8A305 /* night_sky.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +576,7 @@
 				AA239AF71BADA4B800192AE0 /* Loc_PickerView.swift in Sources */,
 				AA271D7B1B4DF4CC00EA5BA6 /* AppDelegate.swift in Sources */,
 				AADFA22D1B6D74E600491DBF /* AFHTTPRequestOperationManager.m in Sources */,
+				AA7EF40B1BAE2DCE00C8A305 /* Profile_Main.swift in Sources */,
 				AADFA2391B6D74E600491DBF /* AFURLResponseSerialization.m in Sources */,
 				AA3C847E1B770E0100C76304 /* Location_class.swift in Sources */,
 				AA239AF51BADA49100192AE0 /* Edu_PickerView.swift in Sources */,
