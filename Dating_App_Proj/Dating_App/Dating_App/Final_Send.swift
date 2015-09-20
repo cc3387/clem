@@ -12,6 +12,7 @@ import UIKit
 class FinalSend: UIViewController{
     
     @IBOutlet weak var userid: UILabel!
+    @IBOutlet weak var Profile_Name: UILabel!
     @IBOutlet weak var City: UILabel!
     @IBOutlet weak var Address: UILabel!
     @IBOutlet weak var Gender: UILabel!
@@ -34,6 +35,7 @@ class FinalSend: UIViewController{
         var params = [
             "title": register_info.user_id,
             "user_id": register_info.user_id,
+            "Profile_Name": register_info.Profile_name,
             "Age_Range": register_info.age_range,
             "location": register_info.location,
             "Gender": register_info.Gender,
@@ -46,7 +48,7 @@ class FinalSend: UIViewController{
             "Sports_Art": register_info.sports_or_art
         ];
         
-        manager.POST("http://localhost:3000/collections/reg_test",
+        manager.POST("http://localhost:3000/collections/reg_test1",
             parameters: params,
             success: { (AFHTTPRequestOperation, AnyObject) -> Void in
                 println("success!")
@@ -59,11 +61,12 @@ class FinalSend: UIViewController{
             "longitude": loc_lng,
             "latitude": loc_lat,
             "Address": register_info.address,
-            "user_id": register_info.user_id
+            "user_id": register_info.user_id,
+            "Profile_Name": register_info.Profile_name
         ];
         
         
-        manager.POST("http://localhost:3000/collections/loc_reg",
+        manager.POST("http://localhost:3000/collections/loc_reg1",
             parameters: param_loc,
             success: { (AFHTTPRequestOperation, AnyObject) -> Void in
                 println("success!")
@@ -71,7 +74,7 @@ class FinalSend: UIViewController{
                 println("fail")
         }
         
-        let cityurl = "http://localhost:3000/collections/city" + "_" + register_info.location;
+        let cityurl = "http://localhost:3000/collections/city1" + "_" + register_info.location;
         
         println(cityurl);
         
@@ -93,16 +96,16 @@ class FinalSend: UIViewController{
         // Do any additional setup after loading the view, typically from a nib.
         self.userid.text = register_info.user_id
         self.City.text = register_info.location
-        self.Address.text = register_info.address
         self.Gender.text = register_info.Gender
         self.School.text = register_info.education
         self.Major.text = register_info.Major
+        self.Profile_Name.text = register_info.Profile_name
         self.userid.adjustsFontSizeToFitWidth = true
         self.City.adjustsFontSizeToFitWidth = true
-        self.Address.adjustsFontSizeToFitWidth = true
         self.Gender.adjustsFontSizeToFitWidth = true
         self.School.adjustsFontSizeToFitWidth = true
         self.Major.adjustsFontSizeToFitWidth = true
+        self.Profile_Name.adjustsFontSizeToFitWidth = true
     }
     
     override func didReceiveMemoryWarning() {

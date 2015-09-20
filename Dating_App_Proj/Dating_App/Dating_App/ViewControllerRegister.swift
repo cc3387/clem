@@ -119,6 +119,7 @@ class ViewControllerRegister: UIViewController, UITextFieldDelegate,UIPickerView
                     
                     register_info.user_id = self.Username.text;
                     register_info.age_range = self.Age.text;
+                    register_info.Profile_name = self.Location.text;
                     
                     //Disable the button and end field
                     self.Username.enabled = false;
@@ -199,6 +200,7 @@ class ViewControllerRegister: UIViewController, UITextFieldDelegate,UIPickerView
 struct register_info{
     static var user_id: String = "";
     static var age_range: String = "";
+    static var Profile_name: String = "";
     static var location: String = "";
     static var address: String = "";
     static var location_lat: Double = 0;

@@ -12,6 +12,7 @@ class Profile_Main : UIViewController{
 
     @IBOutlet weak var User_ID: UILabel!
     @IBOutlet weak var Time_Greetings: UILabel!
+    @IBOutlet weak var user_greetings: UILabel!
     @IBOutlet weak var Bkground_Image: UIImageView!
     
     //Getting the login_user id that is collected from the login page
@@ -25,22 +26,51 @@ class Profile_Main : UIViewController{
     let minute_i = minute_Int();
         
         if(hour_i > 6 && hour_i < 12){
-            self.Time_Greetings.text = "Good Morning, the time is, " + hours + " : " + minutes;
+            
+            if(minute_i < 10){
+            self.Time_Greetings.text = "Good Morning, the time is " + hours + " : " + "0" + minutes;
+            }
+            else{
+            self.Time_Greetings.text = "Good Morning, the time is " + hours + " : " + minutes;
+            }
+            
+            Time_Greetings.textColor = UIColor.blackColor();
             Bkground_Image.image = UIImage(named: "malaysia_morning.jpg");
+            
+            //Setting the User ID to login user id
+            self.User_ID.text = "Welcome to Simple, " + loginuser;
+            self.User_ID.textColor = UIColor.blackColor();
         }
         else if(hour_i >= 12 && hour_i <= 18){
-            self.Time_Greetings.text = "Good Afternoon, the time is, " + hours + " : " + minutes;
+            
+            if(minute_i < 10){
+                self.Time_Greetings.text = "Good Afternoon, the time is " + hours + " : " + "0" + minutes;
+            }
+            else{
+                self.Time_Greetings.text = "Good Afternoon, the time is " + hours + " : " + minutes;
+            }
+            
             Bkground_Image.image = UIImage(named: "chicago_afternoon.jpg");
+            
+            //Setting the User ID to login user id
+            self.User_ID.text = "Welcome to Simple, " + loginuser;
+            self.User_ID.textColor = UIColor.blackColor();
         }
         else{
-            self.Time_Greetings.text = "Good Evening, the time is, " + hours + " : " + minutes;
+            
+            if(minute_i < 10){
+                self.Time_Greetings.text = "Good Evening, the time is " + hours + " : " + "0" + minutes;
+            }
+            else{
+                self.Time_Greetings.text = "Good Evening, the time is " + hours + " : " + minutes;
+            }
+            
             Bkground_Image.image = UIImage(named: "night_sky.jpg");
+            
+            //Setting the User ID to login user id
+            self.User_ID.text = "Welcome to Simple, " + loginuser;
+            self.User_ID.textColor = UIColor.whiteColor();
         }
-        
-        
-    //Setting the User ID to login user id
-    self.User_ID.text = "Welcome to Simple, " + loginuser;
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -103,12 +133,4 @@ class Profile_Main : UIViewController{
         //Return Minute
         return minute
     }
-    
-    
-    
-
-
-
-
-
 };
