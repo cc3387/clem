@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Profile_Main : UIViewController{
 
@@ -50,8 +51,16 @@ class Profile_Main : UIViewController{
                 self.Time_Greetings.text = "Good Afternoon, the time is " + hours + " : " + minutes;
             }
             
-            Bkground_Image.image = UIImage(named: "chicago_afternoon.jpg");
+            let random = arc4random_uniform(2);
             
+            if(random == 0){
+            Bkground_Image.image = UIImage(named: "chicago_afternoon.jpg");
+            }
+            
+            if(random == 1){
+            Bkground_Image.image = UIImage(named: "Sunset.jpg");
+            }
+                
             //Setting the User ID to login user id
             self.User_ID.text = "Welcome to Simple, " + loginuser;
             self.User_ID.textColor = UIColor.blackColor();
@@ -65,8 +74,18 @@ class Profile_Main : UIViewController{
                 self.Time_Greetings.text = "Good Evening, the time is " + hours + " : " + minutes;
             }
             
-            Bkground_Image.image = UIImage(named: "night_sky.jpg");
             
+            let random = arc4random_uniform(2);
+            
+            if(random == 0){
+            Bkground_Image.image = UIImage(named: "night_sky.jpg");
+            }
+            
+            if(random == 1){
+            Bkground_Image.image = UIImage(named: "hong_kong_night.jpg");
+            }
+                
+                
             //Setting the User ID to login user id
             self.User_ID.text = "Welcome to Simple, " + loginuser;
             self.User_ID.textColor = UIColor.whiteColor();

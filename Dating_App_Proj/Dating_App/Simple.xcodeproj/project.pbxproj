@@ -53,6 +53,7 @@
 		AA271DBD1B4E1AE000EA5BA6 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DB71B4E1AE000EA5BA6 /* ParseFacebookUtils.framework */; };
 		AA271DBE1B4E1AE000EA5BA6 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DB81B4E1AE000EA5BA6 /* ParseFacebookUtilsV4.framework */; };
 		AA271DBF1B4E1AE000EA5BA6 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DB91B4E1AE000EA5BA6 /* ParseUI.framework */; };
+		AA3B57DA1BB1128900B6E753 /* hong_kong_night.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA3B57D91BB1128900B6E753 /* hong_kong_night.jpg */; };
 		AA3C847B1B770CF500C76304 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA3C84791B770CF500C76304 /* GoogleMaps.bundle */; };
 		AA3C847C1B770CF500C76304 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3C847A1B770CF500C76304 /* GoogleMaps.framework */; };
 		AA3C847E1B770E0100C76304 /* Location_class.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C847D1B770E0100C76304 /* Location_class.swift */; };
@@ -158,6 +159,7 @@
 		AA271DB81B4E1AE000EA5BA6 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "../../../iOS_App/parse-library-1/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
 		AA271DB91B4E1AE000EA5BA6 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "../../../iOS_App/parse-library-1/ParseUI.framework"; sourceTree = "<group>"; };
 		AA271DC61B4E1C6F00EA5BA6 /* Dating_App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dating_App-Bridging-Header.h"; sourceTree = "<group>"; };
+		AA3B57D91BB1128900B6E753 /* hong_kong_night.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hong_kong_night.jpg; sourceTree = "<group>"; };
 		AA3C84791B770CF500C76304 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 		AA3C847A1B770CF500C76304 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		AA3C847D1B770E0100C76304 /* Location_class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location_class.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 				AA7EF4101BAE479A00C8A305 /* chicago_afternoon.jpg */,
 				AA7EF40E1BAE46C500C8A305 /* malaysia_morning.jpg */,
 				AA7EF40C1BAE2FAC00C8A305 /* night_sky.jpg */,
+				AA3B57D91BB1128900B6E753 /* hong_kong_night.jpg */,
 				AA1015411B54B885007F77B8 /* Strips.png */,
 				AA239AD81BAD9D0E00192AE0 /* Beer_Mug_Edit.png */,
 				AA239AE81BAD9F1F00192AE0 /* Art_Gallery.jpg */,
@@ -529,6 +532,7 @@
 				AA1015421B54B885007F77B8 /* Strips.png in Resources */,
 				AA239AD71BAD9CCD00192AE0 /* Images.xcassets in Resources */,
 				AA7EF40F1BAE46C500C8A305 /* malaysia_morning.jpg in Resources */,
+				AA3B57DA1BB1128900B6E753 /* hong_kong_night.jpg in Resources */,
 				AA5AC1F71B6491B300158156 /* Hong_Kong.jpg in Resources */,
 				AA239AEB1BAD9F3A00192AE0 /* wine.jpg in Resources */,
 				AA0E68B81B8EC9F9000941C4 /* Male_Cloud.tif in Resources */,
