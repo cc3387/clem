@@ -1,0 +1,47 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '../app' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose install initial load of /Users/clement_chan_pig/Documents/passport-local-express4/package.json
+5 verbose installManyTop reading scoped package data from /Users/clement_chan_pig/Documents/passport-local-express4/node_modules/body-parser/package.json
+6 verbose installManyTop reading scoped package data from /Users/clement_chan_pig/Documents/passport-local-express4/node_modules/chai/package.json
+7 verbose installManyTop reading scoped package data from /Users/clement_chan_pig/Documents/passport-local-express4/node_modules/cookie-parser/package.json
+8 verbose installManyTop reading scoped package data from /Users/clement_chan_pig/Documents/passport-local-express4/node_modules/debug/package.json
+9 verbose installManyTop reading scoped package data from /Users/clement_chan_pig/Documents/passport-local-express4/node_modules/express/package.json
+10 verbose installManyTop reading scoped package data from /Users/clement_chan_pig/Documents/passport-local-express4/node_modules/express-session/package.json
+11 verbose installManyTop reading scoped package data from /Users/clement_chan_pig/Documents/passport-local-express4/node_modules/jade/package.json
+12 verbose installManyTop reading scoped package data from /Users/clement_chan_pig/Documents/passport-local-express4/node_modules/mocha/package.json
+13 verbose installManyTop reading scoped package data from /Users/clement_chan_pig/Documents/passport-local-express4/node_modules/mongoose/package.json
+14 verbose installManyTop reading scoped package data from /Users/clement_chan_pig/Documents/passport-local-express4/node_modules/morgan/package.json
+15 verbose installManyTop reading scoped package data from /Users/clement_chan_pig/Documents/passport-local-express4/node_modules/passport/package.json
+16 verbose installManyTop reading scoped package data from /Users/clement_chan_pig/Documents/passport-local-express4/node_modules/passport-local/package.json
+17 verbose installManyTop reading scoped package data from /Users/clement_chan_pig/Documents/passport-local-express4/node_modules/passport-local-mongoose/package.json
+18 verbose installManyTop reading scoped package data from /Users/clement_chan_pig/Documents/passport-local-express4/node_modules/serve-favicon/package.json
+19 verbose installManyTop reading scoped package data from /Users/clement_chan_pig/Documents/passport-local-express4/node_modules/should/package.json
+20 info package.json mocha@1.14.0 No license field.
+21 info package.json passport-local@1.0.0 No license field.
+22 info package.json should@2.1.1 No license field.
+23 verbose readDependencies loading dependencies from /Users/clement_chan_pig/Documents/passport-local-express4/package.json
+24 silly cache add args [ '../app', null ]
+25 verbose cache add spec ../app
+26 silly cache add parsed spec { raw: '../app',
+26 silly cache add   scope: null,
+26 silly cache add   name: null,
+26 silly cache add   rawSpec: '../app',
+26 silly cache add   spec: '/Users/clement_chan_pig/Documents/app',
+26 silly cache add   type: 'local' }
+27 error addLocal Could not install /Users/clement_chan_pig/Documents/app
+28 verbose stack Error: ENOENT, open '/Users/clement_chan_pig/Documents/app'
+28 verbose stack     at Error (native)
+29 verbose cwd /Users/clement_chan_pig/Documents/passport-local-express4
+30 error Darwin 14.5.0
+31 error argv "node" "/usr/local/bin/npm" "install" "../app"
+32 error node v0.12.7
+33 error npm  v2.11.3
+34 error path /Users/clement_chan_pig/Documents/app
+35 error code ENOENT
+36 error errno -2
+37 error enoent ENOENT, open '/Users/clement_chan_pig/Documents/app'
+37 error enoent This is most likely not a problem with npm itself
+37 error enoent and is related to npm not being able to find a file.
+38 verbose exit [ -2, true ]
