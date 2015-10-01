@@ -208,7 +208,9 @@ struct register_info{
     static var Gender: String = "";
     static var education: String = "";
     static var Major: String = "";
-    static var beer_or_wine = "";
-    static var sports_or_art = "";
-    static var EDC_or_Classic = "";
+    static var beer_or_wine: String = "";
+    static var sports_or_art: String = "";
+    static var EDC_or_Classic: String = "";
+    static var Ethnicity: String = "";
+    static var Cooking_Dineout: String = "";
 }

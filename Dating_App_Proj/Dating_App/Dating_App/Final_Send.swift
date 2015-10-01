@@ -39,13 +39,15 @@ class FinalSend: UIViewController{
             "Age_Range": register_info.age_range,
             "location": register_info.location,
             "Gender": register_info.Gender,
+            "Ethnicity": register_info.Ethnicity,
             "longitude": loc_lng,
             "latitude": loc_lat,
             "Education":register_info.education,
             "Major":register_info.Major,
             "Address": register_info.address,
             "Beer_Wine": register_info.beer_or_wine,
-            "Sports_Art": register_info.sports_or_art
+            "Sports_Art": register_info.sports_or_art,
+            "Cooking_DineOut": register_info.Cooking_Dineout
         ];
         
         manager.POST("http://localhost:3000/collections/reg_test1",

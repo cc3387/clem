@@ -54,7 +54,7 @@ class Loc_PickerView: UIViewController,UIPickerViewDataSource, UIPickerViewDeleg
     }
     
     let pickerData = [
-        ["Alabama AL", "Alaska AK", "Arizona AZ", "Arkansas AR", "California CA", "Colorado CO", "Conneticut CT", "Deleware DE", "Florida FL", "Georgia GA", "Hawaii HI", "Idaho ID", "Illinois IL", "Indiana IN", "Iowa IA", "Kansas", "Kentucky KY","Louisiana LA", "Maine ME", "Maryland  MD", "Massechusetts MA", "Michigan MI", "Minnesota MN", "Mississippi MS", "Missouri MO", "Montana MT", "Nebraska NE", "Nevada NV", "New Hampshire NH", "New Jersey NJ", "New Mexico NM", "New York NY", "North Carolina NC", "North Dakota ND", "Oklahoma OK", "Oregon OR", "Pennsylvania PA", "Rhode Island RI", "South Caroline SC", "South Dakota SD", "Tennessee TN", "Texas TX", "Utah UT", "Vermont VT", "Virginia VA", "Washington WA", "West Virginia WV", "Wisconsin WI", "Wyoming WY"]
+        ["Alabama AL", "Alaska AK", "Arizona AZ", "Arkansas AR", "California CA", "Colorado CO", "Conneticut CT", "Deleware DE", "Florida FL", "Georgia GA", "Hawaii HI", "Idaho ID", "Illinois IL", "Indiana IN", "Iowa IA", "Kansas KS", "Kentucky KY","Louisiana LA", "Maine ME", "Maryland  MD", "Massechusetts MA", "Michigan MI", "Minnesota MN", "Mississippi MS", "Missouri MO", "Montana MT", "Nebraska NE", "Nevada NV", "New Hampshire NH", "New Jersey NJ", "New Mexico NM", "New York NY", "North Carolina NC", "North Dakota ND", "Oklahoma OK", "Oregon OR", "Pennsylvania PA", "Rhode Island RI", "South Caroline SC", "South Dakota SD", "Tennessee TN", "Texas TX", "Utah UT", "Vermont VT", "Virginia VA", "Washington WA", "West Virginia WV", "Wisconsin WI", "Wyoming WY"]
     ]
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -82,36 +82,47 @@ class Loc_PickerView: UIViewController,UIPickerViewDataSource, UIPickerViewDeleg
         
         var location: String?;
         
-        if (loc == "New York NY"){
-        location = "NY";
+        if(loc == "Alabama AL"){
+        location = "AL";
         }
-        
-        else if (loc == "New Jersey NJ"){
-        location = "NJ";
+        else if(loc == "Alaska AK"){
+        location = "AK";
         }
-        
-        else if (loc == "Pennsylvania PA"){
-        location = "PA";
+        else if(loc == "Arkansas AR"){
+        location = "AR";
         }
-        
-        else if (loc == "Florida FL"){
-        location  = "FL";
+        else if (loc == "Arizona AZ"){
+        location = "AZ";
         }
-        
         else if (loc == "California CA"){
         location  = "CA";
         }
-        
+        else if (loc == "Colorado CO"){
+        location  = "CO";
+        }
+        else if (loc == "Conneticut CT"){
+        location  = "CT";
+        }
+        else if (loc == "Deleware DE"){
+        location  = "DE";
+        }
+        else if (loc == "Florida FL"){
+        location  = "FL";
+        }
+        else if (loc == "New York NY"){
+        location = "NY";
+        }
+        else if (loc == "New Jersey NJ"){
+        location = "NJ";
+        }
+        else if (loc == "Pennsylvania PA"){
+        location = "PA";
+        }
         else if (loc == "Illinois IL"){
         location  = "IL";
         }
-        
         else if (loc == "Texas TX"){
         location  = "TX";
-        }
-        
-        else if (loc == "Arizona AZ"){
-        location = "AZ";
         }
         
         return location!;

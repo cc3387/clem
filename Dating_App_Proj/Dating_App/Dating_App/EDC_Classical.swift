@@ -45,7 +45,7 @@ class EDCClassical: UIViewController{
     }
     
     func loadDestinationVC(){
-        self.performSegueWithIdentifier("Summary_Send", sender: nil)
+        self.performSegueWithIdentifier("Cooking", sender: nil)
     }
     
 }

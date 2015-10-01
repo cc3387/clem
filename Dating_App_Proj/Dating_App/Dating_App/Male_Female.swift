@@ -45,7 +45,7 @@ class Male_Female: UIViewController{
     }
 
     func loadDestinationVC(){
-        self.performSegueWithIdentifier("Education", sender: nil)
+        self.performSegueWithIdentifier("Ethnicity", sender: nil)
     }
     
 }

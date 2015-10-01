@@ -23,51 +23,48 @@ class Google_ViewController: UIViewController, CLLocationManagerDelegate, GMSMap
         self.mapTasks.geocodeAddress(address, withCompletionHandler: { (status, success) -> Void in
             
             if !success {
-            println(status)
-            
-            if status == "ZERO_RESULTS" {
-            println("The location could not be found.")
-            }
+                println(status)
+                
+                if status == "ZERO_RESULTS" {
+                    println("The location could not be found.")
+                }
             }
             else {
-            let coordinate = CLLocationCoordinate2D(latitude: self.mapTasks.fetchedAddressLatitude, longitude: self.mapTasks.fetchedAddressLongitude)
-            register_info.location_lat = self.mapTasks.fetchedAddressLatitude;
-            register_info.location_lng = self.mapTasks.fetchedAddressLongitude;
-            println("The Latitude is:");
-            println(register_info.location_lat);
-            println("The Longitude is:");
-            println(register_info.location_lng);
+                let coordinate = CLLocationCoordinate2D(latitude: self.mapTasks.fetchedAddressLatitude, longitude: self.mapTasks.fetchedAddressLongitude)
+                register_info.location_lat = self.mapTasks.fetchedAddressLatitude;
+                register_info.location_lng = self.mapTasks.fetchedAddressLongitude;
+                println("The Latitude is:");
+                println(register_info.location_lat);
+                println("The Longitude is:");
+                println(register_info.location_lng);
+                
+                /*Sending Location latitude and longitude to the localhost server*/
+                
+                var loc_lng:String = String(format:"%f",register_info.location_lng);
+                var loc_lat:String = String(format:"%f",register_info.location_lat);
+                
+                
+                var params = [
+                    "longitude": loc_lng,
+                    "latitude" : loc_lat
+                ];
+                
+                let manager = AFHTTPRequestOperationManager();
+                
+                manager.POST("http://localhost:3000/collections/location",
+                    parameters: params,
+                    success: { (AFHTTPRequestOperation, AnyObject) -> Void in
+                        println("success!")
+                    }) { (AFHTTPRequestOperation, NSError) -> Void in
+                        println("fail")
+                }
+                
+            }
             
-            /*Sending Location latitude and longitude to the localhost server*/
-                
-            var loc_lng:String = String(format:"%f",register_info.location_lng);
-            var loc_lat:String = String(format:"%f",register_info.location_lat);
-                
-                
-            var params = [
-            "longitude": loc_lng,
-            "latitude" : loc_lat
-            ];
-                
-            let manager = AFHTTPRequestOperationManager();
-                
-            manager.POST("http://localhost:3000/collections/location",
-            parameters: params,
-            success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-            println("success!")
-            }) { (AFHTTPRequestOperation, NSError) -> Void in
-            println("fail")
-            }
-                
-            }
-         
         })
         
         self.loadDestinationVC();
     }
-    
-    
-    
     
     @IBAction func Request_Address(sender: AnyObject) {
         

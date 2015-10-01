@@ -65,6 +65,8 @@
 		AA3C848A1B770EC400C76304 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3C84891B770EC400C76304 /* CoreText.framework */; };
 		AA3C848C1B770ECA00C76304 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3C848B1B770ECA00C76304 /* CoreData.framework */; };
 		AA3C848E1B770ED800C76304 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3C848D1B770ED800C76304 /* AVFoundation.framework */; };
+		AA4020101BBCA9E800ABA237 /* Ethnicity_PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA40200F1BBCA9E800ABA237 /* Ethnicity_PickerView.swift */; };
+		AA4020121BBCD36000ABA237 /* Cooking_DineOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4020111BBCD36000ABA237 /* Cooking_DineOut.swift */; };
 		AA5AC1F31B648F0900158156 /* space-lp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA5AC1F21B648F0900158156 /* space-lp.jpg */; };
 		AA5AC1F51B6490DD00158156 /* New_York.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA5AC1F41B6490DD00158156 /* New_York.jpg */; };
 		AA5AC1F71B6491B300158156 /* Hong_Kong.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA5AC1F61B6491B300158156 /* Hong_Kong.jpg */; };
@@ -171,6 +173,8 @@
 		AA3C84891B770EC400C76304 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		AA3C848B1B770ECA00C76304 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		AA3C848D1B770ED800C76304 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AA40200F1BBCA9E800ABA237 /* Ethnicity_PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ethnicity_PickerView.swift; sourceTree = "<group>"; };
+		AA4020111BBCD36000ABA237 /* Cooking_DineOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cooking_DineOut.swift; sourceTree = "<group>"; };
 		AA5AC1F21B648F0900158156 /* space-lp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "space-lp.jpg"; sourceTree = "<group>"; };
 		AA5AC1F41B6490DD00158156 /* New_York.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = New_York.jpg; sourceTree = "<group>"; };
 		AA5AC1F61B6491B300158156 /* Hong_Kong.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hong_Kong.jpg; sourceTree = "<group>"; };
@@ -385,6 +389,8 @@
 				AA239AF81BADA4D300192AE0 /* Major.swift */,
 				AA239AFE1BADAF4000192AE0 /* EDC_Classical.swift */,
 				AA239B001BADB0E000192AE0 /* Final_Send.swift */,
+				AA40200F1BBCA9E800ABA237 /* Ethnicity_PickerView.swift */,
+				AA4020111BBCD36000ABA237 /* Cooking_DineOut.swift */,
 			);
 			name = Preferences;
 			sourceTree = "<group>";
@@ -561,11 +567,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA239AE71BAD9EDC00192AE0 /* Beer_Wine.swift in Sources */,
+				AA4020121BBCD36000ABA237 /* Cooking_DineOut.swift in Sources */,
 				AA239AF11BADA14200192AE0 /* Main_Profile.swift in Sources */,
 				AA239AFD1BADA76600192AE0 /* SportsArtGallery.swift in Sources */,
 				AADFA2331B6D74E600491DBF /* AFSecurityPolicy.m in Sources */,
 				AA10153A1B5170A7007F77B8 /* ViewControllerLogin.swift in Sources */,
 				AA239AEF1BAD9FCF00192AE0 /* ViewControllerRegister.swift in Sources */,
+				AA4020101BBCA9E800ABA237 /* Ethnicity_PickerView.swift in Sources */,
 				AADFA2311B6D74E600491DBF /* AFNetworkReachabilityManager.m in Sources */,
 				AA271D7D1B4DF4CC00EA5BA6 /* ViewController.swift in Sources */,
 				AA239AF31BADA15200192AE0 /* Distance_Calculation.swift in Sources */,
