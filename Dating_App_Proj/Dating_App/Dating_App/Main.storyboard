@@ -116,7 +116,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FKV-bw-iHk">
-                                <rect key="frame" x="-108" y="-272" width="817" height="1019"/>
+                                <rect key="frame" x="-61" y="-42" width="720" height="711"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqf-fY-QQl">
                                 <rect key="frame" x="-71" y="-131" width="46" height="30"/>
@@ -464,13 +464,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Simple" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBH-Zc-ag2">
-                                <rect key="frame" x="124" y="114" width="84" height="29"/>
+                                <rect key="frame" x="119" y="114" width="84" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location Search" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUX-MS-o8E">
-                                <rect key="frame" x="99" y="169" width="148" height="39"/>
+                                <rect key="frame" x="92" y="167" width="148" height="39"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
                                 <color key="textColor" red="0.92941182850000004" green="0.5411764979" blue="0.50196081400000003" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
@@ -492,19 +492,14 @@
                                 <color key="textColor" red="0.2204253582" green="0.360501501" blue="0.68112768310000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eqT-z8-gzg">
-                                <rect key="frame" x="40" y="296" width="266" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter location nearest to you:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srN-21-vmd">
-                                <rect key="frame" x="40" y="238" width="328" height="21"/>
+                                <rect key="frame" x="33" y="238" width="328" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cb8-NK-4Yq">
-                                <rect key="frame" x="119" y="357" width="95" height="30"/>
+                                <rect key="frame" x="108" y="367" width="95" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <state key="normal" title="Send Location!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -514,6 +509,11 @@
                                     <action selector="Request_From_Text:" destination="XrC-Zk-39t" eventType="touchUpInside" id="Zpu-T9-Jky"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eqT-z8-gzg">
+                                <rect key="frame" x="33" y="296" width="266" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1474,7 +1474,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Click To Choose)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4S-ft-FxU">
-                                <rect key="frame" x="124" y="266" width="162" height="21"/>
+                                <rect key="frame" x="125" y="266" width="162" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -1702,14 +1702,14 @@
         <image name="wine.jpg" width="620" height="387"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KBk-Ef-9Hr"/>
-        <segue reference="Ccm-cV-i5q"/>
+        <segue reference="26h-W4-Jl5"/>
+        <segue reference="bt9-n8-i2R"/>
         <segue reference="hX4-9H-kZv"/>
         <segue reference="98y-Oy-n8F"/>
         <segue reference="uAq-hg-nYX"/>
         <segue reference="UYx-V1-hc4"/>
         <segue reference="hLD-FZ-jQI"/>
         <segue reference="d3S-iK-LLH"/>
-        <segue reference="xjI-Mi-giw"/>
+        <segue reference="FzL-6n-IqR"/>
     </inferredMetricsTieBreakers>
 </document>

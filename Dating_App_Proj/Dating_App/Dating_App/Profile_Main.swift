@@ -75,17 +75,18 @@ class Profile_Main : UIViewController{
             }
             
             
-            let random = arc4random_uniform(2);
+            let random = arc4random_uniform(3);
             
             if(random == 0){
             Bkground_Image.image = UIImage(named: "night_sky.jpg");
             }
-            
-            if(random == 1){
-            Bkground_Image.image = UIImage(named: "hong_kong_night.jpg");
+            else if(random == 1){
+            Bkground_Image.image = UIImage(named: "hongkongnight.jpg");
             }
-                
-                
+            else if(random == 2){
+            Bkground_Image.image = UIImage(named: "Paris_Night.jpg");
+            }
+            
             //Setting the User ID to login user id
             self.User_ID.text = "Welcome to Simple, " + loginuser;
             self.User_ID.textColor = UIColor.whiteColor();

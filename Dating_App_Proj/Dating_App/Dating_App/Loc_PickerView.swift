@@ -109,6 +109,12 @@ class Loc_PickerView: UIViewController,UIPickerViewDataSource, UIPickerViewDeleg
         else if (loc == "Florida FL"){
         location  = "FL";
         }
+        else if (loc == "Georgia GA"){
+        location  = "GA";
+        }
+        else if (loc == "Hawaii HI"){
+        location  = "HI";
+        }
         else if (loc == "New York NY"){
         location = "NY";
         }
