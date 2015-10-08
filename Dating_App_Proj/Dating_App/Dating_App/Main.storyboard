@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bpH-nP-zcn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VSM-1c-wr2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -101,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="940" y="63"/>
+            <point key="canvasLocation" x="940" y="71"/>
         </scene>
         <!--Profile Main-->
         <scene sceneID="vam-zv-eUB">
@@ -171,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zo6-8k-MkB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1120" y="-683"/>
+            <point key="canvasLocation" x="940" y="-647"/>
         </scene>
         <!--Main Profile-->
         <scene sceneID="UHr-PO-7AZ">
@@ -371,7 +371,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9NQ-Sf-0xg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1870" y="60"/>
+            <point key="canvasLocation" x="1854" y="76"/>
         </scene>
         <!--Distance Calculation-->
         <scene sceneID="VqH-ef-W89">
@@ -534,6 +534,24 @@
             </objects>
             <point key="canvasLocation" x="2174" y="952"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="3s5-Df-By1">
+            <objects>
+                <viewController id="VSM-1c-wr2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UrR-tg-4Yt"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ypq-J3-J3S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aVU-gZ-eRE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kmD-kA-ang" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-881" y="63"/>
+        </scene>
         <!--Starting_StoryBoard-->
         <scene sceneID="bM4-w5-iyx">
             <objects>
@@ -642,7 +660,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RUJ-2a-Ixd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="216" y="378"/>
+            <point key="canvasLocation" x="65" y="63"/>
         </scene>
         <!--View Controller Register-->
         <scene sceneID="oFw-XZ-lYg">
@@ -994,7 +1012,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.92941182850000004" green="0.5411764979" blue="0.50196081400000003" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <color key="titleShadowColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="Nextquest:" destination="suE-Cg-mc7" eventType="touchUpInside" id="nSG-lr-fDw"/>
@@ -1704,8 +1722,7 @@
         <image name="wine.jpg" width="620" height="387"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xjI-Mi-giw"/>
-        <segue reference="hLD-FZ-jQI"/>
+        <segue reference="N9M-jQ-SPw"/>
         <segue reference="KBk-Ef-9Hr"/>
         <segue reference="Ccm-cV-i5q"/>
         <segue reference="SRH-UJ-XLN"/>
@@ -1713,5 +1730,6 @@
         <segue reference="Pvq-MF-HCu"/>
         <segue reference="d3S-iK-LLH"/>
         <segue reference="fTe-SU-cnY"/>
+        <segue reference="hLD-FZ-jQI"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,6 +13,7 @@ class ViewControllerLogin: UIViewController {
     @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var Password: UITextField!
     
+    var user: String = "";
     var decision_user: Int = 0
     var decision_pwd: Int = 0
     
@@ -38,6 +39,7 @@ class ViewControllerLogin: UIViewController {
     @IBAction func Login(sender: AnyObject) {
         //RetrieveUsername();
         //RetrievePassword();
+    
         
         /*if(self.decision_user == 1 && self.decision_pwd == 1){
         self.Username.enabled = false;
@@ -48,6 +50,8 @@ class ViewControllerLogin: UIViewController {
         finduserid();
         loadDestinationVC();
         }*/
+        
+        //println(loginUsername.text)
         
         PFUser.logInWithUsernameInBackground(self.Username.text, password:self.Password.text) {
             
@@ -61,6 +65,8 @@ class ViewControllerLogin: UIViewController {
             }
         }
     }
+    
+    //Load destination to the main profile
     func loadDestinationVC(){
     self.performSegueWithIdentifier("Main_Profile", sender: nil)
     }
