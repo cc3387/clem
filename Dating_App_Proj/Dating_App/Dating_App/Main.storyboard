@@ -96,12 +96,12 @@
                     <connections>
                         <outlet property="Password" destination="7OC-ec-nOr" id="WK1-rj-9sN"/>
                         <outlet property="Username" destination="Mii-0D-bTh" id="M3N-gy-tX3"/>
-                        <segue destination="f9m-1M-zoV" kind="show" identifier="Main_Profile" id="naa-ms-cuj"/>
+                        <segue destination="f9m-1M-zoV" kind="show" identifier="openProfile" id="naa-ms-cuj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="940" y="71"/>
+            <point key="canvasLocation" x="948" y="63"/>
         </scene>
         <!--Profile Main-->
         <scene sceneID="vam-zv-eUB">
@@ -138,7 +138,8 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bpH-nP-zcn" kind="show" id="FzL-6n-IqR"/>
+                                    <action selector="Logout:" destination="f9m-1M-zoV" eventType="touchUpInside" id="jhX-Ef-y0B"/>
+                                    <segue destination="bpH-nP-zcn" kind="show" identifier="Logout" id="PpB-Pu-aBD"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Simple" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTT-Xv-h5m">
@@ -171,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zo6-8k-MkB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="940" y="-647"/>
+            <point key="canvasLocation" x="937" y="-754"/>
         </scene>
         <!--Main Profile-->
         <scene sceneID="UHr-PO-7AZ">
@@ -532,12 +533,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dy7-Z5-gdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2174" y="952"/>
+            <point key="canvasLocation" x="1854" y="988"/>
         </scene>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="3s5-Df-By1">
             <objects>
-                <viewController id="VSM-1c-wr2" sceneMemberID="viewController">
+                <viewController id="VSM-1c-wr2" customClass="startViewController" customModule="Simple" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UrR-tg-4Yt"/>
                         <viewControllerLayoutGuide type="bottom" id="Ypq-J3-J3S"/>
@@ -545,12 +546,29 @@
                     <view key="view" contentMode="scaleToFill" id="aVU-gZ-eRE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloud-horizon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Bhe-bQ-tJY">
+                                <rect key="frame" x="-97" y="-263" width="945" height="1096"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0ts-7T-gcP">
+                                <rect key="frame" x="49" y="-315" width="673" height="895"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="0ts-7T-gcP"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <segue destination="bpH-nP-zcn" kind="show" identifier="goToLogin" id="MN9-zh-jkq"/>
+                        <segue destination="f9m-1M-zoV" kind="show" identifier="goToAccount" id="1cx-Td-9VV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmD-kA-ang" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-881" y="63"/>
+            <point key="canvasLocation" x="65" y="-754"/>
         </scene>
         <!--Starting_StoryBoard-->
         <scene sceneID="bM4-w5-iyx">
@@ -657,6 +675,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <segue destination="f9m-1M-zoV" kind="show" identifier="openProfile" id="cqz-GP-iva"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RUJ-2a-Ixd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -857,7 +878,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5N-TL-ByX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862" y="952"/>
+            <point key="canvasLocation" x="65" y="988"/>
         </scene>
         <!--Loc Picker View-->
         <scene sceneID="Ta5-dd-I4Y">
@@ -929,8 +950,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wb-k3-b7c">
-                                <rect key="frame" x="74" y="207" width="224" height="154"/>
+                                <rect key="frame" x="74" y="207" width="224" height="162"/>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGe-nt-uVW">
+                                <rect key="frame" x="16" y="28" width="46" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bpH-nP-zcn" kind="show" id="ch1-CE-RhC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.91764705879999997" green="0.57647058819999997" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -969,7 +1001,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Vz-l2-tXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1549" y="952"/>
+            <point key="canvasLocation" x="932" y="988"/>
         </scene>
         <!--Ethinicity Picker View-->
         <scene sceneID="F6x-sR-jte">
@@ -1038,7 +1070,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4Z-4U-s3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3537" y="952"/>
+            <point key="canvasLocation" x="3437" y="988"/>
         </scene>
         <!--Edu Picker View-->
         <scene sceneID="lC4-Km-del">
@@ -1708,12 +1740,13 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2832" y="952"/>
+            <point key="canvasLocation" x="2626" y="988"/>
         </scene>
     </scenes>
     <resources>
         <image name="Beer_Mug_Edit.png" width="769" height="1004"/>
         <image name="Classical_Music.jpg" width="600" height="400"/>
+        <image name="Clouds.jpg" width="1280" height="853"/>
         <image name="Cover_Page.jpg" width="1280" height="692"/>
         <image name="EDC_View.jpg" width="600" height="450"/>
         <image name="Female_Cloud.tif" width="740" height="370"/>
@@ -1723,13 +1756,14 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="N9M-jQ-SPw"/>
-        <segue reference="KBk-Ef-9Hr"/>
-        <segue reference="Ccm-cV-i5q"/>
-        <segue reference="SRH-UJ-XLN"/>
-        <segue reference="Gj8-v2-86R"/>
-        <segue reference="Pvq-MF-HCu"/>
-        <segue reference="d3S-iK-LLH"/>
+        <segue reference="naa-ms-cuj"/>
         <segue reference="fTe-SU-cnY"/>
+        <segue reference="d3S-iK-LLH"/>
+        <segue reference="Pvq-MF-HCu"/>
+        <segue reference="hX4-9H-kZv"/>
+        <segue reference="bt9-n8-i2R"/>
+        <segue reference="26h-W4-Jl5"/>
+        <segue reference="98y-Oy-n8F"/>
         <segue reference="hLD-FZ-jQI"/>
     </inferredMetricsTieBreakers>
 </document>

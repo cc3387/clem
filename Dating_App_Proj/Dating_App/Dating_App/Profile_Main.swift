@@ -17,7 +17,8 @@ class Profile_Main : UIViewController{
     @IBOutlet weak var Bkground_Image: UIImageView!
     
     //Getting the login_user id that is collected from the login page
-    var loginuser: String = login_info.user_id;
+    var loginuser: String = login.loginid;
+    var user1: String = "";
     
     override func viewDidLoad() {
     
@@ -39,7 +40,7 @@ class Profile_Main : UIViewController{
             Bkground_Image.image = UIImage(named: "malaysia_morning.jpg");
             
             //Setting the User ID to login user id
-            self.User_ID.text = "Welcome to Simple, " + loginuser;
+            self.User_ID.text = "Welcome to Simple, " + self.loginuser;
             self.User_ID.textColor = UIColor.blackColor();
         }
         else if(hour_i >= 12 && hour_i <= 18){
@@ -62,7 +63,7 @@ class Profile_Main : UIViewController{
             }
                 
             //Setting the User ID to login user id
-            self.User_ID.text = "Welcome to Simple, " + loginuser;
+            self.User_ID.text = "Welcome to Simple, " + self.loginuser;
             self.User_ID.textColor = UIColor.blackColor();
         }
         else{
@@ -88,8 +89,39 @@ class Profile_Main : UIViewController{
             }
             
             //Setting the User ID to login user id
-            self.User_ID.text = "Welcome to Simple, " + loginuser;
+            self.User_ID.text = "Welcome to Simple, " + self.loginuser;
             self.User_ID.textColor = UIColor.whiteColor();
+        }
+    }
+    
+    
+    //To Logout and delete token that is assigned
+    @IBAction func Logout(sender: AnyObject) {
+        
+        //println(loginUsername.text)
+        let manager = AFHTTPRequestOperationManager()
+        
+        var params = [
+            
+            "username":login.loginid,
+            "password":login.password
+            
+        ]
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(nil, forKey: "token")
+        //defaults.getObject(for
+        defaults.synchronize()
+        
+        
+        manager.POST("http://localhost:3000/logout",
+            parameters: params,
+            
+            //what is needed for success to execute?
+            success: { (AFHTTPRequestOperation, AnyObject) -> Void in
+                println("successful logout")
+            }) { (AFHTTPRequestOperation, NSError) -> Void in
+                println("fail")
         }
     }
     

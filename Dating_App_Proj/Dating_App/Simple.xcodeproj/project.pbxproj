@@ -78,6 +78,8 @@
 		AA7EF40F1BAE46C500C8A305 /* malaysia_morning.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA7EF40E1BAE46C500C8A305 /* malaysia_morning.jpg */; };
 		AA7EF4111BAE479A00C8A305 /* chicago_afternoon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA7EF4101BAE479A00C8A305 /* chicago_afternoon.jpg */; };
 		AA8B166F1B8EAD8C00096E73 /* cloud-horizon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA8B166E1B8EAD8C00096E73 /* cloud-horizon.jpg */; };
+		AAAA0FD81BC6CF6B004F2474 /* Start_View_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA0FD71BC6CF6B004F2474 /* Start_View_Controller.swift */; };
+		AAAA0FDA1BC6D210004F2474 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA0FD91BC6D210004F2474 /* User.swift */; };
 		AAAE73E41B5F4D45007841DC /* Cover_Page.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAAE73E31B5F4D45007841DC /* Cover_Page.jpg */; };
 		AADFA22B1B6D74E600491DBF /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AADFA2191B6D74E600491DBF /* AFHTTPRequestOperation.m */; };
 		AADFA22C1B6D74E600491DBF /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AADFA2191B6D74E600491DBF /* AFHTTPRequestOperation.m */; };
@@ -186,6 +188,8 @@
 		AA7EF40E1BAE46C500C8A305 /* malaysia_morning.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = malaysia_morning.jpg; sourceTree = "<group>"; };
 		AA7EF4101BAE479A00C8A305 /* chicago_afternoon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chicago_afternoon.jpg; sourceTree = "<group>"; };
 		AA8B166E1B8EAD8C00096E73 /* cloud-horizon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cloud-horizon.jpg"; sourceTree = "<group>"; };
+		AAAA0FD71BC6CF6B004F2474 /* Start_View_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Start_View_Controller.swift; sourceTree = "<group>"; };
+		AAAA0FD91BC6D210004F2474 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AAAE73E31B5F4D45007841DC /* Cover_Page.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cover_Page.jpg; sourceTree = "<group>"; };
 		AADFA2181B6D74E600491DBF /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		AADFA2191B6D74E600491DBF /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
@@ -277,6 +281,7 @@
 		AA271D771B4DF4CC00EA5BA6 /* Dating_App */ = {
 			isa = PBXGroup;
 			children = (
+				AAAA0FD61BC6CF19004F2474 /* Login_Files */,
 				AA3C848F1B77157200C76304 /* Google_Location */,
 				AA5AC1F11B64559E00158156 /* Preferences */,
 				AA271D7A1B4DF4CC00EA5BA6 /* AppDelegate.swift */,
@@ -388,11 +393,20 @@
 				AA5AC2001B651A8100158156 /* Male_Female.swift */,
 				AA239AF81BADA4D300192AE0 /* Major.swift */,
 				AA239AFE1BADAF4000192AE0 /* EDC_Classical.swift */,
-				AA239B001BADB0E000192AE0 /* Final_Send.swift */,
-				AA40200F1BBCA9E800ABA237 /* Ethnicity_PickerView.swift */,
 				AA4020111BBCD36000ABA237 /* Cooking_DineOut.swift */,
+				AA40200F1BBCA9E800ABA237 /* Ethnicity_PickerView.swift */,
+				AA239B001BADB0E000192AE0 /* Final_Send.swift */,
 			);
 			name = Preferences;
+			sourceTree = "<group>";
+		};
+		AAAA0FD61BC6CF19004F2474 /* Login_Files */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA0FD71BC6CF6B004F2474 /* Start_View_Controller.swift */,
+				AAAA0FD91BC6D210004F2474 /* User.swift */,
+			);
+			name = Login_Files;
 			sourceTree = "<group>";
 		};
 		AADFA1831B67A20F00491DBF /* Location_Pictures */ = {
@@ -571,8 +585,10 @@
 				AA239AF11BADA14200192AE0 /* Main_Profile.swift in Sources */,
 				AA239AFD1BADA76600192AE0 /* SportsArtGallery.swift in Sources */,
 				AADFA2331B6D74E600491DBF /* AFSecurityPolicy.m in Sources */,
+				AAAA0FD81BC6CF6B004F2474 /* Start_View_Controller.swift in Sources */,
 				AA10153A1B5170A7007F77B8 /* ViewControllerLogin.swift in Sources */,
 				AA239AEF1BAD9FCF00192AE0 /* ViewControllerRegister.swift in Sources */,
+				AAAA0FDA1BC6D210004F2474 /* User.swift in Sources */,
 				AA4020101BBCA9E800ABA237 /* Ethnicity_PickerView.swift in Sources */,
 				AADFA2311B6D74E600491DBF /* AFNetworkReachabilityManager.m in Sources */,
 				AA271D7D1B4DF4CC00EA5BA6 /* ViewController.swift in Sources */,

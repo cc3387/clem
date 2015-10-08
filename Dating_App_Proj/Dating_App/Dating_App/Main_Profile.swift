@@ -24,7 +24,7 @@ class Main_Profile: UIViewController{
     @IBOutlet weak var Latitude: UILabel!
     @IBOutlet weak var Longitude: UILabel!
     
-    var loginuser: String = login_info.user_id
+    //var loginuser: String = login_user.user_id
     
     @IBAction func Posting(sender: AnyObject) {
         
@@ -279,7 +279,7 @@ class Main_Profile: UIViewController{
         
         self.Hour.text = hours;
         self.Minutes.text = minutes;
-        self.username.text = loginuser;
+        //self.username.text = loginuser;
         // Do any additional setup after loading the view, typically from a nib.
     }
     

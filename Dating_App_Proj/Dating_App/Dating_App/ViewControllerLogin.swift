@@ -16,6 +16,7 @@ class ViewControllerLogin: UIViewController {
     var user: String = "";
     var decision_user: Int = 0
     var decision_pwd: Int = 0
+    var user1:User!
     
     
     /*override func viewDidLoad() {
@@ -53,7 +54,8 @@ class ViewControllerLogin: UIViewController {
         
         //println(loginUsername.text)
         
-        PFUser.logInWithUsernameInBackground(self.Username.text, password:self.Password.text) {
+        //Login with Parse
+        /*PFUser.logInWithUsernameInBackground(self.Username.text, password:self.Password.text) {
             
             (user: PFUser?, error: NSError?) -> Void in
             if user != nil {
@@ -63,12 +65,52 @@ class ViewControllerLogin: UIViewController {
             } else {
                 // The login failed. Check error to see why.
             }
+        }*/
+        
+        
+        //Login with our own register
+        let manager = AFHTTPRequestOperationManager()
+        
+        var params = [
+            
+            "username":Username.text,
+            "password":Password.text
+            
+        ]
+        
+        manager.POST("http://localhost:3000/login1",
+            parameters: params,
+            
+            //what is needed for success to execute?
+            success: { (AFHTTPRequestOperation, userObject) -> Void in
+                println(userObject)
+                if let results = userObject as? NSDictionary {
+                    if let user_details = results["user"] as? NSDictionary {
+                        if let username = user_details["username"] as? String {
+                            self.user1 = User(username: username, token: "helloworld")
+                            let defaults = NSUserDefaults.standardUserDefaults()
+                            defaults.setObject(self.user1.token, forKey: "token")
+                            //login.loginid = self.user1.username;
+                            //defaults.getObject(for
+                            defaults.synchronize()
+                            self.performSegueWithIdentifier("openProfile", sender: self)
+                            
+                        }
+                        
+                    }
+                }
+            }) { (AFHTTPRequestOperation, NSError) -> Void in
+                println("fail in sending")
         }
+        
+        login.loginid = self.Username.text;
+        login.password = self.Password.text;
+        //self.loadDestinationVC();
     }
     
     //Load destination to the main profile
     func loadDestinationVC(){
-    self.performSegueWithIdentifier("Main_Profile", sender: nil)
+    self.performSegueWithIdentifier("openProfile", sender: nil)
     }
     
     func finduserid(){
@@ -163,12 +205,29 @@ class ViewControllerLogin: UIViewController {
             }
         }
     }
+    
+    
+    //if login fails how do I redirect back?
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "openProfile") {
+            
+            //self.user = User(username: "hsuregan5")
+            let newViewController = segue.destinationViewController as! Profile_Main
+            //println("YAY::")
+            println(self.user1.username)
+            newViewController.user1 = self.user
+            
+        }
+    }
+    
 }
 
 //Storing the userid as global variable in the ios app machine
-
-struct login_info{
-    static var user_id: String = "";
+struct login{
+    
+    static var loginid = "";
+    static var password = "";
+    
 }
 
 

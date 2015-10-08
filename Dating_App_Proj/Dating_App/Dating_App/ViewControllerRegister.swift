@@ -28,6 +28,9 @@ class ViewControllerRegister: UIViewController, UITextFieldDelegate,UIPickerView
     @IBOutlet weak var myPicker: UIPickerView!
     @IBOutlet weak var LocPicker: UIPickerView!
     
+    //Define User class for the later use
+    var user:User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         myPicker.delegate = self;
@@ -139,6 +142,23 @@ class ViewControllerRegister: UIViewController, UITextFieldDelegate,UIPickerView
                     self.loadDestinationVC();
                 }
             }
+        }
+        
+        
+        //Send information to our own register in express server
+        let manager = AFHTTPRequestOperationManager()
+        var param_login = [
+            "username":self.Username.text,
+            "password":self.Password.text
+        ]
+        
+        manager.POST("http://localhost:3000/register",
+        parameters: param_login,
+        success: { (AFHTTPRequestOperation, AnyObject) -> Void in
+                println("success!")
+        })
+        {(AFHTTPRequestOperation, NSError) -> Void in
+        println("fail to send in register")
         }
     }
 
