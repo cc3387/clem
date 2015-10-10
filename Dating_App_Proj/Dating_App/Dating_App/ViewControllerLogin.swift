@@ -90,8 +90,6 @@ class ViewControllerLogin: UIViewController {
                             self.user1 = User(username: username, token: "helloworld")
                             let defaults = NSUserDefaults.standardUserDefaults()
                             defaults.setObject(self.user1.token, forKey: "token")
-                            //login.loginid = self.user1.username;
-                            //defaults.getObject(for
                             defaults.synchronize()
                             self.performSegueWithIdentifier("openProfile", sender: self)
                             

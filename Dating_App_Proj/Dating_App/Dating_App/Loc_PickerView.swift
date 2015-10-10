@@ -115,20 +115,119 @@ class Loc_PickerView: UIViewController,UIPickerViewDataSource, UIPickerViewDeleg
         else if (loc == "Hawaii HI"){
         location  = "HI";
         }
-        else if (loc == "New York NY"){
-        location = "NY";
+        else if(loc == "Idaho ID"){
+        location = "ID";
         }
-        else if (loc == "New Jersey NJ"){
+        else if(loc == "Illinois IL"){
+        location = "IL";
+        }
+        else if(loc == "Indiana IN"){
+        location = "IN";
+        }
+        else if(loc == "Iowa IA"){
+        location = "IA";
+        }
+        else if(loc ==  "Kansas KS"){
+        location = "KS";
+        }
+        else if(loc ==  "Kentucky KY"){
+        location = "KY";
+        }
+        else if(loc ==  "Louisiana LA"){
+        location = "LA";
+        }
+        else if(loc ==  "Maine ME"){
+        location = "ME";
+        }
+        else if(loc ==  "Maryland  MD"){
+        location = "MD";
+        }
+        else if(loc == "Massechusetts MA"){
+        location = "MA";
+        }
+        else if(loc == "Michigan MI"){
+        location = "MI";
+        }
+        else if(loc == "Minnesota MN"){
+        location = "MN";
+        }
+        else if(loc == "Mississippi MS"){
+        location = "MS";
+        }
+        else if(loc == "Missouri MO"){
+        location = "MO";
+        }
+        else if(loc == "Montana MT"){
+        location = "MT";
+        }
+        else if(loc == "Nebraska NE"){
+        location = "NE";
+        }
+        else if(loc == "Nevada NV"){
+        location = "NV";
+        }
+        else if(loc == "New Hampshire NH"){
+        location = "NH";
+        }
+        else if(loc == "New Jersey NJ"){
         location = "NJ";
         }
-        else if (loc == "Pennsylvania PA"){
+        else if(loc == "New Mexico NM"){
+        location = "NM";
+        }
+        else if(loc == "New York NY"){
+        location = "NY";
+        }
+        else if(loc == "North Carolina NC"){
+        location = "NC";
+        }
+        else if(loc == "North Dakota ND"){
+        location = "ND";
+        }
+        else if(loc == "Oklahoma OK"){
+        location = "OK";
+        }
+        else if(loc == "Oregon OR"){
+        location = "OR";
+        }
+        else if(loc == "Pennsylvania PA"){
         location = "PA";
         }
-        else if (loc == "Illinois IL"){
-        location  = "IL";
+        else if(loc == "Rhode Island RI"){
+        location = "RI";
         }
-        else if (loc == "Texas TX"){
-        location  = "TX";
+        else if(loc == "South Caroline SC"){
+        location = "SC";
+        }
+        else if(loc == "South Dakota SD"){
+        location = "SD";
+        }
+        else if(loc == "Tennessee TN"){
+        location = "TN";
+        }
+        else if(loc == "Texas TX"){
+        location = "TX";
+        }
+        else if(loc == "Utah UT"){
+        location = "UT";
+        }
+        else if(loc == "Vermont VT"){
+        location = "VT";
+        }
+        else if(loc == "Virginia VA"){
+        location = "VA";
+        }
+        else if(loc == "Washington WA"){
+        location = "WA";
+        }
+        else if(loc == "West Virginia WV"){
+        location = "WV";
+        }
+        else if(loc == "Wisconsin WI"){
+        location = "WI";
+        }
+        else if(loc == "Wyoming WY"){
+        location = "WY";
         }
         
         return location!;

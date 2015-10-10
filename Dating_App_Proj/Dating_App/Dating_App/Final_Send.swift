@@ -50,7 +50,7 @@ class FinalSend: UIViewController{
             "Cooking_DineOut": register_info.Cooking_Dineout
         ];
         
-        manager.POST("http://localhost:3000/collections/reg_test1",
+        manager.POST("http://localhost:3000/database",
             parameters: params,
             success: { (AFHTTPRequestOperation, AnyObject) -> Void in
                 println("success!")
@@ -58,7 +58,7 @@ class FinalSend: UIViewController{
                 println("fail")
         }
         
-        var param_loc = [
+        /*var param_loc = [
             "title": register_info.location,
             "longitude": loc_lng,
             "latitude": loc_lat,
@@ -86,7 +86,7 @@ class FinalSend: UIViewController{
                 println("success!")
             }) { (AFHTTPRequestOperation, NSError) -> Void in
                 println("fail")
-        }
+        }*/
         
         
         loadDestinationVC();

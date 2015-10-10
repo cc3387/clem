@@ -150,6 +150,7 @@ class ViewControllerRegister: UIViewController, UITextFieldDelegate,UIPickerView
         var param_login = [
             "username":self.Username.text,
             "password":self.Password.text
+            //"age":self.Age.text
         ]
         
         manager.POST("http://localhost:3000/register",

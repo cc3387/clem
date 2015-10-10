@@ -30,6 +30,7 @@ class Google_ViewController: UIViewController, CLLocationManagerDelegate, GMSMap
                 }
             }
             else {
+                
                 let coordinate = CLLocationCoordinate2D(latitude: self.mapTasks.fetchedAddressLatitude, longitude: self.mapTasks.fetchedAddressLongitude)
                 register_info.location_lat = self.mapTasks.fetchedAddressLatitude;
                 register_info.location_lng = self.mapTasks.fetchedAddressLongitude;
@@ -40,7 +41,7 @@ class Google_ViewController: UIViewController, CLLocationManagerDelegate, GMSMap
                 
                 /*Sending Location latitude and longitude to the localhost server*/
                 
-                var loc_lng:String = String(format:"%f",register_info.location_lng);
+                /*var loc_lng:String = String(format:"%f",register_info.location_lng);
                 var loc_lat:String = String(format:"%f",register_info.location_lat);
                 
                 
@@ -57,7 +58,7 @@ class Google_ViewController: UIViewController, CLLocationManagerDelegate, GMSMap
                         println("success!")
                     }) { (AFHTTPRequestOperation, NSError) -> Void in
                         println("fail")
-                }
+                }*/
                 
             }
             
@@ -66,7 +67,7 @@ class Google_ViewController: UIViewController, CLLocationManagerDelegate, GMSMap
         self.loadDestinationVC();
     }
     
-    @IBAction func Request_Address(sender: AnyObject) {
+    /*@IBAction func Request_Address(sender: AnyObject) {
         
         let addressAlert = UIAlertController(title: "Address Finder", message: "Please type your address:", preferredStyle: UIAlertControllerStyle.Alert)
         
@@ -97,7 +98,7 @@ class Google_ViewController: UIViewController, CLLocationManagerDelegate, GMSMap
         }
         /*Sending the latitude and longitude information to the server*/
 
-        var params = [
+        /*var params = [
             "longitude": register_info.location_lng,
             "latitude" : register_info.location_lat
         ];
@@ -119,8 +120,8 @@ class Google_ViewController: UIViewController, CLLocationManagerDelegate, GMSMap
         addressAlert.addAction(findAction)
         addressAlert.addAction(closeAction)
         
-        presentViewController(addressAlert, animated: true, completion: nil)
-    }
+        presentViewController(addressAlert, animated: true, completion: nil)*/
+    }*/
     
     override func viewDidLoad() {
         // Do any additional setup after loading the view, typically from a nib.

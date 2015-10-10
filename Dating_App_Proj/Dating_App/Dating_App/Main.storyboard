@@ -143,10 +143,10 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Simple" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTT-Xv-h5m">
-                                <rect key="frame" x="148" y="16" width="88" height="53"/>
+                                <rect key="frame" x="152" y="16" width="88" height="53"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
+                                <color key="highlightedColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User_ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2J-vj-Baw">
                                 <rect key="frame" x="19" y="75" width="296" height="21"/>
@@ -160,6 +160,22 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaL-IU-Pc7">
+                                <rect key="frame" x="-14" y="166" width="151" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <state key="normal" title="Simple - Meet">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMZ-Sb-t9y">
+                                <rect key="frame" x="-15" y="210" width="151" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <state key="normal" title="Simple - Chat">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -433,7 +449,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HgC-Y2-6zq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2626" y="63"/>
+            <point key="canvasLocation" x="2546" y="76"/>
         </scene>
         <!--Google View Controller-->
         <scene sceneID="6Bn-UN-P6r">
@@ -1140,7 +1156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PtC-gJ-Hz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4204" y="952"/>
+            <point key="canvasLocation" x="4176" y="988"/>
         </scene>
         <!--Major-->
         <scene sceneID="wXF-Ft-CSs">
@@ -1209,7 +1225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGv-85-5EW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4872" y="952"/>
+            <point key="canvasLocation" x="4868" y="988"/>
         </scene>
         <!--Beer Wine-->
         <scene sceneID="LVO-Ut-Bv4">
@@ -1294,7 +1310,7 @@
                 <swipeGestureRecognizer direction="right" id="tFn-L8-5TH"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tuX-2q-RaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5597" y="952"/>
+            <point key="canvasLocation" x="5567" y="988"/>
         </scene>
         <!--Sports Art Gallery-->
         <scene sceneID="t9T-ac-PNH">
@@ -1371,7 +1387,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9G-p9-Y3k" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="XLn-Km-Vj6"/>
             </objects>
-            <point key="canvasLocation" x="6322" y="952"/>
+            <point key="canvasLocation" x="6249" y="988"/>
         </scene>
         <!--Classical-->
         <scene sceneID="HDG-So-jki">
@@ -1399,7 +1415,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Which music do you prefer?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9U-PY-3zo">
-                                <rect key="frame" x="75" y="200" width="226" height="24"/>
+                                <rect key="frame" x="75" y="191" width="226" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -1416,28 +1432,34 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EDC Music" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Dp-dk-Z3y">
-                                <rect key="frame" x="63" y="263" width="86" height="21"/>
+                                <rect key="frame" x="58" y="312" width="86" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EDC_View.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="VaK-30-wA7">
-                                <rect key="frame" x="24" y="303" width="165" height="117"/>
+                                <rect key="frame" x="19" y="353" width="165" height="117"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Classical_Music.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9yk-T7-423">
-                                <rect key="frame" x="207" y="303" width="155" height="117"/>
+                                <rect key="frame" x="202" y="353" width="155" height="117"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Simple" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UU-Di-nVx">
-                                <rect key="frame" x="123" y="63" width="107" height="39"/>
+                                <rect key="frame" x="135" y="59" width="107" height="39"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Classical Music" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ti-gi-3M4">
-                                <rect key="frame" x="229" y="263" width="110" height="21"/>
+                                <rect key="frame" x="224" y="312" width="110" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Swipe To Choose)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7h-h1-SJi">
+                                <rect key="frame" x="96" y="256" width="161" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1449,7 +1471,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7jQ-fH-WBa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="skC-cM-a5m"/>
             </objects>
-            <point key="canvasLocation" x="7048" y="947"/>
+            <point key="canvasLocation" x="6968" y="988"/>
         </scene>
         <!--Cooking Dine Out-->
         <scene sceneID="Boj-fo-tuY">
@@ -1500,18 +1522,16 @@
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <state key="normal" title="Cooking At Home">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="Cooking_Home:" destination="fna-eu-AqX" eventType="touchUpInside" id="ldW-U7-pEA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MC4-kt-MiB">
-                                <rect key="frame" x="186" y="327" width="165" height="36"/>
+                                <rect key="frame" x="191" y="330" width="165" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <state key="normal" title="Dine Out">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="Dine_Out:" destination="fna-eu-AqX" eventType="touchUpInside" id="LJQ-VC-V3s"/>
@@ -1533,7 +1553,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Lc-5R-mAa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="94G-X3-Sya"/>
             </objects>
-            <point key="canvasLocation" x="7741" y="944"/>
+            <point key="canvasLocation" x="7657" y="988"/>
         </scene>
         <!--Final Send-->
         <scene sceneID="Asx-G0-4XQ">
@@ -1660,7 +1680,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuF-Ft-9GV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8401" y="944"/>
+            <point key="canvasLocation" x="8316" y="988"/>
         </scene>
         <!--Male Female-->
         <scene sceneID="3cd-0T-36F">
@@ -1755,15 +1775,15 @@
         <image name="wine.jpg" width="620" height="387"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="N9M-jQ-SPw"/>
-        <segue reference="naa-ms-cuj"/>
-        <segue reference="fTe-SU-cnY"/>
-        <segue reference="d3S-iK-LLH"/>
-        <segue reference="Pvq-MF-HCu"/>
-        <segue reference="hX4-9H-kZv"/>
-        <segue reference="bt9-n8-i2R"/>
         <segue reference="26h-W4-Jl5"/>
-        <segue reference="98y-Oy-n8F"/>
-        <segue reference="hLD-FZ-jQI"/>
+        <segue reference="bt9-n8-i2R"/>
+        <segue reference="1cx-Td-9VV"/>
+        <segue reference="PpB-Pu-aBD"/>
+        <segue reference="Gj8-v2-86R"/>
+        <segue reference="Pvq-MF-HCu"/>
+        <segue reference="d3S-iK-LLH"/>
+        <segue reference="UYx-V1-hc4"/>
+        <segue reference="eKO-5h-52b"/>
+        <segue reference="SRH-UJ-XLN"/>
     </inferredMetricsTieBreakers>
 </document>
