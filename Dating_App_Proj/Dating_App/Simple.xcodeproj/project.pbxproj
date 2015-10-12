@@ -99,6 +99,8 @@
 		AADFA23A1B6D74E600491DBF /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = AADFA2281B6D74E600491DBF /* AFURLResponseSerialization.m */; };
 		AADFA23B1B6D74E600491DBF /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AADFA22A1B6D74E600491DBF /* AFURLSessionManager.m */; };
 		AADFA23C1B6D74E600491DBF /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AADFA22A1B6D74E600491DBF /* AFURLSessionManager.m */; };
+		AAF3ACAB1BCB346E0097C47D /* Background_Color.tif in Resources */ = {isa = PBXBuildFile; fileRef = AAF3ACAA1BCB346E0097C47D /* Background_Color.tif */; };
+		AAF3ACAD1BCB646C0097C47D /* Meet_Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3ACAC1BCB646C0097C47D /* Meet_Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,6 +218,8 @@
 		AADFA2281B6D74E600491DBF /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		AADFA2291B6D74E600491DBF /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		AADFA22A1B6D74E600491DBF /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		AAF3ACAA1BCB346E0097C47D /* Background_Color.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Background_Color.tif; sourceTree = "<group>"; };
+		AAF3ACAC1BCB646C0097C47D /* Meet_Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meet_Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,8 +300,10 @@
 				AA1015391B5170A7007F77B8 /* ViewControllerLogin.swift */,
 				AA239AEE1BAD9FCF00192AE0 /* ViewControllerRegister.swift */,
 				AA7EF40A1BAE2DCE00C8A305 /* Profile_Main.swift */,
+				AAF3ACAC1BCB646C0097C47D /* Meet_Profile.swift */,
 				AA239AD41BAD9C9D00192AE0 /* Main.storyboard */,
 				AA239AD61BAD9CCD00192AE0 /* Images.xcassets */,
+				AAF3ACAA1BCB346E0097C47D /* Background_Color.tif */,
 				AA7EF4101BAE479A00C8A305 /* chicago_afternoon.jpg */,
 				AA7EF40E1BAE46C500C8A305 /* malaysia_morning.jpg */,
 				AA7EF40C1BAE2FAC00C8A305 /* night_sky.jpg */,
@@ -571,6 +577,7 @@
 				AA239ADD1BAD9D4A00192AE0 /* LaunchScreen.xib in Resources */,
 				AA239AE91BAD9F1F00192AE0 /* Art_Gallery.jpg in Resources */,
 				AA5AC1FB1B6499CA00158156 /* London.jpg in Resources */,
+				AAF3ACAB1BCB346E0097C47D /* Background_Color.tif in Resources */,
 				AA239ADB1BAD9D1600192AE0 /* boat_sea_beach-normal.jpg in Resources */,
 				AA239AD91BAD9D0E00192AE0 /* Beer_Mug_Edit.png in Resources */,
 				AA4020241BBE272400ABA237 /* Paris_Night.jpg in Resources */,
@@ -620,6 +627,7 @@
 				AADFA2391B6D74E600491DBF /* AFURLResponseSerialization.m in Sources */,
 				AA3C847E1B770E0100C76304 /* Location_class.swift in Sources */,
 				AA239AF51BADA49100192AE0 /* Edu_PickerView.swift in Sources */,
+				AAF3ACAD1BCB646C0097C47D /* Meet_Profile.swift in Sources */,
 				AA5AC2011B651A8100158156 /* Male_Female.swift in Sources */,
 				AA239AFB1BADA58A00192AE0 /* Google_Location.swift in Sources */,
 			);

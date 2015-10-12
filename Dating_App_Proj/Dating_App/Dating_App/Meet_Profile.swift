@@ -1,16 +1,17 @@
 //
-//  Profile_Main.swift
+//  Meet_Profile.swift
 //  Simple
 //
-//  Created by Clement Chan on 9/19/15.
+//  Created by Clement Chan on 10/11/15.
 //  Copyright (c) 2015 Clement Chan. All rights reserved.
 //
+
 
 import Foundation
 import UIKit
 
-class Profile_Main : UIViewController{
-
+class Profile_Meet_Main : UIViewController{
+    
     @IBOutlet weak var User_ID: UILabel!
     @IBOutlet weak var Time_Greetings: UILabel!
     @IBOutlet weak var user_greetings: UILabel!
@@ -20,30 +21,25 @@ class Profile_Main : UIViewController{
     
     @IBOutlet weak var Profile_Name: UILabel!
     
-    @IBAction func Single_Meet(sender: AnyObject) {
-        
-        loadDestinationVC();
-        
-    }
     
     //Getting the login_user id that is collected from the login page
     var loginuser: String = login.loginid;
     var user1: String = "";
     
     override func viewDidLoad() {
-    
-    let hours = hour();
-    let minutes = minute();
-    let hour_i = hour_int();
-    let minute_i = minute_Int();
+        
+        let hours = hour();
+        let minutes = minute();
+        let hour_i = hour_int();
+        let minute_i = minute_Int();
         
         if(hour_i > 6 && hour_i < 12){
             
             if(minute_i < 10){
-            self.Time_Greetings.text = "Good Morning, the time is " + hours + " : " + "0" + minutes;
+                self.Time_Greetings.text = "Good Morning, the time is " + hours + " : " + "0" + minutes;
             }
             else{
-            self.Time_Greetings.text = "Good Morning, the time is " + hours + " : " + minutes;
+                self.Time_Greetings.text = "Good Morning, the time is " + hours + " : " + minutes;
             }
             
             Time_Greetings.textColor = UIColor.blackColor();
@@ -65,13 +61,13 @@ class Profile_Main : UIViewController{
             let random = arc4random_uniform(2);
             
             if(random == 0){
-            Bkground_Image.image = UIImage(named: "chicago_afternoon.jpg");
+                Bkground_Image.image = UIImage(named: "chicago_afternoon.jpg");
             }
             
             if(random == 1){
-            Bkground_Image.image = UIImage(named: "Sunset.jpg");
+                Bkground_Image.image = UIImage(named: "Sunset.jpg");
             }
-                
+            
             //Setting the User ID to login user id
             self.User_ID.text = "Welcome to Simple, " + self.loginuser;
             self.User_ID.textColor = UIColor.blackColor();
@@ -89,42 +85,19 @@ class Profile_Main : UIViewController{
             let random = arc4random_uniform(3);
             
             if(random == 0){
-            Bkground_Image.image = UIImage(named: "night_sky.jpg");
+                Bkground_Image.image = UIImage(named: "night_sky.jpg");
             }
             else if(random == 1){
-            Bkground_Image.image = UIImage(named: "hongkongnight.jpg");
+                Bkground_Image.image = UIImage(named: "hongkongnight.jpg");
             }
             else if(random == 2){
-            Bkground_Image.image = UIImage(named: "Paris_Night.jpg");
+                Bkground_Image.image = UIImage(named: "Paris_Night.jpg");
             }
             
             //Setting the User ID to login user id
             self.User_ID.text = "Welcome to Simple, " + self.loginuser;
             self.User_ID.textColor = UIColor.whiteColor();
         }
-        
-        let manager = AFHTTPRequestOperationManager();
-        
-        //var param = [login.loginid];
-        
-        manager.GET("http://localhost:3000/database",
-            parameters: nil,
-            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
-                println("JSON: " + responseObject.description)
-                println("Object obtained successfully");
-                println(responseObject.count);
-                
-                if let results = responseObject[0] as? NSDictionary {
-                    if let title = results["title"] as? String {
-                        self.Profile_Name.text = title as String
-                        self.Profile_Name.adjustsFontSizeToFitWidth = true
-                    }
-                }
-            },
-            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
-                println("Error: " + error.localizedDescription)
-            }
-        )
     }
     
     
@@ -161,8 +134,6 @@ class Profile_Main : UIViewController{
     override func didReceiveMemoryWarning() {
         // Dispose of any resources that can be recreated.
     }
-
-
     
     
     //Functions that will be used to display the time
@@ -218,11 +189,5 @@ class Profile_Main : UIViewController{
         //Return Minute
         return minute
     }
-    
-    func loadDestinationVC(){
-        self.performSegueWithIdentifier("To_Meet", sender: nil)
-    }
-    
-    
     
 };
