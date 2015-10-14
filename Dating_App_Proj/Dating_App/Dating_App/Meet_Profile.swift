@@ -98,36 +98,19 @@ class Profile_Meet_Main : UIViewController{
             self.User_ID.text = "Welcome to Simple, " + self.loginuser;
             self.User_ID.textColor = UIColor.whiteColor();
         }
-    }
-    
-    
-    //To Logout and delete token that is assigned
-    @IBAction func Logout(sender: AnyObject) {
         
-        //println(loginUsername.text)
+        
         let manager = AFHTTPRequestOperationManager()
         
-        var params = [
-            
-            "username":login.loginid,
-            "password":login.password
-            
-        ]
+        let param = ["username": login.loginid]
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject(nil, forKey: "token")
-        //defaults.getObject(for
-        defaults.synchronize()
-        
-        
-        manager.POST("http://localhost:3000/logout",
-            parameters: params,
-            
-            //what is needed for success to execute?
+        manager.POST("http://localhost:3000/match",
+            parameters: param,
             success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-                println("successful logout")
-            }) { (AFHTTPRequestOperation, NSError) -> Void in
-                println("fail")
+                println("success!")
+            })
+            {(AFHTTPRequestOperation, NSError) -> Void in
+                println("fail to send in register")
         }
     }
     

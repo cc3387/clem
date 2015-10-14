@@ -121,6 +121,8 @@ class ViewControllerRegister: UIViewController, UITextFieldDelegate,UIPickerView
                     }
                     
                     register_info.user_id = self.Username.text;
+                    register_info.username = self.Username.text;
+                    register_info.password = self.Password.text;
                     register_info.age_range = self.Age.text;
                     register_info.Profile_name = self.Location.text;
                     
@@ -146,7 +148,7 @@ class ViewControllerRegister: UIViewController, UITextFieldDelegate,UIPickerView
         
         
         //Send information to our own register in express server
-        let manager = AFHTTPRequestOperationManager()
+        /*let manager = AFHTTPRequestOperationManager()
         var param_login = [
             "username":self.Username.text,
             "password":self.Password.text
@@ -160,7 +162,7 @@ class ViewControllerRegister: UIViewController, UITextFieldDelegate,UIPickerView
         })
         {(AFHTTPRequestOperation, NSError) -> Void in
         println("fail to send in register")
-        }
+        }*/
     }
 
     override func didReceiveMemoryWarning() {
@@ -219,6 +221,8 @@ class ViewControllerRegister: UIViewController, UITextFieldDelegate,UIPickerView
 
 //Storing the userid as global variable in the ios app machine
 struct register_info{
+    static var username: String = "";
+    static var password: String = "";
     static var user_id: String = "";
     static var age_range: String = "";
     static var Profile_name: String = "";

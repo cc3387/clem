@@ -56,11 +56,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dating_App/Profile_Main.swift"
-            timestampString = "466314621.85833"
+            timestampString = "466490207.041725"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "228"
-            endingLineNumber = "228"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
             landmarkName = "Profile_Main"
             landmarkType = "3">
          </BreakpointContent>

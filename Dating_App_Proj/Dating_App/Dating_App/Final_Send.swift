@@ -33,15 +33,17 @@ class FinalSend: UIViewController{
         //var loc_lat:String = String(format:"%f",loc_lat_int);
         
         var params = [
-            "title": register_info.user_id,
-            "user_id": register_info.user_id,
+            //"title": register_info.user_id,
+            "username": register_info.username,
+            "password": register_info.password,
+            //"user_id": register_info.user_id,
             "Profile_Name": register_info.Profile_name,
             "Age_Range": register_info.age_range,
             "location": register_info.location,
             "Gender": register_info.Gender,
             "Ethnicity": register_info.Ethnicity,
-            "longitude": loc_lng,
-            "latitude": loc_lat,
+            "longitude": register_info.location_lng,
+            "latitude": register_info.location_lat,
             "Education":register_info.education,
             "Major":register_info.Major,
             "Address": register_info.address,
@@ -50,13 +52,14 @@ class FinalSend: UIViewController{
             "Cooking_DineOut": register_info.Cooking_Dineout
         ];
         
-        manager.POST("http://localhost:3000/database",
+        manager.POST("http://localhost:3000/register",
             parameters: params,
             success: { (AFHTTPRequestOperation, AnyObject) -> Void in
                 println("success!")
-            }) { (AFHTTPRequestOperation, NSError) -> Void in
-                println("fail")
-        }
+            })
+            {(AFHTTPRequestOperation, NSError) -> Void in
+                println("fail to send in register")
+            }
         
         /*var param_loc = [
             "title": register_info.location,

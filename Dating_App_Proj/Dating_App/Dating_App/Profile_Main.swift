@@ -103,28 +103,21 @@ class Profile_Main : UIViewController{
             self.User_ID.textColor = UIColor.whiteColor();
         }
         
-        let manager = AFHTTPRequestOperationManager();
+        let manager = AFHTTPRequestOperationManager()
         
-        //var param = [login.loginid];
+        var params = [
+            "username":login.loginid
+        ]
         
-        manager.GET("http://localhost:3000/database",
-            parameters: nil,
-            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
-                println("JSON: " + responseObject.description)
-                println("Object obtained successfully");
-                println(responseObject.count);
-                
-                if let results = responseObject[0] as? NSDictionary {
-                    if let title = results["title"] as? String {
-                        self.Profile_Name.text = title as String
-                        self.Profile_Name.adjustsFontSizeToFitWidth = true
-                    }
-                }
-            },
-            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
-                println("Error: " + error.localizedDescription)
-            }
-        )
+        manager.POST("http://localhost:3000/user",
+            parameters: params,
+            
+            //what is needed for success to execute?
+            success: { (AFHTTPRequestOperation, AnyObject) -> Void in
+                println("successfully retrieve user's info")
+            }) { (AFHTTPRequestOperation, NSError) -> Void in
+                println("fail")
+        }
     }
     
     
