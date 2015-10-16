@@ -1,16 +1,16 @@
 //
-//  Profile_Main.swift
+//  Loading_Meet.swift
 //  Simple
 //
-//  Created by Clement Chan on 9/19/15.
+//  Created by Clement Chan on 10/16/15.
 //  Copyright (c) 2015 Clement Chan. All rights reserved.
-//
+
 
 import Foundation
 import UIKit
 
-class Profile_Main : UIViewController{
-
+class Loading_Meet_Main : UIViewController{
+    
     @IBOutlet weak var User_ID: UILabel!
     @IBOutlet weak var Time_Greetings: UILabel!
     @IBOutlet weak var user_greetings: UILabel!
@@ -20,30 +20,25 @@ class Profile_Main : UIViewController{
     
     @IBOutlet weak var Profile_Name: UILabel!
     
-    @IBAction func Single_Meet(sender: AnyObject) {
-        
-        loadDestinationVC();
-        
-    }
     
     //Getting the login_user id that is collected from the login page
     var loginuser: String = login.loginid;
     var user1: String = "";
     
     override func viewDidLoad() {
-    
-    let hours = hour();
-    let minutes = minute();
-    let hour_i = hour_int();
-    let minute_i = minute_Int();
+        
+        let hours = hour();
+        let minutes = minute();
+        let hour_i = hour_int();
+        let minute_i = minute_Int();
         
         if(hour_i > 6 && hour_i < 12){
             
             if(minute_i < 10){
-            self.Time_Greetings.text = "Good Morning, the time is " + hours + " : " + "0" + minutes;
+                self.Time_Greetings.text = "Good Morning, the time is " + hours + " : " + "0" + minutes;
             }
             else{
-            self.Time_Greetings.text = "Good Morning, the time is " + hours + " : " + minutes;
+                self.Time_Greetings.text = "Good Morning, the time is " + hours + " : " + minutes;
             }
             
             Time_Greetings.textColor = UIColor.blackColor();
@@ -65,13 +60,13 @@ class Profile_Main : UIViewController{
             let random = arc4random_uniform(2);
             
             if(random == 0){
-            Bkground_Image.image = UIImage(named: "chicago_afternoon.jpg");
+                Bkground_Image.image = UIImage(named: "chicago_afternoon.jpg");
             }
             
             if(random == 1){
-            Bkground_Image.image = UIImage(named: "Sunset.jpg");
+                Bkground_Image.image = UIImage(named: "Sunset.jpg");
             }
-                
+            
             //Setting the User ID to login user id
             self.User_ID.text = "Welcome to Simple, " + self.loginuser;
             self.User_ID.textColor = UIColor.blackColor();
@@ -89,13 +84,13 @@ class Profile_Main : UIViewController{
             let random = arc4random_uniform(3);
             
             if(random == 0){
-            Bkground_Image.image = UIImage(named: "night_sky.jpg");
+                Bkground_Image.image = UIImage(named: "night_sky.jpg");
             }
             else if(random == 1){
-            Bkground_Image.image = UIImage(named: "hongkongnight.jpg");
+                Bkground_Image.image = UIImage(named: "hongkongnight.jpg");
             }
             else if(random == 2){
-            Bkground_Image.image = UIImage(named: "Paris_Night.jpg");
+                Bkground_Image.image = UIImage(named: "Paris_Night.jpg");
             }
             
             //Setting the User ID to login user id
@@ -103,59 +98,25 @@ class Profile_Main : UIViewController{
             self.User_ID.textColor = UIColor.whiteColor();
         }
         
-        /*let manager = AFHTTPRequestOperationManager()
         
-        var params = [
-            "username":login.loginid
-        ]
-        
-        manager.POST("http://localhost:3000/user_account",
-            parameters: params,
-            
-            //what is needed for success to execute?
-            success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-                println("successfully retrieve user's info")
-            }) { (AFHTTPRequestOperation, NSError) -> Void in
-                println("fail")
-        }*/
-    }
-    
-    
-    //To Logout and delete token that is assigned
-    @IBAction func Logout(sender: AnyObject) {
-        
-        //println(loginUsername.text)
         let manager = AFHTTPRequestOperationManager()
         
-        var params = [
-            
-            "username":login.loginid,
-            "password":login.password
-            
-        ]
+        let param = ["username": login.loginid]
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject(nil, forKey: "token")
-        //defaults.getObject(for
-        defaults.synchronize()
-        
-        
-        manager.POST("http://localhost:3000/logout",
-            parameters: params,
-            
-            //what is needed for success to execute?
+        manager.POST("http://localhost:3000/matching",
+            parameters: param,
             success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-                println("successful logout")
-            }) { (AFHTTPRequestOperation, NSError) -> Void in
-                println("fail")
+                println("success!")
+            })
+            {(AFHTTPRequestOperation, NSError) -> Void in
+                println("fail to send in register")
+            self.performSegueWithIdentifier("To_Meet_Main", sender: self)
         }
     }
     
     override func didReceiveMemoryWarning() {
         // Dispose of any resources that can be recreated.
     }
-
-
     
     
     //Functions that will be used to display the time
@@ -211,11 +172,5 @@ class Profile_Main : UIViewController{
         //Return Minute
         return minute
     }
-    
-    func loadDestinationVC(){
-        self.performSegueWithIdentifier("To_Meet", sender: nil)
-    }
-    
-    
     
 };

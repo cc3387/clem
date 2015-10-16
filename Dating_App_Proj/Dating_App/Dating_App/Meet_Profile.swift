@@ -18,9 +18,14 @@ class Profile_Meet_Main : UIViewController{
     @IBOutlet weak var Bkground_Image: UIImageView!
     
     //Getting Profile name from the server
-    
     @IBOutlet weak var Profile_Name: UILabel!
     
+    //Matching Labels
+    
+    @IBOutlet weak var First_Match: UILabel!
+    @IBOutlet weak var Second_Match: UILabel!
+    @IBOutlet weak var Third_Match: UILabel!
+    @IBOutlet weak var Fourth_Match: UILabel!
     
     //Getting the login_user id that is collected from the login page
     var loginuser: String = login.loginid;
@@ -99,19 +104,70 @@ class Profile_Meet_Main : UIViewController{
             self.User_ID.textColor = UIColor.whiteColor();
         }
         
-        
+        //Getting the matched information from the server
         let manager = AFHTTPRequestOperationManager()
         
-        let param = ["username": login.loginid]
+        manager.GET("http://localhost:3000/Matching",
+            parameters: nil,
+            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+                println("JSON: " + responseObject.description)
+                println("Object obtained successfully");
+                println(responseObject.count);
+                
+                if(responseObject.count > 0){
+                
+                if(responseObject.count > 0){
+                //Taking the information of the first object
+                if let results = responseObject[0] as? NSDictionary {
+                    if let Profile_Name = results["Profile_Name"] as? String {
+                        self.First_Match.text = Profile_Name as String
+                        self.First_Match.adjustsFontSizeToFitWidth = true
+                  }
+                }
+                }else{self.First_Match.textColor = UIColor.clearColor();}
+                
+                //Taking the information of the second object
+                if(responseObject.count > 1){
+                if let results = responseObject[1] as? NSDictionary {
+                        if let Profile_Name = results["Profile_Name"] as? String {
+                            self.Second_Match.text = Profile_Name as String
+                            self.Second_Match.adjustsFontSizeToFitWidth = true
+                   }
+                }
+                }else{self.Second_Match.textColor = UIColor.clearColor();}
+                
+                //Taking the information of the third object
+                if(responseObject.count > 2){
+                if let results = responseObject[2] as? NSDictionary {
+                        if let Profile_Name = results["Profile_Name"] as? String {
+                            self.Third_Match.text = Profile_Name as String
+                            self.Third_Match.adjustsFontSizeToFitWidth = true
+                    }
+                  }
+                }else{self.Third_Match.textColor = UIColor.clearColor();}
+                    
+                //Taking the information of the third object
+                if(responseObject.count > 3){
+                if let results = responseObject[3] as? NSDictionary {
+                        if let Profile_Name = results["Profile_Name"] as? String {
+                            self.Fourth_Match.text = Profile_Name as String
+                            self.Fourth_Match.adjustsFontSizeToFitWidth = true
+                    }
+                  }
+                }else{self.Fourth_Match.textColor = UIColor.clearColor();}
+                    
+              }else{
+              println("There is no response found")
+              self.First_Match.textColor = UIColor.clearColor();
+              self.Second_Match.textColor = UIColor.clearColor();
+             }
+            },
+            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+                println("Error: " + error.localizedDescription)
+            }
+        )
         
-        manager.POST("http://localhost:3000/match",
-            parameters: param,
-            success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-                println("success!")
-            })
-            {(AFHTTPRequestOperation, NSError) -> Void in
-                println("fail to send in register")
-        }
+        
     }
     
     override func didReceiveMemoryWarning() {

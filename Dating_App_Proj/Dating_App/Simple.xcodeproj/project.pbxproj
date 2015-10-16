@@ -81,6 +81,7 @@
 		AAAA0FD81BC6CF6B004F2474 /* Start_View_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA0FD71BC6CF6B004F2474 /* Start_View_Controller.swift */; };
 		AAAA0FDA1BC6D210004F2474 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA0FD91BC6D210004F2474 /* User.swift */; };
 		AAAE73E41B5F4D45007841DC /* Cover_Page.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAAE73E31B5F4D45007841DC /* Cover_Page.jpg */; };
+		AADD84481BD0BC6100085DE0 /* Loading_Meet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD84471BD0BC6100085DE0 /* Loading_Meet.swift */; };
 		AADFA22B1B6D74E600491DBF /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AADFA2191B6D74E600491DBF /* AFHTTPRequestOperation.m */; };
 		AADFA22C1B6D74E600491DBF /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AADFA2191B6D74E600491DBF /* AFHTTPRequestOperation.m */; };
 		AADFA22D1B6D74E600491DBF /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AADFA21B1B6D74E600491DBF /* AFHTTPRequestOperationManager.m */; };
@@ -199,6 +200,7 @@
 		AAAA0FD71BC6CF6B004F2474 /* Start_View_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Start_View_Controller.swift; sourceTree = "<group>"; };
 		AAAA0FD91BC6D210004F2474 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AAAE73E31B5F4D45007841DC /* Cover_Page.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cover_Page.jpg; sourceTree = "<group>"; };
+		AADD84471BD0BC6100085DE0 /* Loading_Meet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loading_Meet.swift; sourceTree = "<group>"; };
 		AADFA2181B6D74E600491DBF /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		AADFA2191B6D74E600491DBF /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		AADFA21A1B6D74E600491DBF /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				AA239AEE1BAD9FCF00192AE0 /* ViewControllerRegister.swift */,
 				AA7EF40A1BAE2DCE00C8A305 /* Profile_Main.swift */,
 				AAF3ACAC1BCB646C0097C47D /* Meet_Profile.swift */,
+				AADD84471BD0BC6100085DE0 /* Loading_Meet.swift */,
 				AA239AD41BAD9C9D00192AE0 /* Main.storyboard */,
 				AA239AD61BAD9CCD00192AE0 /* Images.xcassets */,
 				AAF3ACAA1BCB346E0097C47D /* Background_Color.tif */,
@@ -620,6 +623,7 @@
 				AADFA2371B6D74E600491DBF /* AFURLRequestSerialization.m in Sources */,
 				AADFA23B1B6D74E600491DBF /* AFURLSessionManager.m in Sources */,
 				AA239B011BADB0E000192AE0 /* Final_Send.swift in Sources */,
+				AADD84481BD0BC6100085DE0 /* Loading_Meet.swift in Sources */,
 				AA239AF71BADA4B800192AE0 /* Loc_PickerView.swift in Sources */,
 				AA271D7B1B4DF4CC00EA5BA6 /* AppDelegate.swift in Sources */,
 				AADFA22D1B6D74E600491DBF /* AFHTTPRequestOperationManager.m in Sources */,
