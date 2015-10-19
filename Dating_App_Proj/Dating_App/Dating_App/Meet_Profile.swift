@@ -141,6 +141,7 @@ class Profile_Meet_Main : UIViewController{
                 if let results = responseObject[2] as? NSDictionary {
                         if let Profile_Name = results["Profile_Name"] as? String {
                             self.Third_Match.text = Profile_Name as String
+                            //self.Third_Match.backgroundColor = UIColor.grayColor();
                             self.Third_Match.adjustsFontSizeToFitWidth = true
                     }
                   }
@@ -151,6 +152,7 @@ class Profile_Meet_Main : UIViewController{
                 if let results = responseObject[3] as? NSDictionary {
                         if let Profile_Name = results["Profile_Name"] as? String {
                             self.Fourth_Match.text = Profile_Name as String
+                            //self.Fourth_Match.backgroundColor = UIColor.grayColor();
                             self.Fourth_Match.adjustsFontSizeToFitWidth = true
                     }
                   }
@@ -160,6 +162,8 @@ class Profile_Meet_Main : UIViewController{
               println("There is no response found")
               self.First_Match.textColor = UIColor.clearColor();
               self.Second_Match.textColor = UIColor.clearColor();
+              self.Third_Match.textColor = UIColor.clearColor();
+              self.Fourth_Match.textColor = UIColor.clearColor();
              }
             },
             failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in

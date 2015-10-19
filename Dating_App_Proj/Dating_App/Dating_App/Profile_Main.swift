@@ -154,9 +154,6 @@ class Profile_Main : UIViewController{
     override func didReceiveMemoryWarning() {
         // Dispose of any resources that can be recreated.
     }
-
-
-    
     
     //Functions that will be used to display the time
     func hour() -> String
@@ -215,7 +212,4 @@ class Profile_Main : UIViewController{
     func loadDestinationVC(){
         self.performSegueWithIdentifier("To_Meet", sender: nil)
     }
-    
-    
-    
 };
