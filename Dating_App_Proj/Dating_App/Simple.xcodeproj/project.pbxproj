@@ -25,7 +25,7 @@
 		AA239AEF1BAD9FCF00192AE0 /* ViewControllerRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA239AEE1BAD9FCF00192AE0 /* ViewControllerRegister.swift */; };
 		AA239AF11BADA14200192AE0 /* Main_Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA239AF01BADA14200192AE0 /* Main_Profile.swift */; };
 		AA239AF31BADA15200192AE0 /* Distance_Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA239AF21BADA15200192AE0 /* Distance_Calculation.swift */; };
-		AA239AF51BADA49100192AE0 /* Edu_PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA239AF41BADA49100192AE0 /* Edu_PickerView.swift */; };
+		AA239AF51BADA49100192AE0 /* Edu_PickerView_US.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA239AF41BADA49100192AE0 /* Edu_PickerView_US.swift */; };
 		AA239AF71BADA4B800192AE0 /* Loc_PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA239AF61BADA4B800192AE0 /* Loc_PickerView.swift */; };
 		AA239AF91BADA4D300192AE0 /* Major.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA239AF81BADA4D300192AE0 /* Major.swift */; };
 		AA239AFB1BADA58A00192AE0 /* Google_Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA239AFA1BADA58A00192AE0 /* Google_Location.swift */; };
@@ -46,6 +46,10 @@
 		AA271DAF1B4E1A8800EA5BA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DAE1B4E1A8800EA5BA6 /* CoreGraphics.framework */; };
 		AA271DB11B4E1A9B00EA5BA6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DB01B4E1A9B00EA5BA6 /* CFNetwork.framework */; };
 		AA271DB31B4E1AAD00EA5BA6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DB21B4E1AAD00EA5BA6 /* AudioToolbox.framework */; };
+		AA3527911BDB007F00679464 /* Edu_PickerView_UK.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3527901BDB007F00679464 /* Edu_PickerView_UK.swift */; };
+		AA3527931BDB629100679464 /* Edu_PickerView_HK.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3527921BDB629000679464 /* Edu_PickerView_HK.swift */; };
+		AA3527951BDB683400679464 /* Edu_PickerView_Aus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3527941BDB683400679464 /* Edu_PickerView_Aus.swift */; };
+		AA3527971BDB6C5F00679464 /* Edu_PickerView_Can.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3527961BDB6C5F00679464 /* Edu_PickerView_Can.swift */; };
 		AA3C847B1B770CF500C76304 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA3C84791B770CF500C76304 /* GoogleMaps.bundle */; };
 		AA3C847C1B770CF500C76304 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3C847A1B770CF500C76304 /* GoogleMaps.framework */; };
 		AA3C847E1B770E0100C76304 /* Location_class.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C847D1B770E0100C76304 /* Location_class.swift */; };
@@ -133,7 +137,7 @@
 		AA239AEE1BAD9FCF00192AE0 /* ViewControllerRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerRegister.swift; sourceTree = "<group>"; };
 		AA239AF01BADA14200192AE0 /* Main_Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main_Profile.swift; sourceTree = "<group>"; };
 		AA239AF21BADA15200192AE0 /* Distance_Calculation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Distance_Calculation.swift; sourceTree = "<group>"; };
-		AA239AF41BADA49100192AE0 /* Edu_PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Edu_PickerView.swift; sourceTree = "<group>"; };
+		AA239AF41BADA49100192AE0 /* Edu_PickerView_US.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Edu_PickerView_US.swift; sourceTree = "<group>"; };
 		AA239AF61BADA4B800192AE0 /* Loc_PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loc_PickerView.swift; sourceTree = "<group>"; };
 		AA239AF81BADA4D300192AE0 /* Major.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Major.swift; sourceTree = "<group>"; };
 		AA239AFA1BADA58A00192AE0 /* Google_Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Google_Location.swift; sourceTree = "<group>"; };
@@ -165,6 +169,10 @@
 		AA271DB81B4E1AE000EA5BA6 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "../../../iOS_App/parse-library-1/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
 		AA271DB91B4E1AE000EA5BA6 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "../../../iOS_App/parse-library-1/ParseUI.framework"; sourceTree = "<group>"; };
 		AA271DC61B4E1C6F00EA5BA6 /* Dating_App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dating_App-Bridging-Header.h"; sourceTree = "<group>"; };
+		AA3527901BDB007F00679464 /* Edu_PickerView_UK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Edu_PickerView_UK.swift; sourceTree = "<group>"; };
+		AA3527921BDB629000679464 /* Edu_PickerView_HK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Edu_PickerView_HK.swift; sourceTree = "<group>"; };
+		AA3527941BDB683400679464 /* Edu_PickerView_Aus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Edu_PickerView_Aus.swift; sourceTree = "<group>"; };
+		AA3527961BDB6C5F00679464 /* Edu_PickerView_Can.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Edu_PickerView_Can.swift; sourceTree = "<group>"; };
 		AA3C84791B770CF500C76304 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 		AA3C847A1B770CF500C76304 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		AA3C847D1B770E0100C76304 /* Location_class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location_class.swift; sourceTree = "<group>"; };
@@ -293,6 +301,8 @@
 		AA271D771B4DF4CC00EA5BA6 /* Dating_App */ = {
 			isa = PBXGroup;
 			children = (
+				AA3527981BDBC66900679464 /* Simple_Meet */,
+				AAEDCD431BDAF5CE00CFF004 /* School */,
 				AAAA0FD61BC6CF19004F2474 /* Login_Files */,
 				AA3C848F1B77157200C76304 /* Google_Location */,
 				AA5AC1F11B64559E00158156 /* Preferences */,
@@ -302,8 +312,6 @@
 				AA1015391B5170A7007F77B8 /* ViewControllerLogin.swift */,
 				AA239AEE1BAD9FCF00192AE0 /* ViewControllerRegister.swift */,
 				AA7EF40A1BAE2DCE00C8A305 /* Profile_Main.swift */,
-				AAF3ACAC1BCB646C0097C47D /* Meet_Profile.swift */,
-				AADD84471BD0BC6100085DE0 /* Loading_Meet.swift */,
 				AA239AD41BAD9C9D00192AE0 /* Main.storyboard */,
 				AA239AD61BAD9CCD00192AE0 /* Images.xcassets */,
 				AAF3ACAA1BCB346E0097C47D /* Background_Color.tif */,
@@ -394,6 +402,15 @@
 			path = Dating_App;
 			sourceTree = "<group>";
 		};
+		AA3527981BDBC66900679464 /* Simple_Meet */ = {
+			isa = PBXGroup;
+			children = (
+				AAF3ACAC1BCB646C0097C47D /* Meet_Profile.swift */,
+				AADD84471BD0BC6100085DE0 /* Loading_Meet.swift */,
+			);
+			name = Simple_Meet;
+			sourceTree = "<group>";
+		};
 		AA3C848F1B77157200C76304 /* Google_Location */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,7 +425,6 @@
 			isa = PBXGroup;
 			children = (
 				AA239AF61BADA4B800192AE0 /* Loc_PickerView.swift */,
-				AA239AF41BADA49100192AE0 /* Edu_PickerView.swift */,
 				AA239AE61BAD9EDC00192AE0 /* Beer_Wine.swift */,
 				AA239AFC1BADA76600192AE0 /* SportsArtGallery.swift */,
 				AA5AC2001B651A8100158156 /* Male_Female.swift */,
@@ -476,6 +492,18 @@
 				AADFA22A1B6D74E600491DBF /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		AAEDCD431BDAF5CE00CFF004 /* School */ = {
+			isa = PBXGroup;
+			children = (
+				AA239AF41BADA49100192AE0 /* Edu_PickerView_US.swift */,
+				AA3527901BDB007F00679464 /* Edu_PickerView_UK.swift */,
+				AA3527921BDB629000679464 /* Edu_PickerView_HK.swift */,
+				AA3527941BDB683400679464 /* Edu_PickerView_Aus.swift */,
+				AA3527961BDB6C5F00679464 /* Edu_PickerView_Can.swift */,
+			);
+			name = School;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -608,6 +636,8 @@
 				AA239AFD1BADA76600192AE0 /* SportsArtGallery.swift in Sources */,
 				AADFA2331B6D74E600491DBF /* AFSecurityPolicy.m in Sources */,
 				AAAA0FD81BC6CF6B004F2474 /* Start_View_Controller.swift in Sources */,
+				AA3527971BDB6C5F00679464 /* Edu_PickerView_Can.swift in Sources */,
+				AA3527951BDB683400679464 /* Edu_PickerView_Aus.swift in Sources */,
 				AA10153A1B5170A7007F77B8 /* ViewControllerLogin.swift in Sources */,
 				AA239AEF1BAD9FCF00192AE0 /* ViewControllerRegister.swift in Sources */,
 				AAAA0FDA1BC6D210004F2474 /* User.swift in Sources */,
@@ -616,12 +646,14 @@
 				AA271D7D1B4DF4CC00EA5BA6 /* ViewController.swift in Sources */,
 				AA239AF31BADA15200192AE0 /* Distance_Calculation.swift in Sources */,
 				AADFA2351B6D74E600491DBF /* AFURLConnectionOperation.m in Sources */,
+				AA3527931BDB629100679464 /* Edu_PickerView_HK.swift in Sources */,
 				AADFA22B1B6D74E600491DBF /* AFHTTPRequestOperation.m in Sources */,
 				AADFA22F1B6D74E600491DBF /* AFHTTPSessionManager.m in Sources */,
 				AA239AF91BADA4D300192AE0 /* Major.swift in Sources */,
 				AA239AFF1BADAF4000192AE0 /* EDC_Classical.swift in Sources */,
 				AADFA2371B6D74E600491DBF /* AFURLRequestSerialization.m in Sources */,
 				AADFA23B1B6D74E600491DBF /* AFURLSessionManager.m in Sources */,
+				AA3527911BDB007F00679464 /* Edu_PickerView_UK.swift in Sources */,
 				AA239B011BADB0E000192AE0 /* Final_Send.swift in Sources */,
 				AADD84481BD0BC6100085DE0 /* Loading_Meet.swift in Sources */,
 				AA239AF71BADA4B800192AE0 /* Loc_PickerView.swift in Sources */,
@@ -630,7 +662,7 @@
 				AA7EF40B1BAE2DCE00C8A305 /* Profile_Main.swift in Sources */,
 				AADFA2391B6D74E600491DBF /* AFURLResponseSerialization.m in Sources */,
 				AA3C847E1B770E0100C76304 /* Location_class.swift in Sources */,
-				AA239AF51BADA49100192AE0 /* Edu_PickerView.swift in Sources */,
+				AA239AF51BADA49100192AE0 /* Edu_PickerView_US.swift in Sources */,
 				AAF3ACAD1BCB646C0097C47D /* Meet_Profile.swift in Sources */,
 				AA5AC2011B651A8100158156 /* Male_Female.swift in Sources */,
 				AA239AFB1BADA58A00192AE0 /* Google_Location.swift in Sources */,

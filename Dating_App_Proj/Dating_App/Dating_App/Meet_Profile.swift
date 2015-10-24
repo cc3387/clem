@@ -26,6 +26,7 @@ class Profile_Meet_Main : UIViewController{
     @IBOutlet weak var Second_Match: UILabel!
     @IBOutlet weak var Third_Match: UILabel!
     @IBOutlet weak var Fourth_Match: UILabel!
+    @IBOutlet weak var Fifth_Match: UILabel!
     
     //Getting the login_user id that is collected from the login page
     var loginuser: String = login.loginid;
@@ -147,7 +148,7 @@ class Profile_Meet_Main : UIViewController{
                   }
                 }else{self.Third_Match.textColor = UIColor.clearColor();}
                     
-                //Taking the information of the third object
+                //Taking the information of the fourth object
                 if(responseObject.count > 3){
                 if let results = responseObject[3] as? NSDictionary {
                         if let Profile_Name = results["Profile_Name"] as? String {
@@ -157,6 +158,19 @@ class Profile_Meet_Main : UIViewController{
                     }
                   }
                 }else{self.Fourth_Match.textColor = UIColor.clearColor();}
+                    
+                //Taking the information of the fifth object
+                if(responseObject.count > 4){
+                    if let results = responseObject[4] as? NSDictionary {
+                            if let Profile_Name = results["Profile_Name"] as? String {
+                                self.Fifth_Match.text = Profile_Name as String
+                                //self.Fourth_Match.backgroundColor = UIColor.grayColor();
+                                self.Fifth_Match.adjustsFontSizeToFitWidth = true
+                            }
+                        }
+                }else{self.Fifth_Match.textColor = UIColor.clearColor();}
+                    
+                    
                     
               }else{
               println("There is no response found")
