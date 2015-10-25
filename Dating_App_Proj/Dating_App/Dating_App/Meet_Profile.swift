@@ -21,11 +21,26 @@ class Profile_Meet_Main : UIViewController{
     @IBOutlet weak var Profile_Name: UILabel!
     
     //Matching Labels
-    
     @IBOutlet weak var First_Match: UILabel!
+    @IBOutlet weak var First_Loc: UILabel!
+    @IBOutlet weak var First_Uni: UILabel!
+    @IBOutlet weak var First_Major: UILabel!
+    
     @IBOutlet weak var Second_Match: UILabel!
+    @IBOutlet weak var Second_Loc: UILabel!
+    @IBOutlet weak var Second_Uni: UILabel!
+    @IBOutlet weak var Second_Major: UILabel!
+    
     @IBOutlet weak var Third_Match: UILabel!
+    @IBOutlet weak var Third_Loc: UILabel!
+    @IBOutlet weak var Third_Uni: UILabel!
+    @IBOutlet weak var Third_Major: UILabel!
+    
     @IBOutlet weak var Fourth_Match: UILabel!
+    @IBOutlet weak var Fourth_Loc: UILabel!
+    @IBOutlet weak var Fourth_Uni: UILabel!
+    @IBOutlet weak var Fourth_Major: UILabel!
+    
     @IBOutlet weak var Fifth_Match: UILabel!
     
     //Getting the login_user id that is collected from the login page
@@ -120,22 +135,56 @@ class Profile_Meet_Main : UIViewController{
                 if(responseObject.count > 0){
                 //Taking the information of the first object
                 if let results = responseObject[0] as? NSDictionary {
+                    
                     if let Profile_Name = results["Profile_Name"] as? String {
                         self.First_Match.text = Profile_Name as String
-                        self.First_Match.adjustsFontSizeToFitWidth = true
-                  }
+                        //self.First_Match.adjustsFontSizeToFitWidth = true
+                        
+                        if let Profile_Loc = results["location"] as? String {
+                            self.First_Loc.text = Profile_Loc as String
+                            self.First_Loc.adjustsFontSizeToFitWidth = true
+                            
+                            if let Profile_Edu = results["Education"] as? String {
+                                self.First_Uni.text = Profile_Edu as String
+                                //self.First_Uni.adjustsFontSizeToFitWidth = true
+                                
+                                if let Profile_Major = results["Major"] as? String {
+                                    self.First_Major.text = Profile_Major as String
+                                    //self.First_Major.adjustsFontSizeToFitWidth = true
+                                }
+                            }
+                        }
+                    }
                 }
-                }else{self.First_Match.textColor = UIColor.clearColor();}
+                }else{self.First_Match.textColor = UIColor.clearColor();
+                      self.First_Loc.textColor = UIColor.clearColor();
+                      self.First_Uni.textColor = UIColor.clearColor();
+                      self.First_Major.textColor = UIColor.clearColor();}
                 
                 //Taking the information of the second object
                 if(responseObject.count > 1){
                 if let results = responseObject[1] as? NSDictionary {
                         if let Profile_Name = results["Profile_Name"] as? String {
                             self.Second_Match.text = Profile_Name as String
-                            self.Second_Match.adjustsFontSizeToFitWidth = true
-                   }
+                            //self.Second_Match.adjustsFontSizeToFitWidth = true
+                        if let Profile_Loc = results["location"] as? String {
+                                self.Second_Loc.text = Profile_Loc as String
+                                //self.Second_Match.adjustsFontSizeToFitWidth = true
+                            if let Profile_Uni = results["Education"] as? String {
+                                self.Second_Uni.text = Profile_Uni as String
+                                //self.Second_Match.adjustsFontSizeToFitWidth = true
+                                if let Profile_Major = results["Major"] as? String {
+                                    self.Second_Major.text = Profile_Major as String
+                                    //self.Second_Match.adjustsFontSizeToFitWidth = true
+                                }
+                            }
+                        }
+                    }
                 }
-                }else{self.Second_Match.textColor = UIColor.clearColor();}
+                }else{self.Second_Match.textColor = UIColor.clearColor();
+                      self.Second_Loc.textColor = UIColor.clearColor();
+                      self.Second_Uni.textColor = UIColor.clearColor();
+                      self.Second_Major.textColor = UIColor.clearColor();}
                 
                 //Taking the information of the third object
                 if(responseObject.count > 2){
@@ -143,10 +192,32 @@ class Profile_Meet_Main : UIViewController{
                         if let Profile_Name = results["Profile_Name"] as? String {
                             self.Third_Match.text = Profile_Name as String
                             //self.Third_Match.backgroundColor = UIColor.grayColor();
-                            self.Third_Match.adjustsFontSizeToFitWidth = true
+                            //self.Third_Match.adjustsFontSizeToFitWidth = true
+                            
+                            if let Profile_Loc = results["location"] as? String {
+                                self.Third_Loc.text = Profile_Loc as String
+                                //self.Third_Match.backgroundColor = UIColor.grayColor();
+                                //self.Third_Match.adjustsFontSizeToFitWidth = true
+                                
+                                if let Profile_Uni = results["Education"] as? String {
+                                    self.Third_Uni.text = Profile_Uni as String
+                                    //self.Third_Match.backgroundColor = UIColor.grayColor();
+                                    //self.Third_Match.adjustsFontSizeToFitWidth = true
+                                    
+                                    if let Profile_Major = results["Major"] as? String {
+                                        self.Third_Major.text = Profile_Major as String
+                                        //self.Third_Match.backgroundColor = UIColor.grayColor();
+                                        //self.Third_Match.adjustsFontSizeToFitWidth = true
+                                        
+                                    }
+                                }
+                            }
+                        }
                     }
-                  }
-                }else{self.Third_Match.textColor = UIColor.clearColor();}
+                }else{self.Third_Match.textColor = UIColor.clearColor();
+                      self.Third_Loc.textColor = UIColor.clearColor();
+                      self.Third_Uni.textColor = UIColor.clearColor();
+                      self.Third_Major.textColor = UIColor.clearColor();}
                     
                 //Taking the information of the fourth object
                 if(responseObject.count > 3){
@@ -154,13 +225,31 @@ class Profile_Meet_Main : UIViewController{
                         if let Profile_Name = results["Profile_Name"] as? String {
                             self.Fourth_Match.text = Profile_Name as String
                             //self.Fourth_Match.backgroundColor = UIColor.grayColor();
-                            self.Fourth_Match.adjustsFontSizeToFitWidth = true
-                    }
+                            //self.Fourth_Match.adjustsFontSizeToFitWidth = true
+                            if let Profile_Loc = results["location"] as? String {
+                                self.Fourth_Loc.text = Profile_Loc as String
+                                //self.Fourth_Match.backgroundColor = UIColor.grayColor();
+                                //self.Fourth_Match.adjustsFontSizeToFitWidth = true
+                                if let Profile_Uni = results["Education"] as? String {
+                                    self.Fourth_Uni.text = Profile_Uni as String
+                                    //self.Fourth_Match.backgroundColor = UIColor.grayColor();
+                                    //self.Fourth_Match.adjustsFontSizeToFitWidth = true
+                                    if let Profile_Major = results["Major"] as? String {
+                                        self.Fourth_Major.text = Profile_Major as String
+                                        //self.Fourth_Match.backgroundColor = UIColor.grayColor();
+                                        //self.Fourth_Match.adjustsFontSizeToFitWidth = true
+                                    }
+                                }
+                            }
+                        }
                   }
-                }else{self.Fourth_Match.textColor = UIColor.clearColor();}
+                }else{self.Fourth_Match.textColor = UIColor.clearColor();
+                      self.Fourth_Loc.textColor = UIColor.clearColor();
+                      self.Fourth_Uni.textColor = UIColor.clearColor();
+                      self.Fourth_Major.textColor = UIColor.clearColor();}
                     
                 //Taking the information of the fifth object
-                if(responseObject.count > 4){
+                /*if(responseObject.count > 4){
                     if let results = responseObject[4] as? NSDictionary {
                             if let Profile_Name = results["Profile_Name"] as? String {
                                 self.Fifth_Match.text = Profile_Name as String
@@ -168,7 +257,7 @@ class Profile_Meet_Main : UIViewController{
                                 self.Fifth_Match.adjustsFontSizeToFitWidth = true
                             }
                         }
-                }else{self.Fifth_Match.textColor = UIColor.clearColor();}
+                }else{self.Fifth_Match.textColor = UIColor.clearColor();}*/
                     
                     
                     
