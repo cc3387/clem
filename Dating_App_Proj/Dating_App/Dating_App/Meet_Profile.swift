@@ -138,18 +138,41 @@ class Profile_Meet_Main : UIViewController{
                     
                     if let Profile_Name = results["Profile_Name"] as? String {
                         self.First_Match.text = Profile_Name as String
+                        if(self.hour_int() > 18){
+                        self.First_Match.backgroundColor = UIColor.grayColor();
+                        }
+                        else{
+                        self.First_Match.textColor = UIColor.redColor();
+                        }
                         //self.First_Match.adjustsFontSizeToFitWidth = true
                         
                         if let Profile_Loc = results["location"] as? String {
                             self.First_Loc.text = Profile_Loc as String
-                            self.First_Loc.adjustsFontSizeToFitWidth = true
+                            if(self.hour_int() > 18){
+                            self.First_Loc.backgroundColor = UIColor.grayColor();
+                            }else{
+                            self.First_Loc.textColor = UIColor.redColor();
+                            }
+                            //self.First_Loc.adjustsFontSizeToFitWidth = true
                             
                             if let Profile_Edu = results["Education"] as? String {
                                 self.First_Uni.text = Profile_Edu as String
+                                if(self.hour_int() > 18){
+                                self.First_Uni.backgroundColor = UIColor.grayColor();
+                                }
+                                else{
+                                self.First_Uni.textColor = UIColor.redColor();
+                                }
                                 //self.First_Uni.adjustsFontSizeToFitWidth = true
                                 
                                 if let Profile_Major = results["Major"] as? String {
                                     self.First_Major.text = Profile_Major as String
+                                    if(self.hour_int() > 18){
+                                    self.First_Major.backgroundColor = UIColor.grayColor();
+                                    }
+                                    else{
+                                    self.First_Major.textColor = UIColor.redColor();
+                                    }
                                     //self.First_Major.adjustsFontSizeToFitWidth = true
                                 }
                             }
@@ -166,15 +189,39 @@ class Profile_Meet_Main : UIViewController{
                 if let results = responseObject[1] as? NSDictionary {
                         if let Profile_Name = results["Profile_Name"] as? String {
                             self.Second_Match.text = Profile_Name as String
+                            if(self.hour_int() > 18){
+                            self.Second_Match.backgroundColor = UIColor.grayColor();
+                            }
+                            else{
+                            self.Second_Match.textColor = UIColor.redColor();
+                            }
                             //self.Second_Match.adjustsFontSizeToFitWidth = true
                         if let Profile_Loc = results["location"] as? String {
                                 self.Second_Loc.text = Profile_Loc as String
+                                if(self.hour_int() > 18){
+                                self.Second_Loc.backgroundColor = UIColor.grayColor();
+                                }
+                                else{
+                                self.Second_Loc.textColor = UIColor.redColor();
+                                }
                                 //self.Second_Match.adjustsFontSizeToFitWidth = true
                             if let Profile_Uni = results["Education"] as? String {
                                 self.Second_Uni.text = Profile_Uni as String
+                                if(self.hour_int() > 18){
+                                    self.Second_Uni.backgroundColor = UIColor.grayColor();
+                                }
+                                else{
+                                    self.Second_Uni.textColor = UIColor.redColor();
+                                }
                                 //self.Second_Match.adjustsFontSizeToFitWidth = true
                                 if let Profile_Major = results["Major"] as? String {
                                     self.Second_Major.text = Profile_Major as String
+                                    if(self.hour_int() > 18){
+                                        self.Second_Major.backgroundColor = UIColor.grayColor();
+                                    }
+                                    else{
+                                        self.Second_Major.textColor = UIColor.redColor();
+                                    }
                                     //self.Second_Match.adjustsFontSizeToFitWidth = true
                                 }
                             }
@@ -191,21 +238,46 @@ class Profile_Meet_Main : UIViewController{
                 if let results = responseObject[2] as? NSDictionary {
                         if let Profile_Name = results["Profile_Name"] as? String {
                             self.Third_Match.text = Profile_Name as String
+                            if(self.hour_int() > 18){
+                                self.Third_Match.backgroundColor = UIColor.grayColor();
+                            }
+                            else{
+                                self.Third_Match.textColor = UIColor.redColor();
+                            }
+                            
                             //self.Third_Match.backgroundColor = UIColor.grayColor();
                             //self.Third_Match.adjustsFontSizeToFitWidth = true
                             
                             if let Profile_Loc = results["location"] as? String {
                                 self.Third_Loc.text = Profile_Loc as String
+                                if(self.hour_int() > 18){
+                                    self.Third_Loc.backgroundColor = UIColor.grayColor();
+                                }
+                                else{
+                                    self.Third_Loc.textColor = UIColor.redColor();
+                                }
                                 //self.Third_Match.backgroundColor = UIColor.grayColor();
                                 //self.Third_Match.adjustsFontSizeToFitWidth = true
                                 
                                 if let Profile_Uni = results["Education"] as? String {
                                     self.Third_Uni.text = Profile_Uni as String
+                                    if(self.hour_int() > 18){
+                                        self.Third_Uni.backgroundColor = UIColor.grayColor();
+                                    }
+                                    else{
+                                        self.Third_Uni.textColor = UIColor.redColor();
+                                    }
                                     //self.Third_Match.backgroundColor = UIColor.grayColor();
                                     //self.Third_Match.adjustsFontSizeToFitWidth = true
                                     
                                     if let Profile_Major = results["Major"] as? String {
                                         self.Third_Major.text = Profile_Major as String
+                                        if(self.hour_int() > 18){
+                                            self.Third_Major.backgroundColor = UIColor.grayColor();
+                                        }
+                                        else{
+                                            self.Third_Major.textColor = UIColor.redColor();
+                                        }
                                         //self.Third_Match.backgroundColor = UIColor.grayColor();
                                         //self.Third_Match.adjustsFontSizeToFitWidth = true
                                         
@@ -224,18 +296,42 @@ class Profile_Meet_Main : UIViewController{
                 if let results = responseObject[3] as? NSDictionary {
                         if let Profile_Name = results["Profile_Name"] as? String {
                             self.Fourth_Match.text = Profile_Name as String
+                            if(self.hour_int() > 18){
+                                self.Fourth_Match.backgroundColor = UIColor.grayColor();
+                            }
+                            else{
+                                self.Fourth_Match.textColor = UIColor.redColor();
+                            }
                             //self.Fourth_Match.backgroundColor = UIColor.grayColor();
                             //self.Fourth_Match.adjustsFontSizeToFitWidth = true
                             if let Profile_Loc = results["location"] as? String {
                                 self.Fourth_Loc.text = Profile_Loc as String
+                                if(self.hour_int() > 18){
+                                    self.Fourth_Loc.backgroundColor = UIColor.grayColor();
+                                }
+                                else{
+                                    self.Fourth_Loc.textColor = UIColor.redColor();
+                                }
                                 //self.Fourth_Match.backgroundColor = UIColor.grayColor();
                                 //self.Fourth_Match.adjustsFontSizeToFitWidth = true
                                 if let Profile_Uni = results["Education"] as? String {
                                     self.Fourth_Uni.text = Profile_Uni as String
+                                    if(self.hour_int() > 18){
+                                        self.Fourth_Uni.backgroundColor = UIColor.grayColor();
+                                    }
+                                    else{
+                                        self.Fourth_Uni.textColor = UIColor.redColor();
+                                    }
                                     //self.Fourth_Match.backgroundColor = UIColor.grayColor();
                                     //self.Fourth_Match.adjustsFontSizeToFitWidth = true
                                     if let Profile_Major = results["Major"] as? String {
                                         self.Fourth_Major.text = Profile_Major as String
+                                        if(self.hour_int() > 18){
+                                            self.Fourth_Major.backgroundColor = UIColor.grayColor();
+                                        }
+                                        else{
+                                            self.Fourth_Major.textColor = UIColor.redColor();
+                                        }
                                         //self.Fourth_Match.backgroundColor = UIColor.grayColor();
                                         //self.Fourth_Match.adjustsFontSizeToFitWidth = true
                                     }
