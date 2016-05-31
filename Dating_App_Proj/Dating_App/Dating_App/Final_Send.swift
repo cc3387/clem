@@ -8,8 +8,9 @@
 
 import Foundation
 import UIKit
+import Firebase
 
-class FinalSend: UIViewController{
+class FinalSend_Final: UIViewController{
     
     @IBOutlet weak var userid: UILabel!
     @IBOutlet weak var Profile_Name: UILabel!
@@ -32,7 +33,10 @@ class FinalSend: UIViewController{
         //var loc_lng: String = String(format:"%f",loc_lng_int);
         //var loc_lat:String = String(format:"%f",loc_lat_int);
         
-        var params = [
+        var ref = Firebase(url:"https://simpleplus.firebaseio.com")
+        var userref = Firebase(url:"https://simpleplus.firebaseio.com")
+        
+        var profile = [
             //"title": register_info.user_id,
             "username": register_info.username,
             "password": register_info.password,
@@ -49,52 +53,27 @@ class FinalSend: UIViewController{
             "Address": register_info.address,
             "Beer_Wine": register_info.beer_or_wine,
             "Sports_Art": register_info.sports_or_art,
-            "Cooking_DineOut": register_info.Cooking_Dineout
+            "Cooking_DineOut": register_info.Cooking_Dineout,
+            "University_Rank": register_info.URank,
+            "Email": register_info.email
         ];
         
-        manager.POST("http://localhost:3000/register",
-            parameters: params,
-            success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-                println("success!")
-            })
-            {(AFHTTPRequestOperation, NSError) -> Void in
-                println("fail to send in register")
-            }
-        
-        /*var param_loc = [
-            "title": register_info.location,
-            "longitude": loc_lng,
-            "latitude": loc_lat,
-            "Address": register_info.address,
-            "user_id": register_info.user_id,
-            "Profile_Name": register_info.Profile_name
+        var friend = [
+            "username" : register_info.username,
+            "location" : register_info.location,
+            "Education": register_info.education,
+            "Major": register_info.Major,
+            "username": register_info.username,
+            "Email": register_info.email
         ];
         
-        
-        manager.POST("http://localhost:3000/collections/loc_reg1",
-            parameters: param_loc,
-            success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-                println("success!")
-            }) { (AFHTTPRequestOperation, NSError) -> Void in
-                println("fail")
-        }
-        
-        let cityurl = "http://localhost:3000/collections/city1" + "_" + register_info.location;
-        
-        println(cityurl);
-        
-        manager.POST(cityurl,
-            parameters: param_loc,
-            success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-                println("success!")
-            }) { (AFHTTPRequestOperation, NSError) -> Void in
-                println("fail")
-        }*/
-        
+        var usersRef = ref.childByAppendingPath("users");
+        var usernamefriend = register_info.username + "_fd";
+        usersRef.childByAppendingPath(register_info.username).setValue(profile);
+        var userfd = userref.childByAppendingPath(usernamefriend);
+        userfd.childByAppendingPath(register_info.username).setValue(friend);
         
         loadDestinationVC();
-        
-        
     }
     
     override func viewDidLoad() {

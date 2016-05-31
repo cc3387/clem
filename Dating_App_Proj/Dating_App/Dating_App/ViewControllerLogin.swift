@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewControllerLogin: UIViewController {
     
@@ -17,14 +18,13 @@ class ViewControllerLogin: UIViewController {
     var decision_user: Int = 0
     var decision_pwd: Int = 0
     var user1:User!
+    var count: Int = 0;
     
-    
-    /*override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    override func viewDidLoad() {
+        
     }
     
-    override func didReceiveMemoryWarning() {
+    /*override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }*/
@@ -38,38 +38,26 @@ class ViewControllerLogin: UIViewController {
     }*/
     
     @IBAction func Login(sender: AnyObject) {
-        //RetrieveUsername();
-        //RetrievePassword();
-    
         
-        /*if(self.decision_user == 1 && self.decision_pwd == 1){
-        self.Username.enabled = false;
-        self.Password.enabled = false;
-        self.Username.text = "";
-        self.Password.text = "";
-        //move();
-        finduserid();
-        loadDestinationVC();
-        }*/
+        var ref = Firebase(url:"https://simpleplus.firebaseio.com")
         
-        //println(loginUsername.text)
-        
-        //Login with Parse
-        /*PFUser.logInWithUsernameInBackground(self.Username.text, password:self.Password.text) {
-            
-            (user: PFUser?, error: NSError?) -> Void in
-            if user != nil {
-                login_info.user_id = self.Username.text
-                self.finduserid();
-                self.loadDestinationVC();
+        ref.authUser(self.Username.text, password: self.Password.text) {
+            error, authData in
+            if error != nil {
+                // an error occured while attempting login
+                println("Login info is wrong");
             } else {
-                // The login failed. Check error to see why.
+                // user is logged in, check authData for data
+                login.loginid = self.Username.text;
+                login.password = self.Password.text;
+                self.Password.text = "**********";
+                
+                self.loadDestinationVC();
             }
-        }*/
-        
+        }
         
         //Login with our own register
-        let manager = AFHTTPRequestOperationManager()
+        /*let manager = AFHTTPRequestOperationManager()
         
         var params = [
             
@@ -99,11 +87,7 @@ class ViewControllerLogin: UIViewController {
                 }
             }) { (AFHTTPRequestOperation, NSError) -> Void in
                 println("fail in sending")
-        }
-        
-        login.loginid = self.Username.text;
-        login.password = self.Password.text;
-        //self.loadDestinationVC();
+        }*/
     }
     
     //Load destination to the main profile
@@ -111,7 +95,7 @@ class ViewControllerLogin: UIViewController {
     self.performSegueWithIdentifier("openProfile", sender: nil)
     }
     
-    func finduserid(){
+    /*func finduserid(){
         var query = PFQuery(className: "UserDetails");
         query.includeKey(self.Username.text);
         query.whereKey("username", equalTo: self.Username.text);
@@ -133,7 +117,7 @@ class ViewControllerLogin: UIViewController {
                 }
             }
         }
-    }
+    }*/
     
     /*func move(){
     func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -148,7 +132,7 @@ class ViewControllerLogin: UIViewController {
     
     
     //This part retrieve the Username saved that were passed on after clicking the "Login" button
-    func RetrieveUsername(){
+    /*func RetrieveUsername(){
         let usertext = Username.text;
         //Creating a new PFQuery
         var query = PFQuery(className: "User")
@@ -172,11 +156,11 @@ class ViewControllerLogin: UIViewController {
                 }
             }
         }
-    }
+    }*/
     
 
     //This part retrieve the Password saved that were passed on after clicking the "Login" button
-    func RetrievePassword(){
+    /*func RetrievePassword(){
         
         let passwordtext = Password.text;
         //Creating a new PFQuery
@@ -202,13 +186,12 @@ class ViewControllerLogin: UIViewController {
                }
             }
         }
-    }
+    }*/
     
     
     //if login fails how do I redirect back?
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "openProfile") {
-            
             //self.user = User(username: "hsuregan5")
             let newViewController = segue.destinationViewController as! Profile_Main
             //println("YAY::")
@@ -216,8 +199,7 @@ class ViewControllerLogin: UIViewController {
             newViewController.user1 = self.user
             
         }
-    }
-    
+    }*/
 }
 
 //Storing the userid as global variable in the ios app machine
@@ -228,6 +210,13 @@ struct login{
     
 }
 
-
-
-
+struct arrays{
+    
+    static var friendsArray:[String] = [String]() //Set an empty array for friend names
+    static var friendlocArray:[String] = [String]() //Set an empty array for friend locations
+    static var frienduniArray:[String] = [String]() //Set an empty array for university locations
+    static var friendmajorArray:[String] = [String]() //Set an empty array for major locations
+    static var friendidArray:[String] = [String]() //Set an empty array for friend's ID
+    static var chatcheck:[Int] = [Int]() //Check 1:1 relationship
+    
+};

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewControllerRegister: UIViewController, UITextFieldDelegate,UIPickerViewDataSource, UIPickerViewDelegate{
     
@@ -86,8 +87,45 @@ class ViewControllerRegister: UIViewController, UITextFieldDelegate,UIPickerView
         self.Age.endEditing(true);
         self.Location.endEditing(true);
         
-        //Create a PF Object
-        var user = PFUser()
+        
+        //Passing info to Firebase
+        register_info.user_id = self.Username.text;
+        register_info.username = self.Username.text;
+        register_info.password = self.Password.text;
+        register_info.age_range = self.Age.text;
+        register_info.Profile_name = self.Location.text;
+        register_info.email = self.Email.text;
+            
+        
+        var myRootRef = Firebase(url:"https://simpleplus.firebaseio.com")
+        myRootRef.createUser(register_info.email, password: register_info.password,
+                withValueCompletionBlock: { error, result in
+                    if error != nil {
+                        // There was an error creating the account
+                    } else {
+                        let uid = result["uid"] as? String
+                        println("Successfully created user account with uid: \(uid)")
+                    }
+        })
+            
+            //Disable the button and end field
+            self.Username.enabled = false;
+            self.Password.enabled = false;
+            self.Email.enabled = false;
+            self.Age.enabled = false;
+            self.Location.enabled = false;
+            self.Sender.enabled = false;
+            self.Username.text = "";
+            self.Password.text = "";
+            self.Email.text = "";
+            self.Age.text = "";
+            self.Location.text = "";
+            
+            self.loadDestinationVC();
+            
+        //Create a PF Object (Parse Codes)
+            
+        /*var user = PFUser()
         var userDetails: PFObject = PFObject(className: "UserDetails")
         //Set the Text Key to the text of the message TextField
         user.username = self.Username.text
@@ -143,26 +181,8 @@ class ViewControllerRegister: UIViewController, UITextFieldDelegate,UIPickerView
                     
                     self.loadDestinationVC();
                 }
-            }
+            }*/
         }
-        
-        
-        //Send information to our own register in express server
-        /*let manager = AFHTTPRequestOperationManager()
-        var param_login = [
-            "username":self.Username.text,
-            "password":self.Password.text
-            //"age":self.Age.text
-        ]
-        
-        manager.POST("http://localhost:3000/register",
-        parameters: param_login,
-        success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-                println("success!")
-        })
-        {(AFHTTPRequestOperation, NSError) -> Void in
-        println("fail to send in register")
-        }*/
     }
 
     override func didReceiveMemoryWarning() {
@@ -211,18 +231,17 @@ class ViewControllerRegister: UIViewController, UITextFieldDelegate,UIPickerView
         pickerLabel.textColor = UIColor.whiteColor()
         pickerLabel.text = pickerData[component][row]
         // pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 15)
-        pickerLabel.font = UIFont(name: "System Thin", size: 20) // In this use your custom font
+        pickerLabel.font = UIFont(name: "System Thin", size: 12) // In this use your custom font
         pickerLabel.textAlignment = NSTextAlignment.Center
         return pickerLabel
     }
-    
-    
 }
 
 //Storing the userid as global variable in the ios app machine
 struct register_info{
     static var username: String = "";
     static var password: String = "";
+    static var email: String = "";
     static var user_id: String = "";
     static var age_range: String = "";
     static var Profile_name: String = "";
@@ -238,4 +257,5 @@ struct register_info{
     static var EDC_or_Classic: String = "";
     static var Ethnicity: String = "";
     static var Cooking_Dineout: String = "";
+    static var URank: String = "";
 }

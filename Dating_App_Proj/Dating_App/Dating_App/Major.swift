@@ -137,6 +137,7 @@ class Major: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
             "Japanese",
             "Juris Doctor",
             "Journalism",
+            "Law",
             "Landscape Architecture",
             "Linguistics",
             "Management",
@@ -194,8 +195,8 @@ class Major: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
         var pickerLabel = UILabel()
         pickerLabel.textColor = UIColor.whiteColor()
         pickerLabel.text = pickerData[component][row]
-        // pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 15)
-        pickerLabel.font = UIFont(name: "System Thin", size: 12) // In this use your custom font
+        pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 14)
+        //pickerLabel.font = UIFont(name: "System Thin", size: 12) // In this use your custom font
         pickerLabel.textAlignment = NSTextAlignment.Center
         return pickerLabel
     }

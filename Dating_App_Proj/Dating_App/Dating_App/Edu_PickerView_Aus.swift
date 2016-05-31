@@ -67,6 +67,7 @@ class Edu_PickerView_AUS: UIViewController,UIPickerViewDataSource, UIPickerViewD
             "Griffith University",
             "James Cook University",
             "La Trobe University",
+            "Melbourne University",
             "Macquarie University",
             "Monash University",
             "Murdoch University",
@@ -109,8 +110,8 @@ class Edu_PickerView_AUS: UIViewController,UIPickerViewDataSource, UIPickerViewD
         var pickerLabel = UILabel()
         pickerLabel.textColor = UIColor.whiteColor()
         pickerLabel.text = pickerData[component][row]
-        // pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 15)
-        pickerLabel.font = UIFont(name: "System Thin", size: 10) // In this use your custom font
+        pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 13)
+        //pickerLabel.font = UIFont(name: "System Thin", size: 10) // In this use your custom font
         pickerLabel.textAlignment = NSTextAlignment.Center
         return pickerLabel
     }

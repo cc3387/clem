@@ -12,28 +12,17 @@ import UIKit
 
 class Cooking_DineOut: UIViewController{
     
-    
-    
-    @IBAction func Cooking_Home(sender: AnyObject) {
-        
-        register_info.Cooking_Dineout = "Cooking_Home";
-        
-        loadDestinationVC();
-        
-        println(register_info.Cooking_Dineout);
-    }
-    
-    
-    @IBAction func Dine_Out(sender: AnyObject) {
-    
-        register_info.Cooking_Dineout = "Dine_Out";
-        
-        loadDestinationVC();
-    
-        println(register_info.Cooking_Dineout);
-    }
-    
     override func viewDidLoad() {
+        
+        var leftSwipe = UISwipeGestureRecognizer(target: self, action: ("CookingDineoutSwipe:"))
+        var rightSwipe = UISwipeGestureRecognizer(target: self, action: ("CookingDineoutSwipe:"))
+        
+        leftSwipe.direction = .Left
+        rightSwipe.direction = .Right
+        
+        view.addGestureRecognizer(leftSwipe)
+        view.addGestureRecognizer(rightSwipe)
+        
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -41,6 +30,22 @@ class Cooking_DineOut: UIViewController{
     override func didReceiveMemoryWarning() {
         // Dispose of any resources that can be recreated.
     }
+    
+    func CookingDineoutSwipe(sender:UISwipeGestureRecognizer){
+        
+        if(sender.direction == .Right){
+            register_info.Cooking_Dineout = "Cooking_Home"
+            loadDestinationVC()
+            println(register_info.Cooking_Dineout)
+        }
+        else if(sender.direction == .Left){
+            register_info.Cooking_Dineout = "Dine_Out"
+            loadDestinationVC()
+            println(register_info.Cooking_Dineout)
+        }
+    }
+
+    
     
     func loadDestinationVC(){
         self.performSegueWithIdentifier("Summary_Send", sender: nil)

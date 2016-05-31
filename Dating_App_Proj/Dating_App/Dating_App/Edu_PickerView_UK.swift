@@ -131,8 +131,8 @@ class Edu_PickerView_UK: UIViewController,UIPickerViewDataSource, UIPickerViewDe
         var pickerLabel = UILabel()
         pickerLabel.textColor = UIColor.whiteColor()
         pickerLabel.text = pickerData[component][row]
-        // pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 15)
-        pickerLabel.font = UIFont(name: "System Thin", size: 12) // In this use your custom font
+        pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 13)
+        //pickerLabel.font = UIFont(name: "System Thin", size: 10) // In this use your custom font
         pickerLabel.textAlignment = NSTextAlignment.Center
         return pickerLabel
     }

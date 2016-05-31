@@ -74,7 +74,7 @@ class Loc_PickerView: UIViewController,UIPickerViewDataSource, UIPickerViewDeleg
         pickerLabel.textColor = UIColor.whiteColor()
         pickerLabel.text = pickerData[component][row]
         // pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 15)
-        pickerLabel.font = UIFont(name: "System Thin", size: 15) // In this use your custom font
+        pickerLabel.font = UIFont(name: "System Thin", size: 12) // In this use your custom font
         pickerLabel.textAlignment = NSTextAlignment.Center
         return pickerLabel
     }
