@@ -202,49 +202,50 @@ class Profile_Meet_Main : UIViewController{
         }
     }
     
-    @IBAction func Load_Chat_4(sender: AnyObject) {
+    @IBAction func Load_Chat_4(sender: UIButton) {
         
         if(self.fourth_match != ""){
-        var usernamefriend = login_user.user_name + "_fd";
-        var friendusername = self.second_id + "_fd";
-        var ref = Firebase(url:"https://simpleplus.firebaseio.com")
-        var fdref = Firebase(url:"https://simpleplus.firebaseio.com")
-        
-        var friendinfo = [
-            "Profile_Name" : self.Fourth_Match.text!,
-            "location" : self.Fourth_Loc.text!,
-            "Education": self.Fourth_Uni.text!,
-            "Major": self.Fourth_Major.text!,
-            "username": self.fourth_id,
-            "Email": self.fourth_match
-        ];
+            var usernamefriend = login_user.user_name + "_fd";
+            var friendusername = self.second_id + "_fd";
+            var ref = Firebase(url:"https://simpleplus.firebaseio.com")
+            var fdref = Firebase(url:"https://simpleplus.firebaseio.com")
             
-        var infofriend = [
-            "Profile_Name" : login_user.Profile_Name,
-            "location" : login_user.location,
-            "Education": login_user.university,
-            "Major": login_user.major,
-            "username": login_user.user_name,
-            "Email": login.loginid
-        ];
-        
-        var usernamefd = ref.childByAppendingPath(usernamefriend);
-        var fdusername = fdref.childByAppendingPath(friendusername);
-        usernamefd.childByAppendingPath(self.second_id).setValue(friendinfo);
-        fdusername.childByAppendingPath(login_user.user_name).setValue(infofriend);
+            var friendinfo = [
+                "Profile_Name" : self.Fourth_Match.text!,
+                "location" : self.Fourth_Loc.text!,
+                "Education": self.Fourth_Uni.text!,
+                "Major": self.Fourth_Major.text!,
+                "username": self.fourth_id,
+                "Email": self.fourth_match
+            ];
             
-//            arrays.friendsArray.append(self.Fourth_Match.text!);
-//            arrays.friendlocArray.append(self.Fourth_Loc.text!);
-//            arrays.frienduniArray.append(self.Fourth_Uni.text!);
-//            arrays.friendmajorArray.append(self.Fourth_Major.text!);
-//            arrays.friendidArray.append(self.fourth_id);
-        
-        //Load to the next destination
-        loadDestinationVC();
+            var infofriend = [
+                "Profile_Name" : login_user.Profile_Name,
+                "location" : login_user.location,
+                "Education": login_user.university,
+                "Major": login_user.major,
+                "username": login_user.user_name,
+                "Email": login.loginid
+            ];
+            
+            var usernamefd = ref.childByAppendingPath(usernamefriend);
+            var fdusername = fdref.childByAppendingPath(friendusername);
+            usernamefd.childByAppendingPath(self.second_id).setValue(friendinfo);
+            fdusername.childByAppendingPath(login_user.user_name).setValue(infofriend);
+            
+            //            arrays.friendsArray.append(self.Fourth_Match.text!);
+            //            arrays.friendlocArray.append(self.Fourth_Loc.text!);
+            //            arrays.frienduniArray.append(self.Fourth_Uni.text!);
+            //            arrays.friendmajorArray.append(self.Fourth_Major.text!);
+            //            arrays.friendidArray.append(self.fourth_id);
+            
+            //Load to the next destination
+            loadDestinationVC();
         }
         else{
             
         }
+        
     }
     
     //Getting the login_user id that is collected from the login page
@@ -335,6 +336,7 @@ class Profile_Meet_Main : UIViewController{
                     var count = 0;
                     
                     for index in latitudesnapshot.children.allObjects as! [FDataSnapshot]{
+                        
                         var uname: String = "";
                         var ind: Int = 0;
                         uname = (index.value["Email"] as! String?)!;
@@ -352,10 +354,10 @@ class Profile_Meet_Main : UIViewController{
                         self.First_Major.text = index.value["Major"] as! String?;
                         self.first_id = (index.value["username"] as! String?)!;
                         self.first_match = (index.value["Email"] as! String?)!;
-                        self.First_Match.textColor = UIColor.blackColor();
-                        self.First_Loc.textColor = UIColor.blackColor();
-                        self.First_Uni.textColor = UIColor.blackColor();
-                        self.First_Major.textColor = UIColor.blackColor();
+                        self.First_Match.textColor = UIColor.whiteColor();
+                        self.First_Loc.textColor = UIColor.whiteColor();
+                        self.First_Uni.textColor = UIColor.whiteColor();
+                        self.First_Major.textColor = UIColor.whiteColor();
                         count += 1;
                         }
                         else if(uname != login.loginid && count == 1 && ind == 0){
@@ -365,10 +367,10 @@ class Profile_Meet_Main : UIViewController{
                         self.Second_Major.text = index.value["Major"] as! String?;
                         self.second_id = (index.value["username"] as! String?)!;
                         self.second_match = (index.value["Email"] as! String?)!;
-                        self.Second_Match.textColor = UIColor.blackColor();
-                        self.Second_Loc.textColor = UIColor.blackColor();
-                        self.Second_Uni.textColor = UIColor.blackColor();
-                        self.Second_Major.textColor = UIColor.blackColor();
+                        self.Second_Match.textColor = UIColor.whiteColor();
+                        self.Second_Loc.textColor = UIColor.whiteColor();
+                        self.Second_Uni.textColor = UIColor.whiteColor();
+                        self.Second_Major.textColor = UIColor.whiteColor();
                         count += 1;
                         }
                         else if(uname != login.loginid && count == 2 && ind == 0){
@@ -378,10 +380,10 @@ class Profile_Meet_Main : UIViewController{
                         self.Third_Major.text = index.value["Major"] as! String?;
                         self.third_id = (index.value["username"] as! String?)!;
                         self.third_match = (index.value["Email"] as! String?)!;
-                        self.Third_Match.textColor = UIColor.blackColor();
-                        self.Third_Loc.textColor = UIColor.blackColor();
-                        self.Third_Uni.textColor = UIColor.blackColor();
-                        self.Third_Major.textColor = UIColor.blackColor();
+                        self.Third_Match.textColor = UIColor.whiteColor();
+                        self.Third_Loc.textColor = UIColor.whiteColor();
+                        self.Third_Uni.textColor = UIColor.whiteColor();
+                        self.Third_Major.textColor = UIColor.whiteColor();
                         count += 1;
                         }
                         else if(uname != login.loginid && count == 3 && ind == 0){
@@ -391,31 +393,11 @@ class Profile_Meet_Main : UIViewController{
                         self.Fourth_Major.text = index.value["Major"] as! String?;
                         self.fourth_id = (index.value["username"] as! String?)!;
                         self.fourth_match = (index.value["Email"] as! String?)!;
-                        self.Fourth_Match.textColor = UIColor.blackColor();
-                        self.Fourth_Loc.textColor = UIColor.blackColor();
-                        self.Fourth_Uni.textColor = UIColor.blackColor();
-                        self.Fourth_Major.textColor = UIColor.blackColor();
+                        self.Fourth_Match.textColor = UIColor.whiteColor();
+                        self.Fourth_Loc.textColor = UIColor.whiteColor();
+                        self.Fourth_Uni.textColor = UIColor.whiteColor();
+                        self.Fourth_Major.textColor = UIColor.whiteColor();
                         count += 1;
-                        }
-                        
-                        //Change of appearance based on time differences
-                        if((self.hour_int() > 18 || self.hour_int() < 6) && ind == 1){
-                            self.First_Match.backgroundColor = UIColor.whiteColor();
-                            self.First_Loc.backgroundColor = UIColor.whiteColor();
-                            self.First_Uni.backgroundColor = UIColor.whiteColor();
-                            self.First_Major.backgroundColor = UIColor.whiteColor();
-                            self.Second_Match.backgroundColor = UIColor.whiteColor();
-                            self.Second_Loc.backgroundColor = UIColor.whiteColor();
-                            self.Second_Uni.backgroundColor = UIColor.whiteColor();
-                            self.Second_Major.backgroundColor = UIColor.whiteColor();
-                            self.Third_Match.backgroundColor = UIColor.whiteColor();
-                            self.Third_Loc.backgroundColor = UIColor.whiteColor();
-                            self.Third_Uni.backgroundColor = UIColor.whiteColor();
-                            self.Third_Major.backgroundColor = UIColor.whiteColor();
-                            self.Fourth_Match.backgroundColor = UIColor.whiteColor();
-                            self.Fourth_Loc.backgroundColor = UIColor.whiteColor();
-                            self.Fourth_Uni.backgroundColor = UIColor.whiteColor();
-                            self.Fourth_Major.backgroundColor = UIColor.whiteColor();
                         }
                     }
                 })

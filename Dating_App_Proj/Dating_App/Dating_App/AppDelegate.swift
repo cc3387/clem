@@ -8,18 +8,16 @@
 
 import UIKit
 import Firebase
+import JSQMessagesViewController
 
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-        //Parse API
-        Parse.setApplicationId("qFuwA5YRyuaf7BQ2tXM5ANg5onwgbCixQnkAR70W", clientKey: "DKQfkIgQADh8etSliPm0BdpETKPsUj0l6kQgA3ZE");
         
         //Google Map API
         GMSServices.provideAPIKey("AIzaSyADGE86SbwoClUTPrhGvb4TxHX1FoU4cfY")

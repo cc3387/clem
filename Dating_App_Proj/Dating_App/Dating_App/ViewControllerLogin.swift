@@ -19,9 +19,10 @@ class ViewControllerLogin: UIViewController {
     var decision_pwd: Int = 0
     var user1:User!
     var count: Int = 0;
+    var ref: Firebase!
     
     override func viewDidLoad() {
-        
+
     }
     
     /*override func didReceiveMemoryWarning() {
@@ -51,7 +52,8 @@ class ViewControllerLogin: UIViewController {
                 login.loginid = self.Username.text;
                 login.password = self.Password.text;
                 self.Password.text = "**********";
-                
+                login.chatid = ref.authData.uid
+                println(login.chatid)
                 self.loadDestinationVC();
             }
         }
@@ -94,6 +96,7 @@ class ViewControllerLogin: UIViewController {
     func loadDestinationVC(){
     self.performSegueWithIdentifier("openProfile", sender: nil)
     }
+
     
     /*func finduserid(){
         var query = PFQuery(className: "UserDetails");
@@ -200,6 +203,7 @@ class ViewControllerLogin: UIViewController {
             
         }
     }*/
+    
 }
 
 //Storing the userid as global variable in the ios app machine
@@ -207,6 +211,7 @@ struct login{
     
     static var loginid = "";
     static var password = "";
+    static var chatid = "";
     
 }
 

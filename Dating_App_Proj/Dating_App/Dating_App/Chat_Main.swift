@@ -27,9 +27,9 @@ class Chat_Main : UIViewController{
     
     //Friend_1
     @IBAction func Chat_1(sender: AnyObject) {
-        
-        loadDestinationVC();
+    loadDestinationVC();
     }
+
     @IBOutlet weak var Friend_1: UILabel!
     @IBOutlet weak var Friend_1_Image: UIImageView!
 
@@ -39,8 +39,9 @@ class Chat_Main : UIViewController{
     
     //Friend_2
     @IBAction func Chat_2(sender: AnyObject) {
-        loadDestinationVC();
+    loadDestinationVC();
     }
+    
     @IBOutlet weak var Friend_2: UILabel!
     @IBOutlet weak var Friend_2_Image: UIImageView!
     @IBOutlet weak var Friend_2_Loc: UILabel!
@@ -49,8 +50,9 @@ class Chat_Main : UIViewController{
     
     //Friend_3
     @IBAction func Chat_3(sender: AnyObject) {
-        loadDestinationVC();
+    loadDestinationVC();
     }
+    
     @IBOutlet weak var Friend_3: UILabel!
     @IBOutlet weak var Friend_3_Loc: UILabel!
     @IBOutlet weak var Friend_3_Image: UIImageView!
@@ -59,9 +61,9 @@ class Chat_Main : UIViewController{
     
     //Friend_4
     @IBAction func Chat_4(sender: AnyObject) {
-        loadDestinationVC();
-
+    loadDestinationVC();
     }
+    
     @IBOutlet weak var Friend_4: UILabel!
     @IBOutlet weak var Friend_4_Loc: UILabel!
     @IBOutlet weak var Friend_4_Image: UIImageView!
@@ -647,6 +649,7 @@ class Chat_Main : UIViewController{
             self.Friend_2_Image.setImageWithUrl(url1!, placeHolderImage: nil);
             self.Friend_3_Image.setImageWithUrl(url2!, placeHolderImage: nil);
             self.Friend_4_Image.setImageWithUrl(url3!, placeHolderImage: nil);
+        
     }
 
     override func didReceiveMemoryWarning() {
