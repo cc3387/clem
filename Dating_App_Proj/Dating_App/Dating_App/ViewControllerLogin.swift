@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ViewControllerLogin: UIViewController {
+class ViewControllerLogin: UIViewController{
     
     @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var Password: UITextField!
@@ -22,7 +22,7 @@ class ViewControllerLogin: UIViewController {
     var ref: Firebase!
     
     override func viewDidLoad() {
-
+        
     }
     
     /*override func didReceiveMemoryWarning() {

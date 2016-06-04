@@ -40,7 +40,7 @@ class Profile_Main : UIViewController{
     
     //Action Item
     override func viewDidLoad() {
-        
+    
     let hours = hour();
     let minutes = minute();
     let hour_i = hour_int();

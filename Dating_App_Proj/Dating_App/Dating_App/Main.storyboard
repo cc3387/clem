@@ -3039,11 +3039,14 @@
         <scene sceneID="4ct-aG-tik">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tr0-Hv-OtS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController hidesBarsOnTap="YES" id="HAL-BT-ZIO" sceneMemberID="viewController">
+                <navigationController hidesBarsOnSwipe="YES" hidesBarsOnTap="YES" hidesBarsWhenKeyboardAppears="YES" hidesBarsWhenVerticallyCompact="YES" id="HAL-BT-ZIO" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SEc-0c-046">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Hjf-hn-fRI">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="vQP-4T-GrP" kind="relationship" relationship="rootViewController" id="GY0-Zc-GkT"/>
                     </connections>
@@ -3075,7 +3078,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="8yH-cO-cIJ" kind="show" id="25o-33-yRW"/>
+                                    <segue destination="f9m-1M-zoV" kind="show" id="KmO-u7-Ryl"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -3083,7 +3086,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m8F-Vp-j0e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3014" y="-1494"/>
+            <point key="canvasLocation" x="2311" y="-800"/>
         </scene>
     </scenes>
     <resources>
@@ -3104,7 +3107,6 @@
         <segue reference="Pvq-MF-HCu"/>
         <segue reference="d3S-iK-LLH"/>
         <segue reference="fTe-SU-cnY"/>
-        <segue reference="Jed-3l-dkk"/>
-        <segue reference="25o-33-yRW"/>
+        <segue reference="KmO-u7-Ryl"/>
     </inferredMetricsTieBreakers>
 </document>

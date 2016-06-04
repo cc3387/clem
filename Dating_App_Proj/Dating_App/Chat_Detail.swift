@@ -15,6 +15,7 @@ class ChatDetail: JSQMessagesViewController{
     
     var messageRef: Firebase!
     var messages = [JSQMessage]()
+    var check = 0
     
     //Setting up the bubbles
     var outgoingBubbleImageView: JSQMessagesBubbleImage!
@@ -22,6 +23,7 @@ class ChatDetail: JSQMessagesViewController{
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        self.navigationController!.navigationBar.hidden = true
         self.senderDisplayName = ""
         self.senderId = login_user.user_name
         title = "Simple Chat"
@@ -58,7 +60,6 @@ class ChatDetail: JSQMessagesViewController{
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         observeMessages()
-        
     }
   
     //Sending the message to server
