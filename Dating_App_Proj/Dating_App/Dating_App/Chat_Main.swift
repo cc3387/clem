@@ -27,7 +27,16 @@ class Chat_Main : UIViewController{
     
     //Friend_1
     @IBAction func Chat_1(sender: AnyObject) {
-    loadDestinationVC();
+    
+    if conversation_info.friend_id1 == ""{
+        
+    }
+    else{
+        convo_final.friend_id_final = conversation_info.friend_id1!
+        convo_final.chat_check_final = conversation_info.chat_check1!
+        loadDestinationVC();
+    }
+        
     }
 
     @IBOutlet weak var Friend_1: UILabel!
@@ -39,7 +48,14 @@ class Chat_Main : UIViewController{
     
     //Friend_2
     @IBAction func Chat_2(sender: AnyObject) {
-    loadDestinationVC();
+        if conversation_info.friend_id2 == "" {
+            
+        }
+        else{
+            convo_final.friend_id_final = conversation_info.friend_id2!
+            convo_final.chat_check_final = conversation_info.chat_check2!
+            loadDestinationVC();
+        }
     }
     
     @IBOutlet weak var Friend_2: UILabel!
@@ -50,7 +66,14 @@ class Chat_Main : UIViewController{
     
     //Friend_3
     @IBAction func Chat_3(sender: AnyObject) {
-    loadDestinationVC();
+        if conversation_info.friend_id3 == ""{
+            
+        }
+        else{
+            convo_final.friend_id_final = conversation_info.friend_id3!
+            convo_final.chat_check_final = conversation_info.chat_check3!
+            loadDestinationVC();
+        }
     }
     
     @IBOutlet weak var Friend_3: UILabel!
@@ -61,7 +84,14 @@ class Chat_Main : UIViewController{
     
     //Friend_4
     @IBAction func Chat_4(sender: AnyObject) {
-    loadDestinationVC();
+        if conversation_info.friend_id4 == ""{
+            
+        }
+        else{
+            convo_final.friend_id_final = conversation_info.friend_id4!
+            convo_final.chat_check_final = conversation_info.chat_check4!
+            loadDestinationVC();
+        }
     }
     
     @IBOutlet weak var Friend_4: UILabel!
@@ -81,6 +111,8 @@ class Chat_Main : UIViewController{
     var frienduniArray:[String] = [String]() //Set an empty array for university locations
     var friendmajorArray:[String] = [String]() //Set an empty array for major locations
     var friendidArray:[String] = [String]() //Set an empty array for friend's ID
+    var chatidArray:[Int] = [Int]() //Set an empty array to define Chat ID
+    var friendusernameArray:[String] = [String]() //Set an empty array for friend's username
     var chatcheck:[Int] = [Int]() //Check 1:1 relationship
     
     
@@ -452,7 +484,7 @@ class Chat_Main : UIViewController{
             Bkground_Image.image = UIImage(named: "malaysia_morning.jpg");
             
             //Setting the User ID to login user id
-            self.User_ID.text = "Welcome to Simple, " + self.loginuser;
+            self.User_ID.text = "Welcome to Simple, " + login_user.Profile_Name;
             self.User_ID.textColor = UIColor.blackColor();
         }
         else if(hour_i >= 12 && hour_i <= 18){
@@ -475,7 +507,7 @@ class Chat_Main : UIViewController{
             }
             
             //Setting the User ID to login user id
-            self.User_ID.text = "Welcome to Simple, " + self.loginuser;
+            self.User_ID.text = "Welcome to Simple, " + login_user.Profile_Name;
             self.User_ID.textColor = UIColor.blackColor();
         }
         else{
@@ -501,7 +533,7 @@ class Chat_Main : UIViewController{
             }
             
             //Setting the User ID to login user id
-            self.User_ID.text = "Welcome to Simple, " + self.loginuser;
+            self.User_ID.text = "Welcome to Simple, " + login_user.Profile_Name;
             self.User_ID.textColor = UIColor.whiteColor();
         }
         
@@ -516,20 +548,19 @@ class Chat_Main : UIViewController{
                 let friends_uni:String? = index.value["Education"] as? String
                 let friends_major:String? = index.value["Major"] as? String
                 let friends_id:String? = index.value["Email"] as? String
+                let friends_username:String? = index.value["username"] as? String
+                let chat_id:Int? = index.value["Chatid"] as? Int
                 
                 println(friends_name);
                 
                 if(friends_name != nil){
-                        /*arrays.friendsArray.append(friends_name!);
-                        arrays.friendlocArray.append(friends_loc!);
-                        arrays.frienduniArray.append(friends_uni!);
-                        arrays.friendmajorArray.append(friends_major!);
-                        arrays.friendidArray.append(friends_id!);*/
                         self.friendsArray.append(friends_name!);
                         self.friendlocArray.append(friends_loc!);
                         self.frienduniArray.append(friends_uni!);
                         self.friendmajorArray.append(friends_major!);
                         self.friendidArray.append(friends_id!);
+                        self.friendusernameArray.append(friends_username!);
+                        self.chatidArray.append(chat_id!);
                 }
             }
             
@@ -556,6 +587,12 @@ class Chat_Main : UIViewController{
                 self.Friend_1_Loc.textColor = UIColor.whiteColor();
                 self.Friend_1_Major.textColor = UIColor.whiteColor();
                 self.Friend_1_Uni.textColor = UIColor.whiteColor();
+                
+                //Assigning information to friend's class
+                conversation_info.friend_id1 = self.friendusernameArray[0];
+                
+                //Add in Check ID
+                conversation_info.chat_check1 = self.chatidArray[0];
             }
             else if(self.friendsArray.count == 2){
                 
@@ -575,6 +612,15 @@ class Chat_Main : UIViewController{
                 self.Friend_2_Loc.textColor = UIColor.whiteColor();
                 self.Friend_2_Major.textColor = UIColor.whiteColor();
                 self.Friend_2_Uni.textColor = UIColor.whiteColor();
+                
+                //Assigning information to friend's class
+                conversation_info.friend_id1 = self.friendusernameArray[0];
+                conversation_info.friend_id2 = self.friendusernameArray[1];
+                
+                //Add in Check ID
+                conversation_info.chat_check1 = self.chatidArray[0];
+                conversation_info.chat_check2 = self.chatidArray[1];
+                
             }
             else if(self.friendsArray.count == 3){
                 
@@ -602,6 +648,16 @@ class Chat_Main : UIViewController{
                 self.Friend_3_Loc.textColor = UIColor.whiteColor();
                 self.Friend_3_Major.textColor = UIColor.whiteColor();
                 self.Friend_3_Uni.textColor = UIColor.whiteColor();
+                
+                //Assigning information to friend's class
+                conversation_info.friend_id1 = self.friendusernameArray[0];
+                conversation_info.friend_id2 = self.friendusernameArray[1];
+                conversation_info.friend_id3 = self.friendusernameArray[2];
+                
+                //Add in Check ID
+                conversation_info.chat_check1 = self.chatidArray[0];
+                conversation_info.chat_check2 = self.chatidArray[1];
+                conversation_info.chat_check3 = self.chatidArray[2];
                 
             }
             else if((remainder == 0 && b > 0) || (remainder == 1 && b > 0) || (remainder == 2 && b > 0) || (remainder == 3 && b > 0)){
@@ -638,6 +694,18 @@ class Chat_Main : UIViewController{
                 self.Friend_4_Loc.textColor = UIColor.whiteColor();
                 self.Friend_4_Major.textColor = UIColor.whiteColor();
                 self.Friend_4_Uni.textColor = UIColor.whiteColor();
+                
+                //Assigning information to friend's class
+                conversation_info.friend_id1 = self.friendusernameArray[0];
+                conversation_info.friend_id2 = self.friendusernameArray[1];
+                conversation_info.friend_id3 = self.friendusernameArray[2];
+                conversation_info.friend_id4 = self.friendusernameArray[3];
+                
+                //Add in Check ID
+                conversation_info.chat_check1 = self.chatidArray[0];
+                conversation_info.chat_check2 = self.chatidArray[1];
+                conversation_info.chat_check3 = self.chatidArray[2];
+                conversation_info.chat_check4 = self.chatidArray[3];
             }
         })
             //Testing with erik's photo online
@@ -730,6 +798,5 @@ struct convo_final{
     static var friend_id_final: String = "";
     static var chat_check_bool: String = "";
     static var chat_check_final: Int?;
-
 };
 

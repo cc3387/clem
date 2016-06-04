@@ -13,7 +13,6 @@ import JSQMessagesViewController
 
 class ChatDetail: JSQMessagesViewController{
     
-    let rootRef = Firebase(url: "https://simpleplus.firebaseio.com/")
     var messageRef: Firebase!
     var messages = [JSQMessage]()
     
@@ -25,11 +24,10 @@ class ChatDetail: JSQMessagesViewController{
         super.viewDidLoad()
         self.senderDisplayName = ""
         self.senderId = login_user.user_name
-        title = "Simple"
+        title = "Simple Chat"
         setupBubbles()
         collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSizeZero
         collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSizeZero
-        
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!,
@@ -59,17 +57,57 @@ class ChatDetail: JSQMessagesViewController{
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-
-        // messages from someone else
-        addMessage("foo", text: "Hey person!")
-        // messages sent from local sender
-        addMessage(senderId, text: "Yo!")
-        addMessage(senderId, text: "I like turtles!")
-        // animates the receiving of a new message on the view
-        finishReceivingMessage()
+        observeMessages()
+        
+    }
+  
+    //Sending the message to server
+    override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!,
+        senderDisplayName: String!, date: NSDate!) {
+            
+            let rootRef = Firebase(url: "https://simpleplus.firebaseio.com/")
+            
+            //Define the server hosting name
+            if(convo_final.chat_check_final == 1){
+            messageRef = rootRef.childByAppendingPath(login_user.user_name + convo_final.friend_id_final + "msg")
+            }
+            else if (convo_final.chat_check_final == 2){
+            messageRef = rootRef.childByAppendingPath(convo_final.friend_id_final + login_user.user_name + "msg")
+            }
+            
+            let itemRef = messageRef.childByAutoId()
+            
+            let messageItem = [
+                "text": text,
+                "senderId": self.senderId
+            ]
+            
+            itemRef.setValue(messageItem)
+            
+            // 4
+            JSQSystemSoundPlayer.jsq_playMessageSentSound()
+            
+            // 5
+            finishSendingMessage()
     }
     
+    override func collectionView(collectionView: UICollectionView,
+        cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+            let cell = super.collectionView(collectionView, cellForItemAtIndexPath: indexPath)
+                as! JSQMessagesCollectionViewCell
+            
+            let message = messages[indexPath.item]
+            
+            if message.senderId == senderId {
+                cell.textView!.textColor = UIColor.whiteColor()
+            } else {
+                cell.textView!.textColor = UIColor.blackColor()
+            }
+            
+            return cell
+    }
     
+    //To Set up chat bubbles for the chat app process
     private func setupBubbles() {
         let factory = JSQMessagesBubbleImageFactory()
         outgoingBubbleImageView = factory.outgoingMessagesBubbleImageWithColor(
@@ -78,6 +116,30 @@ class ChatDetail: JSQMessagesViewController{
             UIColor.jsq_messageBubbleLightGrayColor())
     }
     
+    //Function to observe the information
+    private func observeMessages() {
+        
+        let rootRef = Firebase(url: "https://simpleplus.firebaseio.com/")
+        if(convo_final.chat_check_final == 1){
+            messageRef = rootRef.childByAppendingPath(login_user.user_name + convo_final.friend_id_final + "msg")
+        }
+        else if (convo_final.chat_check_final == 2){
+            messageRef = rootRef.childByAppendingPath(convo_final.friend_id_final + login_user.user_name + "msg")
+        }
+
+        //Define the messageQuery
+        let messagesQuery = messageRef.queryLimitedToLast(25)
+        
+        //Loading the message query
+        messagesQuery.observeEventType(.ChildAdded) { (snapshot: FDataSnapshot!) in
+            let id = snapshot.value["senderId"] as! String
+            let text = snapshot.value["text"] as! String
+            self.addMessage(id, text: text)
+            self.finishReceivingMessage()
+        }
+    }
+    
+    //Function to add messages and send to the server
     func addMessage(id: String, text: String) {
         let message = JSQMessage(senderId: id, displayName: "", text: text)
         messages.append(message)

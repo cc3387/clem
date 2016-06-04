@@ -644,47 +644,6 @@
             </objects>
             <point key="canvasLocation" x="1774" y="988"/>
         </scene>
-        <!--Start View Controller-->
-        <scene sceneID="3s5-Df-By1">
-            <objects>
-                <viewController id="VSM-1c-wr2" customClass="startViewController" customModule="Simple" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UrR-tg-4Yt"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ypq-J3-J3S"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="aVU-gZ-eRE">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud-horizon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Bhe-bQ-tJY">
-                                <rect key="frame" x="-97" y="-263" width="945" height="1096"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0ts-7T-gcP">
-                                <rect key="frame" x="49" y="-315" width="673" height="895"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="Bhe-bQ-tJY" secondAttribute="bottom" constant="-233" id="LSx-ZW-iCP"/>
-                            <constraint firstItem="Bhe-bQ-tJY" firstAttribute="leading" secondItem="aVU-gZ-eRE" secondAttribute="leadingMargin" constant="-113" id="Uh2-82-lfw"/>
-                            <constraint firstItem="Bhe-bQ-tJY" firstAttribute="top" secondItem="aVU-gZ-eRE" secondAttribute="topMargin" constant="-263" id="agv-vR-PvE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Bhe-bQ-tJY" secondAttribute="trailing" constant="-264" id="lNS-te-Ifd"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="0ts-7T-gcP"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <connections>
-                        <segue destination="bpH-nP-zcn" kind="show" identifier="goToLogin" id="MN9-zh-jkq"/>
-                        <segue destination="f9m-1M-zoV" kind="show" identifier="goToAccount" id="1cx-Td-9VV"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kmD-kA-ang" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="65" y="-754"/>
-        </scene>
         <!--Starting_StoryBoard-->
         <scene sceneID="bM4-w5-iyx">
             <objects>
@@ -769,6 +728,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="Byt-bb-42B"/>
                     <connections>
                         <segue destination="f9m-1M-zoV" kind="show" identifier="openProfile" id="cqz-GP-iva"/>
                     </connections>
@@ -2236,7 +2196,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogE-js-8Yk">
-                                <rect key="frame" x="16" y="16" width="42" height="16"/>
+                                <rect key="frame" x="16" y="28" width="42" height="16"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2401,7 +2361,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Simple" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaA-aS-Obl">
-                                <rect key="frame" x="183" y="28" width="55" height="33"/>
+                                <rect key="frame" x="152" y="28" width="55" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -3068,7 +3028,7 @@
                         <outlet property="Time_Greetings" destination="1MR-Cj-xHc" id="hco-ef-0qP"/>
                         <outlet property="User_ID" destination="eY9-Hr-T0k" id="Zrs-bi-aUL"/>
                         <outlet property="user_greetings" destination="eY9-Hr-T0k" id="jg0-lU-4NN"/>
-                        <segue destination="cwW-41-cON" kind="show" identifier="Show_Chat_Detail" id="3sm-c3-6mf"/>
+                        <segue destination="HAL-BT-ZIO" kind="show" identifier="Show_Chat_Detail" id="wFz-I1-1fe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="biA-XS-3Ta" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3076,92 +3036,75 @@
             <point key="canvasLocation" x="1636" y="-1494"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="uuG-qc-dvk">
+        <scene sceneID="4ct-aG-tik">
             <objects>
-                <navigationController hidesBarsOnTap="YES" id="cwW-41-cON" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AhU-Ht-oAk">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tr0-Hv-OtS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController hidesBarsOnTap="YES" id="HAL-BT-ZIO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SEc-0c-046">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="DlG-ve-fwh">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
                     <connections>
-                        <segue destination="29f-9o-r7V" kind="relationship" relationship="rootViewController" id="jYP-v8-A64"/>
+                        <segue destination="vQP-4T-GrP" kind="relationship" relationship="rootViewController" id="GY0-Zc-GkT"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TyF-wm-S5o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2337" y="-1494"/>
+            <point key="canvasLocation" x="2311" y="-1494"/>
         </scene>
         <!--Chat Detail-->
-        <scene sceneID="VXI-8q-Use">
+        <scene sceneID="k6P-ok-fpr">
             <objects>
-                <viewController id="29f-9o-r7V" customClass="ChatDetail" customModule="Simple" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vQP-4T-GrP" customClass="ChatDetail" customModule="Simple" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2fb-dL-I7C"/>
-                        <viewControllerLayoutGuide type="bottom" id="X0T-N7-MqZ"/>
+                        <viewControllerLayoutGuide type="top" id="1ah-Vk-3kz"/>
+                        <viewControllerLayoutGuide type="bottom" id="frv-hX-6We"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="h0d-QT-vlq">
+                    <view key="view" contentMode="scaleToFill" id="UTc-Zg-ugM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jGv-M3-CMb">
-                                <rect key="frame" x="0.0" y="-1" width="600" height="44"/>
-                                <items>
-                                    <navigationItem id="YkY-Ow-Sa3">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="YkT-DQ-EaW">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aDz-qT-Uc8">
-                                                <rect key="frame" x="277" y="285" width="35" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
-                                                <state key="normal" title="Back">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="8yH-cO-cIJ" kind="show" id="J5W-NS-46Y"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="y4B-xM-s44">
-                        <connections>
-                            <outlet property="backBarButtonItem" destination="YkT-DQ-EaW" id="ZGx-yV-tbf"/>
-                            <outlet property="leftBarButtonItem" destination="YkT-DQ-EaW" id="Yo6-ne-e5s"/>
-                        </connections>
+                    <navigationItem key="navigationItem" id="jb0-Gw-GQ7">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="PuL-K7-uRw">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lM8-Lj-vSZ">
+                                <rect key="frame" x="65" y="138" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8yH-cO-cIJ" kind="show" id="25o-33-yRW"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LuT-w8-Do0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m8F-Vp-j0e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3020" y="-1494"/>
+            <point key="canvasLocation" x="3014" y="-1494"/>
         </scene>
     </scenes>
     <resources>
         <image name="Background_Color.tif" width="1280" height="692"/>
-        <image name="Clouds.jpg" width="1280" height="853"/>
         <image name="Cover_Page.jpg" width="1280" height="692"/>
         <image name="Female_Cloud.tif" width="740" height="370"/>
         <image name="Sunset.jpg" width="3648" height="2736"/>
         <image name="cloud-horizon.jpg" width="620" height="465"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PpB-Pu-aBD"/>
-        <segue reference="Jed-3l-dkk"/>
-        <segue reference="J5W-NS-46Y"/>
         <segue reference="hLD-FZ-jQI"/>
-        <segue reference="Ccm-cV-i5q"/>
-        <segue reference="L7q-dC-TAE"/>
+        <segue reference="FQD-TY-JKz"/>
         <segue reference="DUB-xm-YOM"/>
+        <segue reference="L7q-dC-TAE"/>
+        <segue reference="Ccm-cV-i5q"/>
         <segue reference="9qU-UM-F4o"/>
         <segue reference="26h-W4-Jl5"/>
+        <segue reference="Pvq-MF-HCu"/>
         <segue reference="d3S-iK-LLH"/>
         <segue reference="fTe-SU-cnY"/>
-        <segue reference="Pvq-MF-HCu"/>
+        <segue reference="Jed-3l-dkk"/>
+        <segue reference="25o-33-yRW"/>
     </inferredMetricsTieBreakers>
 </document>

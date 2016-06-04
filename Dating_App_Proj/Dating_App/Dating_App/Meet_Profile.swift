@@ -81,7 +81,8 @@ class Profile_Meet_Main : UIViewController{
             "Education": self.First_Uni.text!,
             "Major": self.First_Major.text!,
             "username": self.first_id,
-            "Email": self.first_match
+            "Email": self.first_match,
+            "Chatid": 1
         ];
             
         var infofriend = [
@@ -90,7 +91,8 @@ class Profile_Meet_Main : UIViewController{
             "Education": login_user.university,
             "Major": login_user.major,
             "username": login_user.user_name,
-            "Email": login.loginid
+            "Email": login.loginid,
+            "Chatid": 2
         ];
         
         var usernamefd = ref.childByAppendingPath(usernamefriend);
@@ -98,12 +100,6 @@ class Profile_Meet_Main : UIViewController{
         usernamefd.childByAppendingPath(self.first_id).setValue(friendinfo);
         fdusername.childByAppendingPath(login_user.user_name).setValue(infofriend);
         
-//            arrays.friendsArray.append(self.First_Match.text!);
-//            arrays.friendlocArray.append(self.First_Loc.text!);
-//            arrays.frienduniArray.append(self.First_Uni.text!);
-//            arrays.friendmajorArray.append(self.First_Major.text!);
-//            arrays.friendidArray.append(self.first_id);
-            
         //Load to the next destination
         loadDestinationVC();
         }
@@ -126,7 +122,8 @@ class Profile_Meet_Main : UIViewController{
             "Education": self.Second_Uni.text!,
             "Major": self.Second_Major.text!,
             "username": self.second_id,
-            "Email": self.second_match
+            "Email": self.second_match,
+            "Chatid": 1
         ];
             
         var infofriend = [
@@ -135,19 +132,14 @@ class Profile_Meet_Main : UIViewController{
             "Education": login_user.university,
             "Major": login_user.major,
             "username": login_user.user_name,
-            "Email": login.loginid
+            "Email": login.loginid,
+            "Chatid": 2
         ];
         
         var usernamefd = ref.childByAppendingPath(usernamefriend);
         var fdusername = fdref.childByAppendingPath(friendusername);
         usernamefd.childByAppendingPath(self.second_id).setValue(friendinfo);
         fdusername.childByAppendingPath(login_user.user_name).setValue(infofriend);
-        
-//            arrays.friendsArray.append(self.Second_Match.text!);
-//            arrays.friendlocArray.append(self.Second_Loc.text!);
-//            arrays.frienduniArray.append(self.Second_Uni.text!);
-//            arrays.friendmajorArray.append(self.Second_Major.text!);
-//            arrays.friendidArray.append(self.second_id);
             
         //Load to the next destination
         loadDestinationVC();
@@ -171,7 +163,8 @@ class Profile_Meet_Main : UIViewController{
             "Education": self.Third_Uni.text!,
             "Major": self.Third_Major.text!,
             "username": self.third_id,
-            "Email": self.third_match
+            "Email": self.third_match,
+            "Chatid": 1
         ];
             
         var infofriend = [
@@ -180,7 +173,8 @@ class Profile_Meet_Main : UIViewController{
             "Education": login_user.university,
             "Major": login_user.major,
             "username": login_user.user_name,
-            "Email": login.loginid
+            "Email": login.loginid,
+            "Chatid": 2
         ];
         
         var usernamefd = ref.childByAppendingPath(usernamefriend);
@@ -188,12 +182,6 @@ class Profile_Meet_Main : UIViewController{
         usernamefd.childByAppendingPath(self.second_id).setValue(friendinfo);
         fdusername.childByAppendingPath(login_user.user_name).setValue(infofriend);
             
-//            arrays.friendsArray.append(self.Third_Match.text!);
-//            arrays.friendlocArray.append(self.Third_Loc.text!);
-//            arrays.frienduniArray.append(self.Third_Uni.text!);
-//            arrays.friendmajorArray.append(self.Third_Major.text!);
-//            arrays.friendidArray.append(self.third_id);
-        
         //Load to the next destination
         loadDestinationVC();
         }
@@ -216,7 +204,8 @@ class Profile_Meet_Main : UIViewController{
                 "Education": self.Fourth_Uni.text!,
                 "Major": self.Fourth_Major.text!,
                 "username": self.fourth_id,
-                "Email": self.fourth_match
+                "Email": self.fourth_match,
+                "Chatid": 1
             ];
             
             var infofriend = [
@@ -225,19 +214,14 @@ class Profile_Meet_Main : UIViewController{
                 "Education": login_user.university,
                 "Major": login_user.major,
                 "username": login_user.user_name,
-                "Email": login.loginid
+                "Email": login.loginid,
+                "Chatid": 2
             ];
             
             var usernamefd = ref.childByAppendingPath(usernamefriend);
             var fdusername = fdref.childByAppendingPath(friendusername);
             usernamefd.childByAppendingPath(self.second_id).setValue(friendinfo);
             fdusername.childByAppendingPath(login_user.user_name).setValue(infofriend);
-            
-            //            arrays.friendsArray.append(self.Fourth_Match.text!);
-            //            arrays.friendlocArray.append(self.Fourth_Loc.text!);
-            //            arrays.frienduniArray.append(self.Fourth_Uni.text!);
-            //            arrays.friendmajorArray.append(self.Fourth_Major.text!);
-            //            arrays.friendidArray.append(self.fourth_id);
             
             //Load to the next destination
             loadDestinationVC();
