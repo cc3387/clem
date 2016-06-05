@@ -69,6 +69,7 @@
 		AA5AC1FB1B6499CA00158156 /* London.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA5AC1FA1B6499CA00158156 /* London.jpg */; };
 		AA5AC1FD1B649D0B00158156 /* San_Francisco.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA5AC1FC1B649D0B00158156 /* San_Francisco.jpg */; };
 		AA5AC2011B651A8100158156 /* Male_Female.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AC2001B651A8100158156 /* Male_Female.swift */; };
+		AA6550651D03AD9D007DD200 /* Choose_Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6550641D03AD9D007DD200 /* Choose_Photos.swift */; };
 		AA7EF40B1BAE2DCE00C8A305 /* Profile_Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7EF40A1BAE2DCE00C8A305 /* Profile_Main.swift */; };
 		AA7EF40D1BAE2FAC00C8A305 /* night_sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA7EF40C1BAE2FAC00C8A305 /* night_sky.jpg */; };
 		AA7EF40F1BAE46C500C8A305 /* malaysia_morning.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA7EF40E1BAE46C500C8A305 /* malaysia_morning.jpg */; };
@@ -184,6 +185,7 @@
 		AA5AC1FA1B6499CA00158156 /* London.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = London.jpg; sourceTree = "<group>"; };
 		AA5AC1FC1B649D0B00158156 /* San_Francisco.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = San_Francisco.jpg; sourceTree = "<group>"; };
 		AA5AC2001B651A8100158156 /* Male_Female.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Male_Female.swift; sourceTree = "<group>"; };
+		AA6550641D03AD9D007DD200 /* Choose_Photos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Choose_Photos.swift; path = ../Choose_Photos.swift; sourceTree = "<group>"; };
 		AA7EF40A1BAE2DCE00C8A305 /* Profile_Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile_Main.swift; sourceTree = "<group>"; };
 		AA7EF40C1BAE2FAC00C8A305 /* night_sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = night_sky.jpg; sourceTree = "<group>"; };
 		AA7EF40E1BAE46C500C8A305 /* malaysia_morning.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = malaysia_morning.jpg; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 				AA239AFE1BADAF4000192AE0 /* EDC_Classical.swift */,
 				AA4020111BBCD36000ABA237 /* Cooking_DineOut.swift */,
 				AA40200F1BBCA9E800ABA237 /* Ethnicity_PickerView.swift */,
+				AA6550641D03AD9D007DD200 /* Choose_Photos.swift */,
 				AA239B001BADB0E000192AE0 /* Final_Send.swift */,
 			);
 			name = Preferences;
@@ -709,6 +712,7 @@
 				AA7EF40B1BAE2DCE00C8A305 /* Profile_Main.swift in Sources */,
 				AADFA2391B6D74E600491DBF /* AFURLResponseSerialization.m in Sources */,
 				AA3C847E1B770E0100C76304 /* Location_class.swift in Sources */,
+				AA6550651D03AD9D007DD200 /* Choose_Photos.swift in Sources */,
 				AA239AF51BADA49100192AE0 /* Edu_PickerView_US.swift in Sources */,
 				AA5AC2011B651A8100158156 /* Male_Female.swift in Sources */,
 				AA239AFB1BADA58A00192AE0 /* Google_Location.swift in Sources */,

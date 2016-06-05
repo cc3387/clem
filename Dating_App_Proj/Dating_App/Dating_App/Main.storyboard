@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bpH-nP-zcn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nZR-h9-wIX">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -2062,6 +2062,41 @@
             </objects>
             <point key="canvasLocation" x="9236" y="988"/>
         </scene>
+        <!--Choose Photo-->
+        <scene sceneID="xeZ-OT-OPt">
+            <objects>
+                <viewController id="nZR-h9-wIX" customClass="ChoosePhoto" customModule="Simple" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2RS-zz-7OL"/>
+                        <viewControllerLayoutGuide type="bottom" id="TIE-7o-zTd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ekp-Oq-3dx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PwH-yC-a9m">
+                                <rect key="frame" x="16" y="114" width="285" height="245"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ib5-7O-B6N">
+                                <rect key="frame" x="114" y="409" width="89" height="30"/>
+                                <state key="normal" title="Load Images">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadImageButtonTapped:" destination="nZR-h9-wIX" eventType="touchUpInside" id="3Be-no-hkp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="PwH-yC-a9m" id="GHH-TX-7ci"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rHz-X5-aZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9236" y="1675"/>
+        </scene>
         <!--Male Female-->
         <scene sceneID="3cd-0T-36F">
             <objects>
@@ -3038,7 +3073,6 @@
         <!--Navigation Controller-->
         <scene sceneID="4ct-aG-tik">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tr0-Hv-OtS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController hidesBarsOnSwipe="YES" hidesBarsOnTap="YES" hidesBarsWhenKeyboardAppears="YES" hidesBarsWhenVerticallyCompact="YES" id="HAL-BT-ZIO" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SEc-0c-046">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -3051,6 +3085,7 @@
                         <segue destination="vQP-4T-GrP" kind="relationship" relationship="rootViewController" id="GY0-Zc-GkT"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tr0-Hv-OtS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2311" y="-1494"/>
         </scene>
@@ -3086,7 +3121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m8F-Vp-j0e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2311" y="-800"/>
+            <point key="canvasLocation" x="2311" y="-714"/>
         </scene>
     </scenes>
     <resources>
