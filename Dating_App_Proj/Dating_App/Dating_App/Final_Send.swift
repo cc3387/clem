@@ -55,7 +55,8 @@ class FinalSend_Final: UIViewController{
             "Sports_Art": register_info.sports_or_art,
             "Cooking_DineOut": register_info.Cooking_Dineout,
             "University_Rank": register_info.URank,
-            "Email": register_info.email
+            "Email": register_info.email,
+            "Photo": register_info.Photo
         ];
         
         var friend = [
@@ -63,7 +64,6 @@ class FinalSend_Final: UIViewController{
             "location" : register_info.location,
             "Education": register_info.education,
             "Major": register_info.Major,
-            "username": register_info.username,
             "Email": register_info.email
         ];
         

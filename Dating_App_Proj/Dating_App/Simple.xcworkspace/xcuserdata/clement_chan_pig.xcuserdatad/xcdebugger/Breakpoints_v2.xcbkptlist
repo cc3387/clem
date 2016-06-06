@@ -22,17 +22,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Choose_Photos.swift"
-            timestampString = "486795909.244941"
+            filePath = "Dating_App/ViewControllerRegister.swift"
+            timestampString = "486870013.36667"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
+            startingLineNumber = "260"
+            endingLineNumber = "260"
+            landmarkName = "register_info"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

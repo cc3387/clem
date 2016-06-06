@@ -44,11 +44,9 @@ class Cooking_DineOut: UIViewController{
             println(register_info.Cooking_Dineout)
         }
     }
-
-    
     
     func loadDestinationVC(){
-        self.performSegueWithIdentifier("Summary_Send", sender: nil)
+        self.performSegueWithIdentifier("Profile_Upload", sender: nil)
     }
     
 }

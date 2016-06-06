@@ -38,6 +38,8 @@ class Profile_Main : UIViewController{
     var loginuser: String = "";
     var user1: String = "";
     
+    @IBOutlet var Profile_Pic: UIImageView!
+    
     //Action Item
     override func viewDidLoad() {
     
@@ -142,6 +144,12 @@ class Profile_Main : UIViewController{
                                             if let ProfileName = snapshot.value["Profile_Name"] as? String{
                                                 login_user.Profile_Name = ProfileName;
                                                 println(login_user.Profile_Name);
+                                                
+                                                if let base64String = snapshot.value["Photo"] as? String{
+                                                    var decodedData = NSData(base64EncodedString: base64String, options: NSDataBase64DecodingOptions())
+                                                    var decodedImage = UIImage(data: decodedData!)!
+                                                    self.Profile_Pic.image = decodedImage
+                                                }
                                             }
                                         }
                                     }

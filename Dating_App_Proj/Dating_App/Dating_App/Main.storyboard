@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nZR-h9-wIX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bpH-nP-zcn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -239,6 +239,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UZp-Jb-zMX">
+                                <rect key="frame" x="16" y="162" width="87" height="85"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaL-IU-Pc7">
                                 <rect key="frame" x="144" y="179" width="104" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
@@ -261,6 +264,7 @@
                     <connections>
                         <outlet property="Bkground_Image" destination="FKV-bw-iHk" id="J6T-Zg-PoP"/>
                         <outlet property="Profile_Name" destination="GXm-aZ-xj1" id="vO8-gP-ccx"/>
+                        <outlet property="Profile_Pic" destination="UZp-Jb-zMX" id="CF3-fM-U6G"/>
                         <outlet property="Time_Greetings" destination="2fJ-YP-OWV" id="WET-4v-fjf"/>
                         <outlet property="User_ID" destination="D2J-vj-Baw" id="Nat-k0-uH9"/>
                         <outlet property="user_greetings" destination="D2J-vj-Baw" id="kpo-eE-kgC"/>
@@ -1907,13 +1911,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="PSM-2H-J6O" kind="show" identifier="Summary_Send" id="J8p-UB-dsJ"/>
+                        <segue destination="yLV-0J-K4F" kind="show" identifier="Profile_Upload" id="w7k-32-K2a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Lc-5R-mAa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="94G-X3-Sya"/>
             </objects>
-            <point key="canvasLocation" x="8529" y="988"/>
+            <point key="canvasLocation" x="8472" y="988"/>
         </scene>
         <!--Final Send Final-->
         <scene sceneID="Asx-G0-4XQ">
@@ -2022,11 +2026,14 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="yLV-0J-K4F" kind="show" id="q1R-fB-xUp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnf-c7-iJd">
-                                <rect key="frame" x="51" y="457" width="158" height="29"/>
+                                <rect key="frame" x="51" y="457" width="158" height="32"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
-                                <state key="normal" title="Confirm and Send">
+                                <state key="normal" title="Upload Profile Pic!">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2055,47 +2062,12 @@
                         <outlet property="Profile_Name" destination="8Ok-Eq-vGR" id="79g-NV-PQl"/>
                         <outlet property="School" destination="YDO-2e-uLD" id="5Xr-XO-n0k"/>
                         <outlet property="userid" destination="0Yd-Xw-pCk" id="SOP-rG-Rrm"/>
-                        <segue destination="bpH-nP-zcn" kind="show" identifier="Start" id="xjI-Mi-giw"/>
+                        <segue destination="bpH-nP-zcn" kind="show" identifier="Start" id="Am7-a8-KE0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuF-Ft-9GV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9236" y="988"/>
-        </scene>
-        <!--Choose Photo-->
-        <scene sceneID="xeZ-OT-OPt">
-            <objects>
-                <viewController id="nZR-h9-wIX" customClass="ChoosePhoto" customModule="Simple" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2RS-zz-7OL"/>
-                        <viewControllerLayoutGuide type="bottom" id="TIE-7o-zTd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ekp-Oq-3dx">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PwH-yC-a9m">
-                                <rect key="frame" x="16" y="114" width="285" height="245"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ib5-7O-B6N">
-                                <rect key="frame" x="114" y="409" width="89" height="30"/>
-                                <state key="normal" title="Load Images">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loadImageButtonTapped:" destination="nZR-h9-wIX" eventType="touchUpInside" id="3Be-no-hkp"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="imageView" destination="PwH-yC-a9m" id="GHH-TX-7ci"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rHz-X5-aZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="9236" y="1675"/>
+            <point key="canvasLocation" x="-679" y="988"/>
         </scene>
         <!--Male Female-->
         <scene sceneID="3cd-0T-36F">
@@ -3123,6 +3095,137 @@
             </objects>
             <point key="canvasLocation" x="2311" y="-714"/>
         </scene>
+        <!--Choose Photo-->
+        <scene sceneID="Bw1-Yo-cB4">
+            <objects>
+                <viewController id="yLV-0J-K4F" customClass="ChoosePhoto" customModule="Simple" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AYu-am-UAM"/>
+                        <viewControllerLayoutGuide type="bottom" id="l2f-21-Oe1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zX9-tI-zx4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloud-horizon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="exF-Gx-yJD">
+                                <rect key="frame" x="-196" y="-55" width="1015" height="850"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Simple" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5y-ZE-DcE">
+                                <rect key="frame" x="139" y="70" width="45" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6X-JB-m88">
+                                <rect key="frame" x="16" y="20" width="38" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Setting Profile Picture" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCh-sL-FsM">
+                                <rect key="frame" x="87" y="142" width="148" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxy-Vq-h7s">
+                                <rect key="frame" x="55" y="197" width="106" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
+                                <state key="normal" title="Choose Picture">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadImageButtonTapped:" destination="yLV-0J-K4F" eventType="touchUpInside" id="uB0-t6-BqN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xU8-5j-2gN">
+                                <rect key="frame" x="60" y="239" width="54" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
+                                <state key="normal" title="Upload!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="UploadButtons:" destination="yLV-0J-K4F" eventType="touchUpInside" id="3VD-Tx-fkR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Swipe To Choose)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXO-wQ-2r3">
+                                <rect key="frame" x="121" y="278" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cooking at home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upb-Vk-T7u">
+                                <rect key="frame" x="64" y="348" width="112" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGD-Pw-Qu5">
+                                <rect key="frame" x="221" y="341" width="83" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <state key="normal" title="Dine Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Dine_Out:" destination="yLV-0J-K4F" eventType="touchUpInside" id="eJV-I9-VNM"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xDa-W6-Oph">
+                                <rect key="frame" x="55" y="294" width="157" height="125"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evZ-LB-X6w">
+                                <rect key="frame" x="16" y="20" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fna-eu-AqX" kind="show" id="eZd-JO-exV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vxy-Vq-h7s" firstAttribute="leading" secondItem="zX9-tI-zx4" secondAttribute="leadingMargin" constant="30" id="5Sb-bA-Ev6"/>
+                            <constraint firstItem="xU8-5j-2gN" firstAttribute="top" secondItem="vxy-Vq-h7s" secondAttribute="bottom" constant="25" id="8qx-1c-pOx"/>
+                            <constraint firstItem="hGD-Pw-Qu5" firstAttribute="leading" secondItem="Upb-Vk-T7u" secondAttribute="trailing" constant="45" id="Ete-gU-vle"/>
+                            <constraint firstItem="HXO-wQ-2r3" firstAttribute="leading" secondItem="zX9-tI-zx4" secondAttribute="leadingMargin" constant="70" id="FMc-af-6kM"/>
+                            <constraint firstItem="PCh-sL-FsM" firstAttribute="top" secondItem="y5y-ZE-DcE" secondAttribute="bottom" constant="45" id="Fta-hJ-AcY"/>
+                            <constraint firstItem="g6X-JB-m88" firstAttribute="top" secondItem="AYu-am-UAM" secondAttribute="bottom" id="Ljs-7h-2kC"/>
+                            <constraint firstItem="xU8-5j-2gN" firstAttribute="leading" secondItem="zX9-tI-zx4" secondAttribute="leadingMargin" constant="30" id="NyK-HF-h7A"/>
+                            <constraint firstItem="y5y-ZE-DcE" firstAttribute="top" secondItem="AYu-am-UAM" secondAttribute="bottom" constant="50" id="PZV-oc-n3w"/>
+                            <constraint firstItem="hGD-Pw-Qu5" firstAttribute="top" secondItem="HXO-wQ-2r3" secondAttribute="bottom" constant="42" id="R2p-QJ-z3E"/>
+                            <constraint firstItem="g6X-JB-m88" firstAttribute="leading" secondItem="zX9-tI-zx4" secondAttribute="leadingMargin" id="SFv-Vh-3PH"/>
+                            <constraint firstItem="vxy-Vq-h7s" firstAttribute="top" secondItem="PCh-sL-FsM" secondAttribute="bottom" constant="35" id="eix-bY-lPY"/>
+                            <constraint firstItem="Upb-Vk-T7u" firstAttribute="top" secondItem="HXO-wQ-2r3" secondAttribute="bottom" constant="49" id="oQB-4W-Alp"/>
+                            <constraint firstItem="y5y-ZE-DcE" firstAttribute="leading" secondItem="zX9-tI-zx4" secondAttribute="leadingMargin" constant="80" id="vwq-YZ-I1R"/>
+                            <constraint firstItem="PCh-sL-FsM" firstAttribute="leading" secondItem="zX9-tI-zx4" secondAttribute="leadingMargin" constant="30" id="wqA-VY-2pM"/>
+                            <constraint firstItem="Upb-Vk-T7u" firstAttribute="leading" secondItem="zX9-tI-zx4" secondAttribute="leadingMargin" constant="45" id="xnC-OQ-umw"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="g6X-JB-m88"/>
+                                <exclude reference="HXO-wQ-2r3"/>
+                                <exclude reference="Upb-Vk-T7u"/>
+                                <exclude reference="hGD-Pw-Qu5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="xDa-W6-Oph" id="Tey-t2-slO"/>
+                        <segue destination="PSM-2H-J6O" kind="show" identifier="Final_Send" id="avF-PK-iRg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="imW-v9-2WI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="A2x-vn-pop"/>
+            </objects>
+            <point key="canvasLocation" x="9320" y="988"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Background_Color.tif" width="1280" height="692"/>
@@ -3132,8 +3235,11 @@
         <image name="cloud-horizon.jpg" width="620" height="465"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="cqz-GP-iva"/>
+        <segue reference="Am7-a8-KE0"/>
+        <segue reference="q1R-fB-xUp"/>
+        <segue reference="eZd-JO-exV"/>
         <segue reference="hLD-FZ-jQI"/>
-        <segue reference="FQD-TY-JKz"/>
         <segue reference="DUB-xm-YOM"/>
         <segue reference="L7q-dC-TAE"/>
         <segue reference="Ccm-cV-i5q"/>
@@ -3142,6 +3248,5 @@
         <segue reference="Pvq-MF-HCu"/>
         <segue reference="d3S-iK-LLH"/>
         <segue reference="fTe-SU-cnY"/>
-        <segue reference="KmO-u7-Ryl"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -258,4 +258,5 @@ struct register_info{
     static var Ethnicity: String = "";
     static var Cooking_Dineout: String = "";
     static var URank: String = "";
+    static var Photo: NSString = "";
 }

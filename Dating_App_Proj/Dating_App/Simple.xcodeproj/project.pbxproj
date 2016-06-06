@@ -186,6 +186,7 @@
 		AA5AC1FC1B649D0B00158156 /* San_Francisco.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = San_Francisco.jpg; sourceTree = "<group>"; };
 		AA5AC2001B651A8100158156 /* Male_Female.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Male_Female.swift; sourceTree = "<group>"; };
 		AA6550641D03AD9D007DD200 /* Choose_Photos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Choose_Photos.swift; path = ../Choose_Photos.swift; sourceTree = "<group>"; };
+		AA6550861D04D9B9007DD200 /* SRWebClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SRWebClient.framework; path = "../../../../IOS_Programs/Swift-SRWebClient-master/build/Debug-iphoneos/SRWebClient.framework"; sourceTree = "<group>"; };
 		AA7EF40A1BAE2DCE00C8A305 /* Profile_Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile_Main.swift; sourceTree = "<group>"; };
 		AA7EF40C1BAE2FAC00C8A305 /* night_sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = night_sky.jpg; sourceTree = "<group>"; };
 		AA7EF40E1BAE46C500C8A305 /* malaysia_morning.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = malaysia_morning.jpg; sourceTree = "<group>"; };
@@ -300,7 +301,6 @@
 		AA271D771B4DF4CC00EA5BA6 /* Dating_App */ = {
 			isa = PBXGroup;
 			children = (
-				AAE3F6DE1C03878900B27ABA /* Chat_Conversation */,
 				AA3527981BDBC66900679464 /* Simple_Meet */,
 				AAEDCD431BDAF5CE00CFF004 /* School */,
 				AAAA0FD61BC6CF19004F2474 /* Login_Files */,
@@ -369,6 +369,7 @@
 		AA271DC01B4E1B2B00EA5BA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AA6550861D04D9B9007DD200 /* SRWebClient.framework */,
 				AAE335521CFEF47A004B9722 /* JSQMessagesAssets.bundle */,
 				AA85AF521C78E0BF00321605 /* Firebase.framework */,
 				AA3C848D1B770ED800C76304 /* AVFoundation.framework */,
@@ -484,13 +485,6 @@
 				AADFA22A1B6D74E600491DBF /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
-			sourceTree = "<group>";
-		};
-		AAE3F6DE1C03878900B27ABA /* Chat_Conversation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Chat_Conversation;
 			sourceTree = "<group>";
 		};
 		AAEDCD431BDAF5CE00CFF004 /* School */ = {
@@ -840,6 +834,7 @@
 					"/Users/clement_chan_pig/Documents/iOS_App/parse-library-1",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/parse-library",
+					"/Users/clement_chan_pig/Documents/IOS_Programs/Swift-SRWebClient-master/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = Dating_App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -860,6 +855,7 @@
 					"/Users/clement_chan_pig/Documents/iOS_App/parse-library-1",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/parse-library",
+					"/Users/clement_chan_pig/Documents/IOS_Programs/Swift-SRWebClient-master/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = Dating_App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
