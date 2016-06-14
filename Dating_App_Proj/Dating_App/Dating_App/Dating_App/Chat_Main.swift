@@ -113,6 +113,7 @@ class Chat_Main : UIViewController{
     var friendidArray:[String] = [String]() //Set an empty array for friend's ID
     var chatidArray:[Int] = [Int]() //Set an empty array to define Chat ID
     var friendusernameArray:[String] = [String]() //Set an empty array for friend's username
+    var photoarray:[String] = [String]() //Set an empty array for friend's photo username
     var chatcheck:[Int] = [Int]() //Check 1:1 relationship
     
     
@@ -153,26 +154,42 @@ class Chat_Main : UIViewController{
                     self.Friend_1_Loc.text = self.friendlocArray[self.multi_count_add*4+0];
                     self.Friend_1_Uni.text = self.frienduniArray[self.multi_count_add*4+0];
                     self.Friend_1_Major.text = self.friendmajorArray[self.multi_count_add*4+0];
+                    let base64String = self.photoarray[self.multi_count_add*4+0];
+                    var decodedData = NSData(base64EncodedString: base64String, options: NSDataBase64DecodingOptions())
+                    var decodedImage = UIImage(data: decodedData!)!
+                    self.Friend_1_Image.image = decodedImage
                     self.Friend_2.text = self.friendsArray[self.multi_count_add*4 + 1];
                     self.Friend_2_Loc.text = self.friendlocArray[self.multi_count_add*4+1];
                     self.Friend_2_Uni.text = self.frienduniArray[self.multi_count_add*4+1];
                     self.Friend_2_Major.text = self.friendmajorArray[self.multi_count_add*4+1];
+                    let base64String1 = self.photoarray[self.multi_count_add*4+1];
+                    var decodedData1 = NSData(base64EncodedString: base64String1, options: NSDataBase64DecodingOptions())
+                    var decodedImage1 = UIImage(data: decodedData1!)!
+                    self.Friend_2_Image.image = decodedImage1
                     self.Friend_3.text = self.friendsArray[self.multi_count_add*4 + 2];
                     self.Friend_3_Loc.text = self.friendlocArray[self.multi_count_add*4+2];
                     self.Friend_3_Uni.text = self.frienduniArray[self.multi_count_add*4+2];
                     self.Friend_3_Major.text = self.friendmajorArray[self.multi_count_add*4+2];
+                    let base64String2 = self.photoarray[self.multi_count_add*4+2];
+                    var decodedData2 = NSData(base64EncodedString: base64String2, options: NSDataBase64DecodingOptions())
+                    var decodedImage2 = UIImage(data: decodedData2!)!
+                    self.Friend_3_Image.image = decodedImage2
                     self.Friend_4.text = self.friendsArray[self.multi_count_add*4 + 3];
                     self.Friend_4_Loc.text = self.friendlocArray[self.multi_count_add*4+3];
                     self.Friend_4_Uni.text = self.frienduniArray[self.multi_count_add*4+3];
                     self.Friend_4_Major.text = self.friendmajorArray[self.multi_count_add*4+3];
-                    conversation_info.friend_id1 = self.friendidArray[self.multi_count_add*4+0];
-                    conversation_info.chat_check1 = self.chatcheck[self.multi_count_add*4+0];
-                    conversation_info.friend_id2 = self.friendidArray[self.multi_count_add*4+1];
-                    conversation_info.chat_check2 = self.chatcheck[self.multi_count_add*4+1];
-                    conversation_info.friend_id3 = self.friendidArray[self.multi_count_add*4+2];
-                    conversation_info.chat_check3 = self.chatcheck[self.multi_count_add*4+2];
-                    conversation_info.friend_id4 = self.friendidArray[self.multi_count_add*4+3];
-                    conversation_info.chat_check4 = self.chatcheck[self.multi_count_add*4+3];
+                    let base64String3 = self.photoarray[self.multi_count_add*4+3];
+                    var decodedData3 = NSData(base64EncodedString: base64String3, options: NSDataBase64DecodingOptions())
+                    var decodedImage3 = UIImage(data: decodedData3!)!
+                    self.Friend_4_Image.image = decodedImage3
+                    conversation_info.friend_id1 = self.friendusernameArray[self.multi_count_add*4+0];
+                    conversation_info.chat_check1 = self.chatidArray[self.multi_count_add*4+0];
+                    conversation_info.friend_id2 = self.friendusernameArray[self.multi_count_add*4+1];
+                    conversation_info.chat_check2 = self.chatidArray[self.multi_count_add*4+1];
+                    conversation_info.friend_id3 = self.friendusernameArray[self.multi_count_add*4+2];
+                    conversation_info.chat_check3 = self.chatidArray[self.multi_count_add*4+2];
+                    conversation_info.friend_id4 = self.friendusernameArray[self.multi_count_add*4+3];
+                    conversation_info.chat_check4 = self.chatidArray[self.multi_count_add*4+3];
                     self.Friend_1.textColor = UIColor.whiteColor();
                     self.Friend_1_Loc.textColor = UIColor.whiteColor();
                     self.Friend_1_Uni.textColor = UIColor.whiteColor();
@@ -195,26 +212,42 @@ class Chat_Main : UIViewController{
                         self.Friend_1_Loc.text = self.friendlocArray[(self.multi_count_add-1)*4 + 0];
                         self.Friend_1_Uni.text = self.frienduniArray[(self.multi_count_add-1)*4 + 0];
                         self.Friend_1_Major.text = self.friendmajorArray[(self.multi_count_add-1)*4 + 0];
+                        let base64String = self.photoarray[(self.multi_count_add-1)*4 + 0];
+                        var decodedData = NSData(base64EncodedString: base64String, options: NSDataBase64DecodingOptions())
+                        var decodedImage = UIImage(data: decodedData!)!
+                        self.Friend_1_Image.image = decodedImage
                         self.Friend_2.text = self.friendsArray[(self.multi_count_add-1)*4 + 1];
                         self.Friend_2_Loc.text = self.friendlocArray[(self.multi_count_add-1)*4 + 1];
                         self.Friend_2_Uni.text = self.frienduniArray[(self.multi_count_add-1)*4 + 1];
                         self.Friend_2_Major.text = self.friendmajorArray[(self.multi_count_add-1)*4 + 1];
+                        let base64String1 = self.photoarray[(self.multi_count_add-1)*4 + 1];
+                        var decodedData1 = NSData(base64EncodedString: base64String1, options: NSDataBase64DecodingOptions())
+                        var decodedImage1 = UIImage(data: decodedData1!)!
+                        self.Friend_2_Image.image = decodedImage1
                         self.Friend_3.text = self.friendsArray[(self.multi_count_add-1)*4 + 2];
                         self.Friend_3_Loc.text = self.friendlocArray[(self.multi_count_add-1)*4 + 2];
                         self.Friend_3_Uni.text = self.frienduniArray[(self.multi_count_add-1)*4 + 2];
                         self.Friend_3_Major.text = self.friendmajorArray[(self.multi_count_add-1)*4 + 2];
+                        let base64String2 = self.photoarray[(self.multi_count_add-1)*4 + 2];
+                        var decodedData2 = NSData(base64EncodedString: base64String2, options: NSDataBase64DecodingOptions())
+                        var decodedImage2 = UIImage(data: decodedData2!)!
+                        self.Friend_3_Image.image = decodedImage2
                         self.Friend_4.text = self.friendsArray[(self.multi_count_add-1)*4 + 3];
                         self.Friend_4_Loc.text = self.friendlocArray[(self.multi_count_add-1)*4 + 3];
                         self.Friend_4_Uni.text = self.frienduniArray[(self.multi_count_add-1)*4 + 3];
                         self.Friend_4_Major.text = self.friendmajorArray[(self.multi_count_add-1)*4 + 3];
-                        conversation_info.friend_id1 = self.friendidArray[(self.multi_count_add-1)*4 + 0];
-                        conversation_info.chat_check1 = self.chatcheck[(self.multi_count_add-1)*4 + 0];
-                        conversation_info.friend_id2 = self.friendidArray[(self.multi_count_add-1)*4 + 1];
-                        conversation_info.chat_check2 = self.chatcheck[(self.multi_count_add-1)*4 + 1];
-                        conversation_info.friend_id3 = self.friendidArray[(self.multi_count_add-1)*4 + 2];
-                        conversation_info.chat_check3 = self.chatcheck[(self.multi_count_add-1)*4 + 2];
-                        conversation_info.friend_id4 = self.friendidArray[(self.multi_count_add-1)*4 + 3];
-                        conversation_info.chat_check4 = self.chatcheck[(self.multi_count_add-1)*4 + 3];
+                        let base64String3 = self.photoarray[(self.multi_count_add-1)*4 + 3];
+                        var decodedData3 = NSData(base64EncodedString: base64String3, options: NSDataBase64DecodingOptions())
+                        var decodedImage3 = UIImage(data: decodedData3!)!
+                        self.Friend_4_Image.image = decodedImage3
+                        conversation_info.friend_id1 = self.friendusernameArray[(self.multi_count_add-1)*4 + 0];
+                        conversation_info.chat_check1 = self.chatidArray[(self.multi_count_add-1)*4 + 0];
+                        conversation_info.friend_id2 = self.friendusernameArray[(self.multi_count_add-1)*4 + 1];
+                        conversation_info.chat_check2 = self.chatidArray[(self.multi_count_add-1)*4 + 1];
+                        conversation_info.friend_id3 = self.friendusernameArray[(self.multi_count_add-1)*4 + 2];
+                        conversation_info.chat_check3 = self.chatidArray[(self.multi_count_add-1)*4 + 2];
+                        conversation_info.friend_id4 = self.friendusernameArray[(self.multi_count_add-1)*4 + 3];
+                        conversation_info.chat_check4 = self.chatidArray[(self.multi_count_add-1)*4 + 3];
                         self.Friend_1.textColor = UIColor.whiteColor();
                         self.Friend_1_Loc.textColor = UIColor.whiteColor();
                         self.Friend_1_Uni.textColor = UIColor.whiteColor();
@@ -242,7 +275,7 @@ class Chat_Main : UIViewController{
               }
         }
         
-        if(self.imagecounter == 0){
+        /*if(self.imagecounter == 0){
             let url = NSURL(string: "https://media.licdn.com/media/p/6/005/0a0/376/1c3abce.jpg")
             let url1 = NSURL(string: "https://media.licdn.com/media/AAEAAQAAAAAAAAjlAAAAJDZkZmE3MDBjLWU3MWEtNGFkNC1hMWQ3LWM0NGZjN2JmMzQyMw.jpg")
             let url2 = NSURL(string:"https://media.licdn.com/media/p/4/000/176/03c/02baf1e.jpg")
@@ -251,7 +284,7 @@ class Chat_Main : UIViewController{
         self.Friend_2_Image.setImageWithUrl(url1!, placeHolderImage: nil);
         self.Friend_3_Image.setImageWithUrl(url2!, placeHolderImage: nil);
         self.Friend_4_Image.setImageWithUrl(url3!, placeHolderImage: nil);
-        }
+        }*/
         
     }
     
@@ -274,26 +307,42 @@ class Chat_Main : UIViewController{
             self.Friend_1_Loc.text = self.friendlocArray[0 + (self.multi_count_add-1)*4];
             self.Friend_1_Uni.text = self.frienduniArray[0 + (self.multi_count_add-1)*4];
             self.Friend_1_Major.text = self.friendmajorArray[0 + (self.multi_count_add-1)*4];
+            let base64String = self.photoarray[0 + (self.multi_count_add-1)*4];
+            var decodedData = NSData(base64EncodedString: base64String, options: NSDataBase64DecodingOptions())
+            var decodedImage = UIImage(data: decodedData!)!
+            self.Friend_1_Image.image = decodedImage
             self.Friend_2.text = self.friendsArray[1 + (self.multi_count_add-1)*4];
             self.Friend_2_Loc.text = self.friendlocArray[1 + (self.multi_count_add-1)*4];
             self.Friend_2_Uni.text = self.frienduniArray[1 + (self.multi_count_add-1)*4];
             self.Friend_2_Major.text = self.friendmajorArray[1 + (self.multi_count_add-1)*4];
+            let base64String1 = self.photoarray[1 + (self.multi_count_add-1)*4];
+            var decodedData1 = NSData(base64EncodedString: base64String1, options: NSDataBase64DecodingOptions())
+            var decodedImage1 = UIImage(data: decodedData1!)!
+            self.Friend_2_Image.image = decodedImage1
             self.Friend_3.text = self.friendsArray[2 + (self.multi_count_add-1)*4];
             self.Friend_3_Loc.text = self.friendlocArray[2 + (self.multi_count_add-1)*4];
             self.Friend_3_Uni.text = self.frienduniArray[2 + (self.multi_count_add-1)*4];
             self.Friend_3_Major.text = self.friendmajorArray[2 + (self.multi_count_add-1)*4];
+            let base64String2 = self.photoarray[2 + (self.multi_count_add-1)*4];
+            var decodedData2 = NSData(base64EncodedString: base64String2, options: NSDataBase64DecodingOptions())
+            var decodedImage2 = UIImage(data: decodedData2!)!
+            self.Friend_3_Image.image = decodedImage2
             self.Friend_4.text = self.friendsArray[3 + (self.multi_count_add-1)*4];
             self.Friend_4_Loc.text = self.friendlocArray[3 + (self.multi_count_add-1)*4];
             self.Friend_4_Uni.text = self.frienduniArray[3 + (self.multi_count_add-1)*4];
             self.Friend_4_Major.text = self.friendmajorArray[3 + (self.multi_count_add-1)*4];
-            conversation_info.friend_id1 = self.friendidArray[0 + (self.multi_count_add-1)*4];
-            conversation_info.chat_check1 = self.chatcheck[0 + (self.multi_count_add-1)*4];
-            conversation_info.friend_id2 = self.friendidArray[1 + (self.multi_count_add-1)*4];
-            conversation_info.chat_check2 = self.chatcheck[1 + (self.multi_count_add-1)*4];
-            conversation_info.friend_id3 = self.friendidArray[2 + (self.multi_count_add-1)*4];
-            conversation_info.chat_check3 = self.chatcheck[2 + (self.multi_count_add-1)*4];
-            conversation_info.friend_id4 = self.friendidArray[3 + (self.multi_count_add-1)*4];
-            conversation_info.chat_check4 = self.chatcheck[3 + (self.multi_count_add-1)*4];
+            let base64String3 = self.photoarray[3 + (self.multi_count_add-1)*4];
+            var decodedData3 = NSData(base64EncodedString: base64String3, options: NSDataBase64DecodingOptions())
+            var decodedImage3 = UIImage(data: decodedData3!)!
+            self.Friend_4_Image.image = decodedImage3
+            conversation_info.friend_id1 = self.friendusernameArray[0 + (self.multi_count_add-1)*4];
+            conversation_info.chat_check1 = self.chatidArray[0 + (self.multi_count_add-1)*4];
+            conversation_info.friend_id2 = self.friendusernameArray[1 + (self.multi_count_add-1)*4];
+            conversation_info.chat_check2 = self.chatidArray[1 + (self.multi_count_add-1)*4];
+            conversation_info.friend_id3 = self.friendusernameArray[2 + (self.multi_count_add-1)*4];
+            conversation_info.chat_check3 = self.chatidArray[2 + (self.multi_count_add-1)*4];
+            conversation_info.friend_id4 = self.friendusernameArray[3 + (self.multi_count_add-1)*4];
+            conversation_info.chat_check4 = self.chatidArray[3 + (self.multi_count_add-1)*4];
             self.Friend_1.textColor = UIColor.whiteColor();
             self.Friend_1_Loc.textColor = UIColor.whiteColor();
             self.Friend_1_Uni.textColor = UIColor.whiteColor();
@@ -318,8 +367,12 @@ class Chat_Main : UIViewController{
             self.Friend_1_Loc.text = self.friendlocArray[0 + b*4];
             self.Friend_1_Uni.text = self.frienduniArray[0 + b*4];
             self.Friend_1_Major.text = self.friendmajorArray[0 + b*4];
-            conversation_info.friend_id1 = self.friendidArray[0 + b*4];
-            conversation_info.chat_check1 = self.chatcheck[0 + b*4];
+            let base64String = self.photoarray[0 + b*4];
+            var decodedData = NSData(base64EncodedString: base64String, options: NSDataBase64DecodingOptions())
+            var decodedImage = UIImage(data: decodedData!)!
+            self.Friend_1_Image.image = decodedImage
+            conversation_info.friend_id1 = self.friendusernameArray[0 + b*4];
+            conversation_info.chat_check1 = self.chatidArray[0 + b*4];
             self.Friend_1.textColor = UIColor.whiteColor();
             self.Friend_1_Loc.textColor = UIColor.whiteColor();
             self.Friend_1_Uni.textColor = UIColor.whiteColor();
@@ -343,14 +396,22 @@ class Chat_Main : UIViewController{
             self.Friend_1_Loc.text = self.friendlocArray[0 + b*4];
             self.Friend_1_Uni.text = self.frienduniArray[0 + b*4];
             self.Friend_1_Major.text = self.friendmajorArray[0 + b*4];
+            let base64String = self.photoarray[0 + b*4];
+            var decodedData = NSData(base64EncodedString: base64String, options: NSDataBase64DecodingOptions())
+            var decodedImage = UIImage(data: decodedData!)!
+            self.Friend_1_Image.image = decodedImage
             self.Friend_2.text = self.friendsArray[1 + b*4];
             self.Friend_2_Loc.text = self.friendlocArray[1 + b*4];
             self.Friend_2_Uni.text = self.frienduniArray[1 + b*4];
             self.Friend_2_Major.text = self.friendmajorArray[1 + b*4];
-            conversation_info.friend_id1 = self.friendidArray[0 + b*4];
-            conversation_info.chat_check1 = self.chatcheck[0 + b*4];
-            conversation_info.friend_id2 = self.friendidArray[1 + b*4];
-            conversation_info.chat_check2 = self.chatcheck[1 + b*4];
+            let base64String1 = self.photoarray[1 + b*4];
+            var decodedData1 = NSData(base64EncodedString: base64String1, options: NSDataBase64DecodingOptions())
+            var decodedImage1 = UIImage(data: decodedData1!)!
+            self.Friend_2_Image.image = decodedImage1
+            conversation_info.friend_id1 = self.friendusernameArray[0 + b*4];
+            conversation_info.chat_check1 = self.chatidArray[0 + b*4];
+            conversation_info.friend_id2 = self.friendusernameArray[1 + b*4];
+            conversation_info.chat_check2 = self.chatidArray[1 + b*4];
             self.Friend_1.textColor = UIColor.whiteColor();
             self.Friend_1_Loc.textColor = UIColor.whiteColor();
             self.Friend_1_Uni.textColor = UIColor.whiteColor();
@@ -373,20 +434,32 @@ class Chat_Main : UIViewController{
             self.Friend_1_Loc.text = self.friendlocArray[0 + b*4];
             self.Friend_1_Uni.text = self.frienduniArray[0 + b*4];
             self.Friend_1_Major.text = self.friendmajorArray[0 + b*4];
+            let base64String = self.photoarray[0 + b*4];
+            var decodedData = NSData(base64EncodedString: base64String, options: NSDataBase64DecodingOptions())
+            var decodedImage = UIImage(data: decodedData!)!
+            self.Friend_1_Image.image = decodedImage
             self.Friend_2.text = self.friendsArray[1 + b*4];
             self.Friend_2_Loc.text = self.friendlocArray[1 + b*4];
             self.Friend_2_Uni.text = self.frienduniArray[1 + b*4];
             self.Friend_2_Major.text = self.friendmajorArray[1 + b*4];
+            let base64String1 = self.photoarray[1 + b*4];
+            var decodedData1 = NSData(base64EncodedString: base64String1, options: NSDataBase64DecodingOptions())
+            var decodedImage1 = UIImage(data: decodedData1!)!
+            self.Friend_2_Image.image = decodedImage1
             self.Friend_3.text = self.friendsArray[2 + b*4];
             self.Friend_3_Loc.text = self.friendlocArray[2 + b*4];
             self.Friend_3_Uni.text = self.frienduniArray[2 + b*4];
             self.Friend_3_Major.text = self.friendmajorArray[2 + b*4];
-            conversation_info.friend_id1 = self.friendidArray[0 + b*4];
-            conversation_info.chat_check1 = self.chatcheck[0 + b*4];
-            conversation_info.friend_id2 = self.friendidArray[1 + b*4];
-            conversation_info.chat_check2 = self.chatcheck[1 + b*4];
-            conversation_info.friend_id3 = self.friendidArray[2 + b*4];
-            conversation_info.chat_check3 = self.chatcheck[2 + b*4];
+            let base64String2 = self.photoarray[2 + b*4];
+            var decodedData2 = NSData(base64EncodedString: base64String2, options: NSDataBase64DecodingOptions())
+            var decodedImage2 = UIImage(data: decodedData2!)!
+            self.Friend_3_Image.image = decodedImage2
+            conversation_info.friend_id1 = self.friendusernameArray[0 + b*4];
+            conversation_info.chat_check1 = self.chatidArray[0 + b*4];
+            conversation_info.friend_id2 = self.friendusernameArray[1 + b*4];
+            conversation_info.chat_check2 = self.chatidArray[1 + b*4];
+            conversation_info.friend_id3 = self.friendusernameArray[2 + b*4];
+            conversation_info.chat_check3 = self.chatidArray[2 + b*4];
             self.Friend_1.textColor = UIColor.whiteColor();
             self.Friend_1_Loc.textColor = UIColor.whiteColor();
             self.Friend_1_Uni.textColor = UIColor.whiteColor();
@@ -409,26 +482,42 @@ class Chat_Main : UIViewController{
             self.Friend_1_Loc.text = self.friendlocArray[0 + b*4 - 4];
             self.Friend_1_Uni.text = self.frienduniArray[0 + b*4 - 4];
             self.Friend_1_Major.text = self.friendmajorArray[0 + b*4 - 4];
+            let base64String = self.photoarray[0 + b*4 - 4];
+            var decodedData = NSData(base64EncodedString: base64String, options: NSDataBase64DecodingOptions())
+            var decodedImage = UIImage(data: decodedData!)!
+            self.Friend_1_Image.image = decodedImage
             self.Friend_2.text = self.friendsArray[1 + b*4 - 4];
             self.Friend_2_Loc.text = self.friendlocArray[1 + b*4 - 4];
             self.Friend_2_Uni.text = self.frienduniArray[1 + b*4 - 4];
             self.Friend_2_Major.text = self.friendmajorArray[1 + b*4 - 4];
+            let base64String1 = self.photoarray[1 + b*4 - 4];
+            var decodedData1 = NSData(base64EncodedString: base64String1, options: NSDataBase64DecodingOptions())
+            var decodedImage1 = UIImage(data: decodedData1!)!
+            self.Friend_2_Image.image = decodedImage1
             self.Friend_3.text = self.friendsArray[2 + b*4 - 4];
             self.Friend_3_Loc.text = self.friendlocArray[2 + b*4 - 4];
             self.Friend_3_Uni.text = self.frienduniArray[2 + b*4 - 4];
             self.Friend_3_Major.text = self.friendmajorArray[2 + b*4 - 4];
+            let base64String2 = self.photoarray[2 + b*4 - 4];
+            var decodedData2 = NSData(base64EncodedString: base64String2, options: NSDataBase64DecodingOptions())
+            var decodedImage2 = UIImage(data: decodedData2!)!
+            self.Friend_3_Image.image = decodedImage2
             self.Friend_4.text = self.friendsArray[3 + b*4 - 4];
             self.Friend_4_Loc.text = self.friendlocArray[3 + b*4 - 4];
             self.Friend_4_Uni.text = self.frienduniArray[3 + b*4 - 4];
             self.Friend_4_Major.text = self.friendmajorArray[3 + b*4 - 4];
-            conversation_info.friend_id1 = self.friendidArray[0 + b*4-4];
-            conversation_info.chat_check1 = self.chatcheck[0 + b*4-4];
-            conversation_info.friend_id2 = self.friendidArray[1 + b*4-4];
-            conversation_info.chat_check2 = self.chatcheck[1 + b*4-4];
-            conversation_info.friend_id3 = self.friendidArray[2 + b*4-4];
-            conversation_info.chat_check3 = self.chatcheck[2 + b*4-4];
-            conversation_info.friend_id4 = self.friendidArray[3 + b*4-4];
-            conversation_info.chat_check4 = self.chatcheck[3 + b*4-4];
+            let base64String3 = self.photoarray[3 + b*4 - 4];
+            var decodedData3 = NSData(base64EncodedString: base64String3, options: NSDataBase64DecodingOptions())
+            var decodedImage3 = UIImage(data: decodedData3!)!
+            self.Friend_4_Image.image = decodedImage3
+            conversation_info.friend_id1 = self.friendusernameArray[0 + b*4-4];
+            conversation_info.chat_check1 = self.chatidArray[0 + b*4-4];
+            conversation_info.friend_id2 = self.friendusernameArray[1 + b*4-4];
+            conversation_info.chat_check2 = self.chatidArray[1 + b*4-4];
+            conversation_info.friend_id3 = self.friendusernameArray[2 + b*4-4];
+            conversation_info.chat_check3 = self.chatidArray[2 + b*4-4];
+            conversation_info.friend_id4 = self.friendusernameArray[3 + b*4-4];
+            conversation_info.chat_check4 = self.chatidArray[3 + b*4-4];
             self.Friend_1.textColor = UIColor.whiteColor();
             self.Friend_1_Loc.textColor = UIColor.whiteColor();
             self.Friend_1_Uni.textColor = UIColor.whiteColor();
@@ -448,7 +537,7 @@ class Chat_Main : UIViewController{
         }
       }
         
-        if(self.imagecounter == 1){
+        /*if(self.imagecounter == 1){
         let url = NSURL(string: "https://media.licdn.com/media/AAEAAQAAAAAAAAR7AAAAJGU2YjA0NGI2LWMxZTItNDUxZS05ZGQ3LTk2MTVlNjgwNzU4NQ.jpg");
         self.Friend_1_Image.setImageWithUrl(url!, placeHolderImage: nil);
         let url1 = NSURL(string: "https://media.licdn.com/media/p/1/000/188/24d/122c234.jpg");
@@ -457,7 +546,7 @@ class Chat_Main : UIViewController{
         self.Friend_3_Image.setImageWithUrl(url2!, placeHolderImage: nil);
         }
         let url3 = NSURL(string: "https://media.licdn.com/media/AAEAAQAAAAAAAAV7AAAAJGJmZjU4MDJkLTBlMTQtNDQxMi04OWNjLTNhMjYyZDM3MjU3YQ.jpg");
-        self.Friend_4_Image.setImageWithUrl(url3!, placeHolderImage: nil);
+        self.Friend_4_Image.setImageWithUrl(url3!, placeHolderImage: nil);*/
         
     }
     
@@ -480,12 +569,13 @@ class Chat_Main : UIViewController{
                 self.Time_Greetings.text = "Good Morning, the time is " + hours + " : " + minutes;
             }
             
-            Time_Greetings.textColor = UIColor.blackColor();
-            Bkground_Image.image = UIImage(named: "malaysia_morning.jpg");
+            Time_Greetings.textColor = UIColor.whiteColor();
+            
+            Bkground_Image.image = UIImage(named: "Night_Sky_Pond.jpg");
             
             //Setting the User ID to login user id
             self.User_ID.text = "Welcome to Simple, " + login_user.Profile_Name;
-            self.User_ID.textColor = UIColor.blackColor();
+            self.User_ID.textColor = UIColor.whiteColor();
         }
         else if(hour_i >= 12 && hour_i <= 18){
             
@@ -520,16 +610,16 @@ class Chat_Main : UIViewController{
             }
             
             
-            let random = arc4random_uniform(0);
+            let random = arc4random_uniform(2);
             
             if(random == 0){
                 Bkground_Image.image = UIImage(named: "night_sky.jpg");
             }
             else if(random == 1){
-                Bkground_Image.image = UIImage(named: "hongkongnight.jpg");
+                Bkground_Image.image = UIImage(named: "Night_Sky_Pond.jpg");
             }
             else if(random == 2){
-                Bkground_Image.image = UIImage(named: "Paris_Night.jpg");
+                Bkground_Image.image = UIImage(named: "Night_Sky_Pond.jpg");
             }
             
             //Setting the User ID to login user id
@@ -549,6 +639,7 @@ class Chat_Main : UIViewController{
                 let friends_major:String? = index.value["Major"] as? String
                 let friends_id:String? = index.value["Email"] as? String
                 let friends_username:String? = index.value["username"] as? String
+                let friends_photo:String? = index.value["Photo"] as? String
                 let chat_id:Int? = index.value["Chatid"] as? Int
                 
                 println(friends_name);
@@ -560,6 +651,7 @@ class Chat_Main : UIViewController{
                         self.friendmajorArray.append(friends_major!);
                         self.friendidArray.append(friends_id!);
                         self.friendusernameArray.append(friends_username!);
+                        self.photoarray.append(friends_photo!);
                         self.chatidArray.append(chat_id!);
                 }
             }
@@ -583,6 +675,10 @@ class Chat_Main : UIViewController{
                 self.Friend_1_Loc.text = self.friendlocArray[0];
                 self.Friend_1_Uni.text = self.frienduniArray[0];
                 self.Friend_1_Major.text = self.friendmajorArray[0];
+                let base64String = self.photoarray[0];
+                var decodedData = NSData(base64EncodedString: base64String, options: NSDataBase64DecodingOptions())
+                var decodedImage = UIImage(data: decodedData!)!
+                self.Friend_1_Image.image = decodedImage
                 self.Friend_1.textColor = UIColor.whiteColor();
                 self.Friend_1_Loc.textColor = UIColor.whiteColor();
                 self.Friend_1_Major.textColor = UIColor.whiteColor();
@@ -600,10 +696,18 @@ class Chat_Main : UIViewController{
                 self.Friend_1_Loc.text = self.friendlocArray[0];
                 self.Friend_1_Uni.text = self.frienduniArray[0];
                 self.Friend_1_Major.text = self.friendmajorArray[0];
+                let base64String = self.photoarray[0];
+                var decodedData = NSData(base64EncodedString: base64String, options: NSDataBase64DecodingOptions())
+                var decodedImage = UIImage(data: decodedData!)!
+                self.Friend_1_Image.image = decodedImage
                 self.Friend_2.text = self.friendsArray[1];
                 self.Friend_2_Loc.text = self.friendlocArray[1];
                 self.Friend_2_Uni.text = self.frienduniArray[1];
                 self.Friend_2_Major.text = self.friendmajorArray[1];
+                let base64String1 = self.photoarray[1];
+                var decodedData1 = NSData(base64EncodedString: base64String1, options: NSDataBase64DecodingOptions())
+                var decodedImage1 = UIImage(data: decodedData1!)!
+                self.Friend_2_Image.image = decodedImage1
                 self.Friend_1.textColor = UIColor.whiteColor();
                 self.Friend_1_Loc.textColor = UIColor.whiteColor();
                 self.Friend_1_Major.textColor = UIColor.whiteColor();
@@ -628,14 +732,26 @@ class Chat_Main : UIViewController{
                 self.Friend_1_Loc.text = self.friendlocArray[0];
                 self.Friend_1_Uni.text = self.frienduniArray[0];
                 self.Friend_1_Major.text = self.friendmajorArray[0];
+                let base64String = self.photoarray[0];
+                var decodedData = NSData(base64EncodedString: base64String, options: NSDataBase64DecodingOptions())
+                var decodedImage = UIImage(data: decodedData!)!
+                self.Friend_1_Image.image = decodedImage
                 self.Friend_2.text = self.friendsArray[1];
                 self.Friend_2_Loc.text = self.friendlocArray[1];
                 self.Friend_2_Uni.text = self.frienduniArray[1];
                 self.Friend_2_Major.text = self.friendmajorArray[1];
+                let base64String1 = self.photoarray[1];
+                var decodedData1 = NSData(base64EncodedString: base64String1, options: NSDataBase64DecodingOptions())
+                var decodedImage1 = UIImage(data: decodedData1!)!
+                self.Friend_2_Image.image = decodedImage1
                 self.Friend_3.text = self.friendsArray[2];
                 self.Friend_3_Loc.text = self.friendlocArray[2];
                 self.Friend_3_Uni.text = self.frienduniArray[2];
                 self.Friend_3_Major.text = self.friendmajorArray[2];
+                let base64String2 = self.photoarray[2];
+                var decodedData2 = NSData(base64EncodedString: base64String2, options: NSDataBase64DecodingOptions())
+                var decodedImage2 = UIImage(data: decodedData2!)!
+                self.Friend_3_Image.image = decodedImage2
                 self.Friend_1.textColor = UIColor.whiteColor();
                 self.Friend_1_Loc.textColor = UIColor.whiteColor();
                 self.Friend_1_Major.textColor = UIColor.whiteColor();
@@ -666,18 +782,34 @@ class Chat_Main : UIViewController{
                 self.Friend_1_Loc.text = self.friendlocArray[0];
                 self.Friend_1_Uni.text = self.frienduniArray[0];
                 self.Friend_1_Major.text = self.friendmajorArray[0];
+                let base64String = self.photoarray[0];
+                var decodedData = NSData(base64EncodedString: base64String, options: NSDataBase64DecodingOptions())
+                var decodedImage = UIImage(data: decodedData!)!
+                self.Friend_1_Image.image = decodedImage
                 self.Friend_2.text = self.friendsArray[1];
                 self.Friend_2_Loc.text = self.friendlocArray[1];
                 self.Friend_2_Uni.text = self.frienduniArray[1];
                 self.Friend_2_Major.text = self.friendmajorArray[1];
+                let base64String1 = self.photoarray[1];
+                var decodedData1 = NSData(base64EncodedString: base64String1, options: NSDataBase64DecodingOptions())
+                var decodedImage1 = UIImage(data: decodedData1!)!
+                self.Friend_2_Image.image = decodedImage1
                 self.Friend_3.text = self.friendsArray[2];
                 self.Friend_3_Loc.text = self.friendlocArray[2];
                 self.Friend_3_Uni.text = self.frienduniArray[2];
                 self.Friend_3_Major.text = self.friendmajorArray[2];
+                let base64String2 = self.photoarray[2];
+                var decodedData2 = NSData(base64EncodedString: base64String2, options: NSDataBase64DecodingOptions())
+                var decodedImage2 = UIImage(data: decodedData2!)!
+                self.Friend_3_Image.image = decodedImage2
                 self.Friend_4.text = self.friendsArray[3];
                 self.Friend_4_Loc.text = self.friendlocArray[3];
                 self.Friend_4_Uni.text = self.frienduniArray[3];
                 self.Friend_4_Major.text = self.friendmajorArray[3];
+                let base64String3 = self.photoarray[3];
+                var decodedData3 = NSData(base64EncodedString: base64String3, options: NSDataBase64DecodingOptions())
+                var decodedImage3 = UIImage(data: decodedData3!)!
+                self.Friend_4_Image.image = decodedImage3
                 self.Friend_1.textColor = UIColor.whiteColor();
                 self.Friend_1_Loc.textColor = UIColor.whiteColor();
                 self.Friend_1_Major.textColor = UIColor.whiteColor();
@@ -709,14 +841,14 @@ class Chat_Main : UIViewController{
             }
         })
             //Testing with erik's photo online
-            let url = NSURL(string: "https://media.licdn.com/media/p/6/005/0a0/376/1c3abce.jpg")
+            /*let url = NSURL(string: "https://media.licdn.com/media/p/6/005/0a0/376/1c3abce.jpg")
             let url1 = NSURL(string: "https://media.licdn.com/media/AAEAAQAAAAAAAAjlAAAAJDZkZmE3MDBjLWU3MWEtNGFkNC1hMWQ3LWM0NGZjN2JmMzQyMw.jpg")
             let url2 = NSURL(string:"https://media.licdn.com/media/p/4/000/176/03c/02baf1e.jpg")
             let url3 = NSURL(string:"https://media.licdn.com/media/p/7/005/01d/2f5/3d52f84.jpg")
             self.Friend_1_Image.setImageWithUrl(url!, placeHolderImage: nil);
             self.Friend_2_Image.setImageWithUrl(url1!, placeHolderImage: nil);
             self.Friend_3_Image.setImageWithUrl(url2!, placeHolderImage: nil);
-            self.Friend_4_Image.setImageWithUrl(url3!, placeHolderImage: nil);
+            self.Friend_4_Image.setImageWithUrl(url3!, placeHolderImage: nil);*/
         
     }
 

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="429" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boat_sea_beach-normal.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Lee-oA-igc">
+                    <rect key="frame" x="-165" y="-257" width="1202" height="1125"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqH-VY-o40">
+                    <rect key="frame" x="-128" y="-35" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Meet and Talk" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pr2-32-PZj">
+                    <rect key="frame" x="116" y="182" width="116" height="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Stay Simple" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYu-49-aOg">
+                    <rect key="frame" x="116" y="127" width="124" height="19"/>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Make Friends" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkh-BO-hIt">
+                    <rect key="frame" x="116" y="231" width="123" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="  Copyright (c) 2016 Clement Chan, Regan Hsu All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
+                    <rect key="frame" x="71" y="296" width="248" height="19"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Simple" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQx-lF-pyE">
+                    <rect key="frame" x="116" y="39" width="71" height="37"/>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="mYu-49-aOg" firstAttribute="top" secondItem="xQx-lF-pyE" secondAttribute="bottom" constant="50" id="1cZ-Mu-hZB"/>
+                <constraint firstItem="xQx-lF-pyE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="100" id="25p-M5-zLT"/>
+                <constraint firstItem="xQx-lF-pyE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="6Ez-bK-7pU"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="FI5-Bv-gaM"/>
+                <constraint firstItem="qkh-BO-hIt" firstAttribute="top" secondItem="Pr2-32-PZj" secondAttribute="bottom" constant="30" id="Itl-xV-KNH"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="top" secondItem="qkh-BO-hIt" secondAttribute="bottom" constant="65" id="JEd-hy-qmS"/>
+                <constraint firstItem="Pr2-32-PZj" firstAttribute="top" secondItem="mYu-49-aOg" secondAttribute="bottom" constant="36" id="McK-WM-daL"/>
+                <constraint firstItem="qkh-BO-hIt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="100" id="QAR-Xp-VeS"/>
+                <constraint firstItem="mYu-49-aOg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="100" id="r1p-aX-KUK"/>
+                <constraint firstItem="Pr2-32-PZj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="100" id="v1g-tT-BOL"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="522.5" y="455"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="boat_sea_beach-normal.jpg" width="1600" height="1200"/>
+    </resources>
+</document>
