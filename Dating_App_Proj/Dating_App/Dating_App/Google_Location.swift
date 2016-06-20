@@ -14,31 +14,43 @@ class Google_ViewController: UIViewController, CLLocationManagerDelegate, GMSMap
     
     var mapTasks = MapTasks();
     
+    
     @IBAction func Request_From_Text(sender: AnyObject) {
         
-        let address = self.Address.text;
+        let address:String = self.Address.text!;
         
         register_info.address = address;
-        
-        self.mapTasks.geocodeAddress(address, withCompletionHandler: { (status, success) -> Void in
+        print(address)
+        self.mapTasks.getLatLngForZip(register_info.address);
             
-            if !success {
-                println(status)
-                
-                if status == "ZERO_RESULTS" {
-                    println("The location could not be found.")
-                }
-            }
-            else {
-                
-                let coordinate = CLLocationCoordinate2D(latitude: self.mapTasks.fetchedAddressLatitude, longitude: self.mapTasks.fetchedAddressLongitude)
-                register_info.location_lat = self.mapTasks.fetchedAddressLatitude;
-                register_info.location_lng = self.mapTasks.fetchedAddressLongitude;
-                println("The Latitude is:");
-                println(register_info.location_lat);
-                println("The Longitude is:");
-                println(register_info.location_lng);
-                
+        _ = CLLocationCoordinate2D(latitude: self.mapTasks.fetchedAddressLatitude, longitude: self.mapTasks.fetchedAddressLongitude)
+        register_info.location_lat = self.mapTasks.fetchedAddressLatitude;
+        register_info.location_lng = self.mapTasks.fetchedAddressLongitude;
+        print("The Latitude is:");
+        print(register_info.location_lat);
+        print("The Longitude is:");
+        print(register_info.location_lng);
+        
+        
+//        self.mapTasks.geocodeAddress(address, withCompletionHandler: { (status, success) -> Void in
+//            
+//            if !success {
+//                print(status)
+//                
+//                if status == "ZERO_RESULTS" {
+//                    print("The location could not be found.")
+//                }
+//            }
+//            else {
+//                
+//                let coordinate = CLLocationCoordinate2D(latitude: self.mapTasks.fetchedAddressLatitude, longitude: self.mapTasks.fetchedAddressLongitude)
+//                register_info.location_lat = self.mapTasks.fetchedAddressLatitude;
+//                register_info.location_lng = self.mapTasks.fetchedAddressLongitude;
+//                print("The Latitude is:");
+//                print(register_info.location_lat);
+//                print("The Longitude is:");
+//                print(register_info.location_lng);
+//                
                 /*Sending Location latitude and longitude to the localhost server*/
                 
                 /*var loc_lng:String = String(format:"%f",register_info.location_lng);
@@ -55,15 +67,15 @@ class Google_ViewController: UIViewController, CLLocationManagerDelegate, GMSMap
                 manager.POST("http://localhost:3000/collections/location",
                     parameters: params,
                     success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-                        println("success!")
+                        print("success!")
                     }) { (AFHTTPRequestOperation, NSError) -> Void in
-                        println("fail")
+                        print("fail")
                 }*/
-                
-            }
-            
-        })
-        
+//                
+//            }
+//            
+//        })
+//        
         self.loadDestinationVC();
     }
     
@@ -80,18 +92,18 @@ class Google_ViewController: UIViewController, CLLocationManagerDelegate, GMSMap
         
             self.mapTasks.geocodeAddress(address, withCompletionHandler: { (status, success) -> Void in
                 if !success {
-                    println(status)
+                    print(status)
                     
                     if status == "ZERO_RESULTS" {
-                    println("The location could not be found.")
+                    print("The location could not be found.")
                     }
                 }
                 else {
                     let coordinate = CLLocationCoordinate2D(latitude: self.mapTasks.fetchedAddressLatitude, longitude: self.mapTasks.fetchedAddressLongitude)
                     register_info.location_lat = self.mapTasks.fetchedAddressLatitude;
                     register_info.location_lng = self.mapTasks.fetchedAddressLongitude;
-                    println(register_info.location_lat);
-                    println(register_info.location_lng);
+                    print(register_info.location_lat);
+                    print(register_info.location_lng);
                 }
             })
             
@@ -108,9 +120,9 @@ class Google_ViewController: UIViewController, CLLocationManagerDelegate, GMSMap
         manager.POST("http://localhost:3000/clem",
             parameters: params,
             success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-                println("success!")
+                print("success!")
             }) { (AFHTTPRequestOperation, NSError) -> Void in
-                println("fail")
+                print("fail")
         }
         
         let closeAction = UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel) { (alertAction) -> Void in

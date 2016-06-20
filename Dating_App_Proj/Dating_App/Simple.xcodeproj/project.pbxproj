@@ -38,7 +38,6 @@
 		AA271D9F1B4E196400EA5BA6 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271D9E1B4E196400EA5BA6 /* libsqlite3.0.dylib */; };
 		AA271DA11B4E198200EA5BA6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DA01B4E198200EA5BA6 /* libz.dylib */; };
 		AA271DA31B4E19C900EA5BA6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DA21B4E19C900EA5BA6 /* SystemConfiguration.framework */; };
-		AA271DA51B4E19FE00EA5BA6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DA41B4E19FE00EA5BA6 /* StoreKit.framework */; };
 		AA271DA71B4E1A1300EA5BA6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DA61B4E1A1300EA5BA6 /* Security.framework */; };
 		AA271DA91B4E1A2A00EA5BA6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DA81B4E1A2A00EA5BA6 /* QuartzCore.framework */; };
 		AA271DAB1B4E1A4600EA5BA6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271DAA1B4E1A4600EA5BA6 /* MobileCoreServices.framework */; };
@@ -65,11 +64,15 @@
 		AA4020121BBCD36000ABA237 /* Cooking_DineOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4020111BBCD36000ABA237 /* Cooking_DineOut.swift */; };
 		AA4020221BBE265D00ABA237 /* hongkongnight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA4020211BBE265D00ABA237 /* hongkongnight.jpg */; };
 		AA4020241BBE272400ABA237 /* Paris_Night.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA4020231BBE272400ABA237 /* Paris_Night.jpg */; };
-		AA5AC1F71B6491B300158156 /* Hong_Kong.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA5AC1F61B6491B300158156 /* Hong_Kong.jpg */; };
-		AA5AC1FB1B6499CA00158156 /* London.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA5AC1FA1B6499CA00158156 /* London.jpg */; };
-		AA5AC1FD1B649D0B00158156 /* San_Francisco.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA5AC1FC1B649D0B00158156 /* San_Francisco.jpg */; };
 		AA5AC2011B651A8100158156 /* Male_Female.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AC2001B651A8100158156 /* Male_Female.swift */; };
 		AA6550651D03AD9D007DD200 /* Choose_Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6550641D03AD9D007DD200 /* Choose_Photos.swift */; };
+		AA65508F1D0BBC04007DD200 /* seattle_night.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA65508E1D0BBC04007DD200 /* seattle_night.jpg */; };
+		AA6550911D0BBCE8007DD200 /* New_York_Night.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA6550901D0BBCE8007DD200 /* New_York_Night.jpg */; };
+		AA6550991D0C45D4007DD200 /* Switzerland_Bridge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA6550981D0C45D4007DD200 /* Switzerland_Bridge.jpg */; };
+		AA6550A51D0C4EC1007DD200 /* Dawn_City.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA6550A41D0C4EC1007DD200 /* Dawn_City.jpg */; };
+		AA6550A71D0D0323007DD200 /* Night_Sky_Pond.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA6550A61D0D0323007DD200 /* Night_Sky_Pond.jpg */; };
+		AA6550A91D0DDDB5007DD200 /* Update_Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6550A81D0DDDB5007DD200 /* Update_Profile.swift */; };
+		AA6550AC1D0DE4B4007DD200 /* Update_Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6550AB1D0DE4B4007DD200 /* Update_Location.swift */; };
 		AA7EF40B1BAE2DCE00C8A305 /* Profile_Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7EF40A1BAE2DCE00C8A305 /* Profile_Main.swift */; };
 		AA7EF40D1BAE2FAC00C8A305 /* night_sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA7EF40C1BAE2FAC00C8A305 /* night_sky.jpg */; };
 		AA7EF40F1BAE46C500C8A305 /* malaysia_morning.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA7EF40E1BAE46C500C8A305 /* malaysia_morning.jpg */; };
@@ -79,9 +82,9 @@
 		AAA36DD11C102C5F0073F6B0 /* UIImageView+AFNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA36DD01C102C5F0073F6B0 /* UIImageView+AFNetworking.swift */; };
 		AAAA0FD81BC6CF6B004F2474 /* Start_View_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA0FD71BC6CF6B004F2474 /* Start_View_Controller.swift */; };
 		AAAA0FDA1BC6D210004F2474 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA0FD91BC6D210004F2474 /* User.swift */; };
-		AAAE73E41B5F4D45007841DC /* Cover_Page.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAAE73E31B5F4D45007841DC /* Cover_Page.jpg */; };
 		AAD2047D1C1A99CB008E1770 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD2047C1C1A99CB008E1770 /* Main.storyboard */; };
 		AAD788161BF95535002E436C /* Chat_Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD788151BF95535002E436C /* Chat_Main.swift */; };
+		AADACDD41D15438C0091B142 /* Load_Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADACDD31D15438A0091B142 /* Load_Friends.swift */; };
 		AADFA22B1B6D74E600491DBF /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AADFA2191B6D74E600491DBF /* AFHTTPRequestOperation.m */; };
 		AADFA22C1B6D74E600491DBF /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AADFA2191B6D74E600491DBF /* AFHTTPRequestOperation.m */; };
 		AADFA22D1B6D74E600491DBF /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AADFA21B1B6D74E600491DBF /* AFHTTPRequestOperationManager.m */; };
@@ -151,7 +154,6 @@
 		AA271D9E1B4E196400EA5BA6 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		AA271DA01B4E198200EA5BA6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		AA271DA21B4E19C900EA5BA6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		AA271DA41B4E19FE00EA5BA6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		AA271DA61B4E1A1300EA5BA6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		AA271DA81B4E1A2A00EA5BA6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AA271DAA1B4E1A4600EA5BA6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -181,12 +183,15 @@
 		AA4020231BBE272400ABA237 /* Paris_Night.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Paris_Night.jpg; sourceTree = "<group>"; };
 		AA505FEB9877389876F11326 /* Pods-Simple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple.release.xcconfig"; path = "Pods/Target Support Files/Pods-Simple/Pods-Simple.release.xcconfig"; sourceTree = "<group>"; };
 		AA5648491C75813C006F36F7 /* Dating_App-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Dating_App-Bridging-Header.h"; sourceTree = "<group>"; };
-		AA5AC1F61B6491B300158156 /* Hong_Kong.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hong_Kong.jpg; sourceTree = "<group>"; };
-		AA5AC1FA1B6499CA00158156 /* London.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = London.jpg; sourceTree = "<group>"; };
-		AA5AC1FC1B649D0B00158156 /* San_Francisco.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = San_Francisco.jpg; sourceTree = "<group>"; };
 		AA5AC2001B651A8100158156 /* Male_Female.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Male_Female.swift; sourceTree = "<group>"; };
 		AA6550641D03AD9D007DD200 /* Choose_Photos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Choose_Photos.swift; path = ../Choose_Photos.swift; sourceTree = "<group>"; };
-		AA6550861D04D9B9007DD200 /* SRWebClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SRWebClient.framework; path = "../../../../IOS_Programs/Swift-SRWebClient-master/build/Debug-iphoneos/SRWebClient.framework"; sourceTree = "<group>"; };
+		AA65508E1D0BBC04007DD200 /* seattle_night.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = seattle_night.jpg; sourceTree = "<group>"; };
+		AA6550901D0BBCE8007DD200 /* New_York_Night.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = New_York_Night.jpg; sourceTree = "<group>"; };
+		AA6550981D0C45D4007DD200 /* Switzerland_Bridge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Switzerland_Bridge.jpg; sourceTree = "<group>"; };
+		AA6550A41D0C4EC1007DD200 /* Dawn_City.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dawn_City.jpg; sourceTree = "<group>"; };
+		AA6550A61D0D0323007DD200 /* Night_Sky_Pond.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Night_Sky_Pond.jpg; sourceTree = "<group>"; };
+		AA6550A81D0DDDB5007DD200 /* Update_Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Update_Profile.swift; sourceTree = "<group>"; };
+		AA6550AB1D0DE4B4007DD200 /* Update_Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Update_Location.swift; sourceTree = "<group>"; };
 		AA7EF40A1BAE2DCE00C8A305 /* Profile_Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile_Main.swift; sourceTree = "<group>"; };
 		AA7EF40C1BAE2FAC00C8A305 /* night_sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = night_sky.jpg; sourceTree = "<group>"; };
 		AA7EF40E1BAE46C500C8A305 /* malaysia_morning.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = malaysia_morning.jpg; sourceTree = "<group>"; };
@@ -196,9 +201,9 @@
 		AAA36DD01C102C5F0073F6B0 /* UIImageView+AFNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+AFNetworking.swift"; sourceTree = "<group>"; };
 		AAAA0FD71BC6CF6B004F2474 /* Start_View_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Start_View_Controller.swift; sourceTree = "<group>"; };
 		AAAA0FD91BC6D210004F2474 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		AAAE73E31B5F4D45007841DC /* Cover_Page.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cover_Page.jpg; sourceTree = "<group>"; };
 		AAD2047C1C1A99CB008E1770 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AAD788151BF95535002E436C /* Chat_Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat_Main.swift; sourceTree = "<group>"; };
+		AADACDD31D15438A0091B142 /* Load_Friends.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Load_Friends.swift; path = ../Load_Friends.swift; sourceTree = "<group>"; };
 		AADFA2181B6D74E600491DBF /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		AADFA2191B6D74E600491DBF /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		AADFA21A1B6D74E600491DBF /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -248,7 +253,6 @@
 				AA271DAB1B4E1A4600EA5BA6 /* MobileCoreServices.framework in Frameworks */,
 				AA271DA91B4E1A2A00EA5BA6 /* QuartzCore.framework in Frameworks */,
 				AA271DA71B4E1A1300EA5BA6 /* Security.framework in Frameworks */,
-				AA271DA51B4E19FE00EA5BA6 /* StoreKit.framework in Frameworks */,
 				AA271DA31B4E19C900EA5BA6 /* SystemConfiguration.framework in Frameworks */,
 				AA271D9F1B4E196400EA5BA6 /* libsqlite3.0.dylib in Frameworks */,
 				4837698C73D36AAFBAEBF9FF /* Pods_Simple.framework in Frameworks */,
@@ -301,6 +305,7 @@
 		AA271D771B4DF4CC00EA5BA6 /* Dating_App */ = {
 			isa = PBXGroup;
 			children = (
+				AA6550AA1D0DE43E007DD200 /* Update_Profile */,
 				AA3527981BDBC66900679464 /* Simple_Meet */,
 				AAEDCD431BDAF5CE00CFF004 /* School */,
 				AAAA0FD61BC6CF19004F2474 /* Login_Files */,
@@ -312,6 +317,7 @@
 				AAE65CFA1C835473008C4416 /* Final_Send_Final.swift */,
 				AA1015391B5170A7007F77B8 /* ViewControllerLogin.swift */,
 				AA239AEE1BAD9FCF00192AE0 /* ViewControllerRegister.swift */,
+				AADACDD31D15438A0091B142 /* Load_Friends.swift */,
 				AA7EF40A1BAE2DCE00C8A305 /* Profile_Main.swift */,
 				AAD788151BF95535002E436C /* Chat_Main.swift */,
 				AA25DDFD1CFFEF1B00E57068 /* Chat_Detail.swift */,
@@ -320,8 +326,13 @@
 				AA239AD61BAD9CCD00192AE0 /* Images.xcassets */,
 				AAF3ACAA1BCB346E0097C47D /* Background_Color.tif */,
 				AA7EF4101BAE479A00C8A305 /* chicago_afternoon.jpg */,
+				AA6550A61D0D0323007DD200 /* Night_Sky_Pond.jpg */,
 				AA7EF40E1BAE46C500C8A305 /* malaysia_morning.jpg */,
+				AA6550A41D0C4EC1007DD200 /* Dawn_City.jpg */,
+				AA6550901D0BBCE8007DD200 /* New_York_Night.jpg */,
+				AA6550981D0C45D4007DD200 /* Switzerland_Bridge.jpg */,
 				AA7EF40C1BAE2FAC00C8A305 /* night_sky.jpg */,
+				AA65508E1D0BBC04007DD200 /* seattle_night.jpg */,
 				AA239AE81BAD9F1F00192AE0 /* Art_Gallery.jpg */,
 				AA239AE41BAD9EC600192AE0 /* Sports_Event.jpg */,
 				AA4020231BBE272400ABA237 /* Paris_Night.jpg */,
@@ -332,7 +343,6 @@
 				AA239AE01BAD9EA100192AE0 /* EDC_View.jpg */,
 				AADFA1831B67A20F00491DBF /* Location_Pictures */,
 				AADFA1841B67A23000491DBF /* Male_Female */,
-				AAAE73E31B5F4D45007841DC /* Cover_Page.jpg */,
 				AA239ADC1BAD9D4A00192AE0 /* LaunchScreen.xib */,
 				AA271D781B4DF4CC00EA5BA6 /* Supporting Files */,
 			);
@@ -369,7 +379,6 @@
 		AA271DC01B4E1B2B00EA5BA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AA6550861D04D9B9007DD200 /* SRWebClient.framework */,
 				AAE335521CFEF47A004B9722 /* JSQMessagesAssets.bundle */,
 				AA85AF521C78E0BF00321605 /* Firebase.framework */,
 				AA3C848D1B770ED800C76304 /* AVFoundation.framework */,
@@ -389,7 +398,6 @@
 				AA271DAA1B4E1A4600EA5BA6 /* MobileCoreServices.framework */,
 				AA271DA81B4E1A2A00EA5BA6 /* QuartzCore.framework */,
 				AA271DA61B4E1A1300EA5BA6 /* Security.framework */,
-				AA271DA41B4E19FE00EA5BA6 /* StoreKit.framework */,
 				AA271DA21B4E19C900EA5BA6 /* SystemConfiguration.framework */,
 				0540E9DC01193D4EBFE0BBD2 /* Pods_Simple.framework */,
 			);
@@ -432,6 +440,16 @@
 			name = Preferences;
 			sourceTree = "<group>";
 		};
+		AA6550AA1D0DE43E007DD200 /* Update_Profile */ = {
+			isa = PBXGroup;
+			children = (
+				AA6550A81D0DDDB5007DD200 /* Update_Profile.swift */,
+				AA6550AB1D0DE4B4007DD200 /* Update_Location.swift */,
+			);
+			name = Update_Profile;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		AAAA0FD61BC6CF19004F2474 /* Login_Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -445,9 +463,6 @@
 			isa = PBXGroup;
 			children = (
 				AA8B166E1B8EAD8C00096E73 /* cloud-horizon.jpg */,
-				AA5AC1F61B6491B300158156 /* Hong_Kong.jpg */,
-				AA5AC1FA1B6499CA00158156 /* London.jpg */,
-				AA5AC1FC1B649D0B00158156 /* San_Francisco.jpg */,
 			);
 			name = Location_Pictures;
 			sourceTree = "<group>";
@@ -546,11 +561,18 @@
 		AA271D6D1B4DF4CC00EA5BA6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Clement Chan";
 				TargetAttributes = {
 					AA271D741B4DF4CC00EA5BA6 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 7PK4W84Q3C;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					AA271D891B4DF4CC00EA5BA6 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -582,10 +604,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA6550991D0C45D4007DD200 /* Switzerland_Bridge.jpg in Resources */,
 				AA25DDFC1CFFEE2300E57068 /* JSQMessagesAssets.bundle in Resources */,
 				AA3C847B1B770CF500C76304 /* GoogleMaps.bundle in Resources */,
-				AA5AC1FD1B649D0B00158156 /* San_Francisco.jpg in Resources */,
+				AA65508F1D0BBC04007DD200 /* seattle_night.jpg in Resources */,
+				AA6550A71D0D0323007DD200 /* Night_Sky_Pond.jpg in Resources */,
+				AA6550911D0BBCE8007DD200 /* New_York_Night.jpg in Resources */,
 				AA7EF4111BAE479A00C8A305 /* chicago_afternoon.jpg in Resources */,
+				AA6550A51D0C4EC1007DD200 /* Dawn_City.jpg in Resources */,
 				AA239AE31BAD9EB300192AE0 /* Sunset.jpg in Resources */,
 				AA0E68BC1B8ECC53000941C4 /* Female_Cloud.tif in Resources */,
 				AAD2047D1C1A99CB008E1770 /* Main.storyboard in Resources */,
@@ -593,15 +619,12 @@
 				AA239AED1BAD9F4700192AE0 /* Classical_Music.jpg in Resources */,
 				AA8B166F1B8EAD8C00096E73 /* cloud-horizon.jpg in Resources */,
 				AA4020221BBE265D00ABA237 /* hongkongnight.jpg in Resources */,
-				AAAE73E41B5F4D45007841DC /* Cover_Page.jpg in Resources */,
 				AA239AD71BAD9CCD00192AE0 /* Images.xcassets in Resources */,
 				AA7EF40F1BAE46C500C8A305 /* malaysia_morning.jpg in Resources */,
-				AA5AC1F71B6491B300158156 /* Hong_Kong.jpg in Resources */,
 				AA0E68B81B8EC9F9000941C4 /* Male_Cloud.tif in Resources */,
 				AA239AE51BAD9EC600192AE0 /* Sports_Event.jpg in Resources */,
 				AA239ADD1BAD9D4A00192AE0 /* LaunchScreen.xib in Resources */,
 				AA239AE91BAD9F1F00192AE0 /* Art_Gallery.jpg in Resources */,
-				AA5AC1FB1B6499CA00158156 /* London.jpg in Resources */,
 				AAF3ACAB1BCB346E0097C47D /* Background_Color.tif in Resources */,
 				AA239ADB1BAD9D1600192AE0 /* boat_sea_beach-normal.jpg in Resources */,
 				AA4020241BBE272400ABA237 /* Paris_Night.jpg in Resources */,
@@ -677,12 +700,14 @@
 				AA239AFD1BADA76600192AE0 /* SportsArtGallery.swift in Sources */,
 				AADFA2331B6D74E600491DBF /* AFSecurityPolicy.m in Sources */,
 				AAAA0FD81BC6CF6B004F2474 /* Start_View_Controller.swift in Sources */,
+				AA6550A91D0DDDB5007DD200 /* Update_Profile.swift in Sources */,
 				AA3527971BDB6C5F00679464 /* Edu_PickerView_Can.swift in Sources */,
 				AA3527951BDB683400679464 /* Edu_PickerView_Aus.swift in Sources */,
 				AA10153A1B5170A7007F77B8 /* ViewControllerLogin.swift in Sources */,
 				AA239AEF1BAD9FCF00192AE0 /* ViewControllerRegister.swift in Sources */,
 				AAAA0FDA1BC6D210004F2474 /* User.swift in Sources */,
 				AA4020101BBCA9E800ABA237 /* Ethnicity_PickerView.swift in Sources */,
+				AA6550AC1D0DE4B4007DD200 /* Update_Location.swift in Sources */,
 				AADFA2311B6D74E600491DBF /* AFNetworkReachabilityManager.m in Sources */,
 				AA271D7D1B4DF4CC00EA5BA6 /* ViewController.swift in Sources */,
 				AA239AF31BADA15200192AE0 /* Distance_Calculation.swift in Sources */,
@@ -707,6 +732,7 @@
 				AADFA2391B6D74E600491DBF /* AFURLResponseSerialization.m in Sources */,
 				AA3C847E1B770E0100C76304 /* Location_class.swift in Sources */,
 				AA6550651D03AD9D007DD200 /* Choose_Photos.swift in Sources */,
+				AADACDD41D15438C0091B142 /* Load_Friends.swift in Sources */,
 				AA239AF51BADA49100192AE0 /* Edu_PickerView_US.swift in Sources */,
 				AA5AC2011B651A8100158156 /* Male_Female.swift in Sources */,
 				AA239AFB1BADA58A00192AE0 /* Google_Location.swift in Sources */,
@@ -778,7 +804,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -816,7 +842,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -829,6 +855,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/clement_chan_pig/Documents/iOS_App/parse-library-1",
@@ -837,10 +866,13 @@
 					"/Users/clement_chan_pig/Documents/IOS_Programs/Swift-SRWebClient-master/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = Dating_App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Simple;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dating_App/Dating_App-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -850,6 +882,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/clement_chan_pig/Documents/iOS_App/parse-library-1",
@@ -858,9 +893,12 @@
 					"/Users/clement_chan_pig/Documents/IOS_Programs/Swift-SRWebClient-master/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = Dating_App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Simple;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dating_App/Dating_App-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

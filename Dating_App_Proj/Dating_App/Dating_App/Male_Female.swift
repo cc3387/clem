@@ -35,12 +35,12 @@ class Male_Female: UIViewController{
         if(sender.direction == .Right){
         register_info.Gender = "Female"
         loadDestinationVC()
-        println(register_info.Gender)
+        print(register_info.Gender)
         }
         else if(sender.direction == .Left){
         register_info.Gender = "Male"
         loadDestinationVC()
-        println(register_info.Gender)
+        print(register_info.Gender)
         }
     }
 

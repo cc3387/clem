@@ -14,8 +14,8 @@ class SportsArtGallery: UIViewController{
     
     override func viewDidLoad() {
         
-        var leftSwipe = UISwipeGestureRecognizer(target: self, action: ("SportArtSwipes:"))
-        var rightSwipe = UISwipeGestureRecognizer(target: self, action: ("SportArtSwipes:"))
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: ("SportArtSwipes:"))
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: ("SportArtSwipes:"))
         
         leftSwipe.direction = .Left
         rightSwipe.direction = .Right
@@ -35,12 +35,12 @@ class SportsArtGallery: UIViewController{
         if(sender.direction == .Right){
             register_info.sports_or_art = "Art_Gallery"
             loadDestinationVC()
-            println(register_info.sports_or_art)
+            print(register_info.sports_or_art)
         }
         else if(sender.direction == .Left){
             register_info.sports_or_art = "Sports_Event"
             loadDestinationVC()
-            println(register_info.sports_or_art)
+            print(register_info.sports_or_art)
         }
     }
     

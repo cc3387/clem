@@ -9,29 +9,54 @@
 import UIKit
 import Firebase
 
+//Resizing the image before loading
+func resizeimage(image: UIImage, targetSize: CGSize) -> UIImage {
+    let size = image.size
+    
+    let widthRatio  = targetSize.width  / image.size.width
+    let heightRatio = targetSize.height / image.size.height
+    
+    // Figure out what our orientation is, and use that to form the rectangle
+    var newSize: CGSize
+    if(widthRatio > heightRatio) {
+        newSize = CGSizeMake(size.width * heightRatio, size.height * heightRatio)
+    } else {
+        newSize = CGSizeMake(size.width * widthRatio,  size.height * widthRatio)
+    }
+    
+    // This is the rect that we've calculated out and this is what is actually used below
+    let rect = CGRectMake(0, 0, newSize.width, newSize.height)
+    
+    // Actually do the resizing to the rect using the ImageContext stuff
+    UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+    image.drawInRect(rect)
+    let newImage = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    
+    return newImage
+}
+
+
 //Saving Images after the selection
 extension UIImage {
+    
     func save(fileName: String, type: String) {
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] 
         
         if type.lowercaseString == "png" {
             let path = "\(documentsPath)/\(fileName).\(type)"
-            UIImagePNGRepresentation(self).writeToFile(path, atomically: true)
-            println(path);
-            
+            UIImagePNGRepresentation(self)!.writeToFile(path, atomically: true)
         } else if type.lowercaseString == "jpg" {
             let path = "\(documentsPath)/\(fileName).\(type)"
-            UIImageJPEGRepresentation(self, 1.0).writeToFile(path, atomically: true)
-            println(path);
+            UIImageJPEGRepresentation(self, 1.0)!.writeToFile(path, atomically: true)
         } else {
             
         }
     }
     
     convenience init?(fileName: String, type: String) {
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] 
         let path = "\(documentsPath)/\(fileName).\(type)"
-        println(path)
         self.init(contentsOfFile: path)
     }
 }
@@ -57,32 +82,26 @@ class ChoosePhoto: UIViewController, UIImagePickerControllerDelegate, UINavigati
     
     @IBAction func UploadButtons(sender: UIButton) {
         
-        var ref = Firebase(url: "https://simpleplus.firebaseio.com/")
-        
         //Make a new UIImage
-        var uploadImage = UIImage(fileName:"Profile", type:"png")
+        let uploadImage = UIImage(fileName:"Profile", type:"png")
         
-        //Make an NSData JPEG representation of the Image
-        var imageData: NSData = UIImagePNGRepresentation(uploadImage)
+        
+        //Make an NSData PNG representation of the Image
+        let imageData: NSData = UIImagePNGRepresentation(resizeimage(uploadImage!,targetSize: CGSizeMake(uploadImage!.size.height/5, uploadImage!.size.width/5)))!
         
         //Using base64StringFromData method, we are able to convert data to string
-        self.base64String = imageData.base64EncodedStringWithOptions(.allZeros)
-        register_info.Photo = self.base64String
-        
-        /*var quoteString = ["string": self.base64String]
-        var userRef = ref.childByAppendingPath("images")
-        var users = ["userid": register_info.username, "images": quoteString]
-        userRef.setValue(users)*/
-        
+        self.base64String = imageData.base64EncodedStringWithOptions([])
+        register_info.Photo = self.base64String as NSString
+        print(register_info.Photo)
         loadDestinationVC()
         
     }
         
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-        
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let img = info[UIImagePickerControllerOriginalImage] as? UIImage {
             img.save("Profile", type: "png")
             imageView.image = img
+            imageView.contentMode = .ScaleAspectFit
         }
         
         dismissViewControllerAnimated(true, completion: nil)

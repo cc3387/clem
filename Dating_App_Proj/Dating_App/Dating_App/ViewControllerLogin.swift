@@ -22,6 +22,7 @@ class ViewControllerLogin: UIViewController{
     var ref: Firebase!
     
     override func viewDidLoad() {
+    self.navigationController?.setNavigationBarHidden(true, animated: false)
         
     }
     
@@ -41,19 +42,19 @@ class ViewControllerLogin: UIViewController{
     @IBAction func Login(sender: AnyObject) {
         
         var ref = Firebase(url:"https://simpleplus.firebaseio.com")
-        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         ref.authUser(self.Username.text, password: self.Password.text) {
             error, authData in
             if error != nil {
                 // an error occured while attempting login
-                println("Login info is wrong");
+                print("Login info is wrong");
             } else {
                 // user is logged in, check authData for data
-                login.loginid = self.Username.text;
-                login.password = self.Password.text;
+                login.loginid = self.Username.text!;
+                login.password = self.Password.text!;
                 self.Password.text = "**********";
                 login.chatid = ref.authData.uid
-                println(login.chatid)
+                print(login.chatid)
                 self.loadDestinationVC();
             }
         }
@@ -94,7 +95,7 @@ class ViewControllerLogin: UIViewController{
     
     //Load destination to the main profile
     func loadDestinationVC(){
-    self.performSegueWithIdentifier("openProfile", sender: nil)
+    self.performSegueWithIdentifier("LoadProfile", sender: nil)
     }
 
     
@@ -212,6 +213,7 @@ struct login{
     static var loginid = "";
     static var password = "";
     static var chatid = "";
+    static var registered:Int = 0;
     
 }
 

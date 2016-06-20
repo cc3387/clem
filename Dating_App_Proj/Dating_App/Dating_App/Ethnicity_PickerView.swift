@@ -44,7 +44,7 @@ class Ethinicity_PickerView: UIViewController,UIPickerViewDataSource, UIPickerVi
         let size = pickerData[sizeComponent][myPicker.selectedRowInComponent(sizeComponent)]
         self.Ethnic = size;
         register_info.Ethnicity = self.Ethnic;
-        println(register_info.Ethnicity);
+        print(register_info.Ethnicity);
     }
     
     

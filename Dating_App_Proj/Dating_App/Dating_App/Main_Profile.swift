@@ -10,7 +10,7 @@ import UIKit
 
 class Main_Profile: UIViewController{
     
-    @IBOutlet weak var Hour: UILabel!
+    /*@IBOutlet weak var Hour: UILabel!
     @IBOutlet weak var Minutes: UILabel!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var Greetings: UILabel!
@@ -49,8 +49,8 @@ class Main_Profile: UIViewController{
         })*/
         
         //post to your node server
-        if (self.PostName.text == ""){
-        println("Please Enter Value...");
+        /*if (self.PostName.text == ""){
+        print("Please Enter Value...");
         }
         else{
         manager.POST("http://localhost:3000/collections",
@@ -60,18 +60,18 @@ class Main_Profile: UIViewController{
         }) { (AFHTTPRequestOperation, NSError) -> Void in
         println("fail")
         }
-        }
+        }*/
         //Get information in your server
         //var set = NSSet();
         //manager.responseSerializer = AFHTTPResponseSerializer();
         //manager.responseSerializer.acceptableContentTypes = set.setByAddingObject("text/html");
         
-        manager.GET( "http://localhost:3000/collections/reg_test",
+        /*manager.GET( "http://localhost:3000/collections/reg_test",
             parameters: nil,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
-                println("JSON: " + responseObject.description)
-                println("Object obtained successfully");
-                println(responseObject.count);
+                print("JSON: " + responseObject.description)
+                print("Object obtained successfully");
+                print(responseObject.count);
                 
                 if let results = responseObject[2] as? NSDictionary {
                     if let title = results["title"] as? String {
@@ -96,10 +96,10 @@ class Main_Profile: UIViewController{
                 }
              },
             failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
-                println("Error: " + error.localizedDescription)
+                print("Error: " + error.localizedDescription)
             }
         )
-    }
+    }*/
     
     /*@IBAction func Posting(sender: AnyObject) {
     
@@ -138,7 +138,7 @@ class Main_Profile: UIViewController{
             parameters: nil,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 
-                println("Response: " + responseObject.description)
+                print("Response: " + responseObject.description)
                 
                 
                 if let results = responseObject["results"] as? NSArray {
@@ -182,7 +182,7 @@ class Main_Profile: UIViewController{
                             }
                         }
                         else {
-                            println(user)
+                            print(user)
                             self.myNameLabel.text = "failed at cell"
                             self.myNameLabel.adjustsFontSizeToFitWidth = true
                         }
@@ -198,7 +198,7 @@ class Main_Profile: UIViewController{
                 activityIndicatorView.stopAnimating()
             },
             failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
-                println("uuuError: " + error.localizedDescription)
+                print("uuuError: " + error.localizedDescription)
                 //google timeout
                 activityIndicatorView.stopAnimating()
                 //self.myNameLabel.text = ":("
@@ -366,5 +366,5 @@ class Main_Profile: UIViewController{
     //func loadDestinationVC(){
     //    self.performSegueWithIdentifier("Starting_Storyboard", sender: nil)
     //}
-    
+    */
 }

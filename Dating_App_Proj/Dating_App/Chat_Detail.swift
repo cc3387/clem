@@ -24,12 +24,14 @@ class ChatDetail: JSQMessagesViewController{
     override func viewDidLoad(){
         super.viewDidLoad()
         self.navigationController!.navigationBar.hidden = true
+        self.navigationController!.interactivePopGestureRecognizer!.enabled = false
         self.senderDisplayName = ""
         self.senderId = login_user.user_name
-        title = "Simple Chat"
+        title = "Chat - " + convo_final.friend_id_final
         setupBubbles()
         collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSizeZero
         collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSizeZero
+        self.inputToolbar!.contentView!.leftBarButtonItem = nil
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!,
@@ -66,7 +68,7 @@ class ChatDetail: JSQMessagesViewController{
     override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!,
         senderDisplayName: String!, date: NSDate!) {
             
-            let rootRef = Firebase(url: "https://simpleplus.firebaseio.com/")
+            let rootRef = Firebase(url: "https://simpleplus.firebaseio.com/messages/")
             
             //Define the server hosting name
             if(convo_final.chat_check_final == 1){
@@ -120,7 +122,7 @@ class ChatDetail: JSQMessagesViewController{
     //Function to observe the information
     private func observeMessages() {
         
-        let rootRef = Firebase(url: "https://simpleplus.firebaseio.com/")
+        let rootRef = Firebase(url: "https://simpleplus.firebaseio.com/messages/")
         if(convo_final.chat_check_final == 1){
             messageRef = rootRef.childByAppendingPath(login_user.user_name + convo_final.friend_id_final + "msg")
         }
@@ -130,6 +132,7 @@ class ChatDetail: JSQMessagesViewController{
 
         //Define the messageQuery
         let messagesQuery = messageRef.queryLimitedToLast(25)
+        self.messages = [];
         
         //Loading the message query
         messagesQuery.observeEventType(.ChildAdded) { (snapshot: FDataSnapshot!) in

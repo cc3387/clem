@@ -42,7 +42,9 @@ class Profile_Main : UIViewController{
     
     //Action Item
     override func viewDidLoad() {
-    
+    super.viewDidLoad()
+    self.navigationController?.setNavigationBarHidden(true, animated: false)
+    //self.navigationController!.interactivePopGestureRecognizer!.enabled = false
     let hours = hour();
     let minutes = minute();
     let hour_i = hour_int();
@@ -57,12 +59,20 @@ class Profile_Main : UIViewController{
             self.Time_Greetings.text = "Good Morning, the time is " + hours + " : " + minutes;
             }
             
-            Time_Greetings.textColor = UIColor.blackColor();
-            Bkground_Image.image = UIImage(named: "malaysia_morning.jpg");
+            let random = arc4random_uniform(3);
             
-            //Setting the User ID to login user id
-            //self.User_ID.text = "Welcome to Simple, " + login_user.loginname;
-            //self.User_ID.textColor = UIColor.blackColor();
+            Time_Greetings.textColor = UIColor.blackColor();
+            
+            if(random == 0){
+            Bkground_Image.image = UIImage(named: "malaysia_morning.jpg");
+            }
+            else if(random == 1){
+            Bkground_Image.image = UIImage(named: "Switzerland_Bridge.jpg");
+            }
+            else if(random == 2){
+            Bkground_Image.image = UIImage(named: "Dawn_City.jpg");
+            }
+
         }
         else if(hour_i >= 12 && hour_i <= 18){
             
@@ -97,16 +107,22 @@ class Profile_Main : UIViewController{
             }
             
             
-            let random = arc4random_uniform(3);
+            let random = arc4random_uniform(5);
             
             if(random == 0){
-            Bkground_Image.image = UIImage(named: "night_sky.jpg");
+            Bkground_Image.image = UIImage(named: "Night_Sky_Pond.jpg");
             }
             else if(random == 1){
             Bkground_Image.image = UIImage(named: "hongkongnight.jpg");
             }
             else if(random == 2){
             Bkground_Image.image = UIImage(named: "Paris_Night.jpg");
+            }
+            else if(random == 3){
+            Bkground_Image.image = UIImage(named: "seattle_night.jpg");
+            }
+            else if(random == 4){
+            Bkground_Image.image = UIImage(named: "New_York_Night.jpg");
             }
             
             //Setting the User ID to login user id
@@ -119,36 +135,37 @@ class Profile_Main : UIViewController{
             .observeEventType(.ChildAdded, withBlock: { snapshot in
                 if let login_name = snapshot.value["Profile_Name"] as? String {
                     login_user.loginname = login_name;
-                    println(login_user.loginname);
+                    print(login_user.loginname);
                     self.User_ID.text = "Welcome to Simple, " + login_user.loginname;
                     self.User_ID.textColor = UIColor.whiteColor();
                     
                     if let ulat = snapshot.value["latitude"] as? Double{
                         login_user.latitude = ulat;
-                        println(login_user.latitude);
+                        print(login_user.latitude);
                         if let ulon = snapshot.value["longitude"] as? Double{
                             login_user.longitude = ulon;
-                            println(login_user.longitude);
+                            print(login_user.longitude);
                             if let username = snapshot.value["username"] as? String{
                                 login_user.user_name = username;
-                                println(login_user.user_name);
+                                print(login_user.user_name);
                                 if let major = snapshot.value["Major"] as? String{
                                     login_user.major = major;
-                                    println(login_user.major);
+                                    print(login_user.major);
                                     if let university = snapshot.value["Education"] as? String{
                                         login_user.university = university;
-                                        println(login_user.university);
+                                        print(login_user.university);
                                         if let location = snapshot.value["location"] as? String{
                                             login_user.location = location;
-                                            println(login_user.location);
+                                            print(login_user.location);
                                             if let ProfileName = snapshot.value["Profile_Name"] as? String{
                                                 login_user.Profile_Name = ProfileName;
-                                                println(login_user.Profile_Name);
-                                                
+                                                print(login_user.Profile_Name);
                                                 if let base64String = snapshot.value["Photo"] as? String{
-                                                    var decodedData = NSData(base64EncodedString: base64String, options: NSDataBase64DecodingOptions())
-                                                    var decodedImage = UIImage(data: decodedData!)!
-                                                    self.Profile_Pic.image = decodedImage
+                                                    let decodedData = NSData(base64EncodedString: base64String, options: NSDataBase64DecodingOptions())
+                                                        let decodedImage = UIImage(data: decodedData!)!
+                                                        self.Profile_Pic.image = decodedImage
+                                                        self.Profile_Pic.contentMode = .ScaleAspectFit
+                                                        login_user.photo = base64String;
                                                 }
                                             }
                                         }
@@ -161,17 +178,17 @@ class Profile_Main : UIViewController{
             })
         
         //Download all the Friends' emails
-        var friend = "https://simpleplus.firebaseio.com/" + login_user.user_name + "_fd";
+        var friend = "https://simpleplus.firebaseio.com/friends/" + login_user.user_name + "_fd";
         let friendemail = Firebase(url:friend)
         frienduser.emailarray = [];
         friendemail.queryOrderedByChild("Email").observeEventType(.Value, withBlock:{friendsnapshot in
             for index in friendsnapshot.children.allObjects as! [FDataSnapshot]{
                 if let id = index.value["Email"] as! String?{
-                        frienduser.emailarray.append(id);
+                    frienduser.emailarray.append(id);
                 }
             }
         })
-        
+
         //Sending ChatList and Friends to the server before checking on new information
         //let manager = AFHTTPRequestOperationManager()
         
@@ -188,9 +205,9 @@ class Profile_Main : UIViewController{
             parameters: param1,
             //what is needed for success to execute?
             success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-                println("Successfully renew user info")
+                print("Successfully renew user info")
             }) { (AFHTTPRequestOperation, NSError) -> Void in
-                println("fail")
+                print("fail")
         }
         
         manager.POST("http://localhost:3000/user",
@@ -198,16 +215,16 @@ class Profile_Main : UIViewController{
             parameters: param2,
             //what is needed for success to execute?
             success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-                println("Successfully renew user info")
+                print("Successfully renew user info")
             }) { (AFHTTPRequestOperation, NSError) -> Void in
-                println("fail")
+                print("fail")
         }
         
         manager.GET("http://localhost:3000/user",
             parameters: nil,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
-                println("Object obtained successfully");
-                println(responseObject.count);
+                print("Object obtained successfully");
+                print(responseObject.count);
                 
                 if(responseObject.count > 0){
                 if let results = responseObject[0] as? NSDictionary {
@@ -228,7 +245,7 @@ class Profile_Main : UIViewController{
                }
             },
             failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
-                println("Error: " + error.localizedDescription)
+                print("Error: " + error.localizedDescription)
             }
         )
     
@@ -260,7 +277,7 @@ class Profile_Main : UIViewController{
                    }
                 }
                 
-                println(self.friendsArray.count);
+                print(self.friendsArray.count);
                 self.read_count = self.friendsArray.count;
                 
                 if(self.read_count == 0){
@@ -290,9 +307,9 @@ class Profile_Main : UIViewController{
                     parameters: param,
                     //what is needed for success to execute?
                     success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-                        println("successfully retrieve user's info")
+                        print("successfully retrieve user's info")
                     }) { (AFHTTPRequestOperation, NSError) -> Void in
-                        println("fail")
+                        print("fail")
                 }
               self.read_count -= 1;
               }
@@ -305,7 +322,7 @@ class Profile_Main : UIViewController{
     //To Logout and delete token that is assigned
     @IBAction func Logout(sender: AnyObject) {
         
-        //println(loginUsername.text)
+        //print(loginUsername.text)
         let manager = AFHTTPRequestOperationManager()
         
         var params = [
@@ -326,10 +343,14 @@ class Profile_Main : UIViewController{
             
             //what is needed for success to execute?
             success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-                println("successful logout")
+                print("successful logout")
             }) { (AFHTTPRequestOperation, NSError) -> Void in
-                println("fail")
+                print("fail")
         }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -340,11 +361,11 @@ class Profile_Main : UIViewController{
     func hour() -> String
     {
         //Get Hour
-        var date:NSDate = NSDate();
-        var calendar: NSCalendar = NSCalendar.currentCalendar();
-        var components:NSDateComponents = calendar.components(
-            NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitSecond, fromDate: date)
-        var hours = components.hour
+        let date:NSDate = NSDate();
+        let calendar: NSCalendar = NSCalendar.currentCalendar();
+        let components:NSDateComponents = calendar.components(
+            NSCalendarUnit.NSHourCalendarUnit, fromDate: date)
+        let hours = components.hour
         let hour = String(hours);
         //Return Hour
         return hour
@@ -353,11 +374,11 @@ class Profile_Main : UIViewController{
     func hour_int() -> Int
     {
         //Get Hour
-        var date:NSDate = NSDate();
-        var calendar: NSCalendar = NSCalendar.currentCalendar();
-        var components:NSDateComponents = calendar.components(
-            NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitSecond, fromDate: date)
-        var hours = components.hour
+        let date:NSDate = NSDate();
+        let calendar: NSCalendar = NSCalendar.currentCalendar();
+        let components:NSDateComponents = calendar.components(
+            NSCalendarUnit.NSHourCalendarUnit, fromDate: date)
+        let hours = components.hour
         let hour = Int(hours);
         //Return Hour
         return hour
@@ -367,11 +388,11 @@ class Profile_Main : UIViewController{
     func minute() -> String
     {
         //Get Minute
-        var date:NSDate = NSDate();
-        var calendar: NSCalendar = NSCalendar.currentCalendar();
-        var components:NSDateComponents = calendar.components(
-            NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitSecond, fromDate: date)
-        var minutes = components.minute
+        let date:NSDate = NSDate();
+        let calendar: NSCalendar = NSCalendar.currentCalendar();
+        let components:NSDateComponents = calendar.components(
+            NSCalendarUnit.NSMinuteCalendarUnit, fromDate: date)
+        let minutes = components.minute
         let minute = String(minutes);
         //Return Minute
         return minute
@@ -380,11 +401,11 @@ class Profile_Main : UIViewController{
     func minute_Int() -> Int
     {
         //Get Minute
-        var date:NSDate = NSDate();
-        var calendar: NSCalendar = NSCalendar.currentCalendar();
-        var components:NSDateComponents = calendar.components(
-            NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitSecond, fromDate: date)
-        var minutes = components.minute
+        let date:NSDate = NSDate();
+        let calendar: NSCalendar = NSCalendar.currentCalendar();
+        let components:NSDateComponents = calendar.components(
+            NSCalendarUnit.NSMinuteCalendarUnit, fromDate: date)
+        let minutes = components.minute
         let minute = Int(minutes);
         //Return Minute
         return minute
@@ -409,6 +430,7 @@ struct login_user{
     static var latitude: Double = 0;
     static var university: String = "";
     static var major: String = "";
+    static var photo: String = "";
 };
 
 struct frienduser{

@@ -33,140 +33,163 @@ class MapTasks: NSObject {
     var totalDistance: String!
     var totalDurationInSeconds: UInt = 0
     var totalDuration: String!
+    let apikey = "AIzaSyCDpeX5sgpfZFhhXyzCcU57drXp--q6PBw"
     
     override init() {
         super.init()
     }
     
     
-    func geocodeAddress(address: String!, withCompletionHandler completionHandler: ((status: String, success: Bool) -> Void)) {
-        if let lookupAddress = address {
-            var geocodeURLString = baseURLGeocode + "address=" + lookupAddress
-            geocodeURLString = geocodeURLString.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
-            
-            let geocodeURL = NSURL(string: geocodeURLString)
-            
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                let geocodingResultsData = NSData(contentsOfURL: geocodeURL!)
-                
-                var error: NSError?
-                let dictionary: Dictionary<NSObject, AnyObject> = NSJSONSerialization.JSONObjectWithData(geocodingResultsData!, options: NSJSONReadingOptions.MutableContainers, error: &error) as! Dictionary<NSObject, AnyObject>
-                
-                if (error != nil) {
-                    println(error)
-                    completionHandler(status: "", success: false)
-                }
-                else {
-                    // Get the response status.
-                    let status = dictionary["status"] as! String
-                    
-                    if status == "OK" {
-                        let allResults = dictionary["results"] as! Array<Dictionary<NSObject, AnyObject>>
-                        self.lookupAddressResults = allResults[0]
-                        
-                        // Keep the most important values.
-                        self.fetchedFormattedAddress = self.lookupAddressResults["formatted_address"] as! String
-                        let geometry = self.lookupAddressResults["geometry"] as! Dictionary<NSObject, AnyObject>
-                        self.fetchedAddressLongitude = ((geometry["location"] as! Dictionary<NSObject, AnyObject>)["lng"] as! NSNumber).doubleValue
-                        self.fetchedAddressLatitude = ((geometry["location"] as! Dictionary<NSObject, AnyObject>)["lat"] as! NSNumber).doubleValue
-                        
-                        completionHandler(status: status, success: true)
-                    }
-                    else {
-                        completionHandler(status: status, success: false)
-                    }
-                }
-            })
-        }
-        else {
-            completionHandler(status: "No valid address.", success: false)
-        }
-    }
-    
-    
-    func getDirections(origin: String!, destination: String!, waypoints: Array<String>!, travelMode:TravelModes!, completionHandler: ((status: String, success: Bool) -> Void)) {
+    func getLatLngForZip(loc: String) {
         
-        if let originLocation = origin {
-            if let destinationLocation = destination {
-                var directionsURLString = baseURLDirections + "origin=" + originLocation + "&destination=" + destinationLocation
-                
-                if let routeWaypoints = waypoints {
-                    directionsURLString += "&waypoints=optimize:true"
-                    
-                    for waypoint in routeWaypoints {
-                        directionsURLString += "|" + waypoint
-                    }
+        var geocoding : NSString = self.baseURLGeocode + "address=" + loc + "&key=" + self.apikey
+        var urlStr : NSString = geocoding.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        var searchURL : NSURL = NSURL(string: urlStr as String)!
+        
+        let data = NSData(contentsOfURL: searchURL)
+        let json = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
+        if let result = json["results"] as? NSArray {
+            if let geometry = result[0]["geometry"] as? NSDictionary {
+                if let location = geometry["location"] as? NSDictionary {
+                    self.fetchedAddressLatitude = location["lat"] as! Double
+                    self.fetchedAddressLongitude = location["lng"] as! Double
                 }
-                
-                if let travel = travelMode {
-                    var travelModeString = ""
-                    
-                    switch travelMode.rawValue {
-                    case TravelModes.walking.rawValue:
-                        travelModeString = "walking"
-                        
-                    case TravelModes.bicycling.rawValue:
-                        travelModeString = "bicycling"
-                        
-                    default:
-                        travelModeString = "driving"
-                    }
-                    
-                    
-                    directionsURLString += "&mode=" + travelModeString
-                }
-                
-                
-                directionsURLString = directionsURLString.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
-                
-                let directionsURL = NSURL(string: directionsURLString)
-                
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    let directionsData = NSData(contentsOfURL: directionsURL!)
-                    
-                    var error: NSError?
-                    let dictionary: Dictionary<NSObject, AnyObject> = NSJSONSerialization.JSONObjectWithData(directionsData!, options: NSJSONReadingOptions.MutableContainers, error: &error) as! Dictionary<NSObject, AnyObject>
-                    
-                    if (error != nil) {
-                        println(error)
-                        completionHandler(status: "", success: false)
-                    }
-                    else {
-                        let status = dictionary["status"] as! String
-                        
-                        if status == "OK" {
-                            self.selectedRoute = (dictionary["routes"] as! Array<Dictionary<NSObject, AnyObject>>)[0]
-                            self.overviewPolyline = self.selectedRoute["overview_polyline"] as! Dictionary<NSObject, AnyObject>
-                            
-                            let legs = self.selectedRoute["legs"] as! Array<Dictionary<NSObject, AnyObject>>
-                            
-                            let startLocationDictionary = legs[0]["start_location"] as! Dictionary<NSObject, AnyObject>
-                            self.originCoordinate = CLLocationCoordinate2DMake(startLocationDictionary["lat"] as! Double, startLocationDictionary["lng"] as! Double)
-                            
-                            let endLocationDictionary = legs[legs.count - 1]["end_location"] as! Dictionary<NSObject, AnyObject>
-                            self.destinationCoordinate = CLLocationCoordinate2DMake(endLocationDictionary["lat"] as! Double, endLocationDictionary["lng"] as! Double)
-                            
-                            self.originAddress = legs[0]["start_address"] as! String
-                            self.destinationAddress = legs[legs.count - 1]["end_address"] as! String
-                            
-                            self.calculateTotalDistanceAndDuration()
-                            
-                            completionHandler(status: status, success: true)
-                        }
-                        else {
-                            completionHandler(status: status, success: false)
-                        }
-                    }
-                })
             }
-            else {
-                completionHandler(status: "Destination is nil.", success: false)
-            }
-        }
-        else {
-            completionHandler(status: "Origin is nil", success: false)
         }
     }
+    
+    
+    
+//    func geocodeAddress(address: String!, withCompletionHandler completionHandler: ((status: String, success: Bool) -> Void)) {
+//        if let lookupAddress = address {
+//            var geocodeURLString = baseURLGeocode + "address=" + lookupAddress
+//            geocodeURLString = geocodeURLString.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+//            
+//            let geocodeURL = NSURL(string: geocodeURLString)
+//            
+//            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//                let geocodingResultsData = NSData(contentsOfURL: geocodeURL!)
+//                let errorterm: NSError?
+//        
+//                let dictionary: Dictionary<NSObject, AnyObject>
+//                
+//                = NSJSONSerialization.JSONObjectWithData(geocodingResultsData!, options: NSJSONReadingOptions.MutableContainers, error: &errorterm!) as! Dictionary<NSObject, AnyObject>
+//                
+//                if (errorterm != nil) {
+//                    print(errorterm)
+//                    completionHandler(status: "", success: false)
+//                }
+//                else {
+//                    // Get the response status.
+//                    let status = dictionary["status"] as! String
+//                    
+//                    if status == "OK" {
+//                        let allResults = dictionary["results"] as! Array<Dictionary<NSObject, AnyObject>>
+//                        self.lookupAddressResults = allResults[0]
+//                        
+//                        // Keep the most important values.
+//                        self.fetchedFormattedAddress = self.lookupAddressResults["formatted_address"] as! String
+//                        let geometry = self.lookupAddressResults["geometry"] as! Dictionary<NSObject, AnyObject>
+//                        self.fetchedAddressLongitude = ((geometry["location"] as! Dictionary<NSObject, AnyObject>)["lng"] as! NSNumber).doubleValue
+//                        self.fetchedAddressLatitude = ((geometry["location"] as! Dictionary<NSObject, AnyObject>)["lat"] as! NSNumber).doubleValue
+//                        
+//                        completionHandler(status: status, success: true)
+//                    }
+//                    else {
+//                        completionHandler(status: status, success: false)
+//                    }
+//                }
+//            })
+//        }
+//        else {
+//            completionHandler(status: "No valid address.", success: false)
+//        }
+//    }
+    
+    
+//    func getDirections(origin: String!, destination: String!, waypoints: Array<String>!, travelMode:TravelModes!, completionHandler: ((status: String, success: Bool) -> Void)) {
+//        
+//        if let originLocation = origin {
+//            if let destinationLocation = destination {
+//                var directionsURLString = baseURLDirections + "origin=" + originLocation + "&destination=" + destinationLocation
+//                
+//                if let routeWaypoints = waypoints {
+//                    directionsURLString += "&waypoints=optimize:true"
+//                    
+//                    for waypoint in routeWaypoints {
+//                        directionsURLString += "|" + waypoint
+//                    }
+//                }
+//                
+//                if let travel = travelMode {
+//                    var travelModeString = ""
+//                    
+//                    switch travelMode.rawValue {
+//                    case TravelModes.walking.rawValue:
+//                        travelModeString = "walking"
+//                        
+//                    case TravelModes.bicycling.rawValue:
+//                        travelModeString = "bicycling"
+//                        
+//                    default:
+//                        travelModeString = "driving"
+//                    }
+//                    
+//                    
+//                    directionsURLString += "&mode=" + travelModeString
+//                }
+//                
+//                
+//                directionsURLString = directionsURLString.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+//                
+//                let directionsURL = NSURL(string: directionsURLString)
+//                
+//                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//                    let directionsData = NSData(contentsOfURL: directionsURL!)
+//                    
+//                    var error: NSError?
+//                    let dictionary: Dictionary<NSObject, AnyObject> = NSJSONSerialization.JSONObjectWithData(directionsData!, options: NSJSONReadingOptions.MutableContainers, error: &error) as! Dictionary<NSObject, AnyObject>
+//                    
+//                    if (error != nil) {
+//                        print(error)
+//                        completionHandler(status: "", success: false)
+//                    }
+//                    else {
+//                        let status = dictionary["status"] as! String
+//                        
+//                        if status == "OK" {
+//                            self.selectedRoute = (dictionary["routes"] as! Array<Dictionary<NSObject, AnyObject>>)[0]
+//                            self.overviewPolyline = self.selectedRoute["overview_polyline"] as! Dictionary<NSObject, AnyObject>
+//                            
+//                            let legs = self.selectedRoute["legs"] as! Array<Dictionary<NSObject, AnyObject>>
+//                            
+//                            let startLocationDictionary = legs[0]["start_location"] as! Dictionary<NSObject, AnyObject>
+//                            self.originCoordinate = CLLocationCoordinate2DMake(startLocationDictionary["lat"] as! Double, startLocationDictionary["lng"] as! Double)
+//                            
+//                            let endLocationDictionary = legs[legs.count - 1]["end_location"] as! Dictionary<NSObject, AnyObject>
+//                            self.destinationCoordinate = CLLocationCoordinate2DMake(endLocationDictionary["lat"] as! Double, endLocationDictionary["lng"] as! Double)
+//                            
+//                            self.originAddress = legs[0]["start_address"] as! String
+//                            self.destinationAddress = legs[legs.count - 1]["end_address"] as! String
+//                            
+//                            self.calculateTotalDistanceAndDuration()
+//                            
+//                            completionHandler(status: status, success: true)
+//                        }
+//                        else {
+//                            completionHandler(status: status, success: false)
+//                        }
+//                    }
+//                })
+//            }
+//            else {
+//                completionHandler(status: "Destination is nil.", success: false)
+//            }
+//        }
+//        else {
+//            completionHandler(status: "Origin is nil", success: false)
+//        }
+//    }
     
     
     func calculateTotalDistanceAndDuration() {

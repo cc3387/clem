@@ -41,7 +41,7 @@ class Major: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
         let size = pickerData[sizeComponent][myPicker.selectedRowInComponent(sizeComponent)]
         self.Major = size;
         register_info.Major = self.Major;
-        println(register_info.Major);
+        print(register_info.Major);
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {

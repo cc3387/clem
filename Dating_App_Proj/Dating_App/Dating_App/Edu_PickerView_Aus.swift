@@ -43,7 +43,7 @@ class Edu_PickerView_AUS: UIViewController,UIPickerViewDataSource, UIPickerViewD
         let size = pickerData[sizeComponent][myPicker.selectedRowInComponent(sizeComponent)]
         self.Edu = size;
         register_info.education = self.Edu;
-        println(register_info.education);
+        print(register_info.education);
     }
     
     

@@ -33,8 +33,8 @@ class FinalSend_Final: UIViewController{
         //var loc_lng: String = String(format:"%f",loc_lng_int);
         //var loc_lat:String = String(format:"%f",loc_lat_int);
         
-        var ref = Firebase(url:"https://simpleplus.firebaseio.com")
-        var userref = Firebase(url:"https://simpleplus.firebaseio.com")
+        var ref = Firebase(url:"https://simpleplus.firebaseio.com/")
+        var userref = Firebase(url:"https://simpleplus.firebaseio.com/friends/")
         
         var profile = [
             //"title": register_info.user_id,
@@ -72,6 +72,7 @@ class FinalSend_Final: UIViewController{
         usersRef.childByAppendingPath(register_info.username).setValue(profile);
         var userfd = userref.childByAppendingPath(usernamefriend);
         userfd.childByAppendingPath(register_info.username).setValue(friend);
+        login.registered = 1;
         
         loadDestinationVC();
     }

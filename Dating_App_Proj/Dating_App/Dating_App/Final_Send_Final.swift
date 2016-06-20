@@ -56,10 +56,10 @@ class FinalSend: UIViewController{
         manager.POST("http://localhost:3000/register",
             parameters: params,
             success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-                println("success!")
+                print("success!")
             })
             {(AFHTTPRequestOperation, NSError) -> Void in
-                println("fail to send in register")
+                print("fail to send in register")
         }
         
         /*var param_loc = [

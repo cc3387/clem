@@ -34,13 +34,21 @@ class ViewControllerRegister: UIViewController, UITextFieldDelegate,UIPickerView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         myPicker.delegate = self;
         myPicker.dataSource = self;
         //LocPicker.delegate = self;
         //LocPicker.dataSource = self;
         updateAge();
-        //updateLoc();
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        if(login.registered == 1){
+            self.Username.enabled = false;
+            self.Password.enabled = false;
+            self.Email.enabled = false;
+            self.Age.enabled = false;
+            self.Location.enabled = false;
+            self.Sender.enabled = false;
+        }
     }
 
     //Register Button Click
@@ -89,12 +97,12 @@ class ViewControllerRegister: UIViewController, UITextFieldDelegate,UIPickerView
         
         
         //Passing info to Firebase
-        register_info.user_id = self.Username.text;
-        register_info.username = self.Username.text;
-        register_info.password = self.Password.text;
-        register_info.age_range = self.Age.text;
-        register_info.Profile_name = self.Location.text;
-        register_info.email = self.Email.text;
+        register_info.user_id = self.Username.text!;
+        register_info.username = self.Username.text!;
+        register_info.password = self.Password.text!;
+        register_info.age_range = self.Age.text!;
+        register_info.Profile_name = self.Location.text!;
+        register_info.email = self.Email.text!;
             
         
         var myRootRef = Firebase(url:"https://simpleplus.firebaseio.com")
@@ -104,7 +112,7 @@ class ViewControllerRegister: UIViewController, UITextFieldDelegate,UIPickerView
                         // There was an error creating the account
                     } else {
                         let uid = result["uid"] as? String
-                        println("Successfully created user account with uid: \(uid)")
+                       print("Successfully created user account with uid: \(uid)")
                     }
         })
             

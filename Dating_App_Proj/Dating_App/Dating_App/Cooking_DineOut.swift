@@ -14,8 +14,8 @@ class Cooking_DineOut: UIViewController{
     
     override func viewDidLoad() {
         
-        var leftSwipe = UISwipeGestureRecognizer(target: self, action: ("CookingDineoutSwipe:"))
-        var rightSwipe = UISwipeGestureRecognizer(target: self, action: ("CookingDineoutSwipe:"))
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: ("CookingDineoutSwipe:"))
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: ("CookingDineoutSwipe:"))
         
         leftSwipe.direction = .Left
         rightSwipe.direction = .Right
@@ -34,14 +34,14 @@ class Cooking_DineOut: UIViewController{
     func CookingDineoutSwipe(sender:UISwipeGestureRecognizer){
         
         if(sender.direction == .Right){
-            register_info.Cooking_Dineout = "Cooking_Home"
-            loadDestinationVC()
-            println(register_info.Cooking_Dineout)
-        }
-        else if(sender.direction == .Left){
             register_info.Cooking_Dineout = "Dine_Out"
             loadDestinationVC()
-            println(register_info.Cooking_Dineout)
+            print(register_info.Cooking_Dineout)
+        }
+        else if(sender.direction == .Left){
+            register_info.Cooking_Dineout = "Cooking_Home"
+            loadDestinationVC()
+            print(register_info.Cooking_Dineout)
         }
     }
     

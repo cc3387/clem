@@ -43,7 +43,7 @@ class Edu_PickerView_HK: UIViewController,UIPickerViewDataSource, UIPickerViewDe
         let size = pickerData[sizeComponent][myPicker.selectedRowInComponent(sizeComponent)]
         self.Edu = size;
         register_info.education = self.Edu;
-        println(register_info.education);
+        print(register_info.education);
     }
     
     
@@ -53,14 +53,14 @@ class Edu_PickerView_HK: UIViewController,UIPickerViewDataSource, UIPickerViewDe
     
     let pickerData = [
         [
-         "University of Hong Kong",
-         "The Chinese University of Hong Kong",
-         "Hong Kong Polytechnic University",
+         "University of HK",
+         "The Chinese University of HK",
+         "HK Polytechnic University",
          "City University of Hong Kong",
-         "Hong Kong University of Science and Technology",
-         "Hong Kong Baptist University",
-         "Hong Kong Shue Yan University",
-         "Hong Kong Institute of Education"
+         "HK University of Science and Technology",
+         "HK Baptist University",
+         "HK Shue Yan University",
+         "HK Institute of Education"
         ]
     ]
     

@@ -46,7 +46,7 @@ class Loc_PickerView: UIViewController,UIPickerViewDataSource, UIPickerViewDeleg
         let size = pickerData[sizeComponent][myPicker.selectedRowInComponent(sizeComponent)]
         self.Loc = size;
         register_info.location = self.map(self.Loc);
-        println(register_info.location);
+        print(register_info.location);
     }
     
     

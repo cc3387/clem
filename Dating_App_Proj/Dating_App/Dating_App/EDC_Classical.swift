@@ -14,7 +14,7 @@ class EDCClassical: UIViewController{
     
     override func viewDidLoad() {
         
-        var leftSwipe = UISwipeGestureRecognizer(target: self, action: ("EDCClassicalSwipe:"))
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: ("EDCClassicalSwipe:"))
         var rightSwipe = UISwipeGestureRecognizer(target: self, action: ("EDCClassicalSwipe:"))
         
         leftSwipe.direction = .Left
@@ -35,12 +35,12 @@ class EDCClassical: UIViewController{
         if(sender.direction == .Right){
             register_info.EDC_or_Classic = "Classical"
             loadDestinationVC()
-            println(register_info.EDC_or_Classic)
+            print(register_info.EDC_or_Classic)
         }
         else if(sender.direction == .Left){
             register_info.EDC_or_Classic = "EDC"
             loadDestinationVC()
-            println(register_info.EDC_or_Classic)
+            print(register_info.EDC_or_Classic)
         }
     }
     
